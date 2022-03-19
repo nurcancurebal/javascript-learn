@@ -1,5 +1,3 @@
-// ! Consol ekranına yazı yazdırır.
-
-const say = "Hello, World!";
-
-console.log(say);
+console.log('1hello world')
+console.log("2hello world")
+console.log("3hello world")

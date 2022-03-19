@@ -1,4 +1,3 @@
-// ! Burası dummy veritabanı.
 const database = {
     users: [
         { id: 1, username: "erdinccurebal", age: 15 },
