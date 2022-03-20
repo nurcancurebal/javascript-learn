@@ -28,3 +28,9 @@ console.log(ismarried) //  aslında evli olmamasına rağmen true döndü
 const birthDay = 17;
 
 console.log(birthDay < 18 && "18 Yaşından küçük")
+
+
+let nur= 5
+let er = 10
+let control= (nur>4 && nur< 10) && er>=10
+console.log('36.satır',control)
