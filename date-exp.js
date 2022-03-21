@@ -31,5 +31,8 @@ let day= date.getDay()
         'cuma',
         'cumartesi']
 
-let dateTime= ` ${dayNumber} ${months[mounth]} ${year} ${hour}:${minute}:${second} `
+let dateTime= ` ${dayNumber} ${months[mounth]} ${year} ${days[day]} ${hour}:${minute}:${second} `
 console.log(dateTime)
+
+let dateTimeTwo = `${year} - ${months[mounth]} - ${dayNumber}  ${hour}:${minute}`
+console.log(dateTimeTwo)
