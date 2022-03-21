@@ -19,11 +19,11 @@ const date = new Date()
 
 let year = date.getFullYear(),
     mounth = date.getMonth(),
-    day = date.getDate(),
+    dayNumber = date.getDate(),
     hour = date.getHours(),
     minute = date.getMinutes(),
     Second = date.getSeconds(),
-    dayNumber = date.getDay();
+    day = date.getDay();
 
 let months = [
     'ocak',
@@ -50,6 +50,6 @@ let days = [
     'cumartesi'
 ];
 
-let humanreadabledate = `${day} ${months[mounth]} ${year}, ${days[dayNumber]} ${hour}:${minute}:${Second}`
+let humanreadabledate = `${dayNumber} ${months[mounth]} ${year}, ${days[day]} ${hour}:${minute}:${Second}`
 
 console.log(humanreadabledate)
