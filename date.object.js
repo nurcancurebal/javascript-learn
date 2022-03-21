@@ -53,3 +53,6 @@ let days = [
 let humanreadabledate = `${dayNumber} ${months[mounth]} ${year}, ${days[day]} ${hour}:${minute}:${Second}`
 
 console.log(humanreadabledate)
+
+
+console.log(String(hour<10 ? `0${hour}` : hour) +':'+ String(minute<10 ?`0${minute}`: minute))

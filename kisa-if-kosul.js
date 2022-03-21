@@ -12,3 +12,12 @@ let myAge = 11
 let yourAge= 55
 console.log( myAge > yourAge ? `Benim yaşım senin yaşından ${myAge - yourAge} yaş büyük` : `Benim yaşım senin yaşından ${yourAge - myAge } yaş küçük` )
 
+
+
+const date = new Date ()
+
+let hour = date.getHours()
+let minute = date.getMinutes()
+
+
+console.log(String(hour<10 ? `0${hour}` : hour) +':'+ String(minute<10 ?`0${minute}`: minute))
