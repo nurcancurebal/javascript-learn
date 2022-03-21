@@ -1,11 +1,11 @@
 const date = new Date()
-let year= date.getFullYear(), //! değişken atarken hepsinin başına let yazmamamızın sebebi?
- mounth= date.getMonth(),
- dayNumber= date.getDate(),
- hour= date.getHours(),
- minute= date.getMinutes(),
- second= date.getSeconds(),
- day= date.getDay()
+let year= date.getFullYear()
+let mounth= date.getMonth()
+let dayNumber= date.getDate()
+let hour= date.getHours()
+let minute= date.getMinutes()
+let second= date.getSeconds()
+let day= date.getDay()
 
  let months = [
     'ocak',
