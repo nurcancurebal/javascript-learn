@@ -17,7 +17,10 @@ varFifth = Number(parseFloat(varFifth).toFixed(2))
 console.log("TEST FOUR", parseFloat(varThirsth) === parseFloat(varFifth), parseFloat(varThirsth), parseFloat(varFifth),typeof parseFloat(varThirsth),typeof parseFloat(varFifth) ) // true 14.45 14.45 number number
 
 
-let deneme = {asdsa: "asdas"};
+let deneme = {asdsa: "asdsa"};
 let denememe = {asdas:"adas"};
+
+console.log(deneme==denememe , deneme, denememe, typeof deneme, typeof denememe) // false {asdsa: 'asdsa'} {asdas: 'adas'} object object
+
 
 console.log({} == {})  // false
