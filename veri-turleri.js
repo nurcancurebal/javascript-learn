@@ -4,6 +4,8 @@ string, number, boolean(true or false), undefined (tanımsız), null (boş değe
 2 . non primitive data types 
 objects, functions, arrays(diziler) */
 
+// nan = bu matematiksel işlem hatalı
+
 let numb = ['nurcan', 27, false]
 console.log(numb)  
 // bu bir array örneğidir,

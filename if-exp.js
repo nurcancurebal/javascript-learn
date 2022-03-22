@@ -1,3 +1,10 @@
+// conditions
+// if
+// else if
+// else if else if
+// switch
+// ternary operators( tek satırlık koşul)
+
 let age= 27
 let ageTwo= 13
 
