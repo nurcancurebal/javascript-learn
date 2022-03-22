@@ -44,4 +44,4 @@ switch(caseValue){
         default:
             console.log('yağmurluk giy')
 
-  } //21:37
+  }
