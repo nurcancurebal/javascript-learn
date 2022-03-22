@@ -22,5 +22,3 @@ else if (90<=user1<=100){
 else{
     console.log('Hatalı not girdiniz')
 }
-
-//!bunun başka yöntemi var mı?
