@@ -13,6 +13,7 @@ else {
 
 let days='Monday'
 days= days.toLowerCase()
+
 switch(days){
     case "days=='monday' || days=='tuesday' || days=='wednesday' || days== 'thursday' || days== 'friday'":
         console.log(`${days} is a working day.`)
