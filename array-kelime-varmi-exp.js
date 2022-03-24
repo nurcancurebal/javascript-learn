@@ -11,3 +11,5 @@ console.log(itCompaniesTwo==true ?'there is a company': 'a company is not found'
 
 
 //! 14. soruyu yap
+
+
