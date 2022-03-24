@@ -10,4 +10,4 @@ console.log(names.join(', ')) //Asabeneh, Mathias, Elias, Brook
 console.log(names.join(' # ')) //Asabeneh # Mathias # Elias # Brook
 
 const number= [151, 616, 397542, 738, 62]
-console.log(number.join())
+console.log(number.join()) //151,616,397542,738,62
