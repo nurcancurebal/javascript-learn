@@ -14,7 +14,7 @@ let namesThree = [
 console.log(namesThree.length)
 
 
-// arrayin içerisinde obje tutabiliriz, objenin içindede rray tutabiliriz
+// arrayin içerisinde obje tutabiliriz, objenin içindede array tutabiliriz
 
 const arr = [
     'Nurcan',
