@@ -19,5 +19,3 @@ const countries = [
  console.log(control)
 
  console.log(countriesOne ? countries[control].toUpperCase() : countries.push('Ethiopia'))
-
- //! true ise hepsini yazdırıp ayrıca ethiopia yı büyük yazdırabilir miyiz.
