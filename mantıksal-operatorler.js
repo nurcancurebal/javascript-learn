@@ -1,5 +1,5 @@
 /* 
-mantıksal operatörler
+mantıksal operatörler (logical operators)
 && = ampersand (ve)
 || = pipe (ya da)
 !  = negation (olumsuzlama) 

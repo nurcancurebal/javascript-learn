@@ -2,7 +2,7 @@ let itCompanies=['facebook', 'google', 'microsoft', 'apple', 'ibm', 'oracle', 'a
 
 const a= 'Facebook'.toLowerCase()
 
-itCompaniesOne= itCompanies.includes(a)
+itCompaniesOne= itCompanies.includes(a) // true/false döner
 
 console.log(itCompaniesOne==true ?'there is a company': 'a company is not found')
 
