@@ -2,8 +2,8 @@ const countries = [
     'Albania',
     'Bolivia',
     'Canada',
-    'Denmark',
     'Ethiopia',
+    'Denmark',
     'Finland',
     'Germany',
     'Hungary',
@@ -12,9 +12,12 @@ const countries = [
     'Kenya'
   ]
 
- let countriesOne=countries.includes('Ethiopia')
- let big= countries['Ethiopia'].toUpperCase() // yalnızca ethiopia nın olduğu satırı büyülteceğim
+ let countriesOne = countries.includes('Ethiopia')
+ console.log(countriesOne)
 
- console.log(countriesOne ? big : countries.push('Ethiopia'))
+ let control = countries.indexOf('Ethiopia')
+ console.log(control)
 
- //! Ethiopia var ise yalnızca Ethiopia yı büyülterek ekrana yazdırabilir miyiz Ethiopia nın olduğu indisi nasıl yakalayabilirz
+ console.log(countriesOne ? countries[control].toUpperCase() : countries.push('Ethiopia'))
+
+ //! true ise hepsini yazdırıp ayrıca ethiopia yı büyük yazdırabilir miyiz.
