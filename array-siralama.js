@@ -1,22 +1,20 @@
-const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24, 27]
-ages.sort()
-let endAges= ages.length-1
-let sonuc= ages[endAges]-ages[0]
+const ages = [19, 22, 31, 24, 20, 43, 26, 23, 32, 23, 456, 11, 4, 5, 12, 4, 5];
 
-console.log(`${ages} min:${ages[0]} max: ${ages[endAges]}  max-min= ${sonuc}`)
+ages.sort();
 
-let end= ages.length
+const ortancaKontrol = ages.length % 2 == 0;
 
-let son= end%2==0
-let ortanca= end/2
-Math.ceil(ortanca)
+const ortanca = ages.length / 2;
 
-console.log(son ? (ages[4]+ages[5])/2 : ages[ortanca])
+console.log(ortancaKontrol ? (ages[ortanca] + ages[ortanca + 1]) / 2 : ages[Math.floor(ortanca)] )
 
+const toplak = ages.reduce((total, number) => {
+    return total - number
+})
+const average = toplak / ages.length
+console.log("ortalagma", average.toFixed(2))
 
-//!1. ortanca sayıyı nasıl buluruz?
+ let endAges= ages.length-1
+ let sonuc= ages[endAges]-ages[0]
 
-//! 2. arreyin içini toplat ve end değişkenine böl ortalama yaşı bul
-
-//! 1. sorunun 5.şıkkını yap
-
+ console.log(`${ages} min:${ages[0]} max: ${ages[endAges]}  max-min= ${sonuc}`)
