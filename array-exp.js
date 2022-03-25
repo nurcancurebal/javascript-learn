@@ -1,0 +1,1 @@
+const shoppingCart = ['Milk', 'Coffee', 'Tea', 'Honey']
