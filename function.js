@@ -10,10 +10,10 @@ const cikarma = function (deger1, deger2, deger3){
 }
 
 const toplananlar = toplama(5,6,7);
-const cikarilanler = cikarma(5,6,7);
+const cikarilanlar = cikarma(5,6,7);
 
 console.log(toplananlar);
-console.log(cikarilanler);
+console.log(cikarilanlar);
 
 function toplama(deger1, deger2, deger3){
     const topla = deger1 + deger2 + deger3;
