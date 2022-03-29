@@ -12,8 +12,8 @@ const countries = [
     'Kenya'
   ]
 
-  
-  for (let i=0; i<=10; i++){
+
+for (let i=0; i<=10; i++){
       console.log('for ile =', countries[i])
     }       // for ile ekrana sırayla yazdırma
     
@@ -42,7 +42,7 @@ do {
 
 for (let i=0; i<=10; i++){
     countries.reverse()
-    console.log('for ile tersden =', countries[i])
+    console.log('for ile tersden =', countries[i]) // for ile ekrana tersten sırayla yazdırma
   }
 
   //! neden tersten yazarken değişik sıralama ile yazdı
@@ -56,7 +56,7 @@ while (c<=10){
     countries.reverse()
     console.log('while ile tersten = ', countries[c])
     c++
-}
+}       // while ile ekrana tersten sırayla yazdırma
 
 
 
@@ -65,4 +65,10 @@ do{
     countries.reverse()
     console.log('do while ile tersten = ', countries[d])
     d++
-}while(d<=10)
+}while(d<=10)       // do while ile ekrana tersten sırayla yazdırma
+
+
+for (let e=0; e<=10; e++){
+   
+    console.log(countries[e].repeat(3))
+  }                

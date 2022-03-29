@@ -13,9 +13,9 @@ const countries = [
   ]
 
  let countriesOne = countries.includes('Ethiopia')
- console.log(countriesOne)
+ console.log(countriesOne) // true
 
  let control = countries.indexOf('Ethiopia')
- console.log(control)
+ console.log(control)  //3
 
- console.log(countriesOne ? countries[control].toUpperCase() : countries.push('Ethiopia'))
+ console.log(countriesOne ? countries[control].toUpperCase() : countries.push('Ethiopia'))  // ETHIOPIA
