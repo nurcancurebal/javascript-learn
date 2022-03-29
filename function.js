@@ -1,33 +1,29 @@
+const a = 5;
+const b = 6;
+const c = 7;
 
+const jj = c;
 
+const cikarma = function (deger1, deger2, deger3){
+    const cikar = deger1 - deger2 - deger3;
+    return cikar;
+}
 
+const toplananlar = toplama(5,6,7);
+const cikarilanler = cikarma(5,6,7);
 
-// const a = 5;
-// const b = 6;
-// const c = 7;
+console.log(toplananlar);
+console.log(cikarilanler);
 
-// const jj = c;
+function toplama(deger1, deger2, deger3){
+    const topla = deger1 + deger2 + deger3;
+    return topla;
+}
 
-// const cikarma = function (deger1, deger2, deger3){
-//     const cikar = deger1 - deger2 - deger3;
-//     return cikar;
-// }
-
-// const toplananlar = toplama(5,6,7);
-// const cikarilanler = cikarma(5,6,7);
-
-// console.log(toplananlar);
-// console.log(cikarilanler);
-
-// function toplama(deger1, deger2, deger3){
-//     const topla = deger1 + deger2 + deger3;
-//     return topla;
-// }
-
-/* const sehirler = ["ankara","istanbul","bursa","izmir"];
+ const sehirler = ["ankara","istanbul","bursa","izmir"];
 
 sehirler.forEach(function (item, index){
     console.log(index, item)
     console.log(item == "istanbul")
 })
- */
+
