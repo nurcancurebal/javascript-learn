@@ -36,12 +36,12 @@ const countries = [
 //   b++
 // } while (b <= 10)       // do while ile ekrana sırayla yazdırma
 
-countries.reverse()
+// countries.reverse()
 
 
-for (let i = 0; i <= 10; i++) {
-  console.log('for ile tersden =', countries[i]) // for ile ekrana tersten sırayla yazdırma
-}
+// for (let i = 0; i <= 10; i++) {
+//   console.log('for ile tersden =', countries[i]) // for ile ekrana tersten sırayla yazdırma
+// }
 
 
 //! while ile tekrar reverse yaptığımda for ile çevirdiğim ülkeleri terkar çeviriyor bunu önlemek için
@@ -49,12 +49,13 @@ for (let i = 0; i <= 10; i++) {
 
 
 
-// let c = 0
-// while (c <= 10) {
-//   countries.reverse()
-//   console.log('while ile tersten = ', countries[c])
-//   c++
-// }       // while ile ekrana tersten sırayla yazdırma
+let c = 0
+countries.reverse()
+while (c <= 10) {
+
+  console.log('while ile tersten = ', countries[c])
+  c++
+}       // while ile ekrana tersten sırayla yazdırma
 
 
 
