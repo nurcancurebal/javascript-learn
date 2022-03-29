@@ -9,3 +9,14 @@ for (let i = 0; i < numbers.length; i++) {
 }
 
 console.log(newArr)
+
+
+
+const countries= ['turkey', 'Australia', 'Canada', 'England']
+let newCountries=[]
+
+for (let i=0; i<countries.length; i++){
+    newCountries.push(countries[i].toUpperCase())
+}
+console.log(countries)
+console.log(newCountries)
