@@ -21,4 +21,3 @@ if (dizininKonumu <= 4) {
 } else {
     console.log("Gün bulunamadı.")
 }
-
