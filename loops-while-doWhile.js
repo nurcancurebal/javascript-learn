@@ -16,6 +16,7 @@ do{
 
 let names=['nurcan', 'erdinç', 'bal', 'çisem', 'turhan']
 let b=0
+
 while (b<names.length){
     console.log('isim:', names[b])
     b++
