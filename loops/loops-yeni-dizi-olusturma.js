@@ -10,14 +10,15 @@ const countries = [
     'Ireland',
     'Japan',
     'Kenya'
-]
+];
 
-let loop = []
-for (i = 0; i = countries.length ; i++){
-    countries[i].toUpperCase()
-    loop.push(countries)
-}
+const newCountries = [];
 
-    
+for (let i = 0; i < countries.length; i++) {
 
-  //! neden hata veriyor
+    newCountries.push(countries[i].toUpperCase());
+
+};
+
+console.log(newCountries);
+
