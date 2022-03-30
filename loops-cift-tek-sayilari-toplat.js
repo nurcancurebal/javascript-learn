@@ -13,4 +13,4 @@ for (let i=0; i<=100; i++ ){
 console.log(`çift sayıların toplamı ${totalevens}`)
 console.log(`tek sayıların toplamı ${totalodds}`)
 
-//! soru 12 yap
+//! soru 12, 13, 14, 15 yap
