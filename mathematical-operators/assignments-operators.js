@@ -1,4 +1,4 @@
-/*assignments operators
+/*assignments operators(atama operatörleri)
 operatörler     kullanım şekli       description
 +=               x += y               x = x+y
 -=               x -= y               x = x-y

@@ -9,3 +9,8 @@ console.log(string.match('love'))
 
 console.log(string.match(/love/gi))
 // ekran çıktı=(3) ['love', 'love', 'love']
+
+
+
+//let string='love' bu ifade string bir değişkendir
+// let patterOne= /love/ bu bir regex regular(düzenli) ifadedir / ile başlar / ile biter

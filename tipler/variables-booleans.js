@@ -1,4 +1,4 @@
-// true or false diye döndürür
+// booleans true or false diye döndürür
 
 /* fallsy values
 0 (sıfır)
