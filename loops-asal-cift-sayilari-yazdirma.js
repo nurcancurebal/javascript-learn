@@ -1,16 +1,16 @@
-//   for(i=0; i<=100; i++){
-//     if (i%2==0){
-//         console.log(i)
-//     }
-// }       // çift sayıları yazdırdık
+  for(i=0; i<=100; i++){
+    if (i%2==0){
+        console.log(i)
+    }
+}       // çift sayıları yazdırdık
 
 
 
-//  for (a=0; a<=100; a++){
-//     if (a%2==0){
-//     } else{
-//         (console.log(a))}
-// }       //tek sayıları yazdırdık
+ for (a=0; a<=100; a++){
+    if (a%2==0){
+    } else{
+        (console.log(a))}
+}       //tek sayıları yazdırdık
 
  
 
