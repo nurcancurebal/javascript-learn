@@ -20,7 +20,8 @@ console.log("TEST FOUR", parseFloat(varThirsth) === parseFloat(varFifth), parseF
 let deneme = {asdsa: "asdsa"};
 let denememe = {asdas:"adas"};
 
-console.log(deneme==denememe , deneme, denememe, typeof deneme, typeof denememe) // false {asdsa: 'asdsa'} {asdas: 'adas'} object object
+console.log(deneme==denememe , deneme, denememe, typeof deneme, typeof denememe)
+// false {asdsa: 'asdsa'} {asdas: 'adas'} object object
 
 
 console.log({} == {})  // false

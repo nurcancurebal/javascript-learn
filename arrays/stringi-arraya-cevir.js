@@ -1,6 +1,3 @@
-//! Exercise lever 2 question 1 yap
-
-
 // split(ayırıcı,limit)
 // split(',',3) virgülden ayırır 3 tane array oluşturur gerisini almaz
 
