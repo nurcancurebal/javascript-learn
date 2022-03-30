@@ -35,5 +35,3 @@ for (let sayi = 2; sayi <= 100; sayi++) {
 console.log(array);
 
 // asal sayıları yazdırdık
-
-//! kodları tekrar incele asal sayılar, soru 9 da kaldık
