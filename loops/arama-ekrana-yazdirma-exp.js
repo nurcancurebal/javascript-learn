@@ -12,3 +12,6 @@ const countries = [
     'Kenya'
   ];
 
+console.log(countries.includes('land'))
+
+//! exercise 2 soru 7 yap
