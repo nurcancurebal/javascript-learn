@@ -10,8 +10,15 @@ const countries = [
     'Ireland',
     'Japan',
     'Kenya'
-  ];
+];
 
-console.log(countries.includes('land'))
 
-//! exercise 2 soru 7 yap
+for (i = 0; i < countries.length; i++) {
+
+    if (countries[i].includes('land')) {
+
+        console.log(countries[i])
+    }
+}
+
+//! burada eğer land yoksa 'All these countries are without land' bunu yazdır
