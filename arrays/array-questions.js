@@ -13,14 +13,10 @@ console.log(itCompanies) // baştan 1 eleman silme
 
 let itCompaniesFour= itCompanies.slice(2,4)
 console.log(itCompaniesFour)
-//** slice ana dizinde değişiklik yapmaz ayrı bir ayrı bir değişkene atamamız gerekir
+//** slice ana dizinde değişiklik yapmaz ayrı bir değişkene atamamız gerekir
 
 
 let itCompaniesfive= itCompanies.pop()
 itCompanies.pop()
 itCompanies.pop()
 console.log(itCompanies)
-
-
-
-
