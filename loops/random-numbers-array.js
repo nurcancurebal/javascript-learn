@@ -7,6 +7,3 @@ for (let index = 0; index < 5; index++) {
 }
 
 console.log(randomFiveNumberArray);
-
-
-//! çıktımız rgb(240,180,80) bu şekilde olması lazım
