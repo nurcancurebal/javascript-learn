@@ -12,13 +12,16 @@ const countries = [
     'Kenya'
 ];
 
+const newCountries = [];
 
 for (i = 0; i < countries.length; i++) {
 
     if (countries[i].includes('land')) {
 
-        console.log(countries[i])
+        newCountries.push(countries[i]);
     }
 }
+
+console.log(newCountries);
 
 //! burada eğer land yoksa 'All these countries are without land' bunu yazdır

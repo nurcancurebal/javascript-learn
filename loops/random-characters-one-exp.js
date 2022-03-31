@@ -7,7 +7,7 @@ for (let index = 0; index < 6; index++) {
     key = key + randomNumber;
 }
 
-console.log(key)
+console.log(key);
 
 
 //! bunu tekrar anlatabilir misin kocacığım seniseviyor ve öpüyorum
