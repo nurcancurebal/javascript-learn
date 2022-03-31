@@ -9,6 +9,3 @@ console.log(itCompaniesOne==true ?'there is a company': 'a company is not found'
 itCompaniesTwo=itCompanies.includes('Meta')
 
 console.log(itCompaniesTwo==true ?'there is a company': 'a company is not found')
-
-
-
