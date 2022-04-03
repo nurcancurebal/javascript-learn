@@ -16,10 +16,8 @@ const newCountries = [];
 
 for (let index = 0; index < countries.length; index++) {
 
-    newCountries.push(countries[index], countries[index].slice(0, 3).toUpperCase(), countries[index].length);
+    newCountries.push([countries[index], countries[index].slice(0, 3).toUpperCase(), countries[index].length]);
 
 };
 
 console.log(newCountries);
-
-//!alt alta değilde neden yan yana yazdı
