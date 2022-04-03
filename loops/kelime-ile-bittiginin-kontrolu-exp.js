@@ -22,6 +22,4 @@ for (i = 0; i < countries.length; i++) {
     }
 }
 
-console.log(newCountries);
-
-//! eğer ia ile biten kelime yoksa 'These are countries ends without ia' yazsın
+console.log( newCountries == 0 ? 'These are countries ends without ia' : newCountries)

@@ -12,7 +12,7 @@ const countries = [
     'Kenya'
 ];
 
-const newCountries = [];
+let newCountries = [];
 
 for (i = 0; i < countries.length; i++) {
 
@@ -22,6 +22,5 @@ for (i = 0; i < countries.length; i++) {
     }
 }
 
-console.log(newCountries);
 
-//! burada eğer land yoksa 'All these countries are without land' bunu yazdır
+console.log(newCountries.length == 0 ? "All these countries are without land" : newCountries);
