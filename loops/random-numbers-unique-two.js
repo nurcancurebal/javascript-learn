@@ -9,6 +9,7 @@ while (uniqueKey.length < 5) {
 
     if (!uniqueKey.includes(randomNumber)) {
         uniqueKey = uniqueKey + randomNumber;  // stringde yan yana yazdırma, string değer olduğu için yan yana yazar
+        // her seferinde uniqueKeyin içindekini silip yeni değeri yazar
     }
 }
 
