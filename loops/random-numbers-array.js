@@ -1,4 +1,4 @@
-//5 rastgele sayı dizisi oluşturan küçük bir komut dosyası geliştirin
+// 5 rastgele sayı dizisi oluşturan küçük bir komut dosyası geliştirin
 
 const randomFiveNumberArray = [];
 
