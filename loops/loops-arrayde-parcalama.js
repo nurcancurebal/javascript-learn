@@ -9,5 +9,5 @@ const webTechs = [
   ]
 
   for (const techs of webTechs){
-      console.log(techs[0])
+      console.log(techs[0].toString())
   }
