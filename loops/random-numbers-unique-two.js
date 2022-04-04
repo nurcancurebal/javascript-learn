@@ -1,6 +1,5 @@
 // 5 rastgele sayı dizisi oluşturan küçük bir komut dosyası geliştirin ve sayılar benzersiz olmalıdır
 
-
 let uniqueKey = "";
 
 while (uniqueKey.length < 5) {
@@ -14,3 +13,6 @@ while (uniqueKey.length < 5) {
 }
 
 console.log(uniqueKey)
+
+
+//TODO bu kodu array şeklinde yazabilir miyiz
