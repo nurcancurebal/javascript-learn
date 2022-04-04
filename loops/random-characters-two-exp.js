@@ -1,3 +1,5 @@
+// Herhangi bir sayıda rastgele karakter oluşturan küçük bir komut dosyası geliştirin:
+
 const data = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "r", "s", "t", "v", "y", "z"];
 
 let key = "";
@@ -15,5 +17,3 @@ for (let index = 0; index <= 5; index++) {
 
 console.log(key);
 console.log(keyTwo);
-
-//! arada bir undefined değeri dönüyor neden?

@@ -1,3 +1,6 @@
+// Rastgele bir RGB renk numarası üreten bir komut dosyası yazın.
+
+
 const randomNumbers = [];
 
 for (let index = 0; index < 3; index++) {

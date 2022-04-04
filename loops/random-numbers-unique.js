@@ -1,3 +1,6 @@
+// 5 rastgele sayı dizisi oluşturan küçük bir komut dosyası geliştirin ve sayılar benzersiz olmalıdır
+
+
 let uniqueKey = "";
 
 while (uniqueKey.length < 5) {

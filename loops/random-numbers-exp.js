@@ -1,3 +1,6 @@
+// Rastgele bir onaltılık sayı üreten bir komut dosyası yazın.
+
+
 const randomNumbers = [];
 
 for (let index = 0; index < 5; index++) {

@@ -24,3 +24,5 @@ for (i = 0; i < countries.length; i++) {
 
 
 console.log(newCountries.length == 0 ? "All these countries are without land" : newCountries);
+
+// (2) ['Finland', 'Ireland']
