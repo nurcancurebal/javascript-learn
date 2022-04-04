@@ -5,6 +5,7 @@ while (i<=5){
 }
 // koşul doğru olduğu sürece süslü parantezin içindeki işlemi yapar
 
+
 let a=0
 do{
     console.log(a)
@@ -12,6 +13,7 @@ do{
 }while (i<=5)
 
 // koşul true olmasa bile do' nun altındaki kodu bir kere çalıştırır
+
 
 
 let names=['nurcan', 'erdinç', 'bal', 'çisem', 'turhan']
