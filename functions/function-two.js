@@ -1,3 +1,4 @@
+// parametreye gondermeden function tanımlamak
 // function geriye bir şeyler döndürür dolayısıyla parametre alır
 
 let msg = 'merhaba dünya'; // burasıçokönemli functionun içerisindeki ddeeğişken ile dışarıdaki değişken isimleri aynı 
