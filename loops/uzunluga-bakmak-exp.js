@@ -21,4 +21,4 @@ for (let index = 0; index < webTechs.length; index++) {
 console.log(webTechsTwoCharacters);
 
 
-//TODO yada nın olayını anlamadım anlatır mısın canım benim
+//TODO yada nın olayını anlamadım neden ve kullanmadık anlatır mısın canım benim
