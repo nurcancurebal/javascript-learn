@@ -1,6 +1,6 @@
 /* değişken tanımlarken yalnızca 
 let değişkeni değiştirebileceklerinde
-const değişkeni değiştirmeyeceklerinde kullan */
+const değişkeni function, object, array kullan */
 let araba= "Nurcan'ın arabası güzel siyah" 
 console.log(araba) //örnek bir değişken
 
