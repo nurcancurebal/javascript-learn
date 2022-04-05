@@ -8,18 +8,15 @@ const webTechs = [
     'MongoDB'
 ];
 
-const webTechsLenght = [];
+let bigLengthTech = [0];
 
 for (let index = 0; index < webTechs.length; index++) {
-
-    webTechsLenght.push(webTechs.length)
-
-    if ( ) {
-
-    } //! koşulu bir türlü yazamadım
+    
+    if (bigLengthTech[0] < webTechs[index].length) {
+        bigLengthTech[0] = webTechs[index].length;
+        bigLengthTech[1] = webTechs[index];
+    }
+    
 };
 
-
-console.log(webTechs[webTechsLenght])
-
-//TODO  imdatttttt
+console.log(bigLengthTech[1])

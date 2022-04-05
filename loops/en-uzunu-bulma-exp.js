@@ -14,19 +14,14 @@ const countries = [
     'Kenya'
 ];
 
-const countriesLenght = 0;
+const countriesLenght = [0];
 
 for (let index = 0; index < countries.length; index++) {
+    if (countriesLenght[0] < countries[index].length) {
 
-    let length = countries[index].length;
-
-
-    if (countriesLenght < length) {
-
-        countriesLenght = length;
-
+        countriesLenght[0] = countries[index].length;
+        countriesLenght[1] = countries[index]
     }
-}
-console.log(countries[countriesLenght]);
+};
 
-//TODO yapamadımmm :(
+console.log(countriesLenght[1]);

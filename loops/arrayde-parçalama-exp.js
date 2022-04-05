@@ -1,8 +1,13 @@
 const mernStack = ['MongoDB', 'Express', 'React', 'Node'];
 
+const newMernStack = [];
 
 for (const mern of mernStack){
-  console.log(mern[0].toString())
+
+  newMernStack.push(mern[0]);
+  
 }
 
-//TODO  yan yana nasıl yazdıracağım
+console.log(newMernStack.join(''));
+
+// join olmazsa (4) ['M', 'E', 'R', 'N'] yazdırır

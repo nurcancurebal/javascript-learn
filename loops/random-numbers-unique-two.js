@@ -12,7 +12,4 @@ while (uniqueKey.length < 5) {
     }
 }
 
-console.log(uniqueKey)
-
-
-//TODO bu kodu array şeklinde yazabilir miyiz
+console.log([uniqueKey]) // sayıları array içine aldık

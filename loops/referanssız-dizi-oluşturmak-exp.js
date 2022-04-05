@@ -1,19 +1,29 @@
-// kopyalama yapmadan yani referanssız dizi oluşturmak
-
 const countries = [
-    'Albania',
-    'Bolivia',
-    'Canada',
-    'Denmark',
-    'Ethiopia',
-    'Finland',
-    'Germany',
-    'Hungary',
-    'Ireland',
-    'Japan',
-    'Kenya'
-  ];
+  'Kenya',
+  'Albania',
+  'Bolivia',
+  'Canada',
+  'Finland',
+  'Germany',
+  'Hungary',
+  'Ireland',
+  'Japan',
+  'Denmark',
+  'Ethiopia',
 
+];
 
-  //TODO bu diziden referanssız bir tane daha dizi oluşturup sort metodu ile sıralama yap. sortedCountries in içinde bunu tutun countries dizini sort olmayacak yalnızca sortCountries sıralanmış olacak
-  
+const newCountries = [];
+
+for (let index = 0; index < countries.length; index++) {
+  newCountries.push(countries[index])
+}
+
+newCountries.sort();
+
+console.log("countries", countries);
+console.log("newCounries", newCountries)
+
+// referanslı olursa const newCountries = countries yazarsak newCountries' in içinde değişiklik yaptığımız zaman
+// countriesinde içi değişir ancak bu şekilde push edersek yeni bir değişken oluşturmuş oluruz ve bu referanssız değişken
+//  olmuş olur newCountries' in içinde değişiklik yaptığımız zaman countries değişmez
