@@ -4,14 +4,11 @@
 function topla() {  // burada toplanın içini boş bıraktık
 
     let total = 0;
-
     for (let index = 0; index < arguments.length; index++) { // burada aşağıdakinden farklı arguments kullanıyoruz
         total += arguments[index];
     }
-    return total
-
+    return total;
 };
-
 console.log(topla(2, 5, 7, 9, 10));  // farklı olarak arraye gelecek değişkenleri console.log içinde yazdık
 
 
@@ -20,17 +17,11 @@ console.log(topla(2, 5, 7, 9, 10));  // farklı olarak arraye gelecek değişken
 function sumArrayValues(array) {
 
     let total = 0;
-
     for (let i = 0; i < array.length; i++) {
-
         total += array[i];
-
     };
-
     return total;
-
 };
-
 let dizi = [2, 5, 7, 9, 10];
 
-console.log('toplam', sumArrayValues(dizi))
+console.log('toplam', sumArrayValues(dizi));
