@@ -14,4 +14,4 @@ function sumArrayValues(array) {
 
 let dizi = [2, 4, 6, 8, 10];
 
-console.log('toplam', sumArrayValues(dizi))
+console.log('toplam', sumArrayValues(dizi));
