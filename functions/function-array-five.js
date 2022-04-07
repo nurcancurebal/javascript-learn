@@ -12,6 +12,6 @@ function sumArrayValues(array) {
 
 };
 
-let dizi = [2, 4, 6, 8, 10];
+let dizi = [2, 4, 6, 8, 10]; //TODO burada sumArrayValues değişkeninin içindeki arrayleri yazdık ama bunun ona ait olduğunu nasıl gösterdik
 
-console.log('toplam', sumArrayValues(dizi));
+console.log('toplam', sumArrayValues(dizi)); // burada ekrana yazdırma olayının nasıl olduğunu hiç anlamadım
