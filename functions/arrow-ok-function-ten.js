@@ -1,0 +1,1 @@
+// fonksiyon yazmanın bir alternatifi, arrow= ok fonksiyonu denir
