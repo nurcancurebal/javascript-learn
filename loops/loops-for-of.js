@@ -2,6 +2,7 @@ const numbers= [1, 2, 3, 4, 5]
  for( const num of numbers){
      console.log('for of', num)
  }  // ekran çıktısı aşağıya doğru for of 1 for of 2 for of 3 for of 4 for of 5
+ // içindeki ürün kadar saydırma yapar
 
 
  for (let i=0; i<=4; i++){
