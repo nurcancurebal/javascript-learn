@@ -22,6 +22,6 @@ function sumArrayValues(array) {
     };
     return total;
 };
-let dizi = [2, 5, 7, 9, 10];
+let dizi = [1, 3, 8, 9, 10];
 
 console.log('toplam', sumArrayValues(dizi));
