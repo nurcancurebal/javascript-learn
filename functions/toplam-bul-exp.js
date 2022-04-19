@@ -28,3 +28,11 @@ const math = function (num5, num6) {
 };
 
 console.log(math(7, 5));
+
+
+// kendi kendini çağıran fonksiyon ile
+
+(function (num7, num8) {
+
+    console.log(num7 + num8);
+})(10, 11);

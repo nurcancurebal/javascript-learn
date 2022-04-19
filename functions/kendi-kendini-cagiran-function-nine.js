@@ -9,7 +9,7 @@
 
 let squaredNum = (function (n) {
 
-    return n * n
+    return n * n;
 
 })(10);
 console.log(squaredNum); //100 // bu şekilde değişkenede atabiliyoruz
