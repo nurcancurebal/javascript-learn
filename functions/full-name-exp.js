@@ -10,10 +10,21 @@ function printFullName(firstName, lastName) {
 console.log(printFullName('Nurcan', 'Cürebal'));
 
 
+
 // 2.yol
 
+function printFullNameFour(name, surname) {
 
-function printFullNameTwo() {
+    return `${name} ${surname}`;
+
+};
+console.log(printFullNameFour('Aynur', 'Çeliköz'));
+
+
+
+// 3.yol
+
+function printFullNameTwo() { // dışarıdan değer almadan
 
     let name = 'Erdinç';
     let surname = 'Cürebal';
@@ -25,25 +36,13 @@ function printFullNameTwo() {
 console.log(printFullNameTwo());
 
 
-// 3.yol
+// 4.yol
 
 
 
-function printFullNameThree() {
+function printFullNameThree() {  // dışarıdan değer almadan
 
     console.log('Bal' + ' ' + 'Cürebal');
 };
 
 printFullNameThree();
-
-
-// 4.yol
-
-
-
-function printFullNameFour(name, surname) {
-
-    return `${name} ${surname}`;
-
-};
-console.log(printFullNameFour('Aynur', 'Çeliköz'));
