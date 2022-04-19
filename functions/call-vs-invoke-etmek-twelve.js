@@ -2,14 +2,13 @@ function test(){
     console.log('test fonksiyonu çalıştı!')
 };
 
+test();   // call etmek ( doğrudan çağırma )
 
-// call etmek ( doğrudan çağırma )
 
-test();
 
-// invoke etmek( dolaylı yoldan çağırma )
+
 
 function invoker(func) {
     func();
 };
-invoker(test);
+invoker(test);  // invoke etmek( dolaylı yoldan çağırma )
