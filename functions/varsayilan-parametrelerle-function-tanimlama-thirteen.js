@@ -1,5 +1,5 @@
-// bazen parametrelere varsayılan değerleri eklememiz gerekiyor çünkü: fonksiyonu çağırdığımızda eğer o parametreyi göndermediysek varsayılan değerler kullanıllır.
-// atama operatörü kullanılır.
+// bazen parametrelere varsayılan değerleri eklememiz gerekiyor çünkü: fonksiyonu çağırdığımızda eğer o parametreyi göndermediysek 
+// varsayılan değerler kullanılır. atama operatörü kullanılır.
 
 
 function multiply(num1, num2 = 3) { // eğer num2 ye değer vermezsek num2 yi 23 kabul eder

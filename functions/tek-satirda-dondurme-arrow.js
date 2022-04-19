@@ -6,4 +6,4 @@ console.log(fullName('erdinç', 'cürebal'));
 
 
 const fullNameTwo = (first, last) => `${first} ${last}`;
-fullNameTwo('bal','cürebal')
+console.log(fullNameTwo('bal','cürebal'))
