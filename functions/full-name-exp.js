@@ -1,6 +1,6 @@
 // 1.yol
 
-function printFullName(firstName, lastName) {
+function printFullName(firstName, lastName) { // dışarıdan değer alır, işlemi değişkene atar
 
     let space = ' '
     let fullname = firstName + space + lastName;
@@ -13,18 +13,18 @@ console.log(printFullName('Nurcan', 'Cürebal'));
 
 // 2.yol
 
-function printFullNameFour(name, surname) {
+function printFullNameTwo(name, surname) {  // dışarıdan değer alır, işlemi returnda yapar
 
     return `${name} ${surname}`;
 
 };
-console.log(printFullNameFour('Aynur', 'Çeliköz'));
+console.log(printFullNameTwo('Aynur', 'Çeliköz'));
 
 
 
 // 3.yol
 
-function printFullNameTwo() { // dışarıdan değer almadan
+function printFullNameThree() { // dışarıdan değer almadan, işlemi değişkene atarak
 
     let name = 'Erdinç';
     let surname = 'Cürebal';
@@ -33,16 +33,16 @@ function printFullNameTwo() { // dışarıdan değer almadan
     return fullNameTwo;
 };
 
-console.log(printFullNameTwo());
+console.log(printFullNameThree());
 
 
 // 4.yol
 
 
 
-function printFullNameThree() {  // dışarıdan değer almadan
+function printFullNameFour() {  // dışarıdan değer almadan, işlemi console.logda yaptık
 
     console.log('Bal' + ' ' + 'Cürebal');
 };
 
-printFullNameThree();
+printFullNameFour();
