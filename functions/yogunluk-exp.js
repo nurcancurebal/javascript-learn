@@ -6,4 +6,4 @@ function density(mass, volume) {
 
 let result = density(10, 5);
 
-console.log(result);
+console.log('Yoğunluk= ', result);
