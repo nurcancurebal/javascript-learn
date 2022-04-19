@@ -1,6 +1,6 @@
 function circumOfCircle(r) {
 
-    let circumference = 2 * 3.14 * r;
+    let circumference = 2 * Math.PI * r;
     return circumference;
 };
 
