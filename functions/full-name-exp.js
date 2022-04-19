@@ -1,3 +1,5 @@
+// 1.yol
+
 function printFullName(firstName, lastName) {
 
     let space = ' '
@@ -8,7 +10,7 @@ function printFullName(firstName, lastName) {
 console.log(printFullName('Nurcan', 'Cürebal'));
 
 
-// ya da
+// 2.yol
 
 
 function printFullNameTwo() {
@@ -23,7 +25,7 @@ function printFullNameTwo() {
 console.log(printFullNameTwo());
 
 
-// ya da
+// 3.yol
 
 
 
@@ -33,3 +35,15 @@ function printFullNameThree() {
 };
 
 printFullNameThree();
+
+
+// 4.yol
+
+
+
+function printFullNameFour(name, surname){
+
+    return `${name} ${surname}`;
+    
+};
+console.log(printFullNameFour('Aynur','Çeliköz'));

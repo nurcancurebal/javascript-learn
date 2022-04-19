@@ -21,15 +21,15 @@ console.log(hello2('Erdinç'));
 
 function hello3(name, surname) {
 
-    return `Merhaba ${name} ${surname}`;
+    return  `Merhaba ${name} ${surname}`;
 
 };
 
-console.log(hello3('Nurcan', 'cürebal'));
+console.log(hello3('Nurcan', 'Cürebal'));
 
 
 // arrow function
 
 const hello4 = (name, surname) => `Merhaba ${name} ${surname}`;
 
-console.log(hello4('Erdinç', 'cürebalycy'));
+console.log(hello4('Aynur', 'Çeliköz'));
