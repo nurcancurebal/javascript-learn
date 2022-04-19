@@ -31,7 +31,7 @@ console.log(printFullNameTwo());
 
 function printFullNameThree() {
 
-    console.log('Bal'+' '+'Cürebal');
+    console.log('Bal' + ' ' + 'Cürebal');
 };
 
 printFullNameThree();
@@ -41,9 +41,9 @@ printFullNameThree();
 
 
 
-function printFullNameFour(name, surname){
+function printFullNameFour(name, surname) {
 
     return `${name} ${surname}`;
-    
+
 };
-console.log(printFullNameFour('Aynur','Çeliköz'));
+console.log(printFullNameFour('Aynur', 'Çeliköz'));
