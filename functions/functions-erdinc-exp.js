@@ -4,7 +4,7 @@ const c = 7;
 
 const jj = c;
 
-const cikarma = function (deger1, deger2, deger3){
+const cikarma = function (deger1, deger2, deger3){  // anonim fonksiyon
     const cikar = deger1 - deger2 - deger3;
     return cikar;
 }
@@ -20,7 +20,7 @@ function toplama(deger1, deger2, deger3){
     return topla;
 }
 
- const sehirler = ["ankara","istanbul","bursa","izmir"];
+const sehirler = ["ankara","istanbul","bursa","izmir"];
 
 sehirler.forEach(function (item, index){
     console.log(index, item)
