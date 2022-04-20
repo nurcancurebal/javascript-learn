@@ -26,5 +26,5 @@ if (0 <= sonuc && sonuc <= 18.4) {
 
 } else {
 
-    console.log('Tam sayı girmediniz')
+    console.log('Tam sayı girmediniz');
 };
