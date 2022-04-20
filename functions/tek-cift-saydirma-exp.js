@@ -1,33 +1,28 @@
-function evensAndOdds(sayi1, sayi2 = 0) {
+function evensAndOdds(sayi) {
+
+    if (sayi < 0) {
+        throw "Yanlış girdiniz."
+    }
 
     let evensTotal = 0;
     let oddsTotal = 0;
 
-    for (let index = 0; index < sayi1; index++) {
+    for (let index = 0; index < sayi; index++) {
 
-        if (sayi2 % 2 == 0) {
+        if (index % 2 == 0) {
 
-            evensTotal += sayi2;
+            evensTotal += index;
 
         } else {
 
-            oddsTotal += sayi2;
+            oddsTotal += index;
         };
-
-        sayi2 = sayi2 + 1;
     };
 
-    evensAndOdds[0]=evensTotal;
-    evensAndOdds[1]=oddsTotal;
-
-    return evensAndOdds;
+    return [evensTotal, oddsTotal];
 };
 
-evensAndOdds(100);
+const aaa = evensAndOdds(100);
 
-console.log(`The number of evens are ${evensAndOdds[1]}`);
-console.log(`The number of odds are ${evensAndOdds[0]}`);
-
-
-//TODO neden çalışmadı
-//TODO evensAndOdds fonksiyonu yalnızca pozitif tam sayıları alabilir olacak
+console.log(`The number of evens are ${aaa[0]}`);
+console.log(`The number of odds are ${aaa[1]}`);
