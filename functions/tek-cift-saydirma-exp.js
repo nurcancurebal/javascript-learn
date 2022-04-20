@@ -17,15 +17,17 @@ function evensAndOdds(sayi1, sayi2 = 0) {
         sayi2 = sayi2 + 1;
     };
 
-    return evensTotal, oddsTotal;
+    evensAndOdds[0]=evensTotal;
+    evensAndOdds[1]=oddsTotal;
 
+    return evensAndOdds;
 };
 
 evensAndOdds(100);
 
-console.log(`The number of evens are ${evensTotal}`);
-console.log(`The number of odds are ${oddsTotal}`);
+console.log(`The number of evens are ${evensAndOdds[1]}`);
+console.log(`The number of odds are ${evensAndOdds[0]}`);
 
 
 //TODO neden çalışmadı
-// TODO evensAndOdds fonksiyonu yalnızca pozitif tam sayıları alabilir yapacağız
+//TODO evensAndOdds fonksiyonu yalnızca pozitif tam sayıları alabilir olacak
