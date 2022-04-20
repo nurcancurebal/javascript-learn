@@ -28,3 +28,4 @@ console.log(`The number of odds are ${oddsTotal}`);
 
 
 //TODO neden çalışmadı
+// TODO evensAndOdds fonksiyonu yalnızca pozitif tam sayıları alabilir yapacağız
