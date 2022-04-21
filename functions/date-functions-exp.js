@@ -8,9 +8,14 @@ function showDateTime() {
     let hours = date.getHours();
     let minutes = date.getMinutes();
 
-    mounth<10 ? 
+    let dayZero = day < 10 ? `0${day}` : day;
+    let mounthZero = mounth < 10 ? `0${mounth}` : mounth;
+    let hoursZero = hours < 10 ? `0${hours}` : hours;
+    let minutesZero = minutes < 10 ? `0${minutes}` : minutes;
 
-    console.log(day + '/' + mounth + '/' + year + ' ' + hours + ':' + minutes);
+    console.log(dayZero + '/' + mounthZero + '/' + year + ' ' + hoursZero + ':' + minutesZero);
+    console.log(`${dayZero}/${mounthZero}/${year} ${hoursZero}:${minutesZero}`);
+    console.log(dayZero,'/', mounthZero,'/',year,hoursZero,':',minutesZero);
 
 };
 
