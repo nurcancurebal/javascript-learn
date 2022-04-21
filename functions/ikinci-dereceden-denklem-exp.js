@@ -21,6 +21,6 @@ function solveQuadEquation(a, b, c) {
     };
 };
 
-solveQuadEquation(1, 5, -14); // Çözüm kümesi iki reel kök var x1= 2, x2= -7
+// solveQuadEquation(1, 5, -14); // Çözüm kümesi iki reel kök var x1= 2, x2= -7
 // solveQuadEquation(9, -6, 1);  // Çözüm kümesi çakışık kök var x1=x2= 0.3333333333333333
 // solveQuadEquation(1, 1, 2);   // Boş küme, kök yok
