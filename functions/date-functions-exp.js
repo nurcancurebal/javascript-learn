@@ -13,12 +13,7 @@ function showDateTime() {
     let hoursZero = hours < 10 ? `0${hours}` : hours;
     let minutesZero = minutes < 10 ? `0${minutes}` : minutes;
 
-    console.log(dayZero + '/' + mounthZero + '/' + year + ' ' + hoursZero + ':' + minutesZero);
     console.log(`${dayZero}/${mounthZero}/${year} ${hoursZero}:${minutesZero}`);
-    console.log(dayZero,'/', mounthZero,'/',year,hoursZero,':',minutesZero);
-
 };
 
 showDateTime();
-
-// 08/01/2020 04:08
