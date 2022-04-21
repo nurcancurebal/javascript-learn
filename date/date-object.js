@@ -52,7 +52,7 @@ let days = [
 
 let humanreadabledate = `${dayNumber} ${months[mounth]} ${year}, ${days[day]} ${hour}:${minute}:${Second}`
 
-console.log(humanreadabledate)
+console.log(humanreadabledate) // 21 nisan 2022, perşembe 14:35:35
 
 
-console.log(String(hour<10 ? `0${hour}` : hour) +':'+ String(minute<10 ?`0${minute}`: minute))
+console.log(String(hour<10 ? `0${hour}` : hour) +':'+ String(minute<10 ?`0${minute}`: minute)) // 02:05 sıfır koyduk başına
