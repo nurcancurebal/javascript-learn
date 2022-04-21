@@ -22,7 +22,7 @@ function evensAndOdds(sayi) {
     return [evensTotal, oddsTotal];
 };
 
-const aaa = evensAndOdds(100);
+const sonuc = evensAndOdds(100);
 
-console.log(`The number of evens are ${aaa[0]}`);
-console.log(`The number of odds are ${aaa[1]}`);
+console.log(`The number of evens are ${sonuc[0]}`);
+console.log(`The number of odds are ${sonuc[1]}`);
