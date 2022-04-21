@@ -1,12 +1,14 @@
-function printArray() {
+function printArray(array) {
 
-   return arguments;
+   for (let index = 0; index < array.length; index++) {
+      console.log(array[index])
+   }
 
 };
 
-let array= [3,4,5];
+let array = [3,4,5];
 
-console.log(printArray(array));
+printArray(array)
 
 // Declare a function name printArray. It takes array as a parameter and it prints out each value of the array
 
