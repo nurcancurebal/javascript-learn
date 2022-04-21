@@ -1,7 +1,7 @@
-// TODO level 2 soru 5
+// TODO x'in değerini y'ye değiştir
 
-console.log(reverseSwap(1,2))
+console.log(reverseSwap(1, 2));
 
-function reverseSwap (){
-    return Array.from(arguments).reverse()
-}
+function reverseSwap() {
+    return Array.from(arguments).reverse();
+};

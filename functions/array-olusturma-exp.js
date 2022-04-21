@@ -1,15 +1,13 @@
-function printArray(array) {
+//TODO parametre olarak array alsın ve arrayin her değerini yazdırır
 
-   for (let index = 0; index < array.length; index++) {
+function printArray(arrays) {
+
+   for (let index = 0; index < arrays.length; index++) {
       console.log(array[index])
-   }
+   };
 
 };
 
-let array = [3,4,5];
+let array = [3, 4, 5, 6];
 
-printArray(array)
-
-// Declare a function name printArray. It takes array as a parameter and it prints out each value of the array
-
-//TODO ne demek anlamadım
+printArray(array);

@@ -1,4 +1,4 @@
-// TODO level 2 soru 6
+//TODO parametre olarak array alsın ve dizinin tersini döndürür (yöntem kullanmayın)
 
 
 const array = [1, 2, 3];
@@ -15,7 +15,7 @@ function reverseArray(funcArray) {
 
         items.push(funcArray[index]);
 
-    }
+    };
 
     return items;
 
