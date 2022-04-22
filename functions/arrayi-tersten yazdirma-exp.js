@@ -1,10 +1,8 @@
 // parametre olarak array alsın ve arrayin tersini döndürür (yöntem kullanmayın)
 
 
-const array = [1, 2, 3];
-
-
-console.log(reverseArray(array));
+console.log(reverseArray([1, 2, 3]));
+console.log(reverseArray(['A', 'B', 'C']))
 
 
 function reverseArray(funcArray) {
