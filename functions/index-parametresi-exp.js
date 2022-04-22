@@ -1,0 +1,1 @@
+// TODO function name removeItem indeks parametresi alır ve  bir öğeyi çıkardıktan sonra bir dizi döndürür
