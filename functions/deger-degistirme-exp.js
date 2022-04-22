@@ -1,4 +1,4 @@
-// TODO x'in değerini y'ye değiştir
+// x'in değerini y'ye değiştir
 
 console.log(reverseSwap(1, 2));
 

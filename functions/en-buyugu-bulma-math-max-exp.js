@@ -8,4 +8,4 @@ function findMaxMin(num1, num2, num3) {
 console.log(`Maximum değer: ${findMaxMin(0, 10, 5)[0]} Minimum değer:${findMaxMin(0, -567, -2)[1]}`);
 
 
-//TODO birinci çıktı maximumu, ikinci çıktı minimumu verecek ve çıktı array olmayacak
+// birinci çıktı maximumu, ikinci çıktı minimumu verecek ve çıktı array olmayacak

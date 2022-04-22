@@ -1,4 +1,4 @@
-//TODO parametre olarak array alsın ve arrayin her değerini yazdırır
+// parametre olarak array alsın ve arrayin her değerini yazdırır
 
 function printArray(arrays) {
 
