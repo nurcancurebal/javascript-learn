@@ -1,12 +1,7 @@
-console.log(sumOfNumbers(3, 5, 7, 9, 10));
+console.log(sumOfNumbers(3,7,9,10));
 
-function sumOfNumbers() {
-
-    let toplam = 0;
-
-    for (let index = 0; index < arguments.length; index++) {
-
-        toplam += arguments[index];
-    };
-    return toplam;
+function sumOfNumbers(num1,num2,num3,num4) {
+  
+    let num = num1+num2+num3+num4;
+    return num;
 };

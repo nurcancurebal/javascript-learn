@@ -1,1 +1,1 @@
-//TODO level 2 soru 8  function adı addItem. bir item parametresi alır ve itemi ekledikten sonra bir dizi döndürür
+//TODO level 2 soru 8  function adı addItem. bir item parametresi alır ve itemi ekledikten sonra bir array döndürür
