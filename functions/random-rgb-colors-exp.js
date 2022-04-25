@@ -1,5 +1,3 @@
-
-
 function rgbColorGenerator() {
 
     const rgbColors = [];
@@ -11,4 +9,4 @@ function rgbColorGenerator() {
     console.log(`rgb(${rgbColors[0]},${rgbColors[1]},${rgbColors[2]})`);
 };
 
-rgbColorGenerator()
+rgbColorGenerator();
