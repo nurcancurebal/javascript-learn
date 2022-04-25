@@ -5,8 +5,8 @@ let string = "";
 
 
 for (let index = 0; index < 5; index++) {
-    string = string + (userIdGenerator() + "\n")
-}
+    string = string + (userIdGenerator() + "\n");
+};
 
 
 console.log(string);
