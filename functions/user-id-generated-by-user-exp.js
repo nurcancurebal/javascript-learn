@@ -1,8 +1,15 @@
-//TODO level 3 soru 1 anlamadım
-
 const data = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "a", "B", "c", "D", "e", "F", "g", "H", "i", "J", "k", "L", "m", "N", "o", "P", "q", "R", "s", "T", "u", "V", "w", "X", "y", "Z",];
 
-console.log(userIdGenerator());
+
+let string = "";
+
+
+for (let index = 0; index < 5; index++) {
+    string = string + (userIdGenerator() + "\n")
+}
+
+
+console.log(string);
 
 function userIdGenerator() {
 

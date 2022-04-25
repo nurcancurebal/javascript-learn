@@ -1,25 +1,18 @@
+console.log(arrayOfHexaColors(5));
+
 function arrayOfHexaColors(sayi) {
+
+    const array = [];
 
     for (let index = 0; index < sayi; index++) {
 
-        const newArray = [];
-        const randomNumbers = [];
+        const numberGenerator = Math.floor((Math.random() * 10000) + 100);
 
-        for (let index = 0; index < 5; index++) {
+        const convertHexa = Number(numberGenerator).toString(16);
 
-            const numberGenerator = Math.floor((Math.random() * 100) + 1);
-            randomNumbers.push(numberGenerator);
-        };
-
-        let unite = randomNumbers.join('');
-        let convertHexa = Number(unite).toString(16);
-        newArray.push(convertHexa);
-
-        return newArray;
+        array.push(convertHexa);
 
     };
+
+    return array;
 };
-
-console.log(arrayOfHexaColors(5));
-
-//TODO dışarıdan girdiğim sayı kadar arrayin içinde farklı hexa number olacak çıktı array şeklinde
