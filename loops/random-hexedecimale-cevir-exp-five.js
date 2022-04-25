@@ -8,6 +8,8 @@ for (let index = 0; index < 5; index++) {
     randomNumbers.push(Math.floor((Math.random() * 100) + 1));
 };
 
+console.log(randomNumbers);    // (5) [31, 35, 60, 51, 18]
+
 const sayilariBirlestirVeStringYap = randomNumbers.join("");
 
 const stringiTekrarNumberYap = parseInt(sayilariBirlestirVeStringYap); // sayı olarak birleştirmiş olduk
