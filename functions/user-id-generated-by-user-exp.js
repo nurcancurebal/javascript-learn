@@ -6,19 +6,22 @@ const data = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "a", "B", "c", "
 
 let string = "";
 
+const id = 5;
+const character = 7;
 
-for (let index = 0; index < 5; index++) {
-    string = string + (userIdGenerator() + "\n");
+for (let index = 0; index < id; index++) {
+
+    string = string + (userIdGeneratedByUser() + "\n");
 };
 
 
 console.log(string);
 
-function userIdGenerator() {
+function userIdGeneratedByUser() {
 
     const key = [];
 
-    for (let index = 0; index < 7; index++) {
+    for (let index = 0; index < character; index++) {
 
         const randomChar = data[Math.floor((Math.random() * data.length) + 1)];
         key.push(randomChar);
@@ -28,4 +31,4 @@ function userIdGenerator() {
 
     return randomKey;
 };
-TODO
+//TODO
