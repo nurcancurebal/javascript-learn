@@ -1,4 +1,3 @@
-
 const macAddress = macAddressGenerator(":");
 
 console.log(macAddress);
