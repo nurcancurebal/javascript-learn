@@ -1,6 +1,8 @@
-console.log('rgb', arrayOfRgbColors());   // rgb (3) [116, 167, 101]
-console.log(`rgb ${arrayOfRgbColors()}`);   // rgb 233,17,16
-console.log('rgb' + arrayOfRgbColors());    // rgb230,18,121
+const arrayRgb = [`rgb(${arrayOfRgbColors()})`];
+
+console.log(arrayRgb);
+
+console.log(typeof arrayRgb) // object
 
 function arrayOfRgbColors() {
 
