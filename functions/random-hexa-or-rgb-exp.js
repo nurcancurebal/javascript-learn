@@ -1,49 +1,63 @@
-// generateColors('hexa', 5);
-// generateColors('hexa', 1);
-generateColors('rgb', 2);
-// generateColors('rgb', 1);
+// TODO OOOOOOOOOOOOOOO
+const resultOne = generateColor("rgb", 2);
+const resultTwo = generateColor("hex", 1);
+const resultThree = generateColor("rgb", 1);
+const resultFour = generateColor("hex", 4);
+const resultFive = generateColor("adasda",6555645,"asdasdas");
 
-function generateColors(hexaRgb, number) {
+console.log(resultOne);
+console.log(resultTwo);
+console.log(resultThree);
+console.log(resultFour);
+console.log(resultFive);
 
-    if (hexaRgb == 'hexa') {
+function generateColor(type, loop = 0) {
 
-        const array = [];
-        const arrayDiyez = [];
-        const endArray = [];
+    const items = [];
 
-        for (let index = 0; index < 5; index++) {
-
-            const numberGenerator = Math.floor((Math.random() * 100) + 1);
-            array.push(numberGenerator);
-        };
-
-        const unit = array.join('');
-        const convertHexa = Number(unit).toString(16);
-        let diyez = '#' + convertHexa;
-        arrayDiyez.push(diyez);
-
-        for (let index = 0; index < number; index++) {
-
-            endArray.push(arrayDiyez);
-        };
-
-        console.log(endArray);
-
-    } else if (hexaRgb == 'rgb') {
-
-        const rgbColors = [];
-
-        for (let index = 0; index < 3; index++) {
-
-            rgbColors.push(Math.floor((Math.random() * 255) + 1));
-        };
-
-        for (let index = 0; index < number; index++) {
-
-            console.log([`rgb(${rgbColors})`]);
-        };
-    };
-};
+    for (let index = 0; index < loop; index++) {
 
 
-// TODO level 3 soru 7
+        if (type === "hex") {
+
+            const array = [];
+
+            for (let index = 0; index < 3; index++) {
+
+                const numberGenerator = Math.floor((Math.random() * 230) + 17);
+                const convertHexa = Number(numberGenerator).toString(16);
+                array.push(convertHexa);
+
+            };
+
+            let string = array.join('');
+            string = "#" + string;
+
+            items.push(string);
+
+        } else if (type === "rgb") {
+
+
+            const array = [];
+
+            for (let index = 0; index < 3; index++) {
+
+                array.push(Math.floor((Math.random() * 255) + 1));
+            };
+
+            items.push(`rgb(${array})`)
+
+        } else {
+            return "Yanlış Parametre!"
+        }
+
+    }
+
+    if (items.length === 0) {
+        return "Yanlış Parametre!"
+    } else if (items.length === 1) {
+        return items[0];
+    } else {
+        return items;
+    }
+}
