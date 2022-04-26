@@ -4,7 +4,7 @@ function randomHexaNumberGenerator() {
 
     for (let index = 0; index < 5; index++) {
 
-        const numberGenerator = Math.floor((Math.random() * 100) + 1);
+        const numberGenerator = Math.floor((Math.random() * 1000) + 1);
         randomNumbers.push(numberGenerator);
     };
 
