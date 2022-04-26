@@ -9,7 +9,7 @@ function topla() {  // burada toplanın içini boş bıraktık
     }
     return total;
 };
-console.log(topla(2, 5, 7, 9, 10));  // farklı olarak arraye gelecek değişkenleri console.log içinde yazdık
+console.log(topla(2, 5, 7, 9, 10));  // farklı olarak arraye gelecek değişkenleri console.log içinde yazdık // 33
 
 
 
@@ -24,4 +24,4 @@ function sumArrayValues(array) {
 };
 let dizi = [1, 3, 8, 9, 10];
 
-console.log('toplam', sumArrayValues(dizi));
+console.log('toplam', sumArrayValues(dizi)); // toplam 31
