@@ -6,7 +6,7 @@ function arrayOfHexaColors(sayi) {
 
     for (let index = 0; index < sayi; index++) {
 
-        const numberGenerator = Math.floor((Math.random() * 10000) + 100);
+        const numberGenerator = Math.floor((Math.random() * 1000) + 1);
 
         const convertHexa = Number(numberGenerator).toString(16);
 

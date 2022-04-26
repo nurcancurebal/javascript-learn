@@ -1,37 +1,31 @@
-// array hexa
+// generateColors('hexa', 3);
+ // generateColors('hexa', 1);
+ generateColors('rgb', 3);
+// generateColors('rgb', 1);
 
-console.log(arrayOfHexaColors(5));
+function generateColors(hexaRgb, number) {
 
-function arrayOfHexaColors(sayi) {
 
-    const array = [];
+    if (hexaRgb == 'hexa') {
 
-    for (let index = 0; index < sayi; index++) {
+        const array = [];
 
-        const numberGenerator = Math.floor((Math.random() * 10000) + 100);
+        for (let index = 0; index < number; index++) {
 
-        const convertHexa = Number(numberGenerator).toString(16);
-        let diyez = '#'+convertHexa;
+            const numberGenerator = Math.floor((Math.random() * 10000) + 1);
+            const convertHexa = Number(numberGenerator).toString(16);
+            let diyez = '#' + convertHexa;
+            array.push(diyez);
+        };
+        console.log(array);
+    } else {
 
-        array.push(diyez);
+        const rgbColors = [];
 
+        for (let index = 0; index < number; index++) {
+
+            rgbColors.push(Math.floor((Math.random() * 255) + 1));
+        };
+        console.log([`rgb(${arrayOfRgbColors()})`]);
     };
-
-    return array;
-};
-
-// array rgb
-
-console.log([`rgb(${arrayOfRgbColors()})`]);
-
-function arrayOfRgbColors() {
-
-    const rgbColors = [];
-
-    for (let index = 0; index < 3; index++) {
-
-        rgbColors.push(Math.floor((Math.random() * 255) + 1));
-    };
-
-    return rgbColors;
 };
