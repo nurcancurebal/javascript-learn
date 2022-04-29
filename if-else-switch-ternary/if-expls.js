@@ -15,9 +15,13 @@ const days = [
 const dizininKonumu = days.findIndex(item => item == girdi);
 
 if (dizininKonumu <= 4) {
-    console.log("İş Günü.")
+
+    console.log("İş Günü.");
+
 } else if (dizininKonumu >= 4) {
-    console.log("Tatil Günü.")
+
+    console.log("Tatil Günü.");
+
 } else {
-    console.log("Gün bulunamadı.")
-}
+    console.log("Gün bulunamadı.");
+};

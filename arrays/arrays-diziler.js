@@ -1,17 +1,18 @@
-let names = Array() // çıktı= (0) []
+let names = Array(); // çıktı= (0) []
 
-console.log(names)
+console.log(names);
 // veya bir dizi aşağıdaki şekildede oluşturulur
 
-let namesTwo = []
-console.log(namesTwo) // çıktı= (0) []
+let namesTwo = [];
+
+console.log(namesTwo) // çıktı= (0) [];
 
 
 let namesThree = [
     'nurcan', 27, 'erdinç', 26, 'yazılımcı'
-]
+];
 
-console.log(namesThree.length)
+console.log(namesThree.length);
 
 
 // arrayin içerisinde obje tutabiliriz, objenin içindede array tutabiliriz
@@ -22,33 +23,33 @@ const arr = [
     true,
     { country: 'Finland', city: 'Helsinki' },     // obje satırı
     { skills: ['HTML', 'CSS', 'JS', 'React', 'Python'] } // objenin içerisinde array
-] // arr containing different data types
+]; // arr containing different data types
 
-console.log(arr)
+console.log(arr);
 //çıktı= (5) ['Nurcan', 250, true, {…}, {…}]
 
 
 
 // split array' a dönüştürür
 
-let js = 'JavaScript'
-const charsInJavaScript = js.split('') // harf harf parçaladık
+let js = 'JavaScript';
 
-console.log(charsInJavaScript) // ["J", "a", "v", "a", "S", "c", "r", "i", "p", "t"]
+const charsInJavaScript = js.split(''); // harf harf parçaladık
+
+console.log(charsInJavaScript); // ["J", "a", "v", "a", "S", "c", "r", "i", "p", "t"]
 
 
-let java = 'Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon'
-const charsInJava = java.split(',') // virgülle parçaladık
+let java = 'Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon';
 
-console.log(charsInJava)
+const charsInJava = java.split(','); // virgülle parçaladık
+
+console.log(charsInJava);
 //(7) ['Facebook', ' Google', ' Microsoft', ' Apple', ' IBM', ' Oracle', ' Amazon']
 
 
+let companies = 'I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.';
 
-let companies = 'I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.'
-const companiesString = companies.split(' ') // boşluklardan parçaladık
+const companiesString = companies.split(' '); // boşluklardan parçaladık
 
-console.log(companiesString)
+console.log(companiesString);
 // (13) ['I', 'love', 'teaching', 'and', 'empowering', 'people.', 'I', 'teach', 'HTML,', 'CSS,', 'JS,', 'React,', 'Python.']
-
-

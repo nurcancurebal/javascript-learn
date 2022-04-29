@@ -5,8 +5,10 @@
 \' = console.log('Nurcan\'ın kocası') ekran çıktısı Nurcan'ın kocası şeklinde olur
 \" = aynı şekilde tırnak içinde yazdığın cümlede " geçiyorsa bunu \" şeklinde yazarsın */
 
-let yasım = 26
-let adım = "Nurcan Cürebal"
-let bilgilerim = "Adım: " +  adım + "  \nYaşım: " + yasım;
+let yasım = 26;
 
-console.log(bilgilerim)
+let adım = "Nurcan Cürebal";
+
+let bilgilerim = "Adım: " + adım + "  \nYaşım: " + yasım;
+
+console.log(bilgilerim);

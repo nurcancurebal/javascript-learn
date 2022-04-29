@@ -1,14 +1,13 @@
 const webTechs = [
-    'HTML',
-    'CSS',
-    'JavaScript',
-    'React',
-    'Redux',
-    'Node',
-    'MongoDB'
-  ]
+  'HTML',
+  'CSS',
+  'JavaScript',
+  'React',
+  'Redux',
+  'Node',
+  'MongoDB'
+];
 
-  
+let control = webTechs.includes('Sass');
 
-  let control= webTechs.includes('Sass')
-  console.log(control ?' Sass is a CSS preprocess' : webTechs.push('Sass') && webTechs)
+console.log(control ? ' Sass is a CSS preprocess' : webTechs.push('Sass') && webTechs);

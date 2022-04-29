@@ -1,13 +1,13 @@
-const date = new Date()
-let year= date.getFullYear()
-let mounth= date.getMonth()
-let dayNumber= date.getDate()
-let hour= date.getHours()
-let minute= date.getMinutes()
-let second= date.getSeconds()
-let day= date.getDay()
+const date = new Date();
+let year = date.getFullYear();
+let mounth = date.getMonth();
+let dayNumber = date.getDate();
+let hour = date.getHours();
+let minute = date.getMinutes();
+let second = date.getSeconds();
+let day = date.getDay();
 
- let months = [
+let months = [
     'ocak',
     'şubat',
     'mart',
@@ -19,20 +19,22 @@ let day= date.getDay()
     'eylül',
     'ekim',
     'kasım',
-    'aralık']
+    'aralık'];
 
 
-    let days = [
-        'pazar',
-        'pazartesi',
-        'salı',
-        'çarşamba',
-        'perşembe',
-        'cuma',
-        'cumartesi']
+let days = [
+    'pazar',
+    'pazartesi',
+    'salı',
+    'çarşamba',
+    'perşembe',
+    'cuma',
+    'cumartesi'];
 
-let dateTime= ` ${dayNumber} ${months[mounth]} ${year} ${days[day]} ${hour}:${minute}:${second} `
-console.log(dateTime)
+let dateTime = ` ${dayNumber} ${months[mounth]} ${year} ${days[day]} ${hour}:${minute}:${second} `;
 
-let dateTimeTwo = `${year} - ${months[mounth]} - ${dayNumber}  ${hour}:${minute}`
-console.log(dateTimeTwo)
+console.log(dateTime);
+
+let dateTimeTwo = `${year} - ${months[mounth]} - ${dayNumber}  ${hour}:${minute}`;
+
+console.log(dateTimeTwo);
