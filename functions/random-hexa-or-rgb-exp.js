@@ -1,8 +1,7 @@
-// TODO
-const resultOne = generateColor("rgb", 2);
+const resultOne = generateColor("hex", 4);
 const resultTwo = generateColor("hex", 1);
-const resultThree = generateColor("rgb", 1);
-const resultFour = generateColor("hex", 4);
+const resultThree = generateColor("rgb", 2);
+const resultFour = generateColor("rgb", 1);
 const resultFive = generateColor("adasda", 6555645, "asdasdas");
 
 console.log(resultOne);
@@ -23,15 +22,15 @@ function generateColor(type, loop = 0) {
 
             for (let index = 0; index < 3; index++) {
 
-                const numberGenerator = Math.floor((Math.random() * 230) + 17);
-                const convertHexa = Number(numberGenerator).toString(16);
-                array.push(convertHexa);
-            };
+                const numberGenerator = Math.floor((Math.random() * 239) + 17); //239+17= 256 ama floor ifadesi sayıyı aşağıya yuvarladığı için 255 e kadar sayı bulur
+                const convertHexa = Number(numberGenerator).toString(16); //hexaya çevirdi
+                array.push(convertHexa);    // 3 kere dönecek, her dönüşte 2 tane hex sayısını arrayin içine atıyor
+            }; 
 
             let string = array.join('');
             string = "#" + string;
 
-            items.push(string);
+            items.push(string); // stringe dönen hex sayısını loopda girilen sayı kadar item arrayinin içine attı
 
         } else if (type === "rgb") {
 
