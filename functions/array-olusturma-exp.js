@@ -3,9 +3,9 @@
 function printArray(arrays) {
 
    for (let index = 0; index < arrays.length; index++) {
-      console.log(array[index])
+      
+      console.log(arrays[index])
    };
-
 };
 
 let array = [3, 4, 5, 6];
