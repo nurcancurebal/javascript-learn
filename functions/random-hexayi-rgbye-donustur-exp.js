@@ -1,19 +1,22 @@
-console.log(convertHexaToRgb());
+const hexColor = "#eb4034";
+const rgbColorConvert = convertHexToRgb(hexColor);
 
-function convertHexaToRgb() {
+console.log(rgbColorConvert);
 
-    const randomNumbers = [];
+function convertHexToRgb(outValue) {
 
-    for (let index = 0; index < 5; index++) {
+    let value = String(outValue);
 
-        const numberGenerator = Math.floor((Math.random() * 100) + 1);
-        randomNumbers.push(numberGenerator);
-    };
+    value = value.slice(1);
 
-    let unite = randomNumbers.join('');     // sayıları birleştirip string yaptık
-    let convertHexa = Number(unite).toString(16);   // stringi numbera çevirip, hexa ya çevirdik
+    let arrayValue = [];
 
-    return convertHexa;
+    for (let index = 0; index < 6; index += 2) {
+        const hex = value.slice(index , index + 2);
+        arrayValue.push(parseInt(hex, 16))
+    }
+
+    return `rgb(${arrayValue[0]},${arrayValue[1]},${arrayValue[2]})`
 };
 
-// TODO Hexa rengini rgb'ye dönüştüren ve bir rgb rengi döndüren convertHexaToRgb işlevini yazın
+// TODO Hex rengini rgb'ye dönüştüren ve bir rgb rengi döndüren convertHexaToRgb işlevini yazın
