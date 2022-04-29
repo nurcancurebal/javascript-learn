@@ -1,6 +1,6 @@
-//Modifying array element(Dizi öğesini değiştirme)
+// Modifying array element(Dizi öğesini değiştirme)
 
-const countries= [
+const countries = [
   'Albania',
   'Bolivia',
   'Canada',
@@ -12,13 +12,14 @@ const countries= [
   'Ireland',
   'Japan',
   'Kenya'
-]
+];
 
-countries[0]='Afghanistan' 
+countries[0] = 'Afghanistan';
 //(11) ['Afghanistan', 'Bolivia', 'Canada', 'Denmark', 'Ethiopia', 'Finland', 'Germany', 'Hungary', 'Ireland', 'Japan', 'Kenya']
 
-let lastIndex= countries.length-1
-countries[lastIndex]='Korea'
+let lastIndex = countries.length - 1;
+
+countries[lastIndex] = 'Korea';
 //(11) ['Afghanistan', 'Bolivia', 'Canada', 'Denmark', 'Ethiopia', 'Finland', 'Germany', 'Hungary', 'Ireland', 'Japan', 'Korea']
 
-console.log(countries)
+console.log(countries);
