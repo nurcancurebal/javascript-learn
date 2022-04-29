@@ -4,6 +4,7 @@ factorial(-1);
 factorial(10);
 factorial(3);
 factorial(-3);
+factorial(1);
 
 function factorial(value) {
 
