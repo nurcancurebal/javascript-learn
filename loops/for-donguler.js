@@ -19,7 +19,7 @@ for (i = 0; i <= 5; i++) {
 };
 
 
-let name = ['nurcan', 'erdinç', 'bal', 'cürebal', 'avustralya', 'kanada'];  // bu örnği incele istediğimiz kadar isim ekleyebiliyoruz
+let name = ['nurcan', 'erdinç', 'bal', 'cürebal', 'avustralya', 'kanada'];  // bu örneği incele istediğimiz kadar isim ekleyebiliyoruz
 
 for (i = 0; i < name.length; i++) {
 

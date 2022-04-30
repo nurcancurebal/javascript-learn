@@ -1,3 +1,3 @@
 // hangi veri tipinde yazıldığını gösterir
 
-console.log(typeof 'nurcan');
+console.log(typeof 'nurcan'); //string
