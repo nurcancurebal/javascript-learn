@@ -1,6 +1,7 @@
 const ages = [19, 22, 31, 24, 20, 43, 26, 23, 32];
 
 ages.sort();
+
 console.log(ages);
 
 const ortancaKontrol = ages.length % 2 == 0;

@@ -48,6 +48,8 @@ console.log(itCompanies[0].toUpperCase(), itCompanies[1].toUpperCase(), itCompan
 //FACEBOOK GOOGLE MICROSOFT APPLE IBM ORACLE AMAZON
 
 
+// pop() yöntemi, bir diziden son öğeyi kaldırır ve o öğeyi döndürür. Bu yöntem dizinin uzunluğunu değiştirir.
+
 let newitCompanies = itCompanies.pop();
 
 console.log(itCompanies.join(', '), 'and', newitCompanies, ' are big IT companies.');

@@ -11,4 +11,3 @@ console.log(secondFruit); // orange
 let LastIndex = fruits.length - 1; // 3
 
 console.log(fruits[LastIndex]); // lemon  * indexteki son değere ulaşma
-
