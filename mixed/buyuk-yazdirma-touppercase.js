@@ -1,4 +1,3 @@
-
 // karakterlerin hepsini büyük yazdırma toUpperCase()
 
 let string = 'javaScript';

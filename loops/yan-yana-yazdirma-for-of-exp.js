@@ -5,8 +5,7 @@ const webTechs = [
     'React',
     'Redux',
     'Node',
-    'MongoDB'
-];
+    'MongoDB'];
 
 console.log(webTechs);
 
@@ -15,7 +14,7 @@ const newWebtechs = [];
 for (const item of webTechs) {
 
     newWebtechs.push(item);
-}
+};
 
 console.log(newWebtechs);
 

@@ -2,11 +2,10 @@ const mernStack = ['MongoDB', 'Express', 'React', 'Node'];
 
 const newMernStack = [];
 
-for (const mern of mernStack){
+for (const mern of mernStack) {
 
   newMernStack.push(mern[0]);
-  
-}
+};
 
 console.log(newMernStack.join(''));
 

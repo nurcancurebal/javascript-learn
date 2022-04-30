@@ -6,8 +6,9 @@ const webTechs = [
     'Redux',
     'Node',
     'MongoDB'
-  ]
+];
 
-  for (const techs of webTechs){
-      console.log(techs[0].toString())
-  }
+for (const techs of webTechs) {
+
+    console.log(techs[0].toString());
+};

@@ -1,5 +1,6 @@
-let pattern= '#'
+let pattern = '#';
 
-for (let i=0; i<=6; i++){
-    console.log(pattern.repeat(i))
-}
+for (let i = 0; i <= 6; i++) {
+
+    console.log(pattern.repeat(i));
+};

@@ -1,3 +1,3 @@
-const randomNumber = Math.floor((Math.random() * 100) + 1); 
+const randomNumber = Math.floor((Math.random() * 100) + 1);
 
-console.log(randomNumber)
+console.log(randomNumber);

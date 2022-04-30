@@ -5,11 +5,10 @@ const webTechs = [
     'React',
     'Redux',
     'Node',
-    'MongoDB'
-];
+    'MongoDB'];
 
 const mernStack = ['MongoDB', 'Express', 'React', 'Node'];
 
-console.log(webTechs.sort())
+console.log(webTechs.sort());
 
-console.log(mernStack.sort())
+console.log(mernStack.sort());
