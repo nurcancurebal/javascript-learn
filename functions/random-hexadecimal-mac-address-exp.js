@@ -25,7 +25,7 @@ function macAddressGenerator(splitOperator) {
 function hexNumberGenerator() {
 
     // 17 ile 255 arası sayı üretir. çünkü hexa da rakamlar 16 ya kadardır (0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F); 255=ff, 256=ff1 yani  256 3 karakter üretir
-    const numberGenerator = Math.floor((Math.random() * 239) + 17);
+    const numberGenerator = Math.floor((Math.random() * 238) + 17);
 
     // Hexedecimala cevirir.
     const convertHexa = Number(numberGenerator).toString(16);
