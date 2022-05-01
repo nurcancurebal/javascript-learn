@@ -8,28 +8,28 @@ const WRITE_CHAR_SPECIAL = ["_", "$"];
 
 const varible = "aasd123as";
 
-
 const varibleStatus = isValidVariable(varible);
 
-console.log(varibleStatus)
+console.log(varibleStatus);
 
 function isValidVariable(value) {
 
-
     const typeOne = [...WRITE_CHAR_LETTER, ...WRITE_CHAR_SPECIAL]; // ... üç nokta dizini dışarıya cıkartmaya yarar.
-    
+
     if (!typeOne.includes(value[0])) {
-        return "Geçersiz değişkendir."
-    }
+
+        return "Geçersiz değişkendir.";
+    };
 
     const typeTwo = [...WRITE_CHAR_LETTER, ...WRITE_CHAR_SPECIAL, ...WRITE_CHAR_NUMBER];
+
     for (let index = 0; index < value.length; index++) {
 
         if (!typeTwo.includes(value[index])) {
-            return "Geçersiz değişkendir."
-        }
 
-    }
-
+            return "Geçersiz değişkendir.";
+        };
+    };
     return "Geçerli değişkendir.";
 };
+//TODO
