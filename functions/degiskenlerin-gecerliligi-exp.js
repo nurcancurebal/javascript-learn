@@ -6,7 +6,7 @@ const WRITE_CHAR_NUMBER = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 const WRITE_CHAR_SPECIAL = ["_", "$"];
 
 
-const varible = "aasd123as";
+const varible = "1aasd123as";
 
 const varibleStatus = isValidVariable(varible);
 
@@ -14,14 +14,14 @@ console.log(varibleStatus);
 
 function isValidVariable(value) {
 
-    const typeOne = [...WRITE_CHAR_LETTER, ...WRITE_CHAR_SPECIAL]; // ... üç nokta dizini dışarıya cıkartmaya yarar.
+    const typeOne = [...WRITE_CHAR_LETTER, ...WRITE_CHAR_SPECIAL]; //...(üç nokta) dizini dışarıya cıkartmaya yarar.İkisini arrayde birleştirdi
 
-    if (!typeOne.includes(value[0])) {
+    if (!typeOne.includes(value[0])) { // burada 0' ıncı indexte letter ve special dışında bir şey varsa geçersiz değişken yazacak, değişkenler sayı ile başlamaz.
 
         return "Geçersiz değişkendir.";
     };
 
-    const typeTwo = [...WRITE_CHAR_LETTER, ...WRITE_CHAR_SPECIAL, ...WRITE_CHAR_NUMBER];
+    const typeTwo = [...WRITE_CHAR_LETTER, ...WRITE_CHAR_SPECIAL, ...WRITE_CHAR_NUMBER]; // üçünü tek arrayde birleştirdik.
 
     for (let index = 0; index < value.length; index++) {
 
@@ -32,4 +32,3 @@ function isValidVariable(value) {
     };
     return "Geçerli değişkendir.";
 };
-//TODO
