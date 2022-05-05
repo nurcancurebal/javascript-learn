@@ -7,3 +7,4 @@
 
 name = 'nurcan';
 console.log(name);
+
