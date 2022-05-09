@@ -22,7 +22,7 @@ const person = {
 
 person.nationality = 'Ethiopian';
 person.country = 'Finland'; // countryi değiştirdik yeni değeri
-person.title = 'teacher'; // person objesine eklendi
+person.title = 'developer'; // person objesine eklendi
 person.skills.push('Meteor'); // skills array olduğu için sondan ekledik push ile
 person.skills.push('SasS')
 person.isMarried = true; // person objesine eklendi
@@ -48,6 +48,6 @@ person.getPersonInfo = function () {
 console.log(person); // {firstName: 'Nurcan', lastName: 'Cürebal', age: 27, country: 'Finland', city: 'Ottava', …}
 
 console.log(person.getPersonInfo());
-// Nurcan Cürebal is a teacher.
+// Nurcan Cürebal is a developer.
 // He lives in Finland.
 // He teaches HTML, CSS, JavaScript, React, Node, MongoDB, Python, D3.js, Meteor, and sasS.
