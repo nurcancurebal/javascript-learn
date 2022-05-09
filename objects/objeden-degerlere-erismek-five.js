@@ -4,6 +4,9 @@
 
 //! NOT: objelerde boşlukla değişken tanımlanabilir ama tırnak içine alınmalı örn: {'phone number':+325456715526}
 
+
+//!arrow functionları object methodu olarak kullanamayız. çünkü arrow functionda this windowu referans alır. Objenin kendisini referans almak yerine
+
 const person = {
     firstName: 'Nurcan',
     lastName: 'Cürebal',
