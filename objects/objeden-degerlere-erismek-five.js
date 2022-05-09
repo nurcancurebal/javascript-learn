@@ -5,8 +5,8 @@
 //! NOT: objelerde boşlukla değişken tanımlanabilir ama tırnak içine alınmalı örn: {'phone number':+325456715526}
 
 const person = {
-    firstName: 'Asabeneh',
-    lastName: 'Yetayeh',
+    firstName: 'Nurcan',
+    lastName: 'Cürebal',
     age: 250,
     country: 'Finland',
     city: 'Helsinki',
@@ -30,4 +30,8 @@ const person = {
 console.log(person.firstName);
 console.log(person.lastName);
 console.log(person.age);
-console.log(person.location);
+console.log(person.location);   // undefined
+console.log(person.skills); // (8) ['HTML', 'CSS', 'JavaScript', 'React', 'Node', 'MongoDB', 'Python', 'D3.js']
+console.log(person.skills[1]);  // CSS
+
+console.log(person['phone number']);    //+3584545454545 //! boşluklu olduğu için bu şekilde eriştik birde dinamik olarak kullanmak için köşeli parantez kullanılır
