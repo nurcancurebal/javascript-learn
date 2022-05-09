@@ -26,6 +26,6 @@ const person = {
 console.log(person['phone number']);    // boşluklu değişken çağırmak için
 
 
-let keyName= 'skills';
+let keyName = 'skills';
 
 console.log(person[keyName]);   // dinamik olarak kullanmak için
