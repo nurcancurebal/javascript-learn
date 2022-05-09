@@ -7,5 +7,3 @@
 
 name = 'nurcan';
 console.log(name);
-
-window.name
