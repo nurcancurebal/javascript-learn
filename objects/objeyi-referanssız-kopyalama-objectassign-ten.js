@@ -19,11 +19,12 @@ console.log(person); // {firstName: 'Erdinç', age: 250, country: 'Finland', get
 
 //! referanslı kopyalarsak orijinal metinde her değişimden etkilenir.
 
-// referanssız kopyalama
+
+// referanssız kopyalama(object.assign)
 
 const copyPerson = Object.assign({}, person);
 
 copyPerson.firstName ='Bal';
 
-console.log(person);
-console.log(copyPerson);
+console.log(person); // {firstName: 'Erdinç', age: 250, country: 'Finland', getPersonInfo: ƒ}
+console.log(copyPerson); // {firstName: 'Bal', age: 250, country: 'Finland', getPersonInfo: ƒ}
