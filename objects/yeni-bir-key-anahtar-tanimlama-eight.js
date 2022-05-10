@@ -37,10 +37,12 @@ person.getPersonInfo = function () {
     // HTML, CSS, JavaScript, React, Node, MongoDB, Python, D3.js, Meteor (skillsin içinden 0' ıncı değerden başladık 9 tane değeri
     // aldık ve birleştirdik onuda skillsWithoutLastSkill' in içine attık)
 
-    let lastSkill = this.skills.splice(this.skills.length - 1)[0]; // TODO burada ne yaptı
-    let skills = `${skillsWithoutLastSkill}, and ${lastSkill}`;
+    let lastSkill = this.skills.splice(this.skills.length - 1)[0]; //TODO
+
+    let skills = `${skillsWithoutLastSkill} and ${lastSkill}`;
 
     let fullName = this.getFullName(); // objenin içindeki fullname functionunu çağırmış
+    
     let statement = `${fullName} is a ${this.title}.\nHe lives in ${this.country}.\nHe teaches ${skills}.`;
     return statement;
 };
