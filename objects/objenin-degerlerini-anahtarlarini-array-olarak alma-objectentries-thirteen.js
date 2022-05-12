@@ -1,0 +1,1 @@
+// Object.entries: Bir dizideki anahtarları ve değerleri almak için
