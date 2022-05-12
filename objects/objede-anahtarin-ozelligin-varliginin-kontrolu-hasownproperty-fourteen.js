@@ -1,4 +1,4 @@
-// Object.entries: Bir dizideki anahtarları ve değerleri almak için
+// hasOwnProperty: Bir objede belirli bir anahtarın veya özelliğin var olup olmadığını kontrol etmek için
 
 const person = {
     firstName: 'Nurcan',
@@ -17,12 +17,13 @@ const person = {
     }
 };
 
-// const entries = Object.entries(person);
 
-// console.log(entries);   //(8) [Array(2), Array(2), Array(2), Array(2), Array(2), Array(2), Array(2), Array(2)]
+console.log(person.hasOwnProperty('firstName'));    // true
 
+console.log(person.hasOwnProperty('score'));    // false
 
-for (let [key, val] of Object.entries(person)) {
+console.log(person.hasOwnProperty('Nurcan'));   // false
 
-    console.log(key, val);
-};
+console.log(person.hasOwnProperty(27)); // false
+
+console.log(person.hasOwnProperty('age'));  // true
