@@ -11,7 +11,7 @@ const person = {
 
 // referanslı kopyalama
 
-let newPerson= person;
+let newPerson = person;
 console.log(person); // {firstName: 'Nurcan', age: 250, country: 'Finland', getPersonInfo: ƒ}
 
 newPerson.firstName = 'Erdinç';
@@ -24,7 +24,7 @@ console.log(person); // {firstName: 'Erdinç', age: 250, country: 'Finland', get
 
 const copyPerson = Object.assign({}, person);
 
-copyPerson.firstName ='Bal';
+copyPerson.firstName = 'Bal';
 
 console.log(person); // {firstName: 'Erdinç', age: 250, country: 'Finland', getPersonInfo: ƒ}
 console.log(copyPerson); // {firstName: 'Bal', age: 250, country: 'Finland', getPersonInfo: ƒ}
