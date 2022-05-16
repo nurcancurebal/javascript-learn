@@ -1,3 +1,5 @@
+// Kullanıcı nesnesinde birçok beceriye sahip olan kişiyi bulun.
+
 const users = {
     Alex: {
         email: 'alex@alex.com',
@@ -50,4 +52,16 @@ const users = {
     }
 };
 
-console.log(users);
+
+const arrayUsers = Object.entries(users);
+
+const skors = [];
+
+for (let index = 0; index < arrayUsers.length; index++) {
+
+    skors[index] = arrayUsers[index][1].skills.length;
+};
+
+const findIndex = skors.indexOf(Math.max(...skors));// math.max array içinden maximum değeri bulmadığı için üç nokta ile skorsun içindekileri dışarıya çıkartıyor bundan sonra max değerini buluyor.
+
+console.log(users[arrayUsers[findIndex][0]]);
