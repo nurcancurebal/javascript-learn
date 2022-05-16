@@ -24,5 +24,7 @@ const person = {
 
 for (let [key, val] of Object.entries(person)) {
 
-    console.log(key, val);
+    console.log(`key: ${key} val:${val}`);
 };
+
+console.log(typeof Object.entries(person)); // object

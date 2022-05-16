@@ -37,7 +37,8 @@ person.getPersonInfo = function () {
     // HTML, CSS, JavaScript, React, Node, MongoDB, Python, D3.js, Meteor (skillsin içinden 0' ıncı değerden başladık 9 tane değeri
     // aldık ve birleştirdik onuda skillsWithoutLastSkill' in içine attık)
 
-    let lastSkill = this.skills.splice(this.skills.length - 1)[0]; //TODO
+    let lastSkill = this.skills.splice(this.skills.length - 1)[0]; // son indexi aldık ancak arrayin içine atıyor [0] yazdığımızda
+    // arrayin içindeki o' rıncı değeri alıyor bu değerde 'sasS'. bu şekilde ('sasS') lastSkill' in içine atıyor
 
     let skills = `${skillsWithoutLastSkill} and ${lastSkill}`;
 
