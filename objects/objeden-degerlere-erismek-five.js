@@ -38,3 +38,5 @@ console.log(person.skills); // (8) ['HTML', 'CSS', 'JavaScript', 'React', 'Node'
 console.log(person.skills[1]);  // CSS
 
 console.log(person['phone number']);    //+3584545454545 //! boşluklu olduğu için bu şekilde eriştik birde dinamik olarak kullanmak için köşeli parantez kullanılır
+
+console.log(person['skills']);

@@ -1,4 +1,4 @@
-// Object.values: Bir nesnenin değerlerini dizi olarak almak için
+// Object.values: Bir objenin değerlerini array olarak almak için
 
 const person = {
   firstName: 'Nurcan',

@@ -13,4 +13,4 @@ dog.getDogInfo = 'Barren';
 
 console.log(dog);
 
-//TODO level 1 soru 4 ne istiyor?
+console.log(Object.values(dog));
