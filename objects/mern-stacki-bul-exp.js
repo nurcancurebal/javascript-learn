@@ -1,3 +1,5 @@
+// Kullanıcılar nesnesinden MERN yığın geliştiricisi olan kişileri bulun.MongoDB, Express, React ve Node ‘in baş harflerinden oluşur.
+
 const users = {
     Alex: {
         email: 'alex@alex.com',
@@ -50,3 +52,23 @@ const users = {
     }
 };
 
+
+const arrayUsers = Object.entries(users);
+
+let mernMeter = 0;
+
+for (let index = 0; index < arrayUsers.length; index++) {
+
+    let mongoDb = arrayUsers[index][1].skills.includes('MongoDB');
+    let expressJs = arrayUsers[index][1].skills.includes('Express');
+    let reactJs = arrayUsers[index][1].skills.includes('React');
+    let nodeJs = arrayUsers[index][1].skills.includes('Node');
+
+
+    if (mongoDb == true && expressJs == true && reactJs == true && nodeJs == true) {
+
+        console.log(`MERN yığın geliştiricisi ${arrayUsers[index][0]}`);
+        mernMeter++;
+    };
+};
+console.log(`MERN yığın geliştiricisi ${mernMeter} kişi var.`);
