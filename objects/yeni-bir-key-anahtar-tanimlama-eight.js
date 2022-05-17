@@ -20,7 +20,7 @@ const person = {
     }
 };
 
-person.nationality = 'Ethiopian';
+person.nationality = 'Ethiopian'; // yeni key eklendi
 person.country = 'Finland'; // countryi değiştirdik yeni değeri
 person.title = 'developer'; // person objesine eklendi
 person.skills.push('Meteor'); // skills array olduğu için sondan ekledik push ile
