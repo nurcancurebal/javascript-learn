@@ -1,5 +1,5 @@
-// her şey bir nesne olabilir. Nesnelerin özezllikleri vardir. zelliklerinde değerleri vardır.
-// Bir nesne anahtar değer ikilisi, çiftlisi gibi bir şeydir.
+// her şey bir nesne olabilir. Nesnelerin özezllikleri vardir. özelliklerinde değerleri vardır.
+// Bir nesne anahtar ve değer ikilisi, çiftlisi gibi bir şeydir.
 
 const person = {}; // boş bir nesne
 console.log(person) // {}

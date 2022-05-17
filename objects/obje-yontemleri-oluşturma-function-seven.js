@@ -15,7 +15,7 @@ const person = {
         'D3.js'
     ],
     getFullName: function () {      // bu bir object method' dur
-        return `${this.firstName} ${this.lastName}`; // burada this objenin kendisi oluyor
+        return `${this.firstName} ${this.lastName}`; // burada this objenin kendisi demek oluyor
     }
 };
 

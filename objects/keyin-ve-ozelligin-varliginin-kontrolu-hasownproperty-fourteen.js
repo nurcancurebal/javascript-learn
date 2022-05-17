@@ -1,4 +1,4 @@
-// hasOwnProperty: Bir objede belirli bir anahtarın veya özelliğin var olup olmadığını kontrol etmek için
+// hasOwnProperty: Bir objede belirli bir anahtarın (key) veya özelliğin var olup olmadığını kontrol etmek için
 
 const person = {
     firstName: 'Nurcan',
