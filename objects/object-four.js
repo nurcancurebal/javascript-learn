@@ -2,6 +2,7 @@
 // Bir nesne anahtar ve değer ikilisi, çiftlisi gibi bir şeydir.
 
 const person = {}; // boş bir nesne
+
 console.log(person) // {}
 
 
