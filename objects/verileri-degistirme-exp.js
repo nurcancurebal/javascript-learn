@@ -21,9 +21,8 @@ const personAccount = {
 
 personAccount.accountBalance = personAccount.totalIncome - personAccount.totalExpense;
 
-personAccount.incomes.push(addIncome); //TODO bu addIncome incomes' in içine eklemek istiyorum
+personAccount.incomes.push(...personAccount.addIncome);
 
-personAccount.expenses.push(addExpense);
+personAccount.expenses.push(personAccount.addExpense);
 
 console.log(personAccount);
-
