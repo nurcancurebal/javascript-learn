@@ -1,6 +1,6 @@
 const date = new Date();
 let year = date.getFullYear();
-let mounth = date.getMonth();
+let mounth = date.getMonth();//!eğer ayı sayı ile gösterirsek mounth = mounth+1; ifadesini eklememiz gerek çünkü getMounth 0 dan başlar ocak=0'dır
 let dayNumber = date.getDate();
 let hour = date.getHours();
 let minute = date.getMinutes();
