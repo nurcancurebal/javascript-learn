@@ -45,42 +45,45 @@ const users = [
 ];
 
 
-signUp("Thomas", "nurcancurebal@hotmail.com", "123456");
+signUp("Nurcan", "nurcancurebal@hotmail.com", "123456");
 
-console.log("Mevcut kullanıcılar:", users)
+console.log("Mevcut kullanıcılar:", users);
 
 function signUp(username, email, password) {
 
     const user = {
+
         _id: randomIdGenerator(),
         username,
         email,
         password,
         createdAt: dateNowGenerator(),
         isLoggedIn: false
-    }
+    };
 
     for (let index = 0; index < users.length; index++) {
-        
+
         if (user._id == users[index]._id) {
+
             user._id = randomIdGenerator();
-        }
+        };
 
         if (user.username == users[index].username) {
+
             console.log("Benzer kullanıcı adı bulunmakta!");
             return; // Üstünde funksiyon blogu bulursa ve return parametresi kullanılırsa fonksiyon durur ve boş return cıkar, fonsiyon devam etmez.
-        }
+        };
 
         if (user.email == users[index].email) {
+
             console.log("Benzer e posta bulunmakta!");
             return;
-        }
-
-    }
+        };
+    };
 
     users.push(user);
 
-    console.log("Kullanıcı ekleme işlemi başarılı.")
+    console.log("Kullanıcı ekleme işlemi başarılı.");
 
     // ! Alt fonksiyonlar - burası cagırılmadıgı sürece çalışmaz.
 
@@ -114,8 +117,7 @@ function signUp(username, email, password) {
             time = `${dayNumberZero}/${mounthZero}/${year} ${hourZero}:${minuteZero} PM`;
         };
         return time;
-
-    }
+    };
 
     function randomIdGenerator() {
 
@@ -134,8 +136,5 @@ function signUp(username, email, password) {
         let randomKey = randomId.join('');
 
         return randomKey;
-
-    }
-}
-
-
+    };
+};
