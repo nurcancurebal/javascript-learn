@@ -1,3 +1,6 @@
+
+const RANDOM_ID_CHARSET = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+
 const users = [
     {
         _id: 'ab12ex',
@@ -42,36 +45,97 @@ const users = [
 ];
 
 
-function date() {
+signUp("Thomas", "nurcancurebal@hotmail.com", "123456");
 
-    const date = new Date();
+console.log("Mevcut kullanıcılar:", users)
 
-    let year = date.getFullYear();
-    let mounth = date.getMonth();
-    let dayNumber = date.getDate();
-    let hour = date.getHours();
-    let minute = date.getMinutes();
+function signUp(username, email, password) {
 
-    mounth = mounth + 1;
+    const user = {
+        _id: randomIdGenerator(),
+        username,
+        email,
+        password,
+        createdAt: dateNowGenerator(),
+        isLoggedIn: false
+    }
 
-    let mounthZero = mounth < 10 ? `0${mounth}` : mounth;
-    let dayNumberZero = dayNumber < 10 ? `0${dayNumber}` : dayNumber;
-    let hourZero = hour < 10 ? `0${hour}` : hour;
-    let minuteZero = minute < 10 ? `0${minute}` : minute;
+    for (let index = 0; index < users.length; index++) {
+        
+        if (user._id == users[index]._id) {
+            user._id = randomIdGenerator();
+        }
 
-    let time = '';
+        if (user.username == users[index].username) {
+            console.log("Benzer kullanıcı adı bulunmakta!");
+            return; // Üstünde funksiyon blogu bulursa ve return parametresi kullanılırsa fonksiyon durur ve boş return cıkar, fonsiyon devam etmez.
+        }
 
-    if (hourZero >= 00 && hourZero < 12) {
+        if (user.email == users[index].email) {
+            console.log("Benzer e posta bulunmakta!");
+            return;
+        }
 
-        time = `${dayNumberZero}/${mounthZero}/${year} ${hourZero}:${minuteZero} AM`;
+    }
 
-    } else if (hourZero >= 12 && hourZero <= 23) {
+    users.push(user);
 
-        time = `${dayNumberZero}/${mounthZero}/${year} ${hourZero}:${minuteZero} PM`;
-    };
-    return time;
-};
+    console.log("Kullanıcı ekleme işlemi başarılı.")
 
-console.log(date());
+    // ! Alt fonksiyonlar - burası cagırılmadıgı sürece çalışmaz.
+
+    function dateNowGenerator() {
+
+        const date = new Date();
+
+        let year = date.getFullYear();
+        let mounth = date.getMonth();
+        let dayNumber = date.getDate();
+        let hour = date.getHours();
+        let minute = date.getMinutes();
+
+        mounth = mounth + 1;
+
+        let mounthZero = mounth < 10 ? `0${mounth}` : mounth;
+        let dayNumberZero = dayNumber < 10 ? `0${dayNumber}` : dayNumber;
+        let hourZero = hour < 10 ? `0${hour}` : hour;
+        let minuteZero = minute < 10 ? `0${minute}` : minute;
+
+        let time = '';
+
+        if (hourZero >= 00 && hourZero < 12) {
+
+            time = `${dayNumberZero}/${mounthZero}/${year} ${hourZero}:${minuteZero} AM`;
+
+            console.log(id(data));
+
+        } else if (hourZero >= 12 && hourZero <= 23) {
+
+            time = `${dayNumberZero}/${mounthZero}/${year} ${hourZero}:${minuteZero} PM`;
+        };
+        return time;
+
+    }
+
+    function randomIdGenerator() {
+
+        const randomId = [];
+
+        for (let index = 0; index < 6; index++) {
+
+            const randomChar = RANDOM_ID_CHARSET[Math.floor((Math.random() * RANDOM_ID_CHARSET.length) + 1)];
+
+            if (!randomId.includes(randomChar)) {
+
+                randomId.push(randomChar);
+            };
+        };
+
+        let randomKey = randomId.join('');
+
+        return randomKey;
+
+    }
+}
 
 
