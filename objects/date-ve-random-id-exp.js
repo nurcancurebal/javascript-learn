@@ -71,7 +71,7 @@ function signUp(username, email, password) {
         if (user.username == users[index].username) {
 
             console.log("Benzer kullanıcı adı bulunmakta!");
-            return; // Üstünde funksiyon blogu bulursa ve return parametresi kullanılırsa fonksiyon durur ve boş return cıkar, fonsiyon devam etmez.
+            return; // Üstünde funksiyon blogu bulursa ve return parametresi kullanılırsa fonksiyon durur ve boş return cıkar, fonsiyon devam etmez. Users'a ekleme yapmaz.
         };
 
         if (user.email == users[index].email) {
