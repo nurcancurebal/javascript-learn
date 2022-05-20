@@ -138,3 +138,5 @@ function signUp(username, email, password) {
         return randomKey;
     };
 };
+
+//TODO Kullanıcının uygulamada oturum açmasına izin veren oturum açma adlı bir işlev oluşturun
