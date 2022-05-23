@@ -154,4 +154,4 @@ function signIn() {
 
 console.log(signIn());
 
-// TODO olmadı ayrıca usersın içi değişecek ekra ayrıyetten yazdırmayacağım.
+// TODO olmadı ayrıca usersın içi değişecek ekrana ayrıyetten yazdırmayacağım.
