@@ -139,4 +139,17 @@ function signUp(username, email, password) {
     };
 };
 
-//TODO Kullanıcının uygulamada oturum açmasına izin veren oturum açma adlı bir işlev oluşturun
+
+function signIn() {
+
+    for (let index = 0; index < users.length; index++) {
+
+        if (users[index].isLoggedIn == false) {
+
+         users[index].isLoggedIn = true;
+        };
+    };
+    return 
+};
+
+console.log(signIn());
