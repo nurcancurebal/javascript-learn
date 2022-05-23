@@ -144,12 +144,14 @@ function signIn() {
 
     for (let index = 0; index < users.length; index++) {
 
-        if (users[index].isLoggedIn == false) {
+        if (users[index].isLoggedIn === false) {
 
-         users[index].isLoggedIn = true;
+             users[index].isLoggedIn = 'true';
         };
     };
-    return 
+    return users;
 };
 
 console.log(signIn());
+
+// TODO olmadı ayrıca usersın içi değişecek ekra ayrıyetten yazdırmayacağım.

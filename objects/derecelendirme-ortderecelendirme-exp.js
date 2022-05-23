@@ -1,6 +1,6 @@
 // Ürünler arrayinin üç elemanı vardır ve her birinin altı özelliği vardır. a. Ürünü derecelendiren RateProduct adında bir fonksiyon
 // oluşturun b. Bir ürünün ortalama derecelendirmesini hesaplayan ortalamaRating adlı bir fonksiyon oluşturun.
-
+// likeProduct adlı bir fonksiyon oluşturun.Bu fonksiyon beğenilmeyen ürünü beğenmeye, beğenildiyse beğenmeyi kaldırmaya yardımcı olacaktır
 const products = [
     {
         _id: 'eedfcf',
@@ -30,4 +30,10 @@ const products = [
     }
 ];
 
-// TODO
+function rateProduct() {
+
+    
+    
+}
+
+//TODO
