@@ -140,18 +140,5 @@ function signUp(username, email, password) {
 };
 
 
-function signIn() {
-
-    for (let index = 0; index < users.length; index++) {
-
-        if (users[index].isLoggedIn === false) {
-
-             users[index].isLoggedIn = 'true';
-        };
-    };
-    return users;
-};
-
-console.log(signIn());
-
-// TODO olmadı ayrıca usersın içi değişecek ekrana ayrıyetten yazdırmayacağım.
+// TODO bir fonksiyon olacak ismi signIn fonksiyon 2 parametre alır 1 username 2 password bu
+// bilgilerle yukarıda var olan user listesine göre böyle bir kullanıcı varsa şifresi doğruysa true dönecek
