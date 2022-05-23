@@ -7,3 +7,14 @@
 //! 1000 milisaniye 1 saniyeye eşit
 
 
+function sayHello() {
+    
+    console.log('Hello!');
+};
+
+setTimeout(sayHello,5000); // 5 saniye sonra çalıştı
+setInterval(sayHello,2000); // 2 saniyede bir çalışır
+
+//! clearInterval ile setInterval' i iptal edebiliriz
+//! clearTimeout ile setTimeout' u iptal edebiliriz
+
