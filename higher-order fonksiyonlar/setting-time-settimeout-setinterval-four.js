@@ -32,6 +32,4 @@ setTimeout(() => {
     clearTimeout(timeOut);
     console.log('time out işlemi iptal edildi, interval devam edecek');
     
-}, 3000); 
-
-//TODO 19.12
+}, 3000);
