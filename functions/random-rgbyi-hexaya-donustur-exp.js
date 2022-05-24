@@ -7,7 +7,7 @@ function convertRgbToHexa() {
         rgbColors.push(Math.floor((Math.random() * 255) + 1));
     };
 
-    let string = rgbColors.join(''); 
+    let string = rgbColors.join('');
     let hexa = Number(string).toString(16);
 
     return hexa;

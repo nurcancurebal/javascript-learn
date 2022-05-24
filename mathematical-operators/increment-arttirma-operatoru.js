@@ -1,4 +1,4 @@
-// ıncrement operator
+// Increment operator
 
 let count = 0;          // 1
 

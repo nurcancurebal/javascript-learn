@@ -9,7 +9,7 @@ function uniqueRandomNumber() {
         let randomNumber = (Math.floor((Math.random() * 9)));
 
         if (!randomNumberArray.includes(randomNumber)) {
-            
+
             randomNumberArray.push(randomNumber);
         };
     };

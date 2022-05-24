@@ -3,6 +3,6 @@
 console.log(reverseSwap(1, 2));
 
 function reverseSwap() {
-    
+
     return Array.from(arguments).reverse();
 };

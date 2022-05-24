@@ -3,7 +3,7 @@
 function printArray(arrays) {
 
    for (let index = 0; index < arrays.length; index++) {
-      
+
       console.log(arrays[index])
    };
 };

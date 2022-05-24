@@ -17,4 +17,4 @@ function sayilariTopla(birinciDeger, ikinciDeger) {
 /* toplama işlemini bir değişkene atadık her seferinde bu değişkeni kullanarak farklı sayılar yazarak istediğimiz
 kadar sayıyı kısa yoldan her seferinde toplama işlemini baştan yaptırmayarak istediğimiz kadar sayı toplatabiliriz  */
 
-console.log(toplaBir, toplaIki , toplaUc);
+console.log(toplaBir, toplaIki, toplaUc);

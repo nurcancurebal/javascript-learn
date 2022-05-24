@@ -10,7 +10,7 @@ function randomHexaNumberGenerator() {
 
     let unite = randomNumbers.join('');     // sayıları birleştirip string yaptık
     let convertHexa = Number(unite).toString(16);   // stringi numbera çevirip, hexa ya çevirdik
-    let diyez = '#'+convertHexa;
+    let diyez = '#' + convertHexa;
 
     return diyez;
 };

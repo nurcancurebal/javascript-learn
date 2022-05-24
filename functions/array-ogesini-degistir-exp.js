@@ -1,6 +1,6 @@
 console.log(modifyArray(['Avocado', 'Tomato', 'Potato', 'Mango', 'Lemon', 'Carrot']));
 console.log(modifyArray(['Google', 'Facebook', 'Apple', 'Amazon']));
-console.log(modifyArray(['Google', 'Facebook','Apple', 'Amazon','Microsoft',  'IBM']));
+console.log(modifyArray(['Google', 'Facebook', 'Apple', 'Amazon', 'Microsoft', 'IBM']));
 
 function modifyArray(array) {
 

@@ -21,7 +21,7 @@ console.log(hello2('Erdinç'));
 
 function hello3(name, surname) {
 
-    return  `Merhaba ${name} ${surname}`;
+    return `Merhaba ${name} ${surname}`;
 
 };
 

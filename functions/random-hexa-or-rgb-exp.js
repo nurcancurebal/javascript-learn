@@ -25,7 +25,7 @@ function generateColor(type, loop = 0) {
                 const numberGenerator = Math.floor((Math.random() * 238) + 17); //238+17= 255, floor ifadesi sayıyı aşağıya yuvarladığı için 255 e kadar sayı bulur
                 const convertHexa = Number(numberGenerator).toString(16); //hexaya çevirdi
                 array.push(convertHexa);    // 3 kere dönecek, her dönüşte 2 tane hex sayısını arrayin içine atıyor
-            }; 
+            };
 
             let string = array.join('');
             string = "#" + string;
