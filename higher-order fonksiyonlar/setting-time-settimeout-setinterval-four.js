@@ -31,5 +31,5 @@ setTimeout(() => {
 
     clearTimeout(timeOut);
     console.log('time out işlemi iptal edildi, interval devam edecek');
-    
+
 }, 3000);

@@ -38,6 +38,6 @@ users = users.map(user => {
 console.log(users);
 
 
-const nameToUpperCase = users.map( names => names.name.toUpperCase());
+const nameToUpperCase = users.map(names => names.name.toUpperCase());
 
 console.log(nameToUpperCase);
