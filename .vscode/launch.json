@@ -10,6 +10,7 @@
             "args": [],
             "cwd": "${fileDirname}",
             "runtimeExecutable": null,
+            "console": "integratedTerminal",
             "runtimeArgs": [
                 "--nolazy"
             ],

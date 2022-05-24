@@ -140,14 +140,14 @@ function signUp(username, email, password) {
 };
 
 
-// TODO bir fonksiyon olacak ismi signIn fonksiyon 2 parametre alır 1 username 2 password bu
+//  bir fonksiyon olacak ismi signIn fonksiyon 2 parametre alır 1 username 2 password bu
 // bilgilerle yukarıda var olan user listesine göre böyle bir kullanıcı varsa şifresi doğruysa true dönecek
 
-function signIn(username, passwordOne) {
+function signIn(username, password) {
 
     for (let index = 0; index < users.length; index++) {
 
-        if (username == users[index]._id && password == users[index].password) {
+        if (username == users[index].username && password == users[index].password) {
 
             return "Böyle bir kullanıcı mevcut: True";
 
@@ -158,8 +158,5 @@ function signIn(username, passwordOne) {
     };
 };
 
-console.log(signIn('ghderc', 123333));
-console.log(signIn('sdfgyhu', 3456789));
-
-
-//TODO neden olmadı
+console.log(signIn('Alex', "123123"));
+console.log(signIn('sdfgyhu', "3456789"));
