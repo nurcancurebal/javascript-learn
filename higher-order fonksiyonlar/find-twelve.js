@@ -19,12 +19,17 @@ const users = [
         age: 1
     }];
 
-console.log(numbers.find(function (num) {
-    
-   return num <10;
-}));    // 1
 
-console.log(users.find(function (ages) {
+let findNum = numbers.find(function (num) {
 
-   return ages.age === 27;   
-}));    // { id: 1, name: 'Nurcan', age: 27 }
+    return num < 10;
+});
+
+console.log(findNum);   // 1
+
+let findAge = users.find(function (ages) {
+
+    return ages.age === 27;
+});
+
+console.log(findAge);   // { id: 1, name: 'Nurcan', age: 27 }
