@@ -1,0 +1,32 @@
+let users = [
+    {
+        id: 1,
+        name: 'Nurcan',
+        age: 27,
+        gender: 2
+    },
+    {
+        id: 2,
+        name: 'Erdinç',
+        age: 27,
+        gender: 1
+    },
+    {
+        id: 3,
+        name: 'Bal',
+        age: 1,
+        gender: 2
+    },
+    {
+        id: 4,
+        name: 'Kanada',
+        age: 30,
+        gender: 1
+    }];
+
+
+const women = users.filter(user => user.gender === 2);
+const men = users.filter(user => user.gender === 1);
+
+console.log(women);
+console.log(men);
