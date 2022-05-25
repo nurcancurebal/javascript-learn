@@ -1,31 +1,52 @@
 // Filtre: Filtreleme koşullarını tam olarak dolduran ve yeni bir dizi döndüren öğeleri filtreleyin.Fonksiyonlar ile kullanılır.
 
+//! Birinci derlemede okunan ya da kenara kayıt edilen fonksiyonlar 1. Daha hızlı çalışır bilgisayar kod çalışmadan önce
+//! fonksiyonun ne olduğunu bilir. 2. Her yerden ( fonksiyonun üntündende ) çağırabiliriz.
+//! İkinci derlemede okunan fonksiyon : ikinci derlemede kodlar çalışmaya başladığında okunmaya başlar ikinci derlemede kodlar yukardan aşağı çalışır.
+
+
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-const filterNumber = function (number) { // Bu fonksiyon tiplemesi ikinci derlemede kodlar çalışmaya başladığımda okunmaya başlar ikinci derlemede kodlar yukardan aşağı çalışır.
+
+const filterNumber = function (number) { // ikinci derlemede çalışır
 
     return number > 3 && number < 8;
 };
+console.log(numbers.filter(filterNumber));
+
+
+
 
 console.log(numbers.filter(aaa));
 
-function aaa(number) { // Birinci derlemede okunan fonksiyon daha hızlı çalısılır bilgisayar kod çalışmadan önce fonksiyonun ne olduğunu bilir.
+function aaa(number) {  // Birinci derlemede okunan fonksiyon 
 
     return number > 3 && number < 8;
 };
 
-console.log(numbers.filter(number => number > 3 && number < 8)); // numbers değişmedi, ikinci derlemede çalışır
 
-console.log(numbers.filter(function (number) { // ikinci derlemede çalışır.
+
+
+console.log(numbers.filter(number => number > 3 && number < 8)); // ikinci derlemede çalışır
+
+
+
+
+
+console.log(numbers.filter(function (number) {   // ikinci derlemede çalışır.
 
     return number > 3 && number < 8;
 }));
 
-console.log(numbers.filter(filterNumber));
 
-function a() {
 
-    return numbers.filter(function (number) { // Birinci derlemede kenara kayıt edilir. Bu kod daha hızlı çalışır.
+
+
+console.log(a());
+
+function a() {        // Birinci derlemede okunur
+
+    return numbers.filter(function (number) { 
 
         return number > 3 && number < 8;
     });
