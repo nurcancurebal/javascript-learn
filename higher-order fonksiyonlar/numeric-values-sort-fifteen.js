@@ -3,6 +3,33 @@
 
 const numbers = [9.81, 3.14, 100, 37];
 
+let users = [
+    {
+        id: 2,
+        name: 'Nurcan',
+        age: 27,
+        gender: 2
+    },
+    {
+        id: 4,
+        name: 'Erdinç',
+        age: 27,
+        gender: 1
+    },
+    {
+        id: 1,
+        name: 'Bal',
+        age: 1,
+        gender: 2
+    },
+    {
+        id: 3,
+        name: 'Kanada',
+        age: 30,
+        gender: 1
+    }];
+
+
 const numberSort = numbers.sort(function (a, b) {
 
     return a - b;
@@ -17,3 +44,23 @@ const numberSortTwo = numbers.sort(function (a, b) {
 });
 
 console.log(numberSortTwo);
+
+
+
+
+function sortId(a, b) {
+
+    return a.id - b.id;
+};
+
+console.log(users.sort(sortId));
+
+
+const idSort = users.sort(function (a, b) {
+
+    return b.id - a.id;
+});
+
+console.log(idSort);
+
+//TODO 36.45

@@ -8,10 +8,21 @@
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 
+const filterNum = numbers.filter(function (number) {
+
+    return number > 3 && number < 8;
+});
+
+console.log(filterNum);
+
+
+
+
 const filterNumber = function (number) { // ikinci derlemede çalışır
 
     return number > 3 && number < 8;
 };
+
 console.log(numbers.filter(filterNumber));
 
 
@@ -46,7 +57,7 @@ console.log(a());
 
 function a() {        // Birinci derlemede okunur
 
-    return numbers.filter(function (number) { 
+    return numbers.filter(function (number) {
 
         return number > 3 && number < 8;
     });
