@@ -1,5 +1,5 @@
 // numaraları sıralamada kullanılır. Parametre olarak fonksiyon alır. a ve b iki parametresidir, eğer a-b yaparsanız
-//  küçükten büyüğe, b-a yaparsanız büyükten küçüğe sıralar.
+//  küçükten büyüğe, b-a yaparsanız büyükten küçüğe sıralar. Objelerde de arraylerde de kullanılır.
 
 const numbers = [9.81, 3.14, 100, 37];
 
@@ -62,5 +62,3 @@ const idSort = users.sort(function (a, b) {
 });
 
 console.log(idSort);
-
-//TODO 36.45
