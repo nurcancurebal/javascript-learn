@@ -1,3 +1,5 @@
+//! forEach return dönmez
+
 // 1. kullanımı
 
 const numbers = [1, 3, 5, 7, 9];

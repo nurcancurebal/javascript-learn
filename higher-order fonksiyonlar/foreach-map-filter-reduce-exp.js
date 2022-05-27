@@ -7,6 +7,9 @@ const products = [
     { product: 'tea', price: '' },
 ];
 
+
+
+/* // forEach 1.YOL
 const newProducts = []
 
 products.forEach(function (productUpper) {
@@ -21,5 +24,32 @@ products.forEach(function (productUpper) {
 });
 
 console.log(newProducts);
+ */
 
+// forEach 2.YOL
+
+let pushProductsUpper = [];
+
+const newProductsTwo = products.forEach(function (productsUpper) {
+
+    productsUpper.product = productsUpper.product.toUpperCase();
+
+    pushProductsUpper.push(productsUpper);
+});
+
+console.log(pushProductsUpper);
+
+console.log(products);
+
+
+/* 
+// map
+products = products.map(function (productUpper) {
+
+   return productUpper.product.toUpperCase();
+    
+});
+
+console.log(products);
+ */
 

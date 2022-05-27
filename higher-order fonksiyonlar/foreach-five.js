@@ -1,4 +1,5 @@
 // forEach= Döngüye sokmak için. fonksiyonlarla çalışır.3 parametre alabilir birincisi elemanları ikincisi index değeri üçüncüsü arrayin kendisi
+//! forEach = return dönmez
 
 const arr = [1, 2, 3, 4, 5];
 
