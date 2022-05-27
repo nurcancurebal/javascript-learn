@@ -9,7 +9,7 @@ const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 
 
-numbers.filter(function name(number) {  //
+numbers.filter(function name(number) {  // ikinci derlemede çalışır
 
     console.log(number > 3 && number < 8);
 });  // Bu işlemin sonucu yalnızca true false döner, istediğimiz sonucu yazdırmaz.
@@ -17,7 +17,7 @@ numbers.filter(function name(number) {  //
 
 
 // 1.YOL
-const filterNum = numbers.filter(function (number) {   //
+const filterNum = numbers.filter(function (number) {   // ikinci derlemede çalışır
 
     return number > 3 && number < 8;
 });
