@@ -8,7 +8,16 @@
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 
-const filterNum = numbers.filter(function (number) {
+
+numbers.filter(function name(number) {  //
+
+    console.log(number > 3 && number < 8);
+});  // Bu işlemin sonucu yalnızca true false döner, istediğimiz sonucu yazdırmaz.
+
+
+
+// 1.YOL
+const filterNum = numbers.filter(function (number) {   //
 
     return number > 3 && number < 8;
 });
@@ -17,7 +26,7 @@ console.log(filterNum);
 
 
 
-
+// 2.YOL
 const filterNumber = function (number) { // ikinci derlemede çalışır
 
     return number > 3 && number < 8;
@@ -27,32 +36,30 @@ console.log(numbers.filter(filterNumber));
 
 
 
-
+// 3.YOL
 console.log(numbers.filter(aaa));
 
-function aaa(number) {  // Birinci derlemede okunan fonksiyon 
+function aaa(number) {  // Birinci derlemede okunur
 
     return number > 3 && number < 8;
 };
 
 
 
-
+// 4.YOL
 console.log(numbers.filter(number => number > 3 && number < 8)); // ikinci derlemede çalışır
 
 
 
-
-
-console.log(numbers.filter(function (number) {   // ikinci derlemede çalışır.
+// 5.YOL
+console.log(numbers.filter(function (number) {   // ikinci derlemede çalışır
 
     return number > 3 && number < 8;
 }));
 
 
 
-
-
+// 6.YOL
 console.log(a());
 
 function a() {        // Birinci derlemede okunur
