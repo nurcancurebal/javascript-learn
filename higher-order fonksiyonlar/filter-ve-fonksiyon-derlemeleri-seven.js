@@ -9,14 +9,14 @@ const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 
 
-numbers.filter(function name(number) {  // ikinci derlemede çalışır
+numbers.filter(function (number) {  // ikinci derlemede çalışır
 
     console.log(number > 3 && number < 8);
-});  // Bu işlemin sonucu yalnızca true false döner, istediğimiz sonucu yazdırmaz.
+});  // Bu işlemin sonucu yalnızca true false döner, istediğimiz sonucu yazdırmaz. Bunun doğru çalışması için değişkene
+// atamak gerek ya da direk console.log' un içinde yazabilirsin.
 
 
-
-// 1.YOL
+// 1.YOL (Benim Tercihim)
 const filterNum = numbers.filter(function (number) {   // ikinci derlemede çalışır
 
     return number > 3 && number < 8;

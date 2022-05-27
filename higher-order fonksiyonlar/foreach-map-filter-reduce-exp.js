@@ -1,10 +1,10 @@
 let products = [
     { product: 'banana', price: 3 }, // entries: 0: (2) ['product', 'banana']
     { product: 'mango', price: 6 },           // 1: (2) ['price',3] şelinde arreye çevirir.
-    { product: 'potato', price: ' ' },
+    { product: 'potato', price: 2 },
     { product: 'avocado', price: 8 },
     { product: 'coffee', price: 10 },
-    { product: 'tea', price: '' },
+    { product: 'tea', price: 2 },
 ];
 
 
@@ -27,12 +27,10 @@ console.log(newProducts);
 
 
 
-
 // forEach 2.YOL, burada products' ı değiştirdik
 products.forEach(function (productsUpper) {
 
     productsUpper.product = productsUpper.product.toUpperCase();
-
 });
 
 console.log(products); // products' ın orijinalini değiştirdik.
@@ -44,8 +42,27 @@ products.map(function (productsLower) {
 
     productsLower.product = productsLower.product.toLowerCase();
 
-    return productsLower;
-
+    return productsLower; // forEach' ten tek farkı return olması
 });
 
 console.log(products);
+
+
+
+// filter
+const priceFilter = products.filter(function (findFilter) { // farkı ana dizinde değişiklik yapamıyorsun
+    
+    return findFilter.price == 2;
+});
+
+console.log(priceFilter);
+
+
+
+//reduce (farkı tek bir değer dönmesi,ana dizinde değişiklik yapamıyoruz)
+const priceReduce = products.reduce(function (oldValue, CurrentValue) { //! reduce da iki parametre giriyoruz diğerlerinden farklı olarak
+    
+    return oldValue + CurrentValue.price;
+},0);
+
+console.log(priceReduce);
