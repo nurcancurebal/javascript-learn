@@ -33,7 +33,7 @@ products.forEach(function (productsUpper) {
     productsUpper.product = productsUpper.product.toUpperCase();
 });
 
-console.log(products); // products' ın orijinalini değiştirdik.
+console.log(products); // products' ın orijinalini değiştirdik. ForEach' in diğerlerinden farkı return dönmemesi
 
 
 
@@ -59,7 +59,7 @@ console.log(priceFilter);
 
 
 
-//reduce (farkı tek bir değer dönmesi,ana dizinde değişiklik yapamıyoruz)
+//reduce (farkı tek bir değer dönmesi ve ana dizinde değişiklik yapamıyoruz)
 const priceReduce = products.reduce(function (oldValue, CurrentValue) { //! reduce da iki parametre giriyoruz diğerlerinden farklı olarak
     
     return oldValue + CurrentValue.price;
