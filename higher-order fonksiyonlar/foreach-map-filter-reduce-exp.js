@@ -1,4 +1,4 @@
-const products = [
+let products = [
     { product: 'banana', price: 3 }, // entries: 0: (2) ['product', 'banana']
     { product: 'mango', price: 6 },           // 1: (2) ['price',3] şelinde arreye çevirir.
     { product: 'potato', price: ' ' },
@@ -9,7 +9,7 @@ const products = [
 
 
 
-/* // forEach 1.YOL
+// forEach 1.YOL, burada products' ı değiştirmedik
 const newProducts = []
 
 products.forEach(function (productUpper) {
@@ -24,32 +24,28 @@ products.forEach(function (productUpper) {
 });
 
 console.log(newProducts);
- */
 
-// forEach 2.YOL
 
-let pushProductsUpper = [];
 
-const newProductsTwo = products.forEach(function (productsUpper) {
+
+// forEach 2.YOL, burada products' ı değiştirdik
+products.forEach(function (productsUpper) {
 
     productsUpper.product = productsUpper.product.toUpperCase();
 
-    pushProductsUpper.push(productsUpper);
 });
 
-console.log(pushProductsUpper);
-
-console.log(products);
+console.log(products); // products' ın orijinalini değiştirdik.
 
 
-/* 
-// map
-products = products.map(function (productUpper) {
 
-   return productUpper.product.toUpperCase();
-    
+// map, burada products' ı değiştirdik
+products.map(function (productsLower) {
+
+    productsLower.product = productsLower.product.toLowerCase();
+
+    return productsLower;
+
 });
 
 console.log(products);
- */
-
