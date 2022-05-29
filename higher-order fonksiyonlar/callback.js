@@ -1,4 +1,4 @@
-// Callback Nedir? - Fonksiyonun argumentlerinden bir function gönderip o fonsiyonu calıştırırsanız callback olmuş olur.
+// Callback Nedir? - Fonksiyonun argumentlerinden bir function gönderip o fonctiyonu calıştırırsanız callback olmuş olur.
 
 
 // ! Exaple 1
@@ -16,7 +16,7 @@ function exapleCallback() {
 
 // ! Exaple 2
 
-const UserRepository = {
+const userRepository = {
 
     data: [],
 
@@ -57,7 +57,7 @@ main({
         { username: "bal", password: "12356" },
 
     ]
-}, UserRepository);
+}, userRepository); //! userRepository callback fonksiyonudur.
 
 function main(data, repository) {
 
