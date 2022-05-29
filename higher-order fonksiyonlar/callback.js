@@ -20,7 +20,7 @@ const userRepository = {
 
     data: [],
 
-    create({ username, password }) {
+    create: function ({ username, password }) {
 
         const user = {
             id: this.data.length + 1,
@@ -38,11 +38,13 @@ const userRepository = {
     },
 
     findOne(id) {
-        return this.data.find(item => item.id == id);
+        return this.data.find(function (item) {
+
+            return item.id == id
+        });
     },
 
     deleteOne(id) {
-
         const placeIndex = this.data.findIndex(item => item.id == id);
         delete this.data[placeIndex];
     }
@@ -51,10 +53,10 @@ const userRepository = {
 main({
     pendingUsers: [
         { username: "curebal", password: "12356" },
-        { username: "ncc", password: "12356" },
-        { username: "nurcan", password: "12356" },
-        { username: "tiktok", password: "12356" },
-        { username: "bal", password: "12356" },
+        { username: "erdinç", password: "34678" },
+        { username: "nurcan", password: "45678" },
+        { username: "kanada", password: "56789" },
+        { username: "bal", password: "34568" },
 
     ]
 }, userRepository); //! userRepository callback fonksiyonudur.
