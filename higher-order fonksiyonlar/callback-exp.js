@@ -12,14 +12,16 @@ function main(pusher, listen) {
     pusher("Erdinç", "Sanane");
 
     listen();
-}
+};
 
 function pusherFunc(who, message) {
+
     messages.push({ who, message });
-}
+};
 
 function listenerFunc() {
+
     messages.forEach(function (item) {
         console.log(`WHO: ${item.who} | MESSAGE: ${item.message}`);
-    })
-}
+    });
+};
