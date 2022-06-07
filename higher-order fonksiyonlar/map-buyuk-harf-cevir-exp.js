@@ -3,7 +3,7 @@ const names = ['Nurcan', 'Cürebal', 'Bal', 'Erdinç'];
 
 names.map(function (bigNames) {
 
-    console.log(bigNames.toUpperCase());   
+    console.log(bigNames.toUpperCase());
 });
 // ekran çıktısı:
 // NURCAN
