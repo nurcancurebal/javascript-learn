@@ -29,3 +29,12 @@ function myFunction(num) {
 };
 
 console.log(newArr);    // [ 650, 440, 120, 40 ]
+
+
+
+const numbersSquare = numbers.map(function (num) {
+
+    return num ** 2;
+});
+
+console.log(numbersSquare);
