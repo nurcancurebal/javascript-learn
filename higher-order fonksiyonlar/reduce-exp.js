@@ -7,11 +7,7 @@ const products = [
     { product: 'tea', price: '' },
 ];
 
-const productsItem = products.filter(getStringLists)
+const itemProduct = products.forEach(function (item) {
 
-function getStringLists(item) {
-    
-   return typeof item === 'string';
-};
-
-console.log(productsItem);
+    console.log(Object.values(item)[0]);
+});
