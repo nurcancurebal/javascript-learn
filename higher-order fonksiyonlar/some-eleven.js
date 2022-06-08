@@ -1,4 +1,5 @@
-// Every ile çalışma sistemi aynıdır yalnızca koşulumuz 1 kere bile sağlanıyor ise true döndürür.
+//every: her bir elemanın bizim koşulumuzu karşılayıp karşılamadığını kontrol ediyor. Her biri karşılıyorsa "True" döndürür.
+//every ile çalışma sistemi aynıdır yalnızca koşulumuz 1 kere bile sağlanıyor ise true döndürür.
 
 const users = [
     {
