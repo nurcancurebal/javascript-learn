@@ -5,4 +5,4 @@ let namesSome = names.some(function (item) {
     return item.length > 7;
 });
 
-console.log(namesSome);
+console.log(namesSome); // true
