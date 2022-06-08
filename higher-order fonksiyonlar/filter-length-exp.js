@@ -6,3 +6,10 @@ const countriesLength = countries.filter(function (country) {
 });
 
 console.log(countriesLength);
+
+const characterCountries = countries.filter(function (character) {
+
+    return character.length >= 6;
+});
+
+console.log(characterCountries);
