@@ -5,4 +5,13 @@ const countriesEvery = countries.every(function (item) {
     return item.includes('land');
 });
 
-console.log(countriesEvery);
+console.log(countriesEvery); // false
+
+
+
+const countriesSome = countries.some(function (item) {
+
+    return item.includes('land');
+});
+
+console.log(countriesSome); // true
