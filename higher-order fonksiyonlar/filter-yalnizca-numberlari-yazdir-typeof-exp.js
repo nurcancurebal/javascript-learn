@@ -9,7 +9,8 @@ const products = [
 
 let numberProducts = products.filter(function (num) {
 
-    return typeof num.price == number;
+    let numPrice= typeof num.price;
+    return  numPrice == 'number';
 });
 
 console.log(numberProducts);
