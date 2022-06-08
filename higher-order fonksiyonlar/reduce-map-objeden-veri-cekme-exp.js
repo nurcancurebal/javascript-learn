@@ -8,17 +8,26 @@ const products = [
     { product: 'coffee', price: 10 },
     { product: 'tea', price: '' },
 ];
+ 
+const itemProduct = products.reduce(function (store, item, index) { // reduce index 1 den başlıyor
 
-const itemProduct = products.forEach(function (item) {
+    if (index === 1) {
 
-    console.log(Object.values(item)[0].split(' '));
+        return [store.product, item.product];
+
+    } else {
+
+        return [...store, item.product];
+    }
 });
 
-// [ 'banana' ]
-// [ 'mango' ]
-// [ 'potato' ]
-// [ 'avocado' ]
-// [ 'coffee' ]
-// [ 'tea' ]
+console.log(itemProduct);
+ 
 
-// TODO
+
+const mapProducts = products.map(function (newProduct) {
+
+    return newProduct.product
+});
+
+console.log(mapProducts);
