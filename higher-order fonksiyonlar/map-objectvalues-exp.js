@@ -5,10 +5,12 @@ const products = [
     { product: 'avocado', price: 8 },
     { product: 'coffee', price: 10 },
     { product: 'tea', price: '' },
-  ];
+];
 
-  const productPrice = products.map(function (corresponding) {
-      return corresponding;
-  });
+const productPrice = products.map(function (corresponding) {
 
-  console.log(productPrice);
+    const valuesProducts = Object.values(corresponding);
+    return `${valuesProducts[0]} = ${valuesProducts[1]}`;
+});
+
+console.log(productPrice);
