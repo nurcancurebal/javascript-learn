@@ -1,3 +1,6 @@
+//! reduce, map, filter, forEach, every, find, findIndex, some, sort kendi çalışma sistemtelerinde fonksiyon döndürdüğü için
+//! products.reduce(callbackFn) şeklinde dışarıdan fonksiyonu çağırdığın zaman callback fonksiyonu olur.
+
 const products = [
     { product: 'banana', price: 3 },
     { product: 'mango', price: 6 },
@@ -8,7 +11,7 @@ const products = [
     { product: 'teas', price: {} },
 ];
 
-const productsReduce = products.reduce(productsPrice); // callback productsPrice
+const productsReduce = products.reduce(productsPrice); // callbackFn productsPrice
 
 console.log(productsReduce);
 
