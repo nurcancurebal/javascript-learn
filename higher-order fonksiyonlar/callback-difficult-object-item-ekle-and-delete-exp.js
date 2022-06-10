@@ -1,20 +1,5 @@
-// Callback Nedir? - Fonksiyonun argumentlerinden bir function gönderip o fonctiyonu calıştırırsanız callback olmuş olur.
-
-
-// ! Exaple 1
-console.log(mainTwo(exapleCallback));
-
-function mainTwo(func) {
-
-    return func();
-};
-
-function exapleCallback() {
-
-    return "Hello, World!";
-};
-
-// ! Exaple 2
+// Callback: Fonksiyonun argumentlerinden bir function gönderip o fonctiyonu calıştırırsanız callback olmuş olur.
+// Parametre olarak iletilen fonksiyonlara callback denir.
 
 const userRepository = {
 

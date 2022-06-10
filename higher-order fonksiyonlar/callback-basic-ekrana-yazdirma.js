@@ -1,3 +1,5 @@
+// Parametre olarak iletilen fonksiyonlara callback denir.
+
 main(callbackFunc);
 
 function main(pusher) {

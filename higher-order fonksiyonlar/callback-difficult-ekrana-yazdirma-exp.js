@@ -1,3 +1,5 @@
+// Parametre olarak iletilen fonksiyonlara callback denir.
+
 const messages = [
     { who: "NODE.JS", message: "Go go go!" }
 ];
