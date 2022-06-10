@@ -1,4 +1,4 @@
-// zincirleme
+// chained : zincirleme
 
 const products = [
     { product: 'banana', price: 3 },

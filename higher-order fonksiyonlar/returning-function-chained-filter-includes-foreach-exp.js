@@ -12,10 +12,13 @@ const countries = [
     { nameEng: "Austria", nameTr: "Avusturya", capital: "Viyana", stars: 14 }
 ];
 
-searchArray(17).forEach(({ nameEng, nameTr, capital, stars }) => {
+searchArray(17).forEach(item => {    // chained: zincirleme
 
-    console.log(`Ülkenin ismi İngilizce/Türkçe : ${nameEng}/${nameTr} `);
+    const { nameEng, nameTr, capital, stars } = item;
+
+    console.log(`Ülkenin ismi İngilizce/Türkçe : ${nameEng}/${nameTr} Başkenti : ${capital} Yıldızı : ${stars} `);
 });
+
 
 function searchArray(value) {
 
