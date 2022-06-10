@@ -6,7 +6,7 @@
 
 const numbers = [1, 2, 3, 4, 5, 6, 7];
 
-console.log(numbers.reduce(function (oldValue, currentValue) { // burada reduce oldValue, currentValue, index, array 4 birim alabilir
+console.log(numbers.reduce(function (oldValue, currentValue) { // burada reduce oldValue, currentValue, index, array 4 değer alabilir
 
     return oldValue + currentValue; // burada 0' ı oldValue(accumulator)' ya verdik
 
