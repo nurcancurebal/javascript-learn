@@ -11,3 +11,6 @@ console.log(numbers.reduce(function (oldValue, currentValue) { // burada reduce 
     return oldValue + currentValue; // burada 0' ı oldValue(accumulator)' ya verdik
 
 }, 0));
+
+// oldValue: verdiğimiz değerden başlayıp currentValue' dan gelen değerleri tek tek yanına ekleyip içinde tutar
+// currentValue: numbers' taki değerleri tek tek çeker
