@@ -2,6 +2,7 @@
 // içeren bir geri çağırma işlevi alır ve yeni bir dizi döndürür.(değişkenleri modifiyede edebiliyoruz kısacası)
 // map = fonksiyonlarla çalışır
 
+
 const numbers = [1, 3, 5, 7, 9];
 
 const numbersTwo = numbers.map(number => number * 2);

@@ -27,22 +27,22 @@ console.log(newProducts);
 
 
 
-// forEach 2.YOL, burada products' ı değiştirdik
-products.forEach(function (productsUpper) {
+// forEach 2.YOL, burada products' ın orijinalini değiştirdik
+products.forEach(function (productsUpper) { // yalnızca for gibi saydırmaya yarar
 
     productsUpper.product = productsUpper.product.toUpperCase();
 });
 
-console.log(products); // products' ın orijinalini değiştirdik. ForEach' in diğerlerinden farkı return dönmemesi
+console.log(products); // ForEach' in diğerlerinden farkı return dönmemesi
 
 
 
-// map, burada products' ı değiştirdik
-products.map(function (productsLower) {
+// map, burada products' ın orijinalini değiştirdik
+products.map(function (productsLower) { // forEach' ten farkı dönüştürmeye yarar
 
     productsLower.product = productsLower.product.toLowerCase();
 
-    return productsLower; // forEach' ten tek farkı return olması
+    return productsLower; // forEach' ten farkı return olması
 });
 
 console.log(products);
