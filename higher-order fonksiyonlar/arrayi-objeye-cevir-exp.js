@@ -7,46 +7,27 @@ const objectCountries = countries.map(function (country) {
 
     function countingLetters(value) {
 
+        value = value.toLowerCase();
 
+        value = value.split("");
 
-        return {}
+        const letters = {};
+
+        value.forEach(function (char) {
+
+            // DAHA KISA : !letters[char] ? letters[char] = 1 : letters[char] += 1;
+
+            if (!letters[char]) {
+
+                letters[char] = 1;
+            } else {
+
+                letters[char] += 1;
+            }
+        });
+
+        return letters;
     };
 });
 
 console.log(objectCountries);
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* const output = [
-    {
-        name: "turkiye",
-        letters: {
-            t: 1,
-            u: 1,
-            r: 1,
-            k: 1,
-            i: 1,
-            y: 1,
-            e: 1
-        }
-    },
-    {
-        name: "conono",
-        letters: {
-            c: 1,
-            o: 3,
-            n: 2
-        }
-    }
-]
- */
