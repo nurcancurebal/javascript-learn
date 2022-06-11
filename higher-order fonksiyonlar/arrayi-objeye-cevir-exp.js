@@ -20,6 +20,7 @@ const objectCountries = countries.map(function (country) {
             if (!letters[char]) {
 
                 letters[char] = 1;
+
             } else {
 
                 letters[char] += 1;
