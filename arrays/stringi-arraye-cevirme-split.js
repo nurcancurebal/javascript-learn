@@ -1,4 +1,6 @@
 // split array' a dönüştürür
+// split(',',3) virgülden ayırır 3 tane array oluşturur gerisini almaz
+
 
 let js = 'JavaScript';
 
