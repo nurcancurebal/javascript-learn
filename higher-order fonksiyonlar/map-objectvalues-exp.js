@@ -10,7 +10,7 @@ const products = [
 const productPrice = products.map(function (corresponding) {
 
     const valuesProducts = Object.values(corresponding);
-    
+
     return `${valuesProducts[0]} = ${valuesProducts[1]}`;
 });
 

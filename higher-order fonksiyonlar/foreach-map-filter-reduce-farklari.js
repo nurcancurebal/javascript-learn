@@ -51,7 +51,7 @@ console.log(products);
 
 // filter
 const priceFilter = products.filter(function (findFilter) { // farkı ana dizinde değişiklik yapamıyorsun
-    
+
     return findFilter.price == 2;
 });
 
@@ -61,8 +61,8 @@ console.log(priceFilter);
 
 //reduce (farkı tek bir değer dönmesi ve ana dizinde değişiklik yapamıyoruz)
 const priceReduce = products.reduce(function (oldValue, CurrentValue) { //! reduce da iki parametre giriyoruz diğerlerinden farklı olarak
-    
+
     return oldValue + CurrentValue.price;
-},0);
+}, 0);
 
 console.log(priceReduce);

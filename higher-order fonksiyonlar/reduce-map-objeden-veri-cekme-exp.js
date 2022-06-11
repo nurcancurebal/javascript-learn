@@ -6,7 +6,7 @@ const products = [
     { product: 'coffee', price: 10 },
     { product: 'tea', price: '' },
 ];
- 
+
 const itemProduct = products.reduce(function (store, item, index) { // reduce index 1 den başlıyor
 
     if (index === 1) {
@@ -20,7 +20,7 @@ const itemProduct = products.reduce(function (store, item, index) { // reduce in
 });
 
 console.log(itemProduct);
- 
+
 
 
 const mapProducts = products.map(function (newProduct) {

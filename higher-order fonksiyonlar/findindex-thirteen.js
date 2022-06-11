@@ -18,9 +18,9 @@ const users = [
     }];
 
 
-    const findIndexName = users.findIndex(function (names) {
-        
-        return names.name == 'Bal';
-    });
+const findIndexName = users.findIndex(function (names) {
 
-    console.log(findIndexName);
+    return names.name == 'Bal';
+});
+
+console.log(findIndexName);

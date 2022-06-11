@@ -7,7 +7,7 @@ const objectCountries = countries.map(function (country) {
 
     function countingLetters(value) {
 
-        
+
 
         return {}
     };
