@@ -7,24 +7,25 @@
 // plus sign(+) ile çevirebiliriz
 
 
+
+
+// parseInt()
 let num = 'kalben';
 let numint = parseInt(num);
 
 console.log(typeof numint); // çıktı number
 
 
-// number stringi numbera çevirirken başına artı koy  
 
+//plus sign(+): number stringi numbera çevirirken başına artı koy  
 let aaa = +'10';
 
-console.log(typeof aaa);
+console.log(typeof aaa); //  çıktı number
 
 
-// string to float
-// buradada string veri tipini değiştiriyoruz ancak 5.5 gibi rasyonel sayılarda parseınt() kullanılmaz
-// parseFloat() kullanılır
 
-let bbb = '7,5';
-let cc = parseFloat(bbb);
+// Number()
+let numTwo = 'kalben';
+let numintTwo = Number(numTwo);
 
-console.log(typeof cc); // çıktı= number
+console.log(typeof numintTwo); // çıktı number

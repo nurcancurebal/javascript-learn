@@ -1,8 +1,19 @@
 const countries = ['Germany', 'Denmark', 'Swiss', 'Finland', 'Norway', 'Australia', 'Sweden', 'Holland', 'Austria'];
 
-const objectCountries = 
+const objectCountries = countries.map(function (country) {
 
 
+    return { country, letters: countingLetters(country) };
+
+    function countingLetters(value) {
+
+        
+
+        return {}
+    };
+});
+
+console.log(objectCountries);
 
 
 
