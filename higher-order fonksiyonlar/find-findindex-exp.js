@@ -20,4 +20,4 @@ let productsFindindex = products.findIndex(function (item) {
     return item.price == 3;
 });
 
-console.log(productsFindindex); // 0 uya ilk değerin indexini döndürür
+console.log(productsFindindex); // 0 uyan ilk değerin indexini döndürür

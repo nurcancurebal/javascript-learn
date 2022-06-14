@@ -1,14 +1,16 @@
-// 3 şekilde yapabilirsin 1. ters çevirme reverse, 2. sonuncu karaktere ulaşmak length -1, 3. 
-
 const countries = ['Germany', 'Denmark', 'Swiss', 'Finland', 'Norway', 'Australia', 'Sweden', 'Holland', 'Austria', 'Canada', 'IceLand'];
 
 
+const newCountries = []
+
 countries.forEach(getLastTenCountries);
 
-function getLastTenCountries(country) {
-    
+console.log(newCountries);
 
-    if (country[length -1] ) {
-        
-    }
+function getLastTenCountries(_country, index, arr) {
+
+   newCountries[index] = arr[(arr.length -1)- index];
 };
+
+
+
