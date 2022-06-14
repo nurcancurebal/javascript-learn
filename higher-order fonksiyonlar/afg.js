@@ -1,7 +1,12 @@
 const countries = ['Germany', 'Denmark', 'Swiss', 'Finland', 'Norway', 'Australia', 'Sweden', 'Holland', 'Austria', 'Canada', 'IceLand'];
 
 
-function getLastTenCountries(params) {
-    
-}
+countries.forEach(getLastTenCountries);
 
+function getLastTenCountries(country) {
+    
+
+    if (country[length -1] ) {
+        
+    }
+};
