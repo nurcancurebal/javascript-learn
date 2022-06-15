@@ -22,3 +22,16 @@ const countriesStartLetter = countries.map(function (country) {
 });
 
 console.log(countriesStartLetter);
+
+
+// [
+//     { name: 'Germany', char: 'G', length: 1 },
+//     { name: 'Denmark', char: 'D', length: 1 },
+//     { name: 'Swiss', char: 'S', length: 3 },
+//     { name: 'Finland', char: 'F', length: 1 },
+//     { name: 'Norway', char: 'N', length: 1 },
+//     { name: 'Australia', char: 'A', length: 3 },
+//     { name: 'Sweden', char: 'S', length: 1 },
+//     { name: 'Holland', char: 'H', length: 1 },
+//     { name: 'Austria', char: 'A', length: 2 }
+//   ]
