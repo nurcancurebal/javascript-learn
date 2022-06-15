@@ -1,3 +1,5 @@
+// baş harfin kendi içinde kaç kere kullanıldığını bulacak
+
 const countries = ['Germany', 'Denmark', 'Swiss', 'Finland', 'Norway', 'Australia', 'Sweden', 'Holland', 'Austria'];
 
 const countriesStartLetter = countries.map(function (country) {

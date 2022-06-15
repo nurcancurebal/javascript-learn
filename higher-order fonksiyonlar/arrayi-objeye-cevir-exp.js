@@ -1,3 +1,5 @@
+// her harfin kendi içinde kaç kere kullanıldığını yazacak
+
 const countries = ['Germany', 'Denmark', 'Swiss', 'Finland', 'Norway', 'Australia', 'Sweden', 'Holland', 'Austria'];
 
 const objectCountries = countries.map(function (country) {
