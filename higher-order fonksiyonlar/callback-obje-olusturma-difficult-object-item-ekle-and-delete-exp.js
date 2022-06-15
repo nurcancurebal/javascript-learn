@@ -5,15 +5,15 @@ const userRepository = {
 
     data: [],
 
-    create: function ({ username, password }) {
+    create: function ({ username, password }) { // obje olarak gönderme, burayı pendingUsers'ın içinden aldı ( en aşağıdaki function gönderdi)
 
-        const user = {
+        const user = {        // yeni bir obje oluşturduk
             id: this.data.length + 1,
             username,
             password
         };
 
-        this.data.push(user);
+        this.data.push(user);   // datanın(array) içine user(yeni objeyi) pushluyoruz
 
         console.log("Kullanıcı kayıt işlemi başarılı!");
     },
@@ -31,7 +31,7 @@ const userRepository = {
 
     deleteOne(id) {
         const placeIndex = this.data.findIndex(item => item.id == id);
-        delete this.data[placeIndex];
+        delete this.data[placeIndex];      // objeden itemi silme
     }
 };
 
@@ -49,7 +49,8 @@ main({
 function main(data, repository) {
 
     data.pendingUsers.forEach(item => {
-        repository.create(item);
+
+        repository.create(item); // userRepository' nin içindeki create' tin içine itemi( pendingUsers' ın ilk itemini) gönderdik
     });
 
     console.log(repository.findOne(3));
@@ -58,3 +59,18 @@ function main(data, repository) {
 
     console.log(repository.findAll());
 };
+
+
+// Kullanıcı kayıt işlemi başarılı!
+// Kullanıcı kayıt işlemi başarılı!
+// Kullanıcı kayıt işlemi başarılı!
+// Kullanıcı kayıt işlemi başarılı!
+// Kullanıcı kayıt işlemi başarılı!
+// { id: 3, username: 'nurcan', password: '45678' }
+// [
+//   { id: 1, username: 'curebal', password: '12356' },
+//   <1 empty item>,
+//   { id: 3, username: 'nurcan', password: '45678' },
+//   { id: 4, username: 'kanada', password: '56789' },
+//   { id: 5, username: 'bal', password: '34568' }
+// ]
