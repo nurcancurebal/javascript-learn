@@ -13,7 +13,7 @@ const countries = [
 
 const countriesFilter = countries.filter(function (currentValue, index, arr) {  // 3 parametre alır
 
-  return arr[arr.length - 1].count < currentValue.count && index > 1;
+  return arr[arr.length - 1].count < currentValue.count && index > 1; // currentValue.count 10' dan büyük ve index' i 1'den büyük olmalı
 });
 
 console.log(countriesFilter);
