@@ -10,10 +10,26 @@ const countries = [
     {country: 'Austria', capital: 'Viyana', population: 8.917}
 ];
 
-/* 
+ 
 const countrySort = countries.sort(function (a,b) {
 
     return  a.country.localeCompare(b.country);
-}); */
+});
 
 console.log(countries);
+
+
+const capitalSort = countries.sort(function (a,b) {
+    
+    return a.capital.localeCompare(b.capital);
+});
+
+console.log(capitalSort);
+
+
+const populationSort = countries.sort(function (a,b) {
+    
+    return b.population - a.population; // büyükten küçüğe sıralaması için b-a
+});
+
+console.log(populationSort);
