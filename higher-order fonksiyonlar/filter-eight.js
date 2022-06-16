@@ -26,7 +26,9 @@ let users = [
 
 
 const women = users.filter(user => user.gender === 2);
+
 const userName = users.filter(user => user.name !== 'Kanada');
 
 console.log(women);
+
 console.log(userName);

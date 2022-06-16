@@ -10,12 +10,12 @@ const countries = {
     country: 'Austria', capital: 'Viyana', population: 8.917
 };
 
-
+/* 
 const countrySort = countries.sort(function (a,b) {
 
-    return a.country.localeCompare(b.country);
-});
+    return  a.country.localeCompare(b.country);
+}); */
 
-console.log(countrySort);
+console.log(countries);
 
 // TODO bunu nasıl çevirebiliriz.

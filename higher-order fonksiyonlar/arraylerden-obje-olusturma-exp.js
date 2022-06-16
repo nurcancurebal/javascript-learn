@@ -12,11 +12,7 @@ const countriesMap = countries.map(function (country) {
 console.log(countriesMap);
 
 
-// [
-//     {letter: G, country: Germany},
-//     {letter: D, country: Denmark},
-//     {letter: S, country: Swiss,  Sweden}, bu şekilde mi
-//     {Letter: A, country: Australia, country: Austria, country: Arjantin }, bu şekilde mi
-// ]
+// 
+// f: finland, fiji, france
 
 //TODO

@@ -22,7 +22,9 @@ let users = [
         name: 'Kanada',
         age: 30,
         gender: 1
-    }];
+    }
+];
+
 
 const usersSort = users.sort(function (a, b) {
 
@@ -30,6 +32,8 @@ const usersSort = users.sort(function (a, b) {
 });
 
 console.log(usersSort);
+
+
 
 const usersSortTwo = users.sort(function (a, b) {
 

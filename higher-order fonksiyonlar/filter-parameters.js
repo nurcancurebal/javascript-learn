@@ -8,5 +8,14 @@ const countries = [
   { country: "Dutch", count: 8 },
   { country: "German", count: 7 },
   { country: "Chinese", count: 5 },
-  { country: "Swahili", count: 4 },
+  { country: "Swahili", count: 10 },
 ];
+
+const countriesFilter = countries.filter(function (currentValue, index, arr) {  // 3 parametre alır
+
+  return arr[arr.length - 1].count < currentValue.count && index > 1;
+});
+
+console.log(countriesFilter);
+
+// [ { country: 'Arabic', count: 25 }, { country: 'Spanish', count: 24 } ]
