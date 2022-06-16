@@ -9,3 +9,13 @@ const countries = {
     country: 'Holland', capital: 'Amsterdam', population: 17.44,
     country: 'Austria', capital: 'Viyana', population: 8.917
 };
+
+
+const countrySort = countries.sort(function (a,b) {
+
+    return a.country.localeCompare(b.country);
+});
+
+console.log(countrySort);
+
+// TODO bunu nasıl çevirebiliriz.

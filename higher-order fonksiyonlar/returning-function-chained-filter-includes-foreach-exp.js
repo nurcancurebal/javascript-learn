@@ -16,7 +16,7 @@ searchArray(17).forEach(item => {    // chained : zincirleme
 
     const { nameEng, nameTr, capital, stars } = item;
 
-    console.log(`Ülkenin ismi İngilizce/Türkçe : ${nameEng}/${nameTr} Başkenti : ${capital} Yıldızı : ${stars} `);
+    console.log(`Ülkenin ismi İngilizce/Türkçe : ${nameEng}/${nameTr} Başkenti : ${capital} Star : ${stars} `);
 });
 
 
