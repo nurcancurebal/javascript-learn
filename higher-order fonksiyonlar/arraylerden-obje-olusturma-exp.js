@@ -12,7 +12,6 @@ const countriesMap = countries.map(function (country) {
 console.log(countriesMap);
 
 
-// 
 // f: finland, fiji, france
 
 //TODO
