@@ -16,20 +16,24 @@ console.log(mostPopulatedCountries(countries, 5));
 
 console.log(mostPopulatedCountries(countries, 3));
 
+console.log(mostPopulatedCountries(countries, 7));
+
 
 function mostPopulatedCountries(array, number) {
 
-  const sortAesArray = countries.sort(function (a, b) {
+  const sortAesArray = array.sort(function (a, b) {
 
     return b.population - a.population;
   });
 
 
-  const lastFiveArray = sortAesArray.filter(function (item, index) {
+  const lastNumberArray = sortAesArray.filter(function (item, index) {
 
-    
+    if (index < number) {
+
+      return item
+    }
   });
 
-
-  return lastFiveArray;
-}
+  return lastNumberArray;
+};

@@ -29,7 +29,7 @@ function getFirstTenCountries(array, number) {
 
     const mochaArray = [];
 
-    countries.forEach(function (country, index) {
+    array.forEach(function (country, index) {
 
         if (index < number) {
 
