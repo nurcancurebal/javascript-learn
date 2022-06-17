@@ -19,7 +19,7 @@ const objectCountries = countries.map(function (country) {
 
             // DAHA KISA : !letters[char] ? letters[char] = 1 : letters[char] += 1;
 
-            if (!letters[char]) {
+            if (!letters[char]) { // objenin içine key ekleme bu şekilde yapılır.
 
                 letters[char] = 1;
 
