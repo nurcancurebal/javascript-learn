@@ -20,7 +20,7 @@ searchArray(17, countries).forEach(item => {    // chained : zincirleme
 });
 
 
-function searchArray(value, array) {
+function searchArray(value, array) {    // returning function
 
     const result = array.filter(function (item) {
 
