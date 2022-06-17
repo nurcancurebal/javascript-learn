@@ -8,7 +8,7 @@ const countries = [
   { country: "Nigeria", population: 18 },
   { country: "Bangladesh", population: 16 },
   { country: "Russian Federation", population: 14 },
-  { country: "Japan", population: 11 },
+  { country: "Japan", population: 11 }
 ];
 
 
@@ -31,8 +31,8 @@ function mostPopulatedCountries(array, number) {
 
     if (index < number) {
 
-      return item
-    }
+      return item;
+    };
   });
 
   return lastNumberArray;

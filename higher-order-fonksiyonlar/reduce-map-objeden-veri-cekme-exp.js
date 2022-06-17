@@ -4,7 +4,7 @@ const products = [
     { product: 'potato', price: ' ' },
     { product: 'avocado', price: 8 },
     { product: 'coffee', price: 10 },
-    { product: 'tea', price: '' },
+    { product: 'tea', price: '' }
 ];
 
 const itemProduct = products.reduce(function (store, item, index) { // reduce index 1 den başlıyor
@@ -25,7 +25,7 @@ console.log(itemProduct);
 
 const mapProducts = products.map(function (newProduct) {
 
-    return newProduct.product
+    return newProduct.product;
 });
 
 console.log(mapProducts);

@@ -7,21 +7,21 @@ let output = '';
 
 const countriesMap = countries.map(function (country) {
 
-    let  countrySplit = country.split("")[0];
-    
-    if ( oneCharacter.includes(countrySplit)) {
-        
+    let countrySplit = country.split("")[0];
+
+    if (oneCharacter.includes(countrySplit)) {
+
         output += `${oneCharacter}: ${country} aynı`;
 
-        return    
+        return
 
-    }else{
+    } else {
 
         oneCharacter.push(countrySplit);
-        
+
         output += `${oneCharacter}: ${country}`;
 
-        return 
+        return
     }
 });
 

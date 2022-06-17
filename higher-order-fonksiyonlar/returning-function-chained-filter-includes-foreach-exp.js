@@ -12,7 +12,7 @@ const countries = [
     { nameEng: "Austria", nameTr: "Avusturya", capital: "Viyana", stars: 14 }
 ];
 
-searchArray(17,countries).forEach(item => {    // chained : zincirleme
+searchArray(17, countries).forEach(item => {    // chained : zincirleme
 
     const { nameEng, nameTr, capital, stars } = item;
 
@@ -20,7 +20,7 @@ searchArray(17,countries).forEach(item => {    // chained : zincirleme
 });
 
 
-function searchArray(value,array) {
+function searchArray(value, array) {
 
     const result = array.filter(function (item) {
 

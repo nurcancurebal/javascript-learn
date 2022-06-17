@@ -1,7 +1,7 @@
 const countries = ['Germany', 'Denmark', 'Swiss', 'Finland', 'Norway', 'Australia', 'Sweden', 'Holland', 'Austria', 'Canada'];
 
 
-const newCountries = []
+const newCountries = [];
 
 countries.forEach(getLastTenCountries);
 
