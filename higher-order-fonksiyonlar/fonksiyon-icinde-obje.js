@@ -12,6 +12,11 @@ console.log('Min:', statistics.min());
 console.log('Sum:', statistics.sum());
 console.log('Range:', statistics.range());
 console.log('Median:', statistics.median());
+console.log('Mode:', statistics.mode());
+console.log('Mean:', statistics.mean());
+
+statistics.describe()
+
 
 function statisticsCalculater(array) {
 
@@ -58,39 +63,77 @@ function statisticsCalculater(array) {
         },
 
         mode: function () {
-            
-           const data = array.forEach(function (item) {
-            
-            
-           });
 
-            return 
+            let result = {};
+
+            array.forEach(function (item) {
+
+                if (!result[item]) {
+
+                    result[item] = 1
+
+                } else {
+
+                    result[item]++
+                }
+            });
+
+            const arrayEntries = Object.entries(result)
+
+            const mapValues = arrayEntries.map(function (item) {
+
+                return item[1];
+            });
+
+            const maxValue = Math.max(...mapValues);
+
+            const findItem = arrayEntries.find(function (item) {
+
+                return item[1] == maxValue;
+            });
+
+            return `(${findItem[0]}, ${findItem[1]})`;
+        },
+
+        mean: function () {
+
+            return Math.ceil(this.sum() / this.count());
+        },
+
+
+
+
+
+
+        describe: function () { // ! Objenin icersindekileri bulur ve çalıştırır.
+
+            delete this.describe;
+
+            Object.entries(this).forEach(function (item) {
+
+                const name = item[0][0].toUpperCase() + item[0].slice(1) + ": ";
+
+                console.log(name, this[item[0]]());
+
+            }, this);
+
         }
-
-
     };
 };
 
 
 
 
-// console.log('Mode: ', statistics.mode()) // {'mode': 26, 'count': 5}
-// console.log('Variance: ',statistics.var()) // 17.5
+
+
 // console.log('Standard Deviation: ', statistics.std()) // 4.2
 // console.log('Variance: ',statistics.var()) // 17.5
 // console.log('Frequency Distribution: ',statistics.freqDist()) # [(20.0, 26), (16.0, 27), (12.0, 32), (8.0, 37), (8.0, 34), (8.0, 33), (8.0, 31), (8.0, 24), (4.0, 38), (4.0, 29), (4.0, 25)]
 
 
 
-/* console.log(statistics.describe())
-Count: 25
-Sum:  744
-Min:  24
-Max:  38
-Range:  14
-Mean:  30
-Median:  29
-Mode:  (26, 5)
+/*
+
 Variance:  17.5
 Standard Deviation:  4.2
 Frequency Distribution: [(20.0, 26), (16.0, 27), (12.0, 32), (8.0, 37), (8.0, 34), (8.0, 33), (8.0, 31), (8.0, 24), (4.0, 38), (4.0, 29), (4.0, 25)] */
