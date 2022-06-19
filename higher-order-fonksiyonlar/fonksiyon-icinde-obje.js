@@ -1,0 +1,96 @@
+// bir fonksiyon oluştur, içinde obje dönsün içindeki verileri yazdır.
+
+const ages = [31, 26, 34, 37, 27, 26, 32, 32, 26, 27, 27, 24, 32, 33, 27, 25, 26, 38, 37, 31, 34, 24, 33, 29, 26];
+
+
+const statistics = statisticsCalculater(ages);
+
+
+console.log('Count:', statistics.count());
+console.log('Max:', statistics.max());
+console.log('Min:', statistics.min());
+console.log('Sum:', statistics.sum());
+console.log('Range:', statistics.range());
+console.log('Median:', statistics.median());
+
+function statisticsCalculater(array) {
+
+    return {
+
+        count: function () {
+
+            return array.length;
+        },
+
+        sum: function () {
+
+            return array.reduce((store, prev) => {
+
+                return store + prev;
+            });
+        },
+
+        min: function () {
+
+            return Math.min(...array);
+        },
+
+        max: function () {
+
+            return Math.max(...array);
+        },
+
+        range: function () {
+
+            return Math.max(...array) - Math.min(...array);
+        },
+
+        median: function () {
+
+            const data = array.sort().filter((item, index, array) => {
+
+                if (Math.floor(array.length / 2) == index) { // index 0' dan başladığı için floor kullanıyoruz
+
+                    return item;
+                }
+            });
+            return Number(data);
+        },
+
+        mode: function () {
+            
+           const data = array.forEach(function (item) {
+            
+            
+           });
+
+            return 
+        }
+
+
+    };
+};
+
+
+
+
+// console.log('Mode: ', statistics.mode()) // {'mode': 26, 'count': 5}
+// console.log('Variance: ',statistics.var()) // 17.5
+// console.log('Standard Deviation: ', statistics.std()) // 4.2
+// console.log('Variance: ',statistics.var()) // 17.5
+// console.log('Frequency Distribution: ',statistics.freqDist()) # [(20.0, 26), (16.0, 27), (12.0, 32), (8.0, 37), (8.0, 34), (8.0, 33), (8.0, 31), (8.0, 24), (4.0, 38), (4.0, 29), (4.0, 25)]
+
+
+
+/* console.log(statistics.describe())
+Count: 25
+Sum:  744
+Min:  24
+Max:  38
+Range:  14
+Mean:  30
+Median:  29
+Mode:  (26, 5)
+Variance:  17.5
+Standard Deviation:  4.2
+Frequency Distribution: [(20.0, 26), (16.0, 27), (12.0, 32), (8.0, 37), (8.0, 34), (8.0, 33), (8.0, 31), (8.0, 24), (4.0, 38), (4.0, 29), (4.0, 25)] */
