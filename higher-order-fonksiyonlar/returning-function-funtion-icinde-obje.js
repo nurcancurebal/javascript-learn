@@ -14,6 +14,10 @@ console.log('Range:', statistics.range());
 console.log('Median:', statistics.median());
 console.log('Mode:', statistics.mode());
 console.log('Mean:', statistics.mean());
+console.log('Variance:', statistics.variance());
+console.log('Standard Deviation: ', statistics.std());
+console.log('Frequency Distribution: ',statistics.freqDist());
+
 
 statistics.describe()
 
@@ -97,37 +101,39 @@ function statisticsCalculater(array) {
 
         mean: function () {
 
-            return Math.ceil(this.sum() / this.count());
+            return Math.floor(this.sum() / this.count());
         },
 
         variance: function () {
 
-            const meanCollection = array.reduce((store, prev) => {
+            const arrayMap = array.map(function (item) {
+
+                let extraction = item - this.mean();
+
+                const square = extraction * extraction;
+
+                return square;
+
+            }, this);
+
+            const total = arrayMap.reduce((store, prev) => {
 
                 return store + prev;
             });
 
-            const mean = Math.ceil(meanCollection/ array.length);
-
-            return array.map(function (item) {
-
-                const extraction = item - mean;
-
-                if (extraction < 0) {
-                    
-                     extraction = extraction*(-1); // TODO neden olmuyor
-                }else{
-                    extraction;
-                }
-
-                const square = Math.sqrt(extraction);
-
-                 return square;
-            })
+            return total / (this.count() - 1);
         },
 
+        std: function () {
 
+            return Math.sqrt(this.variance());
+        },
 
+        freqDist: function () {
+            
+            
+
+        },
 
         describe: function () { // ! Objenin icersindekileri bulur ve çalıştırır.
 
@@ -140,24 +146,8 @@ function statisticsCalculater(array) {
                 console.log(name, this[item[0]]());
 
             }, this);
-
         }
     };
 };
 
-
-
-
-
-
-// console.log('Standard Deviation: ', statistics.std()) // 4.2
-// console.log('Variance: ',statistics.var()) // 17.5
-// console.log('Frequency Distribution: ',statistics.freqDist()) # [(20.0, 26), (16.0, 27), (12.0, 32), (8.0, 37), (8.0, 34), (8.0, 33), (8.0, 31), (8.0, 24), (4.0, 38), (4.0, 29), (4.0, 25)]
-
-
-
-/*
-
-Variance:  17.5
-Standard Deviation:  4.2
-Frequency Distribution: [(20.0, 26), (16.0, 27), (12.0, 32), (8.0, 37), (8.0, 34), (8.0, 33), (8.0, 31), (8.0, 24), (4.0, 38), (4.0, 29), (4.0, 25)] */
+//Frequency Distribution: [(20.0, 26), (16.0, 27), (12.0, 32), (8.0, 37), (8.0, 34), (8.0, 33), (8.0, 31), (8.0, 24), (4.0, 38), (4.0, 29), (4.0, 25)]
