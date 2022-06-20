@@ -100,7 +100,31 @@ function statisticsCalculater(array) {
             return Math.ceil(this.sum() / this.count());
         },
 
+        variance: function () {
 
+            const meanCollection = array.reduce((store, prev) => {
+
+                return store + prev;
+            });
+
+            const mean = Math.ceil(meanCollection/ array.length);
+
+            return array.map(function (item) {
+
+                const extraction = item - mean;
+
+                if (extraction < 0) {
+                    
+                     extraction = extraction*(-1); // TODO neden olmuyor
+                }else{
+                    extraction;
+                }
+
+                const square = Math.sqrt(extraction);
+
+                 return square;
+            })
+        },
 
 
 
