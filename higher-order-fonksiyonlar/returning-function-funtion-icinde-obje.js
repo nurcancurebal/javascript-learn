@@ -7,16 +7,15 @@ const statistics = statisticsCalculater(ages);
 
 
 console.log('Count:', statistics.count());
-console.log('Max:', statistics.max());
-console.log('Min:', statistics.min());
 console.log('Sum:', statistics.sum());
+console.log('Min:', statistics.min());
+console.log('Max:', statistics.max());
 console.log('Range:', statistics.range());
+console.log('Mean:', statistics.mean());
 console.log('Median:', statistics.median());
 console.log('Mode:', statistics.mode());
-console.log('Mean:', statistics.mean());
 console.log('Variance:', statistics.variance());
 console.log('Standard Deviation: ', statistics.std());
-console.log('Frequency Distribution: ',statistics.freqDist());
 
 
 statistics.describe()
@@ -52,6 +51,11 @@ function statisticsCalculater(array) {
         range: function () {
 
             return Math.max(...array) - Math.min(...array);
+        },
+
+        mean: function () {
+
+            return Math.floor(this.sum() / this.count());
         },
 
         median: function () {
@@ -97,12 +101,7 @@ function statisticsCalculater(array) {
             });
 
             return `(${findItem[0]}, ${findItem[1]})`;
-        },
-
-        mean: function () {
-
-            return Math.floor(this.sum() / this.count());
-        },
+        },  
 
         variance: function () {
 
@@ -129,12 +128,6 @@ function statisticsCalculater(array) {
             return Math.sqrt(this.variance());
         },
 
-        freqDist: function () {
-            
-            
-
-        },
-
         describe: function () { // ! Objenin icersindekileri bulur ve çalıştırır.
 
             delete this.describe;
@@ -149,5 +142,3 @@ function statisticsCalculater(array) {
         }
     };
 };
-
-//Frequency Distribution: [(20.0, 26), (16.0, 27), (12.0, 32), (8.0, 37), (8.0, 34), (8.0, 33), (8.0, 31), (8.0, 24), (4.0, 38), (4.0, 29), (4.0, 25)]
