@@ -13,11 +13,11 @@ Math.ceil(x)	ondalıklı sayıyı kendisinden sonraki ilk tam sayıya yuvarlar.(
 
 Math.floor(x)	ondalıklı sayıyının ondalıklı kısmını kaldırır.(aşağı yuvarlar)
 
-Math.sqrt(x)	Kendisine parametre olarak gönderilen sayının karesini verir.
+Math.sqrt(x)	Kendisine parametre olarak gönderilen sayının karekökünü verir.
 
 Math.pow(x,y)	x taban, y üs olacak şekilde sayının kuvvetini hesaplar
 
-Math.abs(x)	Sayının mutlak değerini verir. ( |-2| =2 )
+Math.abs(x) 	Sayının mutlak değerini verir. ( |-2| =2 )
 
 Math.acos(x)	-1 +1 arasındaki consinüs değerini radyan cinsinden döndürür.
 
@@ -25,17 +25,17 @@ Math.asin(x)	-1 +1 arasındaki sinüs değerini 0 – pi arasında derecesini ge
 
 Math.atan(x)	tanjant tipindeki bir ifadenin 0 – pi arasında derecesini getirir.
 
-Math.atan2(y,x)	y,x değeri girilen ifadelerin 0 – pi arasında derecesini getirir.
+Math.atan2(y,x)	 y,x değeri girilen ifadelerin 0 – pi arasında derecesini getirir.
 
-Math.cos(x)	derece cinsinden girilen cosinüs açısının -1 +1 arasıdaki değerini getirir.
+Math.cos(x)	    derece cinsinden girilen cosinüs açısının -1 +1 arasıdaki değerini getirir.
 
-Math.exp(x)	ex  degerini getirir.
+Math.exp(x) 	ex  degerini getirir.
 
-Math.log(x)	e tabanındaki doğal logaritmasını verir.
+Math.log(x)	    e tabanındaki doğal logaritmasını verir.
 
-Math.sin(x)	derece cinsinden girilen sinüs açısının -1 +1 arasıdaki değerini getirir.
+Math.sin(x) 	derece cinsinden girilen sinüs açısının -1 +1 arasıdaki değerini getirir.
 
-Math.tan(x)	derece cinsinden girilen sayının radyan cinsinden değerini döndürür.
+Math.tan(x)	    derece cinsinden girilen sayının radyan cinsinden değerini döndürür.
 
 
 Matematiksel Sabitler
@@ -55,3 +55,16 @@ Math.LN10      	Bu özellik matematikteki 10 sayısının karekökünü verir.
 Math.LOG2E     	Tabanı 2 olan e sabitinin logaritamsını verir.
 
 Math.LOG10E   	Tabanı 10 olan e sabitinin logaritmasını verir. */
+
+
+console.log(Math.sqrt(4)); // sonuç 2
+
+console.log(Math.floor(Math.random() * 11 +20)); // 20-30 arasında rastgele sayı üretir
+
+console.log(Math.random()); //sonuç: 0-1 arasında rastgele ondalıklı sayı
+
+console.log(Math.floor(Math.random() * 11)); // 0-10 arasında rastgele sayı üretir.
+
+console.log(Math.pow(2,5)); // sonuç 32
+
+console.log(Math.abs(-210.6)); // Sonuç: 210.6
