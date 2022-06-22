@@ -22,3 +22,17 @@ myMap.forEach(function (key, value) {
 // X Nurcan
 // Y { a: 2, b: 3 }
 // Z [Function: key3]
+
+
+//! seti kullanmadan yapsaydık
+
+const arr = [[key1, "A"], [key2, "B"], [key3, "C"]];
+
+arr.forEach(function (key, value) {
+
+    console.log(key, value);
+});
+
+// [ 'Nurcan', 'A' ] 0
+// [ { a: 2, b: 3 }, 'B' ] 1
+// [ [Function: key3], 'C' ] 2
