@@ -1,4 +1,6 @@
-let map =new Map();
+// Set(Küme), bir öğeler(elements) topluluğudur. Küme yalnızca benzersiz öğeler(elements) içerebilir.
+
+let map = new Map();
 
 map.set({a:1}, "merhaba, dünya");
 
