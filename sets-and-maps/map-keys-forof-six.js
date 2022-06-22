@@ -19,9 +19,9 @@ for (const [keyTwo, value] of map.entries()) {
 // c 3
 
 
-for (let [keyThree, valueTwo] of[...map]){
+for (let [keyThree, valueTwo] of [...map]) {
 
-    console.log(keyThree,valueTwo);
+    console.log(keyThree, valueTwo);
 };
 
 // a 1

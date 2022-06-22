@@ -9,8 +9,8 @@ map.set(f, "merhaba dünya");
 console.log(map.get(f));    // merhaba dünya
 
 
-let mapTwo= new Map();
+let mapTwo = new Map();
 
-mapTwo.set(f,f);
+mapTwo.set(f, f);
 
 console.log(mapTwo.get(f));  // [Function: f]

@@ -2,7 +2,7 @@
 
 let map = new Map();
 
-map.set({a:1}, "merhaba, dünya");
+map.set({ a: 1 }, "merhaba, dünya");
 
 console.log(map);   // Map(1) { { a: 1 } => 'merhaba, dünya' }
 
