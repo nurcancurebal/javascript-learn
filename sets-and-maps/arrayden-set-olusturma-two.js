@@ -10,7 +10,6 @@ const languages = [
     'French',
 ];
 
-
 const setOfLanguages = new Set(languages);
 
 console.log(setOfLanguages);    // Set(4) { 'English', 'Finnish', 'French', 'Spanish' }
