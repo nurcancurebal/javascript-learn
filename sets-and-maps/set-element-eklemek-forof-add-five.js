@@ -1,6 +1,6 @@
 const companies = ['Google', 'Facebook', 'Amazon', 'Oracle', 'Microsoft'];
 
-setOfCompanies = new Set();
+let setOfCompanies = new Set();
 
 for (const company of companies) {
 
