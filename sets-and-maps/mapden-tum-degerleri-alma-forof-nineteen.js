@@ -1,4 +1,4 @@
-countries = [
+const countries = [
     ['Finland', 'Helsinki'],
     ['Sweden', 'Stockholm'],
     ['Norway', 'Oslo'],

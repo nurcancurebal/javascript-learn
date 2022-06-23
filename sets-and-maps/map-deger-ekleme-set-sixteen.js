@@ -6,10 +6,10 @@ countriesMap.set('Norway', 'Oslo');
 
 console.log(countriesMap);
 
-console.log(countriesMap.size); // 3
-
 // Map(3) {
 //     'Finland' => 'Helsinki',
 //     'Sweden' => 'Stockholm',
 //     'Norway' => 'Oslo'
 //   }
+
+console.log(countriesMap.size); // 3

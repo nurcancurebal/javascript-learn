@@ -1,8 +1,8 @@
 let map = new Map();
 
-map.set("a", "merhaba dünya");
+map.set("a", "merhaba dünya"); // setle ekledik
 
-console.log(map.get("a"));  // merhaba dünya
+console.log(map.get("a"));  // merhaba dünya , get ile valuesunu çağırdık
 
 
 
