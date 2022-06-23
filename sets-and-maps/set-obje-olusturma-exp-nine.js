@@ -16,8 +16,6 @@ console.log(langSet.size);   // 4
 
 const counts = [];
 
-const count = {};
-
 for (const l of langSet) {
 
     const filteredLang = languages.filter((lng) => lng === l);
