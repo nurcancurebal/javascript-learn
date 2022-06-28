@@ -1,24 +1,24 @@
 const users = [
     {
-        name: 'Brook',
+        name: 'Nurcan',
         scores: 75,
         skills: ['HTM', 'CSS', 'JS'],
         age: 16
     },
     {
-        name: 'Alex',
+        name: 'Erdinç',
         scores: 80,
         skills: ['HTM', 'CSS', 'JS'],
         age: 18
     },
     {
-        name: 'David',
+        name: 'Bal',
         scores: 75,
         skills: ['HTM', 'CSS'],
         age: 22
     },
     {
-        name: 'John',
+        name: 'Cürebal',
         scores: 85,
         skills: ['HTML'],
         age: 25
@@ -47,14 +47,11 @@ const users = [
 
 for ({ name, scores, skills, age } of users) {
 
-    console.log(name, scores, skills, age);
+    if (skills.length < 2) {
+
+        console.log(name, scores, skills, age);
+    }
 };
 
 
-// Brook 75 [ 'HTM', 'CSS', 'JS' ] 16
-// Alex 80 [ 'HTM', 'CSS', 'JS' ] 18
-// David 75 [ 'HTM', 'CSS' ] 22
-// John 85 [ 'HTML' ] 25
-// Sara 95 [ 'HTM', 'CSS', 'JS' ] 26
-// Martha 80 [ 'HTM', 'CSS', 'JS' ] 18
-// Thomas 90 [ 'HTM', 'CSS', 'JS' ] 20
+// Cürebal 85 [ 'HTML' ] 25
