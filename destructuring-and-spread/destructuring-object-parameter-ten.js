@@ -39,4 +39,9 @@ const person = {
 
 // İmha etmeden kişi nesnesi hakkında bilgi veren bir fonksiyon oluşturalım.
 
-const getPersonInfo = 
+const getPersonInfo = function (obj) {
+
+    const skills = obj.skills;
+    const formattedSkills = skills.slice(0,-1).join(', ');
+    const languages = 
+}

@@ -6,6 +6,6 @@ let name = "Nurcan";
 console.log(name.slice(1, 3)); // ur
 
 
-const numbers = [1, 2, 3, 4, 5];
+let nameTwo = "Erdinç";
 
-console.log(numbers.slice(1, 3));   // 1. eleman dahil 3. eleman hariç arayı al yani 1 ve 2. index, yani 3' ten sonrasını alma
+console.log(nameTwo.slice(0, -1)); // Erdin , (-1) sondaki karakteri alma demek 
