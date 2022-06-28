@@ -59,12 +59,12 @@ Math.LOG10E   	Tabanı 10 olan e sabitinin logaritmasını verir. */
 
 console.log(Math.sqrt(4)); // sonuç 2
 
-console.log(Math.floor(Math.random() * 11 +20)); // 20-30 arasında rastgele sayı üretir
+console.log(Math.floor(Math.random() * 11 + 20)); // 20-30 arasında rastgele sayı üretir
 
 console.log(Math.random()); //sonuç: 0-1 arasında rastgele ondalıklı sayı
 
 console.log(Math.floor(Math.random() * 11)); // 0-10 arasında rastgele sayı üretir.
 
-console.log(Math.pow(2,5)); // sonuç 32
+console.log(Math.pow(2, 5)); // sonuç 32
 
 console.log(Math.abs(-210.6)); // Sonuç: 210.6

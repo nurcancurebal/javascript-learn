@@ -1,6 +1,7 @@
 /* değişken tanımlarken yalnızca 
 let değişkeni değiştirebileceklerinde
 const değişkeni function, object, array kullan */
+
 let araba = "Nurcan'ın arabası güzel siyah";
 
 console.log(araba); //örnek bir değişken
@@ -20,6 +21,7 @@ let surname = 'cürebal';
 let a = 5;
 let b = 4;
 let fullName = `Test deneme
+
 ${a} + ${b} = ${a + b} 
 ${name} ${surname}`;
 

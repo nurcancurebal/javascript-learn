@@ -99,7 +99,7 @@ function statisticsCalculater(array) {
             });
 
             return `(${findItem[0]}, ${findItem[1]})`;
-        },  
+        },
 
         variance: function () {
 

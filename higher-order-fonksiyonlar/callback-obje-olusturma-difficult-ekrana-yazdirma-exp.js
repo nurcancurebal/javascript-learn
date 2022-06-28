@@ -24,7 +24,7 @@ function pusherFunc(who, message) {
 function listenerFunc() {
 
     messages.forEach(function (item) {
-        
+
         console.log(`WHO: ${item.who} | MESSAGE: ${item.message}`); // item: {who: 'NODE.JS', message: 'Go go go!'} item bu şekildeyken bunu tek tek düzenleyip ekrana yazdırıyor
     });
 };

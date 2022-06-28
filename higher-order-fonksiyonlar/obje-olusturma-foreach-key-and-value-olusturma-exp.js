@@ -19,6 +19,6 @@ countries.forEach(function (country) {
 
 
 Object.entries(data).forEach(function (item) {
-    
+
     console.log(`${item[0]} : ${item[1].join(', ')}`);
 });
