@@ -8,3 +8,10 @@ const user = {
 const copiedUser = { ...user, title: "instructor" };
 
 console.log(copiedUser);
+
+// {
+//     name: 'Nurcan',
+//     title: 'instructor',
+//     country: 'Canada',
+//     city: 'Ottava'
+//   }
