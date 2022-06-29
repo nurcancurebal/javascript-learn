@@ -3,13 +3,18 @@ const students = [
     ['John', ['HTM', 'CSS', 'JS', 'React'], [85, 80, 85, 80]]
 ];
 
+
 console.log(convertArrayToObject(students));
-
-
 
 
 function convertArrayToObject(array) {
 
+let object = {};
+
+/* if(array.indexof(array)== 0){
+
+
+} */
 
 }
 
