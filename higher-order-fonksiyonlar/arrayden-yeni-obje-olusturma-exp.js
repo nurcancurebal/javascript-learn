@@ -7,7 +7,7 @@ const countriesStartLetter = countries.map(function (country) {
 
     const data = {};
 
-    country.split("").forEach(function (item, index) {
+    country.split("").forEach(function (item, index) { // harf harf parçaladık
 
         if (index == 0) {
 
