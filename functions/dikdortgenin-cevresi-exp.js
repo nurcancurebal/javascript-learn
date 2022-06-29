@@ -1,6 +1,7 @@
 function perimeterOfRectangle(length, width) {
 
     let perimeter = 2 * (length + width);
+    
     return perimeter;
 };
 
