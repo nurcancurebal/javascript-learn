@@ -28,4 +28,11 @@ console.log(person['phone number']);    // boşluklu değişken çağırmak içi
 
 let keyName = 'skills';
 
-console.log(person[keyName]);   // dinamik olarak kullanmak için
+console.log(person[keyName]);   // dinamik olarak kullanmak için(değişken sahip olduğu değeri yazdık içine)
+
+// [
+//     'HTML',       'CSS',
+//     'JavaScript', 'React',
+//     'Node',       'MongoDB',
+//     'Python',     'D3.js'
+//   ]
