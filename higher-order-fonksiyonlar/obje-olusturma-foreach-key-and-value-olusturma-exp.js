@@ -5,7 +5,7 @@ const data = {};
 
 countries.forEach(function (country) {
 
-    if (!data[country[0]]) { //objenin içerisine key ekleme bu şekilde yapılır
+    if (!data[country[0]]) { //objenin içerisine key ekleme bu şekilde yapılır, değişkeni dinamik olarak kullanmak
 
         data[country[0]] = []; // önce arrayi oluşturduk push işlemini kullanabilmek için
 

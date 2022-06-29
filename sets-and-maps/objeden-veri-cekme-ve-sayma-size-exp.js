@@ -72,16 +72,17 @@ const countries = [
         population: 1000,
         flag: 'https://restcountries.eu/data/ata.svg',
         currency: 'Australian dollar'
-    }];
+    }
+];
 
 const array = [];
 
-const mapCountries = countries.forEach(function (country) {
+countries.forEach(function (country) {
 
     array.push(...country.languages);
 });
 
-const set = new Set(array);
+const set = new Set(array); // benzersiz yaptık
 
 console.log(set);
 
