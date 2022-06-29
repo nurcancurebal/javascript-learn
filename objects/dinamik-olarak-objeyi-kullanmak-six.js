@@ -1,4 +1,4 @@
-// objelerde köşeli parantez iki şey için kullanılır
+// objelerde köşeli parantez üç şey için kullanılır
 
 
 const person = {
@@ -36,3 +36,13 @@ console.log(person[keyName]);   // dinamik olarak kullanmak için(değişken sah
 //     'Node',       'MongoDB',
 //     'Python',     'D3.js'
 //   ]
+
+
+
+// obje içinde obje çağırmak için
+
+const obj2 = { name: 'Nurcan' };
+
+const obj = { [obj2]: "Merhaba Dünya" };
+
+console.log(obj);   // { '[object Object]': 'Merhaba Dünya' }
