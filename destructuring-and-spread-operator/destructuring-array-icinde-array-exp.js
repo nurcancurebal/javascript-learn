@@ -1,8 +1,17 @@
-// öğrenci adını, becerilerini ve puanını, okunması kolay olmayan diziler dizisinde yapılandırır.Bir satırda aşağıdaki dizi adını ada,
-// beceri dizisini becerilere, puan dizisini puanlara, JavaScript puanını jsScore'a ve React puanını tepkiScore değişkenine bir
-// satırda yok edin(destructuring).
+// bir obje yarat 
 
-const student = ['Nurcan', ['HTM', 'CSS', 'JS', 'React'], [98, 85, 90, 95]];
+const student = ['Nurcan', ['HTML', 'CSS', 'JS', 'React'], [98, 85, 90, 95]];
+
+const benzeri = {
+    name: "Nurcan",
+    htmlScore: 98,
+    cssScore: 85,
+    jsScore: 90,
+    reactScore: 95,
+    skills: 'HTML CSS JS React'
+};
+
+console.log(benzeri.name, benzeri.skills, benzeri.jsScore, benzeri.reactScore);
 
 
 
