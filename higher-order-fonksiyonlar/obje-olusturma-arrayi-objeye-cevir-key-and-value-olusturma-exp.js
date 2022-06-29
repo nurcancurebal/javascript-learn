@@ -22,3 +22,11 @@ Object.entries(data).forEach(function (item) {
 
     console.log(`${item[0]} : ${item[1].join(', ')}`);
 });
+
+// G : Germany
+// D : Denmark
+// S : Swiss, Sweden
+// F : Finland
+// N : Norway
+// A : Australia, Austria, Argentina
+// H : Holland
