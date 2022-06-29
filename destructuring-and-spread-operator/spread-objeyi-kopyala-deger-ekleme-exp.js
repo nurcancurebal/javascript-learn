@@ -22,7 +22,7 @@ const student = {
 };
 
 
-const newStudent = { ...student, skills:{ skill: 'BootStrap', level: 8 } };
+const newStudent = { ...student, skills: { skill: 'BootStrap', level: 8 } };
 
 
 console.log(newStudent);

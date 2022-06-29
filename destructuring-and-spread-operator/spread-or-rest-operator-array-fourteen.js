@@ -9,7 +9,7 @@ const countries = [
     'Iceland'
 ];
 
-let [ger, fra, , ...nordicCountries]= countries;
+let [ger, fra, , ...nordicCountries] = countries;
 
 console.log(ger);   // Germany
 
