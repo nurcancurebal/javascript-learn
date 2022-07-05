@@ -1,6 +1,6 @@
 // Bir düzenli ifade(regular expression) iki parametre alır. Gerekli bir arama modeli ve isteğe bağlı bir bayrak.
 
-// Pattern(Model): Bir kalıp(desen), bir metin veya bir tür benzerlik içeren herhangi bir kalıp(desen) olabilir. Örneğin, bir e-postadaki
+// Pattern(Model): Bir kalıp, bir metin veya bir tür benzerlik içeren herhangi bir kalıp olabilir. Örneğin, bir e-postadaki
 // istenmeyen e-posta kelimesi, bir e-postada aramak istediğimiz bir kalıp olabilir veya bir telefon numarası biçimindeki
 // numara bizim ilgi alanımız olabilir.
 
@@ -9,6 +9,7 @@
 /* g: tüm metinde bir kalıp aramak anlamına gelen küresel bir bayrak
    i: büyük/küçük harfe duyarsız bayrak (hem küçük hem de büyük harf arar)
    m: çok satırlı */
+
 
 // RegExp Constructor ile bir desen oluşturma
 
@@ -30,6 +31,17 @@ let flag = 'gi';
 let regExTwo = new RegExp(patternTwo, flag);
 
 
-// RegExp nesnesini(objesini) kullanarak bir regex kalıbı(modeli) bildirme. Deseni(modeli) ve bayrağı RegExp yapıcısının içine yazma
 
-let Three = new RegExp('love','gi')
+// RegExp nesnesini(objesini) kullanarak bir regex kalıbı bildirme. Deseni ve bayrağı RegExp yapıcısının içine yazma
+
+let regExThree = new RegExp('love', 'gi');
+
+
+
+// RegExp Constructor olmadan bir desen(kalıp,model) oluşturma
+
+// Genel bayrak ve büyük/küçük harfe duyarsız bayrakla normal ifade(regular expression) bildirme.
+
+let regExFour = /love/gi;
+
+// Yukarıdaki normal ifade, RegExp yapıcısıyla(regExThree) oluşturduğumuzla aynıdır.
