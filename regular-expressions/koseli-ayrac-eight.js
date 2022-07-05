@@ -21,3 +21,13 @@ const patternTwo = /[Aa]pple/g;
 const matchesTwo = txt.match(patternTwo);
 
 console.log(matchesTwo);    // [ 'Apple', 'apple' ]
+
+
+
+const patternThree = /[Aa]pple|[Bb]anana/g;
+
+const txtThree = 'Apple and banana are fruits. An old cliche says an apple a day a doctor way has been replaced by a banana a day keeps the doctor far far away. Banana is easy to eat too.';
+
+const matchesThree = txtThree.match(patternThree);
+
+console.log(matchesThree);  // [ 'Apple', 'banana', 'apple', 'banana', 'Banana' ]
