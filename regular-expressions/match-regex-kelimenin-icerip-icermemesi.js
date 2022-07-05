@@ -1,7 +1,6 @@
+// match()= parametre olarak düzenli ifade(regex/regular expression) alır, eğer bir eşleşme olursa bir dizi döndürür,
+// eşleşme olmazsa null döndürür.
 
-/* match()= parametre olarak düzenli ifade(regex/regular expression) alır, eğer bir eşleşme olursa bir dizi döndürür,
- eşleşme olmazsa null döndürür.
-*/
 
 let string = 'I love JavaScript.If you do not love JavaScript what else can you love.';
 
