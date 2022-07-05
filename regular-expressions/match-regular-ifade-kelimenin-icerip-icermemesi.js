@@ -1,4 +1,4 @@
-// match()= parametre olarak düzenli ifade(regex/regular expression) alır, eğer bir eşleşme olursa bir dizi döndürür,
+// match()= parametre olarak düzenli ifade(regular expression) alır, eğer bir eşleşme olursa bir dizi döndürür,
 // eşleşme olmazsa null döndürür.
 
 
@@ -13,4 +13,4 @@ console.log(string.match(/love/gi));
 
 
 //let string='love' bu ifade string bir değişkendir
-// let patterOne= /love/ bu bir regex regular(düzenli) ifadedir / ile başlar / ile biter
+// let patterOne= /love/ bu bir regular(düzenli) ifadedir / ile başlar / ile biter

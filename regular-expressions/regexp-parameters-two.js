@@ -19,4 +19,17 @@ let pattern = 'love';
 
 let regEx = new RegExp(pattern);
 
+
 // Genel bayrak ve büyük/küçük harfe duyarsız bayrakla düzenli ifade(regular expression) bildirme.
+
+
+let patternTwo = 'love';
+
+let flag = 'gi';
+
+let regExTwo = new RegExp(patternTwo, flag);
+
+
+// RegExp nesnesini(objesini) kullanarak bir regex kalıbı(modeli) bildirme. Deseni(modeli) ve bayrağı RegExp yapıcısının içine yazma
+
+let Three = new RegExp('love','gi')
