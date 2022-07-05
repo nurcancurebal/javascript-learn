@@ -4,10 +4,41 @@
 
 const txt = 'This regular expression example was made in December 6,  2019.';
 
-const pattern = /\\b\w{4}\b/g;
+const pattern = /\b\w{4}\b/g;
 
 const matches = txt.match(pattern);
 
-console.log(matches);
+console.log(matches);   //['This', 'made', '2019']
 
-// Todo neden null verdi?
+// TODO neden null verdi?
+
+
+
+
+const patternTwo = /\b[a-zA-Z]{4}\b/g;
+
+const matchesTwo = txt.match(patternTwo);
+
+console.log(matchesTwo);    // [ 'This', 'made' ]
+
+
+
+
+const patternThree = /\d{4}/g;
+
+const matchesThree = txt.match(pattern);
+
+console.log(matchesThree);  // ['2019']
+
+// TODO null verdi?
+
+
+
+
+
+
+const patternFour = /\d{1,4}/g;
+
+const matchesFour = txt.match(patternFour);
+
+console.log(matchesFour);  // ['6', '2019']
