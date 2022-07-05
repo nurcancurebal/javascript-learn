@@ -1,6 +1,6 @@
 // RegExp'te kaçış karakteri (\)
 
-const pattern = /\d/g;
+const pattern = /\d/g;  // d numaralar demek
 
 const txt = 'This regular expression example was made in January 12,  2020.';
 

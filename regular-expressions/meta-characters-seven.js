@@ -1,7 +1,7 @@
 // => []: Bir dizi karakter
 // . [a-c] şu anlama gelir, a veya b veya c
-// . [a-z], a'dan z'ye herhangi bir harf
-// . [A-Z] anlamına gelir, A'dan Z'ye herhangi bir karakter
+// . [a-z], a'dan z'ye herhangi bir küçük harf
+// . [A-Z] anlamına gelir, A'dan Z'ye herhangi bir büyük karakter
 // . [0-3] anlamına gelir, 0 veya 1 veya 2 veya 3
 // . [0 -9] 0'dan 9'a kadar herhangi bir sayı anlamına gelir
 // . [A-Za-z0-9] a'dan z'ye, A'dan Z'ye, 0'dan 9'a kadar herhangi bir karakter
@@ -13,7 +13,7 @@
 // => . : yeni satır karakteri (\n) dışında herhangi bir karakter
 
 // => ^: ile başlar
-// . r'^substring' örneğin r'^love', aşk kelimesiyle başlayan bir cümle
+// . r'^substring' örneğin r'^love', love kelimesiyle başlayan bir cümle
 // . r'[^abc] a değil, b değil, c değil anlamına gelir.
 
 // => $: zekice biter

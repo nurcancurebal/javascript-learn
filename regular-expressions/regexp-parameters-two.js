@@ -8,7 +8,8 @@
 
 /* g: tüm metinde bir kalıp aramak anlamına gelen küresel bir bayrak
    i: büyük/küçük harfe duyarsız bayrak (hem küçük hem de büyük harf arar)
-   m: çok satırlı */
+   m: çok satırlı 
+*/
 
 
 // RegExp Constructor ile bir desen oluşturma

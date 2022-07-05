@@ -10,8 +10,6 @@ const matches = txt.match(pattern);
 
 console.log(matches);   //['This', 'made', '2019']
 
-// TODO neden null verdi?
-
 
 
 
@@ -26,11 +24,9 @@ console.log(matchesTwo);    // [ 'This', 'made' ]
 
 const patternThree = /\d{4}/g;
 
-const matchesThree = txt.match(pattern);
+const matchesThree = txt.match(patternThree);
 
 console.log(matchesThree);  // ['2019']
-
-// TODO null verdi?
 
 
 
