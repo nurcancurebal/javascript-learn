@@ -38,7 +38,7 @@
 
 // . : yeni satır karakteri (\n) dışında herhangi bir karakter
 // ^ : ile başlar; r'^substring' : örneğin r'^love', love kelimesiyle başlayan bir cümle; r'[^abc] : a değil, b değil, c değil anlamına gelir.
-// $ : zekice biter; r'substring' : örneğin 'love', cümle aşk kelimesiyle biter
+// $ : zekice biter; r'substring' : örneğin r'love', cümle aşk kelimesiyle biter
 // * : sıfır veya daha fazla kez; r'[a]*' : isteğe bağlı anlamına gelir veya birçok kez ortaya çıkabilir.
 // + : bir veya daha fazla kez; r'[a]+' : en az bir veya daha fazla kez anlamına gelir
 // ? : sıfır veya bir kez; r'[a]?' : sıfır kez veya bir kez anlamına gelir
