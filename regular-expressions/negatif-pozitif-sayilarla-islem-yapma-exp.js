@@ -4,4 +4,12 @@ const points = /[-]*\d/g;   // [-]: başında - olanları al; *: sıfır veya da
 
 const matches = txt.match(points);
 
-console.log(matches);
+const sortedPoints = matches.sort();
+
+console.log(sortedPoints);
+
+
+// TODO
+// points = ['-1', '2', '-4', '-3', '-1', '0', '4', '8']
+// sortedPoints =  [-4, -3, -1, -1, 0, 2, 4, 8]
+// distance = 12
