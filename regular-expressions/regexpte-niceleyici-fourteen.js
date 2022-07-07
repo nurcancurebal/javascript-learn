@@ -4,7 +4,7 @@
 
 const txt = 'This regular expression example was made in December 6, 2019, 201, 50198.';
 
-const pattern = /\b\w{4}\b/g;   // \b: bir kelimenin başlangıcı veya bitişiyle eşleşir,\w: Bir kelime karakteri bul,{4}: Tam olarak 4 karakter,
+const pattern = /\b\w{4}\b/g;   // \b: bir kelimenin başlangıcı veya bitişiyle eşleşir; \w: Bir kelime karakteri bul; {4}: Tam olarak 4 karakter
 
 const matches = txt.match(pattern);
 
