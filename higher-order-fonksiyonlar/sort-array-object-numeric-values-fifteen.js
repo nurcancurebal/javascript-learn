@@ -3,6 +3,24 @@
 
 const numbers = [9.81, 3.14, 100, 37];
 
+const numberSort = numbers.sort(function (a, b) {
+
+    return a - b;
+});
+
+console.log(numberSort);
+
+
+const numberSortTwo = numbers.sort(function (a, b) {
+
+    return b - a;
+});
+
+console.log(numberSortTwo);
+
+
+
+
 let users = [
     {
         id: 2,
@@ -27,26 +45,8 @@ let users = [
         name: 'Kanada',
         age: 30,
         gender: 1
-    }];
-
-
-const numberSort = numbers.sort(function (a, b) {
-
-    return a - b;
-});
-
-console.log(numberSort);
-
-
-const numberSortTwo = numbers.sort(function (a, b) {
-
-    return b - a;
-});
-
-console.log(numberSortTwo);
-
-
-
+    }
+];
 
 function sortId(a, b) {
 
