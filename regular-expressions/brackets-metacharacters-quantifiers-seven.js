@@ -19,14 +19,14 @@
 // . \D : Dizenin rakam içermediği yerde eşleşme
 // . \s : Bir boşluk karakteri bulun
 // . \S : Boşluk olmayan bir karakter bul
-// . \w : Bir kelime karakteri bul
+ // . \w : Bir kelime karakteri bul
 // . \W : Kelime olmayan bir karakter bul(harfleri ve sayıları almaz)
 // . \b : Bir kelimenin başında/sonunda şöyle başlayan bir eşleşme bulun: \bHI, şöyle bitirin: HI\b, bir kelimenin başlangıcı veya bitişiyle eşleşir
 // . \B : Bir eşleşme bulun, ancak bir kelimenin başında/sonunda değil
 // . \0 : NULL karakter bul
-// . \n : Yeni bir satır karakteri bul
-// . \f : Bir form besleme karakteri bulun
-// . \r : Bir satır başı karakteri bulun
+ // . \n : Yeni bir satır karakteri bul(Satır beslemesi, bir sonraki satıra aşağı doğru ilerlemek anlamına gelir)
+// . \f : Bir form besleme karakteri bulun(Form besleme, bir sonraki "sayfaya" aşağı doğru ilerlemenizi sağlar)
+// . \r : Bir satır başı karakteri bulun(Satır başı, aşağı doğru ilerlemeden geçerli satırın başına dönmek)
 // . \t : Bir sekme(tab) karakteri bul
 // . \v : Dikey sekme karakteri bul
 // . \xxx : Sekizlik bir sayı xxx ile belirtilen karakteri bulun
