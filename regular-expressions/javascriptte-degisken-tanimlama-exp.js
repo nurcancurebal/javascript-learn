@@ -15,6 +15,7 @@ function is_valid_variable(varible) {
         console.log("True");
 
     } else {
+        
         console.log("False");
     }
 };

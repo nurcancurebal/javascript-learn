@@ -7,6 +7,8 @@ console.log(tenMostFrequentWords(paragraph, 15));
 
 console.log(tenMostFrequentWords(paragraph, 10));
 
+console.log(tenMostFrequentWords(paragraph, 3));
+
 
 function tenMostFrequentWords(text, number) {
 
