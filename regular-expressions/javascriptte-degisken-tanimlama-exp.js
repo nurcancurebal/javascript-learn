@@ -6,7 +6,7 @@ is_valid_variable('firstname') // True
 
 function is_valid_variable(varible) {
 
-    const pattern = /[A-Za-z0-9]|[_]|[$]/g;
+    const pattern = /^[_$A-z][\dA-z]+$/;
 
     const matches = varible.match(pattern);
 

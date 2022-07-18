@@ -13,9 +13,9 @@ console.log(cleanText(sentence));
 
 function cleanText(text) {
 
-    const pattern = /[^A-Za-z]+/g;
+    const pattern = /[\w ]+/g;
 
-    const matches = text.match(pattern);
+    const matches = text.match(pattern).join("");
 
     return matches;
 };
