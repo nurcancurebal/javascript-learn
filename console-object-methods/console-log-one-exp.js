@@ -12,5 +12,23 @@
 // Tarayıcı konsolunda çıktıyı göstermek için console.log() kullanıyoruz. Değerleri değiştirebiliriz ve ayrıca %c kullanarak oturumu
 // kapatma stilini belirleyebiliriz.
 
+// Tarayıcı konsolunda çıktı gösteriliyor
 
+console.log('30 Days of JavaScript'); // 30 Days of JavaScript
 
+// Yer değiştirme
+
+console.log('%d %s of JavaScript', 30, 'Days'); // 30 Days of JavaScript
+
+// CSS: Günlük mesajına css kullanarak stil verebiliriz. Sonucu görmek için aşağıdaki kodu kopyalayın ve tarayıcı konsoluna yapıştırın
+
+console.log('%c30 Days Of JavaScript', 'color:green'); // 30 Days Of JavaScript(çıktı yeşil oluyor)
+
+console.log(
+    '%c30 Days%c %cOf%c %cJavaScript',
+    'color:green',
+    '',
+    'color:red',
+    '',
+    'color:yellow'
+);  // 30 Days Of JavaScript(30 Days(yeşil) Of(kırmızı) JavaScript(sarı))
