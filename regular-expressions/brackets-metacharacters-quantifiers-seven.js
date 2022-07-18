@@ -37,7 +37,7 @@
 // Quantifiers(Niceleyiciler):
 
 // . : Yeni satır karakteri (\n) dışında herhangi bir karakter
-// ^ : İle başlar; r'^substring' : örneğin r'^love', love kelimesiyle başlayan bir cümle; r'[^abc] : a değil, b değil, c değil anlamına gelir.
+// ^ : İle başlar; r'^substring' : örneğin r'^love', love kelimesiyle başlayan bir cümle; r'[^abc] : a,b,c dışında bir şeyler
 // $ : Zekice biter; r'substring' : örneğin r'love', cümle aşk kelimesiyle biter
 // * : Sıfır veya daha fazla kez; r'[a]*' : isteğe bağlı anlamına gelir veya birçok kez ortaya çıkabilir.
 // + : Bir veya daha fazla kez; r'[a]+' : en az bir veya daha fazla kez anlamına gelir
@@ -45,6 +45,6 @@
 // {3} : Tam olarak 3 karakter
 // {3,} : En az 3 karakter
 // {3,8} : 3 ila 8 karakter
-// | : Ya ... veya; r'apple|muz' : ya bir elma ya da bir muz anlamına gelir
+// | : Ya ... veya; r'apple|muz' : ya bir elma ya da bir muz anlamına gelir(kısaca ve anlamına gelir)
 // () : Yakala ve grupla
 // ?! : Belirli bir dize tarafından takip edilmeyen herhangi bir dizeyle eşleşir
