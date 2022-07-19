@@ -44,7 +44,7 @@ console.timeEnd('for of loop');
 
 console.time('forEach loop');
 
-countries.forEach( (i) => {console.log(i)});
+countries.forEach((i) => { console.log(i) });
 
 console.timeEnd('forEach loop');
 
