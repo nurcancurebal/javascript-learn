@@ -17,3 +17,12 @@ try {
     // bir hata oluşup oluşmadığına bakılmaksızın yürütülecek kod
 
 };
+
+// try: try bloğunda hata oluşturabilecek şüpheli kodu sarın. try ifadesi, yürütülürken hatalara karşı test edilecek bir kod bloğu
+// tanımlamamızı sağlar.
+
+// catch: Bir hata oluştuğunda catch bloğunda bir şeyler yapmak için kod yazın. Catch bloğu size hata bilgisi verecek parametreler
+// içerebilir. Yakalama bloğu, bir hatayı günlüğe kaydetmek veya kullanıcıya belirli mesajları göstermek için kullanılır.
+
+//nihayet(finally): nihayet blok, bir hata oluşmasından bağımsız olarak her zaman yürütülür. Nihayet bloğu, kalan görevi tamamlamak veya
+// try bloğunda hata oluşmadan önce değişmiş olabilecek değişkenleri sıfırlamak için kullanılabilir.
