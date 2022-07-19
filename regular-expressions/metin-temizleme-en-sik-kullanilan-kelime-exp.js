@@ -53,15 +53,13 @@ function mostFrequentWords(matchText) {
         return b.count - a.count;
     });
 
-    newObjSort.forEach(function (_item, index) {
+    newObjSort.forEach(function (item, index) {
 
-        if (index == 3) {
+        if (index < 3) {
 
-            break;
+            console.log(item);
         }
     });
-
-    return ;
 };
 
-// TODO
+// TODO çalıştırınca ekranda undefined var neden?  2. fonksiyonun returnü yok sıkıntı olur mu?
