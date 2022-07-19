@@ -48,3 +48,4 @@
 // | : Ya ... veya; r'apple|muz' : ya bir elma ya da bir muz anlamına gelir(kısaca ve anlamına gelir)
 // () : Yakala ve grupla
 // ?! : Belirli bir dize tarafından takip edilmeyen herhangi bir dizeyle eşleşir
+// (?<=r) : r ile başlayan

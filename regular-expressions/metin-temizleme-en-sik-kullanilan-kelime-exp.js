@@ -6,7 +6,7 @@ console.log(cleanText(sentence));
 
 let cleanedText = cleanText(sentence);
 
-console.log(mostFrequentWords(cleanedText));
+mostFrequentWords(cleanedText);
 
 // [{word:'I', count:3}, {word:'teaching', count:2}, {word:'teacher', count:2}]
 
@@ -61,5 +61,3 @@ function mostFrequentWords(matchText) {
         }
     });
 };
-
-// TODO çalıştırınca ekranda undefined var neden?  2. fonksiyonun returnü yok sıkıntı olur mu?
