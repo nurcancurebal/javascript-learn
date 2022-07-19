@@ -1,6 +1,6 @@
 // Period(.)
 
-const pattern = /[a]./g;    // bu köşeli parantez a ve anlamına gelir. yeni satır dışında herhangi bir karakter anlamına gelir
+const pattern = /[a]./g;    // . yeni satır dışında herhangi bir karakter anlamına gelir (yanındaki her hangi bir karakteri alır)
 
 const txt = 'Apple and banana are fruits';
 

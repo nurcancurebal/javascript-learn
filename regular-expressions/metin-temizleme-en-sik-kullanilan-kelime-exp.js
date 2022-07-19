@@ -24,10 +24,38 @@ function mostFrequentWords(matchText) {
 
     let splitMach = matchText.split(" ");
 
+    let obj = {};
+
     splitMach.forEach(function (letter) {
         
-        
+        if (!obj[letter]) {
+            
+            obj[letter]=1;
+
+        }else{
+
+            obj[letter]++;
+        }
     });
 
-    return splitMach;
+   const resultObj = Object.entries(obj);
+
+   const newObj = [];
+
+    resultObj.forEach(function (item) {
+        
+     newObj.push({word:item[0], count:item[1]});
+
+    });
+
+    const newObjSort = newObj.sort(function (a,b) {
+        
+        return b.count-a.count;
+    });
+
+   if (newObjSort.indexOf(3)) {
+    
+   }
+
+    return newObjSort;
 };

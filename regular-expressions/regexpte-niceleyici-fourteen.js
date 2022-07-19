@@ -31,7 +31,7 @@ console.log(matchesThree);  // [ '2019', '5019' ]
 
 
 
-const patternFour = /\d{1,4}/g; // {1,4} : 1 ila 4 karakter
+const patternFour = /\d{1,4}/g; // {1,4} : 1,2,3,4 karakter
 
 const matchesFour = txt.match(patternFour);
 
