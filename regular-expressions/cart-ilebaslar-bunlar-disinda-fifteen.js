@@ -17,9 +17,9 @@ console.log(matches);
 
 
 
-// Negation(olumsuzlama)
+// Negation(olumsuzlama) : değil
 
-const patternTwo = /[^A-Za-z,. ]+/g;  // A'dan Z'ye değil, a'dan z'ye değil, boşluk yok, virgül yok nokta yok
+const patternTwo = /[^A-Za-z,. ]+/g;  // A'dan Z'ye değil, a'dan z'ye değil, boşluk yok, virgül yok nokta yok; bunlar dışında
 
 const matchesTwo = txt.match(patternTwo);
 

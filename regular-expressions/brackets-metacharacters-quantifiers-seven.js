@@ -19,7 +19,7 @@
 // . \D : Dizenin rakam içermediği yerde eşleşme
 // . \s : Bir boşluk karakteri bulun
 // . \S : Boşluk olmayan bir karakter bul
-// . \w : Bir kelime karakteri bul
+// . \w : Bir kelime karakteri bul (harf ve sayı demek)
 // . \W : Kelime olmayan bir karakter bul(harfleri ve sayıları almaz)
 // . \b : Bir kelimenin başında/sonunda şöyle başlayan bir eşleşme bulun: \bHI, şöyle bitirin: HI\b, bir kelimenin başlangıcı veya bitişiyle eşleşir
 // . \B : Bir eşleşme bulun, ancak bir kelimenin başında/sonunda değil

@@ -4,9 +4,9 @@ let sentence = `%I $am@% a %tea@cher%, &and& I lo%#ve %tea@ching%;. There $is no
 
 console.log(cleanText(sentence));
 
-// I am a teacher and I love teaching There is nothing as more rewarding as educating and empowering people I found teaching more interesting than any other jobs Does this motivate you to be a teacher
+let cleanedText= cleanText(sentence);
 
-// console.log(mostFrequentWords(cleanedText));
+console.log(mostFrequentWords(cleanedText));
 
 // [{word:'I', count:3}, {word:'teaching', count:2}, {word:'teacher', count:2}]
 
@@ -20,5 +20,14 @@ function cleanText(text) {
     return matches;
 };
 
+function mostFrequentWords(matchText) {
 
-// TODO
+    let splitMach = matchText.split(" ");
+
+    splitMach.forEach(function (letter) {
+        
+        
+    });
+
+    return splitMach;
+};
