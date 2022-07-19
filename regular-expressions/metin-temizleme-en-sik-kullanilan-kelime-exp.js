@@ -4,7 +4,7 @@ let sentence = `%I $am@% a %tea@cher%, &and& I lo%#ve %tea@ching%;. There $is no
 
 console.log(cleanText(sentence));
 
-let cleanedText= cleanText(sentence);
+let cleanedText = cleanText(sentence);
 
 console.log(mostFrequentWords(cleanedText));
 
@@ -27,35 +27,41 @@ function mostFrequentWords(matchText) {
     let obj = {};
 
     splitMach.forEach(function (letter) {
-        
-        if (!obj[letter]) {
-            
-            obj[letter]=1;
 
-        }else{
+        if (!obj[letter]) {
+
+            obj[letter] = 1;
+
+        } else {
 
             obj[letter]++;
         }
     });
 
-   const resultObj = Object.entries(obj);
+    const resultObj = Object.entries(obj);
 
-   const newObj = [];
+    const newObj = [];
 
     resultObj.forEach(function (item) {
-        
-     newObj.push({word:item[0], count:item[1]});
+
+        newObj.push({ word: item[0], count: item[1] });
 
     });
 
-    const newObjSort = newObj.sort(function (a,b) {
-        
-        return b.count-a.count;
+    const newObjSort = newObj.sort(function (a, b) {
+
+        return b.count - a.count;
     });
 
-   if (newObjSort.indexOf(3)) {
-    
-   }
+    newObjSort.forEach(function (_item, index) {
 
-    return newObjSort;
+        if (index == 3) {
+
+            break;
+        }
+    });
+
+    return ;
 };
+
+// TODO
