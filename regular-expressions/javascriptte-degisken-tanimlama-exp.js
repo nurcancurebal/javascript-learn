@@ -1,12 +1,16 @@
-is_valid_variable('first_name') // True
-is_valid_variable('first-name') // False
-is_valid_variable('1first_name') // False
-is_valid_variable('firstname') // True
+is_valid_variable('first_name'); // True
+is_valid_variable('firstname'); // True
+is_valid_variable('firstname10'); // True
+is_valid_variable('firstname$'); // True
+is_valid_variable('first-name'); // False
+is_valid_variable('1first_name'); // False
+is_valid_variable('first name'); // False
+
 
 
 function is_valid_variable(varible) {
 
-    const pattern = /^[_$A-z][\dA-z]+$/;
+    const pattern = /^[_$A-z][_$\dA-Za-z]+$/;
 
     const matches = varible.match(pattern);
 
@@ -15,9 +19,7 @@ function is_valid_variable(varible) {
         console.log("True");
 
     } else {
-        
+
         console.log("False");
     }
 };
-
-// TODO

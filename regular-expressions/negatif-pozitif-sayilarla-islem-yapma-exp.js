@@ -1,26 +1,20 @@
-const txt = ' Bazı parçacıkların yatay x ekseni üzerindeki konumu -12, -4, -3 ve -1 negatif yönde, 0 orijinde, 4 ve 8 pozitif yönde';
+const txt = ' Bazı parçacıkların yatay x ekseni üzerindeki konumu -12, -2, -4 ve -1 negatif yönde, 0 orijinde, 5 ve 2 pozitif yönde';
 
-const points = /[-]*\d/g;   // [-]: başında - olanları al; *: sıfır veya daha fazla kez; \d: sayıları tek tek al
+const points = /(?<=\s)[-\d]{1,3}/g;   // [-]: başında - olanları al; *: sıfır veya daha fazla kez; \d: sayıları tek tek al
 
-const matches = txt.match(points);
+const matches = txt.match(points).map(item => Number(item));
 
-console.log(matches);
+console.log("Points",matches);
 
 const sortedPoints = matches.sort(function (a, b) {
-
     return a - b;
 });
 
-console.log(sortedPoints);
+console.log("Sorted Points",sortedPoints);
 
-console.log(typeof sortedPoints);   // object
+const distance = (sortedPoints[0] * -1) + (sortedPoints[sortedPoints.length - 1]);
 
-let distance = Number(sortedPoints[0]) + Number(sortedPoints[sortedPoints.length - 1]); // burada negatifi pozitife çeviremedim
-
-console.log(distance);
+console.log("Distance",distance);
 
 
 // TODO
-// points = ['-1', '2', '-4', '-3', '-1', '0', '4', '8']
-// sortedPoints =  [-4, -3, -1, -1, 0, 2, 4, 8]
-// distance = 12

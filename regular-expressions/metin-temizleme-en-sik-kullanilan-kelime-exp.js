@@ -13,7 +13,7 @@ console.log(cleanText(sentence));
 
 function cleanText(text) {
 
-    const pattern = /[\w ]+/g;
+    const pattern = /[\w\s]+/g;
 
     const matches = text.match(pattern).join("");
 

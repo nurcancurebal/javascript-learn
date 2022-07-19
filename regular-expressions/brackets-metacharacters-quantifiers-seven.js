@@ -37,7 +37,7 @@
 // Quantifiers(Niceleyiciler):
 
 // . : Yeni satır karakteri (\n) dışında herhangi bir karakter
-// ^ : İle başlar; r'^substring' : örneğin r'^love', love kelimesiyle başlayan bir cümle; r'[^abc] : a,b,c dışında bir şeyler
+// ^ : İle başlar ve dışında bir şeyler; r'^substring' : örneğin r'^love', love kelimesiyle başlayan bir cümle; r'[^abc] : a,b,c dışında bir şeyler
 // $ : Zekice biter; r'substring' : örneğin r'love', cümle aşk kelimesiyle biter
 // * : Sıfır veya daha fazla kez; r'[a]*' : isteğe bağlı anlamına gelir veya birçok kez ortaya çıkabilir.
 // + : Bir veya daha fazla kez; r'[a]+' : en az bir veya daha fazla kez anlamına gelir
