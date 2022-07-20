@@ -40,3 +40,7 @@ console.log(person4);
 // PersonTwo { firstName: 'Erdinç', lastName: 'Cürebal' }
 // PersonTwo { firstName: 'Bal', lastName: 'Cürebal' }
 // PersonTwo { firstName: 'Timur', lastName: 'Cürebal' }
+
+
+// Person sınıfını kullanarak üç kişi nesnesi yarattık. Gördüğünüz gibi sınıfımızda çok fazla özellik yoktu, sınıfa daha
+// fazla özellik eklememize izin verdi.
