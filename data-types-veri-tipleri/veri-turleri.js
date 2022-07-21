@@ -1,8 +1,10 @@
-/* 1.primitive data types
-string, number, boolean(true or false), undefined (tanımsız), null (boş değer)
+/* 1. primitive data types
 
-2 . non primitive data types 
-objects, functions, arrays(diziler) */
+strings, numbers, booleans(true or false), undefined (tanımsız), null (boş değer), Symbol(Symbol yapıcısı tarafından oluşturulabilen benzersiz bir değer)
+
+2. non primitive data types
+
+objects, arrays(diziler) */
 
 // nan = bu matematiksel işlem hatalı
 
