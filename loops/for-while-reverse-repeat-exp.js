@@ -81,5 +81,5 @@ do {
 
 for (let e = 0; e <= 10; e++) {
 
-  console.log(countries[e].repeat(3));
-};                // yan yana tekrar ettirme
+  console.log(countries[e].repeat(3));   // yan yana tekrar ettirme
+};

@@ -18,4 +18,5 @@ operatörler     kullanım şekli       description
 */
 
 console.log('ahmet'.length == "mehmet".length); // false
+
 console.log('milk'.length <= "avacado".length); //true

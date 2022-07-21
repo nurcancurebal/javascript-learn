@@ -6,6 +6,7 @@ function topla() {
 
         total += arguments[index];
     };
+    
     return total;
 };
 

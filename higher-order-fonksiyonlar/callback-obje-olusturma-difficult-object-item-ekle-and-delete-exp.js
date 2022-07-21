@@ -19,10 +19,12 @@ const userRepository = {
     },
 
     findAll() {
+
         return this.data;
     },
 
     findOne(id) {
+
         return this.data.find(function (item) {
 
             return item.id == id
@@ -30,7 +32,9 @@ const userRepository = {
     },
 
     deleteOne(id) {
+
         const placeIndex = this.data.findIndex(item => item.id == id);
+        
         delete this.data[placeIndex];      // objeden itemi silme
     }
 };

@@ -10,8 +10,9 @@ let name = 'nurcan'
 function sayHello() {
 
     let msg = 'Hello World';
+
     console.log(msg, name);  // dışarıdaki bir değişkene functionun içinde müdahale edilebilir ancak functionun içindeki bir değişkene dışarıdan müdehala edilemez
-}
+};
 
 sayHello(); // functiondaki msg değişkenini çağırdık
 

@@ -5,11 +5,9 @@ function sumArrayValues(array) {
     for (let i = 0; i < array.length; i++) {
 
         total += array[i];
-
     };
 
     return total;
-
 };
 
 let dizi = [2, 4, 6, 8, 10];

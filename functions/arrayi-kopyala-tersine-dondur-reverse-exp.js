@@ -9,7 +9,8 @@ const countries = [
     'Hungary',
     'Ireland',
     'Japan',
-    'Kenya'];
+    'Kenya'
+];
 
 
 console.log(reverseCountries(countries));
@@ -24,6 +25,7 @@ function reverseCountries(country) {
 
         duplicateCountries.push(country[index]);
     };
+    
     duplicateCountries.reverse();
 
     return duplicateCountries;

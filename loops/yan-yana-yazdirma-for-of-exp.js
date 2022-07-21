@@ -5,7 +5,8 @@ const webTechs = [
     'React',
     'Redux',
     'Node',
-    'MongoDB'];
+    'MongoDB'
+];
 
 console.log(webTechs);
 

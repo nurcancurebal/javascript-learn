@@ -3,10 +3,10 @@ let ad = 'nurcan';
 console.log(ad.length < 7 ? "kücük" : "büyük"); // kücük
 
 
-let adın = 'nurcan';
-let soyadın = 'cürebal';
+let adin = 'nurcan';
+let soyadin = 'cürebal';
 
-console.log(adın.length > soyadın.length ? 'Nurcan adın cürebal soyadından uzun' : 'Nurcan adın cürebal soyadından kısa');
+console.log(adin.length > soyadin.length ? 'Nurcan adın cürebal soyadından uzun' : 'Nurcan adın cürebal soyadından kısa');
 // Nurcan adın cürebal soyadından kısa
 
 

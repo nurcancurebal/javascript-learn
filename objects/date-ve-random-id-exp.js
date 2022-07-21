@@ -1,4 +1,3 @@
-
 const RANDOM_ID_CHARSET = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
 const users = [
@@ -49,6 +48,7 @@ signUp("Nurcan", "nurcancurebal@hotmail.com", "123456");
 
 console.log("Mevcut kullanıcılar:", users);
 
+
 function signUp(username, email, password) {
 
     const user = {
@@ -66,19 +66,19 @@ function signUp(username, email, password) {
         if (user._id == users[index]._id) {
 
             user._id = randomIdGenerator();
-        };
+        }
 
         if (user.username == users[index].username) {
 
             console.log("Benzer kullanıcı adı bulunmakta!");
             return; // Üstünde funksiyon blogu bulursa ve return parametresi kullanılırsa fonksiyon durur ve boş return cıkar, fonsiyon devam etmez. Users'a ekleme yapmaz.
-        };
+        }
 
         if (user.email == users[index].email) {
 
             console.log("Benzer e posta bulunmakta!");
             return;
-        };
+        }
     };
 
     users.push(user);
@@ -115,7 +115,8 @@ function signUp(username, email, password) {
         } else if (hourZero >= 12 && hourZero <= 23) {
 
             time = `${dayNumberZero}/${mounthZero}/${year} ${hourZero}:${minuteZero} PM`;
-        };
+        }
+
         return time;
     };
 
@@ -130,7 +131,7 @@ function signUp(username, email, password) {
             if (!randomId.includes(randomChar)) {
 
                 randomId.push(randomChar);
-            };
+            }
         };
 
         let randomKey = randomId.join('');
@@ -154,9 +155,10 @@ function signIn(username, password) {
         } else {
 
             return "Böyle bir kullanıcı mevcut değil: False";
-        };
+        }
     };
 };
 
 console.log(signIn('Alex', "123123"));
+
 console.log(signIn('sdfgyhu', "3456789"));

@@ -16,7 +16,8 @@ const users = [
         id: 3,
         name: 'Bal',
         age: 1
-    }];
+    }
+];
 
 console.log(users.some(function (ages) {
 

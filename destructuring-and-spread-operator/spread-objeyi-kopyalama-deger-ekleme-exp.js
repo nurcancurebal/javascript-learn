@@ -46,5 +46,6 @@ const newStudent = {
 };
 
 console.log(student);
+
 console.log(newStudent);
 // dataScience: 'SQL'

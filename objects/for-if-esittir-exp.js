@@ -66,8 +66,7 @@ for (let index = 0; index < keyValueUsers.length; index++) {
 
         console.log(`Oturum açtı: ${keyValueUsers[index][0]}`);
         meterOne++;
-    };
-
+    }
 };
 
 console.log(`Oturum açmış ${meterOne} kişi mevcut`);
@@ -77,6 +76,7 @@ for (let index = 0; index < keyValueUsers.length; index++) {
     if (keyValueUsers[index][1].points == 50) {
 
         console.log(`50 puan olan kullanıcılar ${keyValueUsers[index][0]}`);
+        
         meterTwo++;
     };
 };

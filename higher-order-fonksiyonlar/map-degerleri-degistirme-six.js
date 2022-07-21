@@ -25,7 +25,8 @@ let users = [   // users değişeceği için let ile tanımladım
         id: 3,
         name: 'Bal',
         age: 1
-    }];
+    }
+];
 
 users = users.map(user => {
 
@@ -33,6 +34,7 @@ users = users.map(user => {
 
         user.name = 'Nurcan';
     };
+    
     return user;
 });
 

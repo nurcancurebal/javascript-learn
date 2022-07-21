@@ -18,7 +18,7 @@ const countriesStartLetter = countries.map(function (country) {
         } else if (data.char.toLowerCase() == item) {
 
             data.length++;
-        };
+        }
     });
 
     return data;

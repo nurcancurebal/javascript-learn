@@ -8,9 +8,11 @@ function letsLearnScope() {
         let surname = 'Cürebal';
 
         console.log(name, surname); // bunu yazar
-    };
+    }
+
     console.log(name, surname); // ReferenceError: name is not defined
 };
+
 letsLearnScope();
 
 console.log(name, surname); // ReferenceError: name is not defined

@@ -17,7 +17,8 @@ const users = [
         id: 3,
         name: 'Bal',
         age: 1
-    }];
+    }
+];
 
 
 let findNum = numbers.find(function (num) {

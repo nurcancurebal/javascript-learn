@@ -19,7 +19,8 @@ let months = [
     'eylül',
     'ekim',
     'kasım',
-    'aralık'];
+    'aralık'
+];
 
 
 let days = [
@@ -29,7 +30,8 @@ let days = [
     'çarşamba',
     'perşembe',
     'cuma',
-    'cumartesi'];
+    'cumartesi'
+];
 
 let dateTime = ` ${dayNumber} ${months[mounth]} ${year} ${days[day]} ${hour}:${minute}:${second} `;
 

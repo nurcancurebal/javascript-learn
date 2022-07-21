@@ -11,9 +11,9 @@ const countries = [
   { country: "Swahili", count: 4 },
 ];
 
-console.log(mostSpokenLanguages(countries, 10))
+console.log(mostSpokenLanguages(countries, 10));
 
-console.log(mostSpokenLanguages(countries, 3))
+console.log(mostSpokenLanguages(countries, 3));
 
 
 

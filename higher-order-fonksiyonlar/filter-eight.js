@@ -22,7 +22,8 @@ let users = [
         name: 'Kanada',
         age: 30,
         gender: 1
-    }];
+    }
+];
 
 
 const women = users.filter(user => user.gender === 2);

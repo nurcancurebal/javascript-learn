@@ -17,7 +17,7 @@ console.log('Standard Deviation: ', statistics.std());
 
 
 
-statistics.describe()   // burası console.loga basmadan çalışıyor ekrana bütün değerleri yazdırıyor bu şekliyle, clg functionun içinde yazıyor
+statistics.describe();   // burası console.loga basmadan çalışıyor ekrana bütün değerleri yazdırıyor bu şekliyle, clg functionun içinde yazıyor
 
 
 function statisticsCalculater(array) {
@@ -66,6 +66,7 @@ function statisticsCalculater(array) {
                     return item;
                 }
             });
+            
             return Number(data);
         },
 

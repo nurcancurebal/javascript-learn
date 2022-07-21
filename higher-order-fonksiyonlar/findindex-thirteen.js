@@ -15,7 +15,8 @@ const users = [
         id: 3,
         name: 'Bal',
         age: 1
-    }];
+    }
+];
 
 
 const findIndexName = users.findIndex(function (names) {

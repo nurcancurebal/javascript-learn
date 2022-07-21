@@ -54,6 +54,7 @@ const keys = Object.keys(users);
 
 console.log(keys);  // (7) ['Alex', 'Asab', 'Brook', 'Daniel', 'John', 'Thomas', 'Paul']
 
+
 const values = Object.values(users);
 
 console.log(values);  // (7) [{…}, {…}, {…}, {…}, {…}, {…}, {…}]

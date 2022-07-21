@@ -54,7 +54,9 @@ const users = {
 
 
 const arrayUsers = Object.entries(users); // objedeki key ve value' ları almak için kullanırız
+
 console.log(typeof arrayUsers); // object
+
 
 const skors = [];
 
@@ -62,6 +64,7 @@ for (let index = 0; index < arrayUsers.length; index++) {
 
     skors[index] = arrayUsers[index][1].skills.length;
 };
+
 
 const findIndex = skors.indexOf(Math.max(...skors));// math.max array içinden maximum değeri bulmadığı için üç nokta ile skorsun
 // içindekileri dışarıya çıkartıyor bundan sonra max değerini buluyor.

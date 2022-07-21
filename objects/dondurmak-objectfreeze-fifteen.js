@@ -24,9 +24,11 @@ Object.freeze(person);  // bu kodu burada yazdırınca country Canada olarak sab
 
 console.log(person);
 
+
 person.country = 'Ireland';
 
 console.log(person);
+
 
 Object.freeze(person);  // bu kodu burada kullanınca country Ireland olarak sabitliyor
 

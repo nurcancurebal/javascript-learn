@@ -1,5 +1,4 @@
 const personAccount = {
-
     firstName: 'Nurcan',
     lastName: 'Cürebal',
     incomes: ['Erdinç maaşı', 'Nurcan maaşı'],

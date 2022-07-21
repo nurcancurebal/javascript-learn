@@ -3,11 +3,12 @@
 const newCountries = arr => {
 
     const bigCountries = [];
+
     for (const newArr of arr) {
 
         bigCountries.push(newArr.toUpperCase());
-
     };
+    
     return bigCountries;
 };
 

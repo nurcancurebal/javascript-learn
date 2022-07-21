@@ -32,7 +32,9 @@ person.getPersonInfo = function () {
     let skills = formatter.format(this.skills);
 
     let fullName = this.getFullName();
+
     let statement = `${fullName} is a ${this.title}.\nHe lives in ${this.country}.\nHe teaches ${skills}.`; // ve' yi kendi eklediği için türkçe oldu ama diğerlerini elimizle yazdığımız için değişmedi
+    
     return statement;
 };
 

@@ -68,7 +68,9 @@ for (let index = 0; index < arrayUsers.length; index++) {
     if (mongoDb == true && expressJs == true && reactJs == true && nodeJs == true) {
 
         console.log(`MERN yığın geliştiricisi ${arrayUsers[index][0]}`);
+
         mernMeter++;
     };
 };
+
 console.log(`MERN yığın geliştiricisi ${mernMeter} kişi var.`);

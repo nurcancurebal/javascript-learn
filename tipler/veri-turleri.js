@@ -16,7 +16,7 @@ let obj = {
 
     adi: 'nurcan',
     soyadi: 'cürebal',
-    yaşı: 27
+    yasi: 27
 };
 
 console.log(obj);

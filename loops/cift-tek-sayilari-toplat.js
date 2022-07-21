@@ -10,9 +10,11 @@ for (let i = 0; i <= 100; i++) {
     } else {
 
         totalodds += i;
-    };
+    }
 };
 
 console.log(`çift sayıların toplamı ${totalevens}`);
+
 console.log(`tek sayıların toplamı ${totalodds}`);
+
 console.log([totalevens, totalodds]);

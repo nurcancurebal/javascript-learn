@@ -2,7 +2,8 @@
 
 
 console.log(reverseArray([1, 2, 3]));
-console.log(reverseArray(['A', 'B', 'C']))
+
+console.log(reverseArray(['A', 'B', 'C']));
 
 
 function reverseArray(funcArray) {

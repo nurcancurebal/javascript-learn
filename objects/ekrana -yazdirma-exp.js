@@ -1,5 +1,4 @@
 const countries = {
-
     country: 'Canada',
     capital: 'Ottova',
     populations: 994.837,

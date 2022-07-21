@@ -18,7 +18,7 @@ function solveQuadEquation(a, b, c) {
     } else {
 
         console.log('Boş küme, kök yok');
-    };
+    }
 };
 
 // solveQuadEquation(1, 5, -14); // Çözüm kümesi iki reel kök var x1= 2, x2= -7

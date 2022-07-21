@@ -286,7 +286,8 @@ const countries = [
         population: 1377422166,
         flag: 'https://restcountries.eu/data/chn.svg',
         currency: 'Chinese yuan'
-    }];
+    }
+];
 
 console.log(mostSpokenLanguage(countries, 5));
 

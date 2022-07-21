@@ -11,6 +11,7 @@
 
 // parseInt()
 let num = 'kalben';
+
 let numint = parseInt(num);
 
 console.log(typeof numint); // çıktı number
@@ -26,6 +27,7 @@ console.log(typeof aaa); //  çıktı number
 
 // Number()
 let numTwo = 'kalben';
+
 let numintTwo = Number(numTwo);
 
 console.log(typeof numintTwo); // çıktı number

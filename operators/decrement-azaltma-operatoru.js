@@ -8,4 +8,5 @@ console.log(--count);  //-1
 let countt = 0;
 
 console.log(countt--); //0
+
 console.log(countt);   //-1

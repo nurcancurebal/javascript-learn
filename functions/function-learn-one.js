@@ -12,6 +12,7 @@ const toplaUc = sayilariTopla(10, 15);
 function sayilariTopla(birinciDeger, ikinciDeger) {
 
     const toplam = birinciDeger + ikinciDeger;
+    
     return toplam;
 };
 /* toplama işlemini bir değişkene atadık her seferinde bu değişkeni kullanarak farklı sayılar yazarak istediğimiz

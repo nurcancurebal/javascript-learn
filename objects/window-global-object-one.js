@@ -6,4 +6,5 @@
 //! WİNDOW GLOBAL OBJECT = değişkeni let, const, var ile tanımlamadanda görebiliriz. bu değişkenler windows global object olur
 
 name = 'nurcan';
+
 console.log(name);

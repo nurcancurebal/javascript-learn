@@ -3,6 +3,7 @@
 let names = ['nurcan', 'erdinç', 'tarkan', 'ahmet', 'mehmet'];
 
 let newNames = names.pop();
+
 let newNamesTwo = names.pop();
 
 console.log(newNames); //mehmet

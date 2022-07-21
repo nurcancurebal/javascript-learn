@@ -19,6 +19,7 @@ function forEaca(inArray) {
             loopFunc(fullArray[loopIndex + 1], (loopIndex + 1), fullArray);
 
         } else {
+            
             return;
         };
     };

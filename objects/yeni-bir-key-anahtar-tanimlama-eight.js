@@ -23,8 +23,10 @@ const person = {
 person.nationality = 'Ethiopian'; // yeni key eklendi
 person.country = 'Finland'; // countryi değiştirdik yeni değeri
 person.title = 'developer'; // person objesine eklendi
+
 person.skills.push('Meteor'); // skills array olduğu için sondan ekledik push ile
-person.skills.push('SasS')
+person.skills.push('SasS');
+
 person.isMarried = true; // person objesine eklendi
 //! person objesine eklenenler sondan eklenmez, person objesinin içi a dan z ye kadar sıralanır, eklenenlerde bu sıraya göre eklenir.
 
@@ -45,6 +47,7 @@ person.getPersonInfo = function () {
     let fullName = this.getFullName(); // objenin içindeki fullname functionunu çağırmış
 
     let statement = `${fullName} is a ${this.title}.\nHe lives in ${this.country}.\nHe teaches ${skills}.`;
+    
     return statement;
 };
 

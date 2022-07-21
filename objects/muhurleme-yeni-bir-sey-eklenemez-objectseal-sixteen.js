@@ -14,8 +14,11 @@ Object.seal(person);
 person.nationality = 'Ethiopian'; // eklemedi
 person.country = 'Ireland'; // değiştirdi
 person.title = 'teacher'; // eklemedi
+
 person.skills.push('Meteor'); // var olana ekledi
 person.skills.push('SasS'); // var olana ekledi
+
 person.isMarried = true; // eklemedi
+
 
 console.log(person); // {firstName: 'Nurcan', age: 27, country: 'Ireland', city: 'Ottava', skills: Array(5)}

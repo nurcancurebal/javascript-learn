@@ -21,6 +21,7 @@ const keys = Object.keys(person);
 
 console.log(keys); // (8) ['firstName', 'age', 'country', 'city', 'skills', 'title', 'address', 'getPersonInfo']
 
+
 const newAddress = Object.keys(person.address);
 
 console.log(newAddress); // (3) ['street', 'pobox', 'city']

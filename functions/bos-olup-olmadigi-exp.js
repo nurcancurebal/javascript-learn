@@ -9,8 +9,11 @@ isEmpty(``);
 function isEmpty(params) {
 
     if (!params) {
+
         console.log('Parametre yok!');
+
     } else {
+
         console.log('Parametre var!');
-    };
+    }
 };

@@ -1,6 +1,5 @@
 // objelerde köşeli parantez üç şey için kullanılır
 
-
 const person = {
     firstName: 'Nurcan',
     lastName: 'Cürebal',

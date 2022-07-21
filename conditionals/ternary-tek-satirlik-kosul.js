@@ -15,6 +15,7 @@ israining ? console.log('you need a rain coat.') : console.log('no need for a ra
 const date = new Date();
 
 let hour = date.getHours();
+
 let minute = date.getMinutes();
 
 console.log(String(hour < 10 ? `0${hour}` : hour) + ':' + String(minute < 10 ? `0${minute}` : minute));

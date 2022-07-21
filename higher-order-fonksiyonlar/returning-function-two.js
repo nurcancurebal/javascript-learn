@@ -8,8 +8,10 @@ const a = s1 => {
 
             return s1 + s2 + s3; // c fonksiyonunun çıktısı
         };
+
         return c; // b fonksiyonunun çıktısı
     };
+    
     return b; // a fonksiyonunun çıktısı
 };
 

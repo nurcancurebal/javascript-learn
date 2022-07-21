@@ -10,6 +10,7 @@ function removeItem(funcArray, index) {
     const newArray = [];
 
     for (let index = 0; index < funcArray.length; index++) {
+        
         newArray.push(funcArray[index]);
     };
 

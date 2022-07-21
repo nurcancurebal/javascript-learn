@@ -23,6 +23,7 @@ const interval = setInterval(sayHello, 1000);
 const timeOut = setTimeout(() => {
 
     clearInterval(interval);
+
     console.log('interval işlemi iptal edildi');
 
 }, 5000); // 5 saniye sonra interval işlemini iptal edecek
@@ -30,6 +31,7 @@ const timeOut = setTimeout(() => {
 setTimeout(() => {
 
     clearTimeout(timeOut);
+    
     console.log('time out işlemi iptal edildi, interval devam edecek');
 
 }, 3000);

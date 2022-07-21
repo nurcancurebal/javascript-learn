@@ -61,4 +61,5 @@ copyUsers.nurcan = {
 };
 
 console.log(users);
+
 console.log(copyUsers);// nurcan yalnızca copyUsers' a eklendi
