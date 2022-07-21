@@ -25,7 +25,7 @@ function reverseCountries(country) {
 
         duplicateCountries.push(country[index]);
     };
-    
+
     duplicateCountries.reverse();
 
     return duplicateCountries;

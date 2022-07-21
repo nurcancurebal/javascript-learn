@@ -36,5 +36,5 @@ console.log(math(7, 5));
 (function (num7, num8) {
 
     console.log(num7 + num8);
-    
+
 })(10, 11);

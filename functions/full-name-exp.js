@@ -31,7 +31,7 @@ function printFullNameThree() { // dışarıdan değer almadan, işlemi değişk
     let surname = 'Cürebal';
     let spaceTwo = ' ';
     let fullNameTwo = name + spaceTwo + surname;
-    
+
     return fullNameTwo;
 };
 

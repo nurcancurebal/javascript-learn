@@ -23,6 +23,6 @@ if (dizininKonumu <= 4) {
     console.log("Tatil Günü.");
 
 } else {
-    
+
     console.log("Gün bulunamadı.");
 };

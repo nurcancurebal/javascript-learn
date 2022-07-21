@@ -15,7 +15,7 @@ for (let index = 0; index < webTechs.length; index++) {
     if (bigLengthTech[0] < webTechs[index].length) {
 
         bigLengthTech[0] = webTechs[index].length;
-        
+
         bigLengthTech[1] = webTechs[index];
     };
 };

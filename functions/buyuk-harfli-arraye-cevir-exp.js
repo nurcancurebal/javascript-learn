@@ -8,6 +8,6 @@ function capitalizeArray(names) {
 
         big.push(names[index].toUpperCase());
     };
-    
+
     return big;
 };

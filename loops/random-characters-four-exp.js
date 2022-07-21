@@ -18,7 +18,7 @@ console.log(key);
 for (let index = 0; index <= 5; index++) {
 
     let randomNumber = data[Math.floor((Math.random() * data.length))];
-    
+
     keyTwo = keyTwo + randomNumber;
 };
 

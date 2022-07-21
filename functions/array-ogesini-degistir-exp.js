@@ -25,6 +25,6 @@ function modifyArray(array) {
             newArray.push(array[index]);
         };
     };
-    
+
     return newArray;
 };

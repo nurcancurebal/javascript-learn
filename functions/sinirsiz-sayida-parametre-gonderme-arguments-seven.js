@@ -9,7 +9,7 @@ function topla() {  // burada toplanın içini boş bıraktık
 
         total += arguments[index];
     };
-    
+
     return total;
 };
 

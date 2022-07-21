@@ -15,7 +15,7 @@ function sumOfArrayItems(arrays) {
         } else if (typeof arrays[index] == "number") {
 
             console.log(`number ${arrays[index]}`);
-            
+
             sum += arrays[index];   // array' dekilerin hepsi number olunca toplamada yapıyor
         };
     };

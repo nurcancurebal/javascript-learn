@@ -13,6 +13,6 @@ function uniqueArray(arrays) {
             newArray.push(arrays[index]);
         };
     };
-    
+
     return newArray;
 };

@@ -8,7 +8,7 @@ const newCountries = arr => {
 
         bigCountries.push(newArr.toUpperCase());
     };
-    
+
     return bigCountries;
 };
 
