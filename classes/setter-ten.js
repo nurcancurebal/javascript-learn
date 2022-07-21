@@ -1,6 +1,7 @@
 // Ayarlayıcı(Setter) yöntemi, belirli özelliklerin değerini değiştirmemize izin verir. Anahtar kelime seti ve ardından bir fonksiyon
 // kullanarak bir setter yöntemi yazıyoruz.
 
+//! setler return dönmez, class' ın içindeki verileri değiştirmek için kullanılır. Güvenlik açaığını kapatmak için kullanılır.
 
 class Person {
 
@@ -15,7 +16,7 @@ class Person {
         this.skills = [];
     };
 
-    getFullName() {     // TODO burada kullanılan bir function mu?
+    getFullName() {     // function classlarda bu şekilde yazılır
 
         const fullName = this.firstName + ' ' + this.lastName;
 
@@ -32,7 +33,7 @@ class Person {
         return this.skills;
     };
 
-    set setScore(score) {   // TODO set' in neden altını çizdi
+    set setScore(score) {
 
         this.score += score;
     };

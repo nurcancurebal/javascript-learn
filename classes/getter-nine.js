@@ -3,6 +3,8 @@
 // Get yöntemi, nesneden değere erişmemize izin verir. Get anahtar sözcüğünü ve ardından bir işlev(function) kullanarak bir get yöntemi
 // yazıyoruz. Özelliklere doğrudan nesneden erişmek yerine, değeri elde etmek için alıcıyı kullanırız.
 
+//! Getler dısarıdan veri(argument) almaz, içerideki verileri dışarıya çıkartmak için kullanılır.Bu güvenlik açığını kapatmak için kullanılır
+
 class Person {
 
     constructor(firstName, lastName, age, country, city) {
@@ -17,8 +19,9 @@ class Person {
     };
 
     getFullName() {
-        const fullName = this.firstName + ' ' + this.lastName
-        return fullName
+        const fullName = this.firstName + ' ' + this.lastName;
+
+        return fullName;
     };
 
     get getScore() {
