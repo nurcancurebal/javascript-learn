@@ -3,6 +3,7 @@
 function AddNumbers(num1, num2) {
 
     let nums = num1 + num2;
+
     return nums;
 };
 
@@ -35,4 +36,5 @@ console.log(math(7, 5));
 (function (num7, num8) {
 
     console.log(num7 + num8);
+    
 })(10, 11);
