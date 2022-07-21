@@ -1,12 +1,17 @@
-/* değişken tanımlarken yalnızca 
-let değişkeni değiştirebileceklerinde
-const değişkeni function, object, array kullan */
+// Değişken isimlerinde harf, rakam, alt çizgi ve dolar işareti olabilir.
+// Değişken isimleri harf, alt çizgi veya dolar işareti ile başlayabilir.
+// Değişken isimleri BÜYÜK küçük harf duyarlıdır. (a ve A farklı değişkenlerdir)
+// Değişken isimleri arasında boşluk bırakılmaz.
+// JavaScript anahtar kelimeleri değişken adı olarak kullanılamaz. (var, debugger, if, while…vb)
+// Değişken isimlerinde Türkçe karakter kullanılabilir. Ancak kullanılması tavsiye edilmez.
+
+
+// değişken tanımlarken yalnızca let değişkeni değiştirebileceklerinde const değişkeni function, object, array kullan
 
 let araba = "Nurcan'ın arabası güzel siyah";
 
 console.log(araba); //örnek bir değişken
 
-// _ ve $ ile değişken başlar diğerleri ile başlamaz
 
 let _NurcaninYasi = 27;
 let $NurcaninKedisi = 'bal';

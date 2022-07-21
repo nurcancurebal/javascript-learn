@@ -4,4 +4,4 @@
 // undefined
 // NaN
 // the boolean false
-// '', "", ``, empty string
+// '', "", ``, empty(boş) string
