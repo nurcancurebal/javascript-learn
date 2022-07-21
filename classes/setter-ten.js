@@ -44,8 +44,8 @@ class Person {
     };
 };
 
-const person1 = new Person('Nurcan', 'Cürebal', 27, 'Canada', 'Ottava')
-const person2 = new Person('Erdinç', 'Cürebal', 27, 'Turkey', 'Istanbul')
+const person1 = new Person('Nurcan', 'Cürebal', 27, 'Canada', 'Ottava');
+const person2 = new Person('Erdinç', 'Cürebal', 27, 'Turkey', 'Istanbul');
 
 person1.setScore = 1;
 person1.setSkill = 'HTML';

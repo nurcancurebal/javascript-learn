@@ -30,7 +30,9 @@ const users = [
 ];
 
 console.group('Users');
+
 console.log(users);
+
 console.groupEnd();
 
 // Users

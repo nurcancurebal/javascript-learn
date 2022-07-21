@@ -28,6 +28,7 @@ const user = {
     city: 'Ottava',
     age: 27
 };
+
 console.table(user);
 
 // ┌─────────┬──────────────┐

@@ -3,13 +3,11 @@
 class Person {
 
     constructor(
-
         firstName = 'Nurcan',
         lastName = 'Cürebal',
         age = 27,
         country = 'Canada',
         city = 'Ottava'
-
     ) {
 
         this.firstName = firstName;

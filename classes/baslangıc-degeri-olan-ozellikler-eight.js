@@ -15,9 +15,10 @@ class Person {
         this.score = 0;
         this.skills = [];
     };
-    getFullName() {
+    getFullName() {    // class' ın içinde function bu şekilde tanımlanır
 
         const fullName = this.firstName + " " + this.lastName;
+        
         return fullName;
     };
 };

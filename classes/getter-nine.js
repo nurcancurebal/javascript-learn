@@ -18,7 +18,8 @@ class Person {
         this.skills = [];
     };
 
-    getFullName() {
+    getFullName() {  // class' ın içinde function bu şekilde tanımlanır
+        
         const fullName = this.firstName + ' ' + this.lastName;
 
         return fullName;
@@ -64,5 +65,3 @@ console.log(person2.getSkills);
 //   []
 //   0
 //   []
-
-//TODO get' in getFullName functionundan ne farkı var?
