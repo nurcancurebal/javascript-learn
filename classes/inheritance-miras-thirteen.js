@@ -149,7 +149,7 @@ console.log(Student.favoriteSkill());   // static
 
 console.log(Student.showDateTime());    // static
 
-console.log(s1.saySomething());     // Student' taki function
+console.log(s1.saySomething());     // Student' taki function(inheritance)
 
 
 // Student {

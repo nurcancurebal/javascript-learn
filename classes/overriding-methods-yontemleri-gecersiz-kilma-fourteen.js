@@ -124,6 +124,7 @@ class Student extends Person {
     getPersonInfo() {
 
         let fullName = this.getFullName();
+
         let skills =
             this.skills.length > 0 &&
             this.skills.slice(0, this.skills.length - 1).join(', ') +
@@ -149,19 +150,61 @@ const s1 = new Student(
 );
 
 const s2 = new Student('Erdinç', 'Cürebal', 27, 'Turkey', 'Istanbul', 'Male');
-s1.setScore = 1;
+
+s1.setScore = 2;
 s1.setSkill = 'HTML';
 s1.setSkill = 'CSS';
 s1.setSkill = 'JavaScript';
 
-s2.setScore = 1;
+s2.setScore = 5;
 s2.setSkill = 'Planning';
 s2.setSkill = 'Managing';
 s2.setSkill = 'Organizing';
 
 // Şimdi, getPersonInfo yöntemi geçersiz kılındı ​​ve kişinin erkek mi yoksa kadın mı olduğunu tanımlar.
 
-console.log(s1);
+console.log(s1);        // Student
+
+console.log(s1.getFullName());  // student' in iindeki function
+
+console.log(s1.getScore);   // get
+
+console.log(s1.getSkills);  // get
+
+console.log(s1.score);   // set
+
+console.log(s1.skills);    // set
+
+console.log(s1.getPersonInfo());    // Student' taki function(overriding: değiştirdik)
+
+console.log(Student.favoriteSkill());   // static
+
+console.log(Student.showDateTime());    // static
+
+console.log(s1.saySomething());     // Student' taki function(inheritance)
+
+
+console.log(s2);
+
+console.log(s2.getFullName());
+
+console.log(s2.getScore);
+
+console.log(s2.getSkills);
+
+console.log(s2.score);
+
+console.log(s2.skills);
+
+console.log(s2.getPersonInfo());
+
+console.log(Student.favoriteSkill());
+
+console.log(Student.showDateTime());
+
+console.log(s2.saySomething());
+
+
 
 // Student {
 //     firstName: 'Nurcan',
@@ -169,15 +212,35 @@ console.log(s1);
 //     age: 27,
 //     country: 'Canada',
 //     city: 'Ottava',
-//     score: 1,
+//     score: 2,
 //     skills: [ 'HTML', 'CSS', 'JavaScript' ],
 //     gender: 'female'
 //   }
-
-console.log(s1.saySomething());     // I am a child of the person class
-console.log(s1.getFullName());      // Nurcan Cürebal
-console.log(s1.getPersonInfo());    // Nurcan Cürebal is 27. She lives in Ottava, Canada. She knows HTML, CSS and JavaScript
-
-console.log(s2.saySomething());     // I am a child of the person class
-console.log(s2.getFullName());      // Erdinç Cürebal
-console.log(s2.getPersonInfo());    // Erdinç Cürebal is 27. He lives in Istanbul, Turkey. He knows Planning, Managing and Organizing
+//   Nurcan Cürebal
+//   2
+//   [ 'HTML', 'CSS', 'JavaScript' ]
+//   2
+//   [ 'HTML', 'CSS', 'JavaScript' ]
+//   Nurcan Cürebal is 27. She lives in Ottava, Canada. She knows HTML, CSS and JavaScript
+//   HTML
+//   22.07.2022 21:09
+//   I am a child of the person class
+//   Student {
+//     firstName: 'Erdinç',
+//     lastName: 'Cürebal',
+//     age: 27,
+//     country: 'Turkey',
+//     city: 'Istanbul',
+//     score: 5,
+//     skills: [ 'Planning', 'Managing', 'Organizing' ],
+//     gender: 'Male'
+//   }
+//   Erdinç Cürebal
+//   5
+//   [ 'Planning', 'Managing', 'Organizing' ]
+//   5
+//   [ 'Planning', 'Managing', 'Organizing' ]
+//   Erdinç Cürebal is 27. He lives in Istanbul, Turkey. He knows Planning, Managing and Organizing
+//   JS
+//   22.07.2022 21:09
+//   I am a child of the person class

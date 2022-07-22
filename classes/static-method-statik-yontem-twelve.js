@@ -108,8 +108,41 @@ class Person {
     };
 };
 
-console.log(Person.favoriteSkill());    // Node (çağırırken function gibi parantezle çağırdık)
+const person = new Person('Nurcan', 'Cürebal', 27, 'Canada', 'Ottava');
 
-console.log(Person.showDateTime());     // 22.07.2022 19:08
+console.log(person);
 
-// TODO bu methodun farkı ne?
+console.log(person.getFullName());
+
+console.log(person.getScore);   // get
+
+console.log(person.getSkills);  // get
+
+console.log(person.score);     // set
+
+console.log(person.skills);    // set
+
+console.log(person.getPersonInfo());
+
+console.log(Person.favoriteSkill());    // static
+
+console.log(Person.showDateTime());     // static
+
+
+// Person {
+//     firstName: 'Nurcan',
+//     lastName: 'Cürebal',
+//     age: 27,
+//     country: 'Canada',
+//     city: 'Ottava',
+//     score: 0,
+//     skills: []
+//   }
+//   Nurcan Cürebal
+//   0
+//   []
+//   0
+//   []
+//   Nurcan Cürebal is 27. She lives Ottava, Canada. 
+//   Python
+//   22.07.2022 20:59
