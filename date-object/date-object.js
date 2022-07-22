@@ -1,6 +1,6 @@
 //  Method        Description Examples
 //getFullYear()     (yyyy)      2022
-// getMounth()      (0-11)      0
+// getMounth()      (0-11)      0   (aylar sıfırdan başlamayacağı için sayı olarak gösterildiğinde +1 eklenir)
 // getDate()        (1-31)      4
 //getHours()        (0-23)      0
 //getMinutes()      (0-59)      56
