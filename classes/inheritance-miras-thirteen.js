@@ -1,8 +1,16 @@
-// Statik anahtar kelime, bir sınıf için statik bir yöntem tanımlar. Statik yöntemler, sınıfın örneklerinde çağrılmaz. Bunun yerine,
-// sınıfın kendisine çağrılır. Bunlar genellikle nesneler oluşturma veya klonlama işlevleri gibi yardımcı işlevlerdir. Statik yönteme
-// bir örnek Date.now()'dur. Now yöntemi doğrudan sınıftan çağrılır.
+// Kalıtım kullanarak ana sınıfın tüm özelliklerine ve yöntemlerine erişebiliriz. Bu, kod tekrarını azaltır. Hatırlarsanız, bir Person
+// ebeveyn sınıfımız var ve bundan çocuklar oluşturacağız. Çocuk sınıfımız öğrenci, öğretmen vb. olabilir.
 
-// Statik yöntemler, yardımcı işlevler olarak kullanılabilen yöntemlerdir.
+
+// syntax(söz dizimi)
+//class ChildClassName extends {
+
+//   kod buraya gelecek
+//};
+
+
+// Kişi ebeveyn sınıfından bir Öğrenci alt sınıfı oluşturalım.
+
 
 class Person {
     constructor(firstName, lastName, age, country, city) {
@@ -106,8 +114,33 @@ class Person {
     };
 };
 
-console.log(Person.favoriteSkill());    // Node (çağırırken function gibi parantezle çağırdık)
 
-console.log(Person.showDateTime());     // 22.07.2022 19:08
+class Student extends Person {
 
-// TODO bu methodun farkı ne?
+    saySomething() {
+
+        return 'I am a child of the person class';
+    };
+};
+
+const s1 = new Student('Nurcan', 'Cürebal', 'Canada', 27, 'Ottava');
+
+console.log(s1);
+console.log(s1.saySomething());
+console.log(s1.getFullName());
+console.log(s1.getPersonInfo());
+
+
+// Student {
+//     firstName: 'Nurcan',
+//     lastName: 'Cürebal',
+//     age: 'Canada',
+//     country: 27,
+//     city: 'Ottava',
+//     score: 0,
+//     skills: []
+//   }
+//   I am a child of the person class
+//   undefined
+//   Nurcan Cürebal
+//   Nurcan Cürebal is Canada. She lives Ottava, 27.
