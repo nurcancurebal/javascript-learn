@@ -125,10 +125,31 @@ class Student extends Person {
 
 const s1 = new Student('Nurcan', 'Cürebal', 'Canada', 27, 'Ottava');
 
-console.log(s1);
-console.log(s1.saySomething());
-console.log(s1.getFullName());
-console.log(s1.getPersonInfo());
+s1.setScore = 1;
+s1.setSkill = 'HTML';
+s1.setSkill = 'CSS';
+s1.setSkill = 'JavaScript';
+
+
+console.log(s1);    // Student
+
+console.log(s1.getFullName());  // Person' daki function
+
+console.log(s1.getScore);   // get
+
+console.log(s1.getSkills);  // get
+
+console.log(s1.score);   // set
+
+console.log(s1.skills);   // set
+
+console.log(s1.getPersonInfo());    // Person' daki function
+
+console.log(Student.favoriteSkill());   // static
+
+console.log(Student.showDateTime());    // static
+
+console.log(s1.saySomething());     // Student' taki function
 
 
 // Student {
@@ -137,10 +158,24 @@ console.log(s1.getPersonInfo());
 //     age: 'Canada',
 //     country: 27,
 //     city: 'Ottava',
-//     score: 0,
-//     skills: []
+//     score: 1,
+//     skills: [ 'HTML', 'CSS', 'JavaScript' ]
 //   }
-//   I am a child of the person class
-//   undefined
+
 //   Nurcan Cürebal
-//   Nurcan Cürebal is Canada. She lives Ottava, 27.
+
+//   1
+
+//   [ 'HTML', 'CSS', 'JavaScript' ]
+
+//   1
+
+//   [ 'HTML', 'CSS', 'JavaScript' ]
+
+//   Nurcan Cürebal is Canada. She lives Ottava, 27. She knows HTML, CSS and JavaScript
+
+//   CSS
+
+//   22.07.2022 20:46
+
+//   I am a child of the person class

@@ -4,6 +4,8 @@
 
 // Statik yöntemler, yardımcı işlevler olarak kullanılabilen yöntemlerdir.
 
+// Statiğin içinde objeleri(date,math) kullanabiliyoruz.
+
 class Person {
     constructor(firstName, lastName, age, country, city) {
 
