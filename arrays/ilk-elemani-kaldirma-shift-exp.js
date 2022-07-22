@@ -1,4 +1,4 @@
-//shift()baştan eleman çıkartmak istersek
+//shift(): baştan eleman çıkartmak istersek
 
 let names = ['nurcan', 'erdinç', 'tarkan', 'ahmet', 'mehmet'];
 
