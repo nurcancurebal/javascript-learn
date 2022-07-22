@@ -1,19 +1,29 @@
-/* 1. primitive data types
+/* 1. Primitive Data Types(İlkel Veri Türleri)
 
-strings, numbers, booleans(true or false), undefined (tanımsız), null (boş değer), Symbol(Symbol yapıcısı tarafından oluşturulabilen benzersiz bir değer)
+1. Strings
+2. Numbers
+3. Booleans(true or false)
+4. Undefined (tanımsız)
+5. Null (boş değer)
+6. Symbol(Symbol yapıcısı tarafından oluşturulabilen benzersiz bir değer)
 
-2. non primitive data types
+    2. Non Primitive Data Types(İlkel Olmayan Veri Türleri)
 
-objects, arrays(diziler) */
+1. Objects
+2. Arrays(diziler) */
+
+// non primitive değişkenlerin değerlerini sonradan değiştirebiliyorken primitive değişkenler değişmez
+
 
 // nan = bu matematiksel işlem hatalı
+
 
 let numb = ['nurcan', 27, false];
 
 console.log(numb);
-// bu bir array örneğidir
 
-// non primitive değişkenlerin değerlerini sonradan değiştirebiliyorken primitive değişkenler değişmez
+// bu bir Array örneğidir
+
 
 let obj = {
 
@@ -24,7 +34,7 @@ let obj = {
 
 console.log(obj);
 
-// bu bir obje örneği
+// bu bir Obje örneğidir
 
 
 let name = 'nurcan';
@@ -34,6 +44,9 @@ let fullname = name + ' ' + surname;
 
 console.log(fullname);
 
+// bu bir String örneğidir
+
+
 let nurcanyas = 27;
 let erdincyas = 26;
 
@@ -41,10 +54,11 @@ let fullName = nurcanyas + erdincyas;
 
 console.log(fullName);           //+: iki sayı olduğu zaman toplama islemi yapar,string değer olduğu zaman yan yana yazar
 
+// bu bir Numbers örneğidir
 
-const paragraph = 'uzun paragraflarda ters slash \
-koyarsak cümlenin sonuna bizi alt satırda yazdıracak \
-yalnız ekran çıktısı cümlenin devamı şeklinde olacak \
-burada olduğu gibi ';
 
-console.log(paragraph);
+console.log('This is a backslash  symbol (\\)');
+
+// This is a backslash  symbol (\)
+
+// bu bir Symbol örneğidir
