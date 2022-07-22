@@ -129,9 +129,9 @@ class Student extends Person {
             this.skills.slice(0, this.skills.length - 1).join(', ') +
             ` and ${this.skills[this.skills.length - 1]}`;
 
-        let formattedSkills = skills ? `He knows ${skills}` : '';
-
         let pronoun = this.gender == 'Male' ? 'He' : 'She';
+
+        let formattedSkills = skills ? `${pronoun} knows ${skills}` : '';
 
         let info = `${fullName} is ${this.age}. ${pronoun} lives in ${this.city}, ${this.country}. ${formattedSkills}`;
 
@@ -159,6 +159,8 @@ s2.setSkill = 'Planning';
 s2.setSkill = 'Managing';
 s2.setSkill = 'Organizing';
 
+// Şimdi, getPersonInfo yöntemi geçersiz kılındı ​​ve kişinin erkek mi yoksa kadın mı olduğunu tanımlar.
+
 console.log(s1);
 
 // Student {
@@ -174,7 +176,7 @@ console.log(s1);
 
 console.log(s1.saySomething());     // I am a child of the person class
 console.log(s1.getFullName());      // Nurcan Cürebal
-console.log(s1.getPersonInfo());    // Nurcan Cürebal is 27. She lives in Ottava, Canada. He knows HTML, CSS and JavaScript
+console.log(s1.getPersonInfo());    // Nurcan Cürebal is 27. She lives in Ottava, Canada. She knows HTML, CSS and JavaScript
 
 console.log(s2.saySomething());     // I am a child of the person class
 console.log(s2.getFullName());      // Erdinç Cürebal
