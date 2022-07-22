@@ -11,7 +11,8 @@ objects, arrays(diziler) */
 let numb = ['nurcan', 27, false];
 
 console.log(numb);
-// bu bir array örneğidir,
+// bu bir array örneğidir
+
 // non primitive değişkenlerin değerlerini sonradan değiştirebiliyorken primitive değişkenler değişmez
 
 let obj = {
@@ -38,7 +39,7 @@ let erdincyas = 26;
 
 let fullName = nurcanyas + erdincyas;
 
-console.log(fullName);           //+ = iki sayı olduğu zaman toplama islemi yapar,string değer olduğu zaman yan yana yazar
+console.log(fullName);           //+: iki sayı olduğu zaman toplama islemi yapar,string değer olduğu zaman yan yana yazar
 
 
 const paragraph = 'uzun paragraflarda ters slash \

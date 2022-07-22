@@ -1,3 +1,5 @@
+// index' ini verir
+
 let string = 'I love JavaScript. If you do not love JavaScript what else can you love';
 
 console.log(string.search('love'));  //ekran çıktısı= 2 //içine yazdığın şeyin nerede olduğunu söyler
