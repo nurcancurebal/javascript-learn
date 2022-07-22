@@ -19,7 +19,7 @@ class Person {
     };
 
     getFullName() {  // class' ın içinde function bu şekilde tanımlanır
-        
+
         const fullName = this.firstName + ' ' + this.lastName;
 
         return fullName;

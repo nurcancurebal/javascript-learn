@@ -34,7 +34,7 @@ users = users.map(user => {
 
         user.name = 'Nurcan';
     };
-    
+
     return user;
 });
 

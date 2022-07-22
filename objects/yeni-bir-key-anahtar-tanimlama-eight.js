@@ -47,7 +47,7 @@ person.getPersonInfo = function () {
     let fullName = this.getFullName(); // objenin içindeki fullname functionunu çağırmış
 
     let statement = `${fullName} is a ${this.title}.\nHe lives in ${this.country}.\nHe teaches ${skills}.`;
-    
+
     return statement;
 };
 

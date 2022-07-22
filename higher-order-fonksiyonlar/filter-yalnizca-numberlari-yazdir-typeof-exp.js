@@ -10,7 +10,7 @@ const products = [
 let numberProducts = products.filter(function (num) {
 
     let numPrice = typeof num.price;
-    
+
     return numPrice == 'number';
 });
 

@@ -63,7 +63,7 @@ console.log(priceFilter);
 const priceReduce = products.reduce(function (oldValue, CurrentValue) { //! reduce da iki parametre giriyoruz diğerlerinden farklı olarak
 
     return oldValue + CurrentValue.price;
-    
+
 }, 0);
 
 console.log(priceReduce);

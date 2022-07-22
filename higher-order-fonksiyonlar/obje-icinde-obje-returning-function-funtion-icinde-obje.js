@@ -66,7 +66,7 @@ function statisticsCalculater(array) {
                     return item;
                 }
             });
-            
+
             return Number(data);
         },
 

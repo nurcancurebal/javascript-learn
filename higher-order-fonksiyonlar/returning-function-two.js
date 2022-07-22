@@ -11,7 +11,7 @@ const a = s1 => {
 
         return c; // b fonksiyonunun çıktısı
     };
-    
+
     return b; // a fonksiyonunun çıktısı
 };
 

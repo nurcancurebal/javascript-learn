@@ -34,7 +34,7 @@ const userRepository = {
     deleteOne(id) {
 
         const placeIndex = this.data.findIndex(item => item.id == id);
-        
+
         delete this.data[placeIndex];      // objeden itemi silme
     }
 };

@@ -9,7 +9,7 @@ const ortancaBoolean = ages.length % 2 == 0;
 
 const ortancaKontrol = ages.length / 2;
 
-const ortanca = ortancaBoolean ? (ages[ortancaortancaKontrol-1] + ages[ortancaortancaKontrol]) / 2 : ages[Math.floor(ortancaortancaKontrol)];
+const ortanca = ortancaBoolean ? (ages[ortancaortancaKontrol - 1] + ages[ortancaortancaKontrol]) / 2 : ages[Math.floor(ortancaortancaKontrol)];
 
 console.log(`Ortanca: ${ortanca}`);
 
