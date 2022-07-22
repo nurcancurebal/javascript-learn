@@ -1,4 +1,4 @@
-// varsayılan olarak virhgülle birleştirip string olarak yazdırır
+// Arrayleri varsayılan olarak virgülle birleştirip string olarak yazdırır
 
 
 const names = ['Asabeneh', 'Mathias', 'Elias', 'Brook'];
