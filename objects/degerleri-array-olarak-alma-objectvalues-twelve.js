@@ -20,3 +20,5 @@ const person = {
 const values = Object.values(person);
 
 console.log(values);  //(8) ['Nurcan', 27, 'Canada', 'Ottava', Array(3), 'teacher', {…}, ƒ]
+
+console.log(typeof values);  // object
