@@ -165,7 +165,7 @@ s2.setSkill = 'Organizing';
 
 console.log(s1);        // Student
 
-console.log(s1.getFullName());  // student' in iindeki function
+console.log(s1.getFullName());  // person' ın içindeki function
 
 console.log(s1.getScore);   // get
 
