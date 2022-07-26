@@ -3,7 +3,7 @@
 // çoğunlukla bir sunucudan bir istemciye veri gönderildiğinde kullanılır. JSON, XML'e kullanımı daha kolay bir alternatiftir.
 
 
-{
+const testing = {
     "users": [
         {
             "firstName": "Asabeneh",
@@ -23,7 +23,7 @@
             "age": 28,
             "email": "lidiya@lidiya.com"
         }
-    ];
+    ]
 };
 
 // Yukarıdaki JSON örneği, normal bir nesneden çok farklı değildir. O zaman, fark nedir? Aradaki fark, bir JSON nesnesinin
@@ -36,100 +36,98 @@
 // işaretleri olmadan anahtarları kullanıyoruz. Bu, bir nesne ile bir JSON arasındaki en büyük farktır. JSON hakkında daha
 // fazla örnek görelim.
 
-{
+const testingTwo = {
     "Alex": {
         "email": "alex@alex.com",
-            "skills": [
-                "HTML",
-                "CSS",
-                "JavaScript"
-            ],
-                "age": 20,
-                    "isLoggedIn": false,
-                        "points": 30
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        "age": 20,
+        "isLoggedIn": false,
+        "points": 30
     },
     "Asab": {
         "email": "asab@asab.com",
-            "skills": [
-                "HTML",
-                "CSS",
-                "JavaScript",
-                "Redux",
-                "MongoDB",
-                "Express",
-                "React",
-                "Node"
-            ],
-                "age": 25,
-                    "isLoggedIn": false,
-                        "points": 50
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Redux",
+            "MongoDB",
+            "Express",
+            "React",
+            "Node"
+        ],
+        "age": 25,
+        "isLoggedIn": false,
+        "points": 50
     },
     "Brook": {
         "email": "daniel@daniel.com",
-            "skills": [
-                "HTML",
-                "CSS",
-                "JavaScript",
-                "React",
-                "Redux"
-            ],
-                "age": 30,
-                    "isLoggedIn": true,
-                        "points": 50
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React",
+            "Redux"
+        ],
+        "age": 30,
+        "isLoggedIn": true,
+        "points": 50
     },
     "Daniel": {
         "email": "daniel@alex.com",
-            "skills": [
-                "HTML",
-                "CSS",
-                "JavaScript",
-                "Python"
-            ],
-                "age": 20,
-                    "isLoggedIn": false,
-                        "points": 40
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Python"
+        ],
+        "age": 20,
+        "isLoggedIn": false,
+        "points": 40
     },
     "John": {
         "email": "john@john.com",
-            "skills": [
-                "HTML",
-                "CSS",
-                "JavaScript",
-                "React",
-                "Redux",
-                "Node.js"
-            ],
-                "age": 20,
-                    "isLoggedIn": true,
-                        "points": 50
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React",
+            "Redux",
+            "Node.js"
+        ],
+        "age": 20,
+        "isLoggedIn": true,
+        "points": 50
     },
     "Thomas": {
         "email": "thomas@thomas.com",
-            "skills": [
-                "HTML",
-                "CSS",
-                "JavaScript",
-                "React"
-            ],
-                "age": 20,
-                    "isLoggedIn": false,
-                        "points": 40
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React"
+        ],
+        "age": 20,
+        "isLoggedIn": false,
+        "points": 40
     },
     "Paul": {
         "email": "paul@paul.com",
-            "skills": [
-                "HTML",
-                "CSS",
-                "JavaScript",
-                "MongoDB",
-                "Express",
-                "React",
-                "Node"
-            ],
-                "age": 20,
-                    "isLoggedIn": false,
-                        "points": 40
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "MongoDB",
+            "Express",
+            "React",
+            "Node"
+        ],
+        "age": 20,
+        "isLoggedIn": false,
+        "points": 40
     }
-}
-
-// TODO neden hata veriyor
+};
