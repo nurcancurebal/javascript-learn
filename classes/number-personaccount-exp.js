@@ -46,8 +46,8 @@ class TotalPersonAccount extends PersonAccount {
 
     accountBalance() {
 
-        const result = this.totalIncome() - this.totalExpense;  // TODO buradaki işlemi yapmıyor
-
+        const result = this.totalIncome() - this.totalExpense();
+        
         return result;
     };
 
