@@ -1,6 +1,9 @@
 // Reviver fonksiyonunu formatlayıcı olarak kullanmak için isim ve soyadı değerini formatlamak istediğimiz tuşları
 // koyuyoruz. Diyelim ki JSON verilerinin ad ve soyadını biçimlendirmek istiyoruz.
 
+// JSON.parse() kullanımı oldukça kullanışlıdır. İsteğe bağlı parametreyi geçmenize gerek yok, sadece gerekli parametre ile
+// kullanabilirsiniz ve çok şey başaracaksınız.
+
 const usersText = `{
     "users":[
       {
