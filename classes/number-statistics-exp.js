@@ -1,9 +1,3 @@
-// Bir örneğin merkezi eğilim ölçüsünü (ortalama, medyan, mod) ve değişkenlik ölçüsünü (aralık, varyans, standart sapma)
-// hesaplayan bir program geliştirmeye çalışalım. Bu ölçülere ek olarak, numunenin min, maks, sayım, yüzdelik ve frekans
-// dağılımını bulun. İstatistikler adında bir sınıf oluşturabilir ve İstatistik sınıfı için metot olarak istatistiksel
-// hesaplamalar yapan tüm fonksiyonları oluşturabilirsiniz.
-
-
 class Statistics {
     constructor() {
 
