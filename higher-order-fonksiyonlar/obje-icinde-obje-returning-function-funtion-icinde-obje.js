@@ -86,7 +86,7 @@ function statisticsCalculater(array) {
                 }
             });
 
-            const arrayEntries = Object.entries(result)
+            const arrayEntries = Object.entries(result);
 
             const mapValues = arrayEntries.map(function (item) {
 
@@ -100,7 +100,7 @@ function statisticsCalculater(array) {
                 return item[1] == maxValue;
             });
 
-            return `(${findItem[0]}, ${findItem[1]})`;
+            return `(${findItem})`;
         },
 
         variance: function () {
