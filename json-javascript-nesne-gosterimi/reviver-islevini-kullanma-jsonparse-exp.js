@@ -96,8 +96,34 @@ const txt = `{
 `;
 
 
-const jsonObj = JSON.parse(txt, function (key,value) {
-    
-   
-    
-},5)
+const jsonObj = JSON.parse(txt);
+
+const entriesObj = Object.entries(jsonObj);
+
+let sortingMostSkillsUser = entriesObj.sort((a, b) => {
+
+    return b[1].skills.length - a[1].skills.length;
+
+})[0];
+
+console.log(sortingMostSkillsUser);
+
+// [
+//     'Asab',
+//     {
+//       email: 'asab@asab.com',
+//       skills: [
+//         'HTML',
+//         'CSS',
+//         'JavaScript',
+//         'Redux',
+//         'MongoDB',
+//         'Express',
+//         'React',
+//         'Node'
+//       ],
+//       age: 25,
+//       isLoggedIn: false,
+//       points: 50
+//     }
+//   ]
