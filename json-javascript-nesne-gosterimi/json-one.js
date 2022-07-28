@@ -1,5 +1,5 @@
 // JSON, JavaScript Nesne Gösterimi anlamına gelir. JSON sözdizimi JavaScript nesne gösterimi söz diziminden türetilmiştir,
-// ancak JSON biçimi yalnızca metin veya dizedir. JSON, depolamak ve taşımak için hafif bir veri biçimidir. JSON,
+// ancak JSON biçimi yalnızca metin veya dizedir(string). JSON, depolamak ve taşımak için hafif bir veri biçimidir. JSON,
 // çoğunlukla bir sunucudan bir istemciye veri gönderildiğinde kullanılır. JSON, XML'e kullanımı daha kolay bir alternatiftir.
 
 
