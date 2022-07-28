@@ -36,6 +36,7 @@ const testing = {
 // işaretleri olmadan anahtarları kullanıyoruz. Bu, bir nesne ile bir JSON arasındaki en büyük farktır. JSON hakkında daha
 // fazla örnek görelim.
 
+
 const testingTwo = {
     "Alex": {
         "email": "alex@alex.com",
