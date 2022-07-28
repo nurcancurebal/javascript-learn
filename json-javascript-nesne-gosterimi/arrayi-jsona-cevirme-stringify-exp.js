@@ -12,3 +12,14 @@ console.log(arrayJson);
 //     "Node",
 //     "Python"
 // ]
+
+// boşluk(3. parametre) 1 olunca
+
+//  [
+//   "HTML",
+//   "CSS",
+//   "JS",
+//   "React",
+//   "Node",
+//   "Python"
+//  ]
