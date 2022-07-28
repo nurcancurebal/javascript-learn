@@ -29,33 +29,33 @@ const usersText = `{
 
 const usersObj = JSON.parse(usersText, (key, value) => {
 
-    let newValue = typeof value == 'string' && key != 'email' ? value.toUpperCase() : value;
+  let newValue = typeof value == 'string' && key != 'email' ? value.toUpperCase() : value;
 
-    return newValue;
-});
+  return newValue;
+}, 5);
 
 console.log(usersObj);
 
 
 // {
-//     users: [
-//       {
-//         firstName: 'NURCAN',
-//         lastName: 'CÜREBAL',
-//         age: 27,
-//         email: 'nurcan@nrc.com'
-//       },
-//       {
-//         firstName: 'ERDINÇ',
-//         lastName: 'CÜREBAL',
-//         age: 27,
-//         email: 'erdinç@erd.com'
-//       },
-//       {
-//         firstName: 'BAL',
-//         lastName: 'CÜREBAL',
-//         age: 1,
-//         email: 'bal@bal.com'
-//       }
-//     ]
-//   }
+//   users: [
+//     {
+//       firstName: 'NURCAN',
+//       lastName: 'CÜREBAL',
+//       age: 27,
+//       email: 'nurcan@nrc.com'
+//     },
+//     {
+//       firstName: 'ERDINÇ',
+//       lastName: 'CÜREBAL',
+//       age: 27,
+//       email: 'erdinç@erd.com'
+//     },
+//     {
+//       firstName: 'BAL',
+//       lastName: 'CÜREBAL',
+//       age: 1,
+//       email: 'bal@bal.com'
+//     }
+//   ]
+// }
