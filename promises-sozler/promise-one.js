@@ -8,10 +8,9 @@
 // sözü verir.
 
 // Bir Söz(promise) şu durumlardan birindedir:
-
-// beklemede(pending): ilk durum, ne yerine getirildi ne de reddedildi.
-// tamamlandı(fulfilled): işlemin başarıyla tamamlandığı anlamına gelir.
-// reddedildi(rejected): işlemin başarısız olduğu anlamına gelir.
+// -> beklemede(pending): ilk durum, ne yerine getirildi ne de reddedildi.
+// -> tamamlandı(fulfilled): işlemin başarıyla tamamlandığı anlamına gelir.
+// -> reddedildi(rejected): işlemin başarısız olduğu anlamına gelir.
 
 // Bekleyen bir söz ya bir değerle yerine getirilebilir ya da bir sebeple (hata) reddedilebilir. Bu seçeneklerden herhangi
 // biri gerçekleştiğinde, bir sözün o zaman yöntemiyle sıraya alınan ilişkili işleyiciler çağrılır. (Karşılık gelen bir
