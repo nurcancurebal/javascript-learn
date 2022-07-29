@@ -5,4 +5,4 @@ let y2 = 10;
 
 let m = (y2 - y1) / (x2 - x1);
 
-console.log('eğim:', m); // 2 
+console.log('eğim:', m); // eğim: 2
