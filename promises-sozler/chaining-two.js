@@ -13,7 +13,7 @@ new Promise((resolve, reject) => {
         data.web = "http://curebal.com";
         return data;
     })
-    .then(data =>{ 
+    .then(data => {
 
         console.log(data)
     })
