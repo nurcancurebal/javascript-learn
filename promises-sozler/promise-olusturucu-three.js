@@ -2,14 +2,8 @@
 // bir parantez kullanarak yeni bir söz oluşturabiliriz. Parantez içinde bir geri arama işlevi(callback) alır. Sözlü geri
 // çağırma işlevi, çözme ve reddetme işlevleri olmak üzere iki parametreye sahiptir.
 
+
 const promiseOne = new Promise((resolve, reject) => {
-
-    resolve('success'); // true ise
-    reject('failure');  // false ise
-});
-
-
-const promiseTwo = new Promise((resolve, reject) => {
 
     setTimeout(() => {
 
@@ -27,7 +21,7 @@ const promiseTwo = new Promise((resolve, reject) => {
     }, 2000);
 });
 
-promiseTwo
+promiseOne
     .then(result => {   // doğru ise bu kod çalışmaya devam eder; result resolve dan gelir
 
         console.log(result + " Bu kod resolve' un devamıdır.");
@@ -39,7 +33,7 @@ promiseTwo
 
 // Yukarıdaki söz kararlılıkla yerine getirildi. Sözün ret ile karara bağlanmasından bir örnek verelim.
 
-const promiseThree = new Promise((resolve, reject) => {
+const promiseTwo = new Promise((resolve, reject) => {
 
     setTimeout(() => {
 
@@ -57,7 +51,7 @@ const promiseThree = new Promise((resolve, reject) => {
     }, 2000);
 });
 
-promiseThree
+promiseTwo
     .then(result => {
 
         console.log(result + " Bu kod resolve' un devamıdır.");
