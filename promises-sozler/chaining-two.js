@@ -15,6 +15,7 @@ new Promise((resolve, reject) => {
     })
     .then(data => {
 
+        data.country = "Canada";
         console.log(data)
     })
     .catch(data => {
@@ -22,4 +23,4 @@ new Promise((resolve, reject) => {
         console.log(data);
     });
 
-// { name: 'Nurcan', surname: 'Cürebal', web: 'http://curebal.com' }
+// { name: 'Nurcan', surname: 'Cürebal', web: 'http://curebal.com', country: 'Canada' }

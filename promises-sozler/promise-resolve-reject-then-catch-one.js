@@ -8,7 +8,7 @@ new Promise((resolve, reject) => {
     });
 
     // işlem hatalı ise
-    reject();
+    reject("Hata");
 })
     .then(data => {     // resolve oluyorsa then çalışır. Buradaki data yukarıdaki resolve() un içine yazdığımızdan geliyor
 

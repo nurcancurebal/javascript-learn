@@ -2,15 +2,14 @@
 // bir parantez kullanarak yeni bir söz oluşturabiliriz. Parantez içinde bir geri arama işlevi(callback) alır. Sözlü geri
 // çağırma işlevi, çözme ve reddetme işlevleri olmak üzere iki parametreye sahiptir.
 
-const promise = new Promise((resolve, reject) => {
+const promiseOne = new Promise((resolve, reject) => {
 
-    resolve('success');
-    reject('failure');
+    resolve('success'); // true ise
+    reject('failure');  // false ise
 });
 
 
-// Promise
-const doPromise = new Promise((resolve, reject) => {
+const promiseTwo = new Promise((resolve, reject) => {
 
     setTimeout(() => {
 
@@ -18,31 +17,29 @@ const doPromise = new Promise((resolve, reject) => {
 
         if (skills.length > 0) {
 
-            resolve(skills);
+            resolve(skills);    // true ise
 
         } else {
 
-            reject('Something wrong has happened');
+            reject('Something wrong has happened'); // false ise
         }
 
     }, 2000);
 });
 
-doPromise
-    .then(result => {
+promiseTwo
+    .then(result => {   // doğru ise bu kod çalışmaya devam eder; result resolve dan gelir
 
-        console.log(result);
+        console.log(result + " Bu kod resolve' un devamıdır.");
     })
-    .catch(error => console.log(error));
+    .catch(error => console.log(error + " Bu kod reject' un devamıdır."));
 
-// [ 'HTML', 'CSS', 'JS' ]
-
-
-// Yukarıdaki söz kararlılıkla yerine getirildi. Sözün ret ile karara bağlanmasından bir örnek daha verelim.
+// HTML,CSS,JS Bu kod resolve' un devamıdır.
 
 
-// Promise
-const doPromiseTwo = new Promise((resolve, reject) => {
+// Yukarıdaki söz kararlılıkla yerine getirildi. Sözün ret ile karara bağlanmasından bir örnek verelim.
+
+const promiseThree = new Promise((resolve, reject) => {
 
     setTimeout(() => {
 
@@ -60,11 +57,11 @@ const doPromiseTwo = new Promise((resolve, reject) => {
     }, 2000);
 });
 
-doPromiseTwo
+promiseThree
     .then(result => {
 
-        console.log(result);
+        console.log(result + " Bu kod resolve' un devamıdır.");
     })
-    .catch(error => console.error(error));
+    .catch(error => console.error(error + " Bu kod reject' un devamıdır."));
 
-// Something wrong has happened
+// Something wrong has happened Bu kod reject' un devamıdır.

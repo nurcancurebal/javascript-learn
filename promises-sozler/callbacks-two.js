@@ -8,13 +8,13 @@
 
 
 //Callback
-const doSomething = callback => {
+const doSomething = callback => {   // callback olduğu yer
 
     setTimeout(() => {
 
         const skills = ['HTML', 'CSS', 'JS'];
 
-        callback('It did not go well', skills);
+        callback('It did not go well', skills); // callback atamasının yapıldığı yer, err= It did not go well; result=skills
 
     }, 2000);
 };
@@ -32,8 +32,8 @@ const callback = (err, result) => {
 doSomething(callback);
 // 2 saniye sonra yazdıracak
 // It did not go well
-
 // Bu durumda hata yanlıştır ve sonuç olan else bloğunu döndürür.
+
 
 const doSomethingTwo = callback => {
 
@@ -41,7 +41,7 @@ const doSomethingTwo = callback => {
 
         const skills = ['HTML', 'CSS', 'JS'];
 
-        callback(false, skills);
+        callback(false, skills);    // err= false
 
     }, 2000);
 };
@@ -50,10 +50,10 @@ doSomethingTwo((err, result) => {
 
     if (err) {
 
-        return console.log(err);
+        return console.log(err);    // true ise
     }
 
-    return console.log(result);
+    return console.log(result); // false ise
 });
 
 // 2 saniye sonra becerileri yazdıracak
