@@ -1,1 +1,0 @@
-const wait ms => new Promise(resolve => setTimeout()) // 13.18
