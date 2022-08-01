@@ -1,7 +1,4 @@
-
-
-main()
-
+main();
 
 async function main() {
 
@@ -13,22 +10,23 @@ async function main() {
 
     b = await new Promise(function (resolve, reject) {
 
-        const randomNumber = Math.floor(((Math.random() * 10) + 1 ));
-
-        if (randomNumber < 5) {
+        setTimeout(() => {
 
             resolve(15);
 
-        } else {
+            return; 
 
-            reject("Sayı denk gelemedi!");
-            
-        }
+            console.log("asdasd");  // return' ün altına her hangi bir kod yazarsan çalışmaz
 
+        }, 2000);
     });
 
     console.log("PROMISE BITIS");
 
     console.log(b + a);
+};
 
-}
+// PROMISE BASLANGIC
+// 2 sn bekledi
+// PROMISE BITIS
+// 45
