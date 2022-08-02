@@ -1,5 +1,5 @@
 // Bir personAccount çıkışı işlevi(fonksiyonu) oluşturun. Ad, soyad, gelirler, giderler iç değişkenlerine sahiptir.
-// totalIncome, totalExpense, accountInfo,addIncome, addExpense ve accountBalance iç fonksiyonlarına sahiptir. Gelirler bir
+// totalIncome, totalExpense, accountInfo, addIncome, addExpense ve accountBalance iç fonksiyonlarına sahiptir. Gelirler bir
 // dizi gelirdir ve tanımı ve giderleri de bir dizi gider ve tanımıdır.
 
 
@@ -7,9 +7,9 @@ function personAccount() {
 
     const obj = {};
 
-    const callbackClouse = { totalExpense, totalIncome, totalExpense, accountBalance, addExpense, addIncome, accountInfo };
+    const callbackClouse = { addIncome, addExpense, totalIncome, totalExpense, accountBalance, accountInfo };
 
-    return person()
+    return person();
 
     function person() {
 
@@ -85,6 +85,11 @@ function personAccount() {
         return total;
     };
 
+    function accountBalance() {
+
+        return totalIncome() - totalExpense();
+    };
+
     function accountInfo() {
 
         let stringConcatIncome = obj.income;
@@ -135,11 +140,6 @@ function personAccount() {
         Hesap Bakiyesi: ${accountBalance()}
         `;
     };
-
-    function accountBalance() {
-
-        return totalIncome() - totalExpense();
-    };
 };
 
 const accountPerson = personAccount()
@@ -154,10 +154,7 @@ const accountPerson = personAccount()
         sandalyeMass: 20000,
     })
 
-const totalExpese = accountPerson.totalExpense();
-
-const accontBal = accountPerson.accountBalance();
-
-const accountInfocuk = accountPerson.accountInfo();
-
-console.log(accountInfocuk);
+console.log(accountPerson.totalIncome());
+console.log(accountPerson.totalExpense());
+console.log(accountPerson.accountBalance());
+console.log(accountPerson.accountInfo());

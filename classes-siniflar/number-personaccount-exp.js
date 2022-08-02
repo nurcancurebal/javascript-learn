@@ -53,7 +53,14 @@ class TotalPersonAccount extends PersonAccount {
 
     accountInfo() {
 
-        return `Adı: ${this.firstname}\nSoyadı: ${this.lastname}\nGelirleri: ${this.incomes}\nGiderleri: ${this.expense}\nToplam Gelir: ${this.totalIncome()}\nToplam Gider: ${this.totalExpense()}\nHesap Bakiyesi: ${this.accountBalance()}`;
+        return `
+        Adı: ${this.firstname}
+        Soyadı: ${this.lastname}
+        Gelirleri: ${this.incomes}
+        Giderleri: ${this.expense}
+        Toplam Gelir: ${this.totalIncome()}
+        Toplam Gider: ${this.totalExpense()}
+        Hesap Bakiyesi: ${this.accountBalance()}`;
     };
 };
 
