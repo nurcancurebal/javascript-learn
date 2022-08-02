@@ -1,3 +1,5 @@
+// async fonksiyonlarda await kullanılır
+
 main();
 
 async function main() {

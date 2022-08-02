@@ -1,6 +1,8 @@
 // throw hata mesajı verir burada random number 5' ten küçük olsada trhen ile throw çıkışı yaparsak toplama işlemini yapmaz
 // ama return ile çıkarsak toplama işlemine katılır.
 
+// await yalnızca async functionlarda kullanılır
+
 main();
 
 async function main() {

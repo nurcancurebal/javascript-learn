@@ -17,23 +17,23 @@ const catNames = new Promise((resolve, reject) => {
 })
     .then(result => {
 
-        return result + " ,Siyam Kedisi";
+        return result + ",Siyam Kedisi";
     })
     .then(result => {
 
-        return result + " ,Devon Rex Cat";
+        return result + ",Devon Rex Cat";
     })
     .then(result => {
 
-        return result + " ,Mavi Rus Kedisi";
+        return result + ",Mavi Rus Kedisi";
     })
     .then(result => {
 
-        return result + " ,Scottish Fold";
+        return result + ",Scottish Fold";
     })
     .then(result => {
 
-        console.log(result + " ,Exotic Shorthair");
+        console.log(result + ",Exotic Shorthair");
     })
     .catch(error => {
 
@@ -41,3 +41,6 @@ const catNames = new Promise((resolve, reject) => {
     });
 
 console.log(catNames);
+
+// Promise { <pending> }
+// Bengal Kedisi,British Shorthair,Siyam Kedisi,Devon Rex Cat,Mavi Rus Kedisi,Scottish Fold,Exotic Shorthair

@@ -20,6 +20,8 @@
 // Promise.prototype.then() ve Promise.prototype.catch() yöntemleri vaatleri döndürdüğü(geri verdiği) için zincirlenebilirler.
 
 
+// async fonksiyonlarda await kullanılır
+
 main();
 
 async function main() {
