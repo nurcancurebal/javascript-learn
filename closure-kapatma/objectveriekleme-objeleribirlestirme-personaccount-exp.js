@@ -35,7 +35,7 @@ function personAccount() {
 
         obj.income.push(item);
 
-        return callbackClouse;  // TODO return neden callbackClouse?
+        return callbackClouse;  // return callbackClouse aşağıda ekleme işlemini gerçekliştirmek için
     };
 
     function addExpense(item) {
@@ -71,7 +71,7 @@ function personAccount() {
 
         obj.expense.forEach(item => {
 
-            Object.values(item).forEach(inItem => {
+            Object.values(item).forEach(inItem => { // objelerin value larını arrayin içine push ladık
 
                 allExpensePrices.push(inItem);
             });
@@ -94,14 +94,14 @@ function personAccount() {
 
         let stringConcatIncome = obj.income.reduce((a, b) => {
 
-            return { ...a, ...b };
+            return { ...a, ...b };  // objeleri tek bir obje içinde birleştirdik
         });
 
         stringConcatIncome = Object.entries(stringConcatIncome).reduce((a, b, index) => {
 
-            if (index == 1) {
+            if (index == 1) {   // burası string olarak objeyi(incomeları) yan yana yazdırma işlemi
 
-                return `${a[0]}: ${a[1]} , ${b[0]}: ${b[1]} `;
+                return `${a[0]}: ${a[1]} , ${b[0]}: ${b[1]} `;  // ilk yaptığının sonucunu a değişkenine attı
 
             } else {
 
@@ -109,11 +109,9 @@ function personAccount() {
             }
         });
 
-        let stringConcatExpense = obj.expense;
+        let stringConcatExpense = obj.expense.reduce((a, b) => {
 
-        stringConcatExpense = stringConcatExpense.reduce((a, b) => {
-
-            return { ...a, ...b };
+            return { ...a, ...b };  // tek bir objenin içine aldık
         });
 
         stringConcatExpense = Object.entries(stringConcatExpense).reduce((a, b, index) => {
