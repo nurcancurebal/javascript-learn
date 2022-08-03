@@ -7,7 +7,7 @@ function personAccount() {
 
     const obj = {};
 
-    const callbackClouse = { addIncome, addExpense, totalIncome, totalExpense, accountBalance, accountInfo };
+    const callbackClouse = { addIncome, addExpense, totalIncome, totalExpense, accountBalance, accountInfo };   // TODO ne işe yarıyor içindekiler değişken olarak mı aldık?
 
     return person();
 
@@ -35,7 +35,7 @@ function personAccount() {
 
         obj.income.push(item);
 
-        return callbackClouse;
+        return callbackClouse;  // TODO return neden callbackClouse?
     };
 
     function addExpense(item) {
@@ -92,9 +92,7 @@ function personAccount() {
 
     function accountInfo() {
 
-        let stringConcatIncome = obj.income;
-
-        stringConcatIncome = stringConcatIncome.reduce((a, b) => {
+        let stringConcatIncome = obj.income.reduce((a, b) => {
 
             return { ...a, ...b };
         });
@@ -143,18 +141,26 @@ function personAccount() {
 };
 
 const accountPerson = personAccount()
-    .addExpense({
-        yakit: 8000,
-        araba: 4000
-    })
     .addIncome({
         balMass: 20000,
     })
     .addIncome({
-        sandalyeMass: 20000,
+        timurMass: 20000,
+    })
+    .addExpense({
+        yakit: 8000,
+        araba: 4000
     })
 
-console.log(accountPerson.totalIncome());
-console.log(accountPerson.totalExpense());
-console.log(accountPerson.accountBalance());
+console.log(accountPerson.totalIncome());   // 75000
+console.log(accountPerson.totalExpense());   // 40000
+console.log(accountPerson.accountBalance());  // 35000
 console.log(accountPerson.accountInfo());
+
+// Adı: Nurcan
+// Soyadı: Cürebal
+// Gelirleri: nurcanMaas: 15000 , erdincMaas: 20000 , balMass: 20000, timurMass: 20000
+// Giderleri: elektrik: 5000 , su: 4000 , dogalgaz: 8000, kira: 9000, okul: 2000, yakit: 8000, araba: 4000
+// Toplam Gelir: 75000
+// Toplam Gider: 40000
+// Hesap Bakiyesi: 35000
