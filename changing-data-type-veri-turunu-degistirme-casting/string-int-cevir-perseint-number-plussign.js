@@ -19,9 +19,14 @@ console.log(typeof numint); // çıktı number
 
 
 //plus sign(+): number stringi numbera çevirirken başına artı koy  
-let aaa = +'10';
+no = 10;
+num = +'10';
 
-console.log(typeof aaa); //  çıktı number
+console.log(typeof no);  // çıktı number
+
+console.log(typeof num);  // çıktı number
+
+console.log(typeof no === typeof num); // true
 
 
 
