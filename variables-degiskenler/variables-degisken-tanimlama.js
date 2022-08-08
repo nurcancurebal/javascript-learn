@@ -23,7 +23,7 @@ const RENK_TURUNCU = "#FF7F00";
 // Sabitler için ne zaman büyük harf kullanılmalı ne zaman kullanılmamalı ?
 //“Sabit” değeri hiç değişmeyen demek. Fakat bazı değişkenler örneğin kırmızının hexadecimal karşılığı çalışmadan önce bilinirken bazıları çalışma zamanında hesaplanır fakat sonrasında değişmez.
 
-const sayfaYuklenmeSuresi = /* Sayfanın yüklenme süresini tutar. */;
+const sayfaYuklenmeSuresi = 21; /* Sayfanın yüklenme süresini tutar. */
 
 //Diğer bir deyişle büyük harfle yazılan değişken isimleri sadece önceden bilinen değerleri tanımlamak için kullanılır.
 
