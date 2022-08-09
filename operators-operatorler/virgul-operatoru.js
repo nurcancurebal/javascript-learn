@@ -19,7 +19,7 @@ console.log(a); // 7 (3 + 4 işleminin sonucu)
 
 // Bir satırda 3 farklı işlem
 
-for (a = 1, b = 3, c = a * b; a < 10; a++) {
+for (a = 1, b = 3, c = a * b; a < 10; a++) { // a = 1, b = 3, c = a * b burayı yalnızca 1 defa başlarken yapıyor
 
     console.log(a, b, c);
 

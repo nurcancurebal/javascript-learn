@@ -1,11 +1,13 @@
-/* 
+/*
+>  büyüktür
+<  küçüktür
+>=  büyük eşit
+<=  küçük eşit
 == iki değerin aynı olup olmadığına bakar
 === hem değerin hem veri türünün aynı olup olmadığına bakar
 !=  eşit değilse
 !== hem değerin hem veri tipinin eşit olmama durumu
-<=  küçük eşit
->=  büyük eşit */
-
+*/
 
 console.log(3 > 2);              // true, because 3 is greater than 2
 console.log(3 >= 2);             // true, because 3 is greater than 2
