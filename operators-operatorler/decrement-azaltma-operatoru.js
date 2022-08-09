@@ -1,3 +1,5 @@
+// Artırma/Azaltma sadece değişkenlere uygulanabilirler. 5++ gibi bir kullanım hata verecektir.
+
 // 1.Pre-decrement
 
 let countOne = 0;
