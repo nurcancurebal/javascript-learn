@@ -1,4 +1,4 @@
-// ternary orperators
+// ternary(üçlü) orperators
 
 let israining = true;
 

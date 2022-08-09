@@ -1,3 +1,11 @@
+// Sayısal dünüştürme işlemleri matematiksel operasyonlarda otomatik olarak gerçekleşir. Örnğin sayı olmayan iki değer /
+// işlemine tutulduğunda:
+
+console.log("6" / "2");  // 3, karakterler sayılara dönüştürülür ve işlem öyle yapılır.
+
+
+// Eğer isterseniz Number(value) fonksiyonu ile değeri sayıya dönüştürebilirsiniz:
+
 let str = "123";
 
 console.log(typeof str); // string
@@ -31,3 +39,16 @@ console.log(Number("   123   ")); // 123
 console.log(Number("123z"));      // NaN (Hata "z" bir rakam değil)
 console.log(Number(true));        // 1
 console.log(Number(false));       // 0
+
+// Lütfen null ve undefined'ın aynı davranmadıklarını bilin. null 0 olurken undefined NaN yani sayı değildir.
+
+
+// Ekleme karakteri ‘+’
+// Neredeyse tüm matematiksel operasyonlar önce değerleri sayılara çevirmeye çalışır. Eğer bir taraf sayıya çevrilemediyse
+// bu durumda karakter olarak diğeri ile birleştirme işlemi yapılır.
+
+console.log(1 + '2'); // '12' (Sağ tarafta karakter var)
+console.log('1' + 2); // '12' (Sol tarafta karakter var)
+
+// Gördüğünüz gibi sadece bir tarafın karakter olması yeterlidir. Eğer iki tarafta sayıya dönüşebiliyorsa bu durumda gerçek
+// toplama işlemi yapılır.
