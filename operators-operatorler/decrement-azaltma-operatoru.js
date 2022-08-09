@@ -1,12 +1,16 @@
-//decrement operator
+// 1.Pre-decrement
 
-let count = 0;          // -1
+let countOne = 0;
 
-console.log(--count);  //-1
+console.log(--countOne); // -1
+
+console.log(countOne);  // -1
 
 
-let countt = 0;
+// 2.Post-decrement
 
-console.log(countt--); //0
+let count = 0;
 
-console.log(countt);   //-1
+console.log(count--); // 0
+
+console.log(count);   // -1

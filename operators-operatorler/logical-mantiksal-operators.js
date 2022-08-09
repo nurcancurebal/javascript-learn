@@ -3,7 +3,7 @@ mantıksal operatörler (logical operators)
 && = ampersand (ve)
 || = pipe (ya da)
 !  = negation (olumsuzlama) 
- */
+*/
 
 
 let check = 4 > 3 && 10 > 5;

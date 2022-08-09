@@ -1,12 +1,16 @@
-// Increment operator
+// 1.Pre-increment
 
-let count = 0;          // 1
+let countOne = 0;
 
-console.log(++count);  //1
+console.log(++countOne);        // 1
+
+console.log(countOne);          // 1
 
 
-let countt = 0;
+// 2.Post-increment
 
-console.log(countt++); //0
+let countTwo = 0;
 
-console.log(countt);   //1
+console.log(countTwo++);        // 0
+
+console.log(countTwo);          // 1
