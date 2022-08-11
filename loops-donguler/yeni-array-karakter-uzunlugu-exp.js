@@ -20,7 +20,6 @@ for (let i = 0; i < countries.length; i++) {
 
 };
 
-
 console.log(newCountries);
 
 // içindeki ülkelerin tek tek karakter uzunluğunu yazdırdık
