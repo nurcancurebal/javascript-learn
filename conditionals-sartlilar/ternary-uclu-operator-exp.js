@@ -1,4 +1,4 @@
-// ternary: üçlü operatör
+// ternary orperators: üçlü operatör
 
 let age = 27;
 let ageTwo = 13;

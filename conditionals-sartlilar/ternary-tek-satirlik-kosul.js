@@ -1,4 +1,8 @@
-// ternary(üçlü) orperators
+// ternary(üçlü) orperators: Operatör "?" işareti ile ifade edilir. Resmi tanımda “üçlü” kullanılmasının sebebi üç tane
+// operanddan oluşmasından dolayıdır. Aslında JavaScript dilinde 3 tane operandı olan başka bir operatör yoktur.
+
+// let sonuc = koşul ? deger1 : deger2 = koşul, deger1, deger2 operanddır
+
 
 let israining = true;
 
