@@ -5,6 +5,8 @@
 // switch
 // ternary operators( tek satırlık koşul)
 
+// “if” cümlesi koşulu alır ve kontrol eder sonucunda true ise kodu çalıştırır.
+
 
 // if else
 

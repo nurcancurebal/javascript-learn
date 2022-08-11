@@ -1,5 +1,5 @@
-// Bir dize, tek bir karakter veya paragraf veya bir sayfa olabilir. Dize uzunluğu çok büyükse tek satıra sığmaz. Dizenin bir sonraki
-// satırda devam edeceğini belirtmek için her satırın sonunda ters eğik çizgi karakterini (\) kullanabiliriz.
+// Bir dize, tek bir karakter veya paragraf veya bir sayfa olabilir. Dize uzunluğu çok büyükse tek satıra sığmaz. Dizenin
+// bir sonraki satırda devam edeceğini belirtmek için her satırın sonunda ters eğik çizgi karakterini (\) kullanabiliriz.
 
 
 const paragraph = "My name is Asabeneh Yetayeh. I live in Finland, Helsinki.\
