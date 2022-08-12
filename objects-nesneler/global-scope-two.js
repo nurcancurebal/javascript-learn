@@ -4,6 +4,8 @@
 let a = 'JavaScript'; // bu dosyanın her hangi bir yerinden ulaşılabilir.
 let b = 10;
 
+letsLearnScope();
+
 function letsLearnScope() {
 
     console.log(a, b); // JavaScript 10, erişilebilir
@@ -18,7 +20,5 @@ function letsLearnScope() {
 
     console.log(a, b);   // JavaScript 10
 };
-
-letsLearnScope();
 
 console.log(a, b); // JavaScript 10, erişilebilir
