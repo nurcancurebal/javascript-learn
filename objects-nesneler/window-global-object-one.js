@@ -1,17 +1,26 @@
 // değişkenlerin kapsamları(scopeları) şunlar olabilir
-// 1. Global
-// 2. Local
+// 1. Global scope
+// 2. Local scope
 // let, const ya da var ile değişken tanımlanmamışsa " Window Global Object " olarak geçer.
 
 //! WİNDOW GLOBAL OBJECT = değişkeni let, const, var ile tanımlamadanda görebiliriz. Bu değişkenler window global object olur
 
-name = 'nurcan';
+a = 'JavaScript'; // let veya const olmadan bir değişken bildirmek, onu pencere nesnesinde kullanılabilir hale getirmek ve
+// bu herhangi bir yerde bulunur
 
-console.log(name);
+b = 10; // bu global bir kapsam değişkenidir ve pencere nesnesinde bulunur
 
+function letsLearnScope() {
 
-// Console.log()'u kullanmadan tarayıcınızı açın ve kontrol edin, tarayıcıya a veya b yazarsanız a ve b'nin değerini göreceksiniz. Bu,
-// a ve b'nin pencerede zaten mevcut olduğu anlamına gelir.
+    console.log(a, b);
 
-// let veya const olmadan bir değişken bildirmek, onu pencere nesnesinde kullanılabilir hale getirir ve bu her yerde bulunur. Bu global
-// bir kapsam(global scope) değişkenidir ve pencere nesnesinde(window object) bulunur.
+    if (true) {
+
+        console.log(a, b);
+    }
+}
+
+console.log(a, b); // erişilebilir
+
+// Console.log()'u kullanmadan tarayıcınızı açın ve kontrol edin, tarayıcıya a veya b yazarsanız a ve b'nin değerini
+// göreceksiniz. Bu, a ve b'nin pencerede zaten mevcut olduğu anlamına gelir.
