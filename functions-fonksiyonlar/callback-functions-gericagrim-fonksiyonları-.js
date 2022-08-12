@@ -47,3 +47,8 @@ console.log(sorTwo(
     function () { return ("Kabul ettin"); },
     function () { return ("Çalışmayı durdurdun."); }
 )); // Çalışmayı durdurdun.
+
+
+// Gördüğünüz gibi yukarıda fonksiyonlar doğrudan sor(...) içerisinde tanımlandı. hiçbir isim kullanılmadığından dolayı.
+// Böyle fonksiyonlara anonim veya anonymous fonksiyonlar denir. Bu fonksiyonlar sor fonksiyonu dışında ulaşılabilir
+// değillerdir(çünkü hiçbir değişkene atanmazlar).
