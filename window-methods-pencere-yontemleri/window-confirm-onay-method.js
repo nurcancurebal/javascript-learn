@@ -6,3 +6,6 @@
 const agree = confirm('Are you sure you like to delete? ');
 
 console.log(agree);     // iletişim kutusunda neye tıkladığınıza bağlı olarak sonuç doğru veya yanlış olacaktır
+
+// Tüm bu fonksiyonlar(alert,confirm, prompt) modal dır. Tekrar hatırlatmak gerekirse modallar kullanıcının etkileşimi
+// olana kadar kodu durdururlar. Yani kullanıcıdan cevabı beklerler.

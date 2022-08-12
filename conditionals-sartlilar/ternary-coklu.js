@@ -1,6 +1,5 @@
 // Birden fazla "?" işareti kullanarak birden fazla koşula göre değer döndürme işlemini sağlayabilirsiniz.
 
-
 let yas = 18;
 
 let mesaj = (yas < 3) ? 'Ne tatlı şeysin sen öyle!' :

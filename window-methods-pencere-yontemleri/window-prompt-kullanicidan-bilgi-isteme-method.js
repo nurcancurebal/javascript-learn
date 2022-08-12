@@ -19,3 +19,6 @@ console.log(number);
 // iptal edebilir. Veya Esc tuşu da aynı işlevi görür.
 // Eğer kullanıcı değer girdiyse bunu dönderir, eğer girmediyse ve o ekrandan Esc veya CANCEL butonu ile çıktıysa null
 // dönderir.
+
+// Tüm bu fonksiyonlar(alert,confirm, prompt) modal dır. Tekrar hatırlatmak gerekirse modallar kullanıcının etkileşimi
+// olana kadar kodu durdururlar. Yani kullanıcıdan cevabı beklerler.

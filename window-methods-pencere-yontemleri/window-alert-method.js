@@ -12,3 +12,6 @@ alert('Welcome to 30DaysOfJavaScript');
 // Ekrana çıkan küçük pencereye modal pencere denir. “Modal” sayfayı kullanan kişinin bu durumda sayfayla iletişime
 // geçemeyeceğini, başka tuşlara basamayacağını sadece bu pencere ile etkileşim kurabileceğini ifade eder. Yani “OK”'e
 // basması beklenir.
+
+// Tüm bu fonksiyonlar(alert,confirm, prompt) modal dır. Tekrar hatırlatmak gerekirse modallar kullanıcının etkileşimi
+// olana kadar kodu durdururlar. Yani kullanıcıdan cevabı beklerler.

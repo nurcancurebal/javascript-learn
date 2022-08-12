@@ -14,6 +14,7 @@ switch(caseValue){
 } 
 */
 
+// “switch” karşılaştırma için, sıkı karşılaştırmayı === kullanır.
 
 let weather = 'yagmurlu';
 
