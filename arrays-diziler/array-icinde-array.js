@@ -11,7 +11,6 @@ console.log(numbers[3][2]); // 7 = 3. elemanın içindeki 2. elemanı çağırd�
 
 const firstNums = [1, 2, 3];
 const secondNums = [1, 4, 9];
-
 const arrayOfArray = [[1, 2, 3], [1, 2, 3]];
 
 console.log(arrayOfArray[0]); // [1, 2, 3]

@@ -7,6 +7,7 @@
 // Statiğin içinde objeleri(date,math) kullanabiliyoruz.
 
 class Person {
+
     constructor(firstName, lastName, age, country, city) {
 
         this.firstName = firstName;
@@ -143,6 +144,6 @@ console.log(Person.showDateTime());     // static
 //   []
 //   0
 //   []
-//   Nurcan Cürebal is 27. She lives Ottava, Canada. 
+//   Nurcan Cürebal is 27. She lives Ottava, Canada.
 //   Python
 //   22.07.2022 20:59

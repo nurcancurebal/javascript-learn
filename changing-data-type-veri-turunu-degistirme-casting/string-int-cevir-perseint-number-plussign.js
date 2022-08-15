@@ -1,7 +1,6 @@
 // string veri türünü integer veri  türüne dönüştürebiliriz
 // let num= '10' tırnak içinde olan tüm ifadeler string veri türündedir
 
-
 // parseınt()
 // Number()
 // plus sign(+) ile çevirebiliriz

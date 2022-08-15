@@ -5,4 +5,4 @@ let itCompanies = ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 
 let newitCompanies = itCompanies.pop();
 
 console.log(itCompanies.join(', '), 'and', newitCompanies, ' are big IT companies.');
-  //Facebook, Google, Microsoft, Apple, IBM, Oracle and Amazon  are big IT companies.
+//Facebook, Google, Microsoft, Apple, IBM, Oracle and Amazon  are big IT companies.

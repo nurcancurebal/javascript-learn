@@ -10,4 +10,3 @@ console.log(dizin); //array oluşturmanın bir yoludur farkı ise arrayin içine
 let names = Array(5).fill('loading');
 
 console.log(names); //(5) ['loading', 'loading', 'loading', 'loading', 'loading']
-

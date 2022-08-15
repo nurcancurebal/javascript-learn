@@ -3,6 +3,7 @@
 class Person {
 
     constructor(
+
         firstName = 'Nurcan',
         lastName = 'Cürebal',
         age = 27,
@@ -15,8 +16,8 @@ class Person {
         this.age = age;
         this.country = country;
         this.city = city;
-    };
-};
+    }
+}
 
 const person1 = new Person(); // varsayılan değerleri alacaktır
 const person2 = new Person('Lidiya', 'Tekle', 28, 'Finland', 'Espoo');
