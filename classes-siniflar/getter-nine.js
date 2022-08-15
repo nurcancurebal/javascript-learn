@@ -6,7 +6,6 @@
 //! Getler dısarıdan veri(argument) almaz, içerideki verileri dışarıya çıkartmak için kullanılır.Bu güvenlik açığını kapatmak için kullanılır
 
 class Person {
-
     constructor(firstName, lastName, age, country, city) {
 
         this.firstName = firstName;

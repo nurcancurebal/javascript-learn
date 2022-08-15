@@ -4,7 +4,6 @@
 
 
 class Person {
-
     constructor(firstName, lastName, age, country, city) {
 
         this.firstName = firstName;

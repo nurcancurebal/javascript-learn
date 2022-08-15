@@ -2,7 +2,6 @@
 // oluşturabiliriz. Yöntemler, sınıf içindeki JavaScript işlevleridir. Bazı sınıf yöntemleri oluşturalım.
 
 class Person {
-
     constructor(firstName, lastName, age, country, city) {
 
         this.firstName = firstName;

@@ -1,5 +1,4 @@
 class Person {
-
     constructor(firstName, lastName) {
 
         this.firstName = firstName;
@@ -16,7 +15,6 @@ console.log(person1);   // Person { firstName: 'Nurcan', lastName: 'Cürebal' }
 // kullanarak bir çok person nesnesi oluşturalım.
 
 class PersonTwo {
-
     constructor(firstName, lastName) {
 
         console.log(this);

@@ -4,7 +4,6 @@
 //! setler return dönmez, class' ın içindeki verileri değiştirmek için kullanılır. Güvenlik açaığını kapatmak için kullanılır.
 
 class Person {
-
     constructor(firstName, lastName, age, country, city) {
 
         this.firstName = firstName;

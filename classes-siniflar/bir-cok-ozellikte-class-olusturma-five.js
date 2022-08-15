@@ -1,5 +1,4 @@
 class Person {
-
     constructor(firstName, lastName, age, country, city) {
 
         console.log(this);

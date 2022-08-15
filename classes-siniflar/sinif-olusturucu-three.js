@@ -7,7 +7,6 @@
 
 
 class Person {
-
     constructor(firstName, lastName) {
 
         console.log(this);
