@@ -15,7 +15,7 @@ function letsLearnScopeOne() {
 
     console.log(a, b); // ekran çıktısı: JavaScript 10
 
-    let value = false; // TODO fonksiyondan ve fonksiyonun dışından erişebiliriz
+    let value = false; // fonksiyonun içinden erişebiliriz
 
     // block scope
 

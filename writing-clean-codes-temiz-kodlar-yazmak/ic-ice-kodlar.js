@@ -20,12 +20,17 @@ for (let i = 0; i < 10; i++) {
 // Örneğin aşağıdaki iki yapı birbiri ile aynı.
 
 function ust(x, n) {
+
     if (n < 0) {
-        alert("Negatif sayılar desteklenmemektedir");
+
+        console.log("Negatif sayılar desteklenmemektedir");
+
     } else {
+
         let sonuc = 1;
 
         for (let i = 0; i < n; i++) {
+
             sonuc *= x;
         }
 
@@ -35,14 +40,19 @@ function ust(x, n) {
 
 
 function ustTwo(x, n) {
+
     if (n < 0) {
-        alert("Negatif sayılar desteklenmemektedir");
-        return;   // TODO buradaki return çalışma mantığı?
+
+        console.log("Negatif sayılar desteklenmemektedir");
+
+        return; // eğer n sıfırdan küçük olursa bu if bloğu çalışacak ve return' e gelince function durdurulur ve return
+        // çıkışı verilir function durdurulduğu için alttaki kodlar okunamayacaktır veya çalışamayacaktır.
     }
 
     let sonuc = 1;
 
     for (let i = 0; i < n; i++) {
+
         sonuc *= x;
     }
 

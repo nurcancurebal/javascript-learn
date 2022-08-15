@@ -7,7 +7,7 @@ function personAccount() {
 
     const obj = {};
 
-    const callbackClouse = { addIncome, addExpense, totalIncome, totalExpense, accountBalance, accountInfo };   // TODO ne işe yarıyor içindekiler değişken olarak mı aldık?
+    const callbackClouse = { addIncome, addExpense, totalIncome, totalExpense, accountBalance, accountInfo };
 
     return person();
 
