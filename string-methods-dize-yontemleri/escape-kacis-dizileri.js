@@ -13,6 +13,9 @@ let bilgilerim = "Adım: " + adim + "  \nYaşım: " + yasim;
 
 console.log(bilgilerim);
 
+// Adım: Nurcan Cürebal
+// Yaşım: 26
+
 
 console.log('I hope everyone is enjoying the 30 Days Of JavaScript challenge.\nDo you ?');
 

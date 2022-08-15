@@ -1,18 +1,20 @@
 if (n < 0) { console.log(`Pover ${n} is not supported`); }
-// 1. burada koşuldan sonra boşluk olmamalı
-// 2. kapama süslü parantezinden önce noktalı virgül gelmemeli
+// Süslü parantez açma ve kapama aynı satırda yapılmış: Burada süslü paranteze gerek yok.
 
 
 if (n < 0)
     console.log(`Pover ${n} is not supported`);
-// burada console.log aşağıya alınmamalı
+// Ayrı bir satıra süslü parantez olmadan yazılmış. Bu şekilde yazmayın. Bu ileride bazı anlayamadığınız hatalara neden
+// olabilir. Örneğin if gövdesine bir satır daha yazarsanız bu satırlardan sonraki yazdığınız çalışmaz.
 
 
 if (n < 0) console.log(`Pover ${n} is not supported`);
-// buradaki yazım doğrudur ancak süslü parantez kullanmak en iyisidir.
+// Süslü parantez olmadan tek satırda işi bitirebilirseniz kabul edilebilir. Ama kısa olması şartıyla.
 
 if (n < 0) {
     console.log(`Pover ${n} is not supported`);
 }
-
 // bu şekilde kullanım her zaman en okunaklısıdır.
+
+
+// Çok kısa kodlar için, şu şekilde kullanım kabul edilebilir: if(koşul) return null.

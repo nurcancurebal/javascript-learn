@@ -2,7 +2,7 @@
 // bir sonraki satırda devam edeceğini belirtmek için her satırın sonunda ters eğik çizgi karakterini (\) kullanabiliriz.
 
 
-const paragraph = "My name is Asabeneh Yetayeh. I live in Finland, Helsinki.\
+const paragraph = "My name is Nurcan Cürebal. I live in Canada, Ottava.\
 I am a teacher and I love teaching. I teach HTML, CSS, JavaScript, React, Redux, \
 Node.js, Python, Data Analysis and D3.js for anyone who is interested to learn. \
 In the end of 2019, I was thinking to expand my teaching and to reach \
