@@ -19,6 +19,7 @@ console.log(id === idAgain); // true
 /* Ruby Gibi
 Bazı programlama dillerinde , Ruby gibi, her bir isim için bir sembol bulunmaktadır. JavaScript’te ise gördüğünüz gibi bu global semboller için geçerlidir. */
 
+
 /* Symbol.keyFor
 Global semboller için Symbol.for(anahtar) sembolü ismiyle çağırır, bunun tam tersi de mümkündür: Symbol.keyFor(sym), global sembol ile sembolün ismini dönderir. */
 
@@ -34,18 +35,3 @@ console.log(Symbol.keyFor(sym2)); // id
 console.log(Symbol.keyFor(Symbol.for("isim"))); // isim , global sembol
 
 console.log(Symbol.keyFor(Symbol("isim2"))); // undefined , tanımsız bu argüman sembol kayıtlarında bulunamadı.
-
-/* System sembolleri
-JavaScript içinde tanımlı birçok “sistem” sembolü bulunmaktadır. Bunları farklı yönlerden objeler içinde kullanmak mümkündür. */
-
-// Bu semboller Bilinen semboller tablosundan kontrol edilebilir:
-
-Symbol.hasInstance
-Symbol.isConcatSpreadable
-Symbol.iterator
-Symbol.toPrimitive
-// …vs.
-
-/* Örneğin Symbol.toPrimitive ilkel tiplere çevirirken objelerin nasıl davranması gerektiğini tanımlar. Bunlara yakında değinilecektir. */
-
-// Diğer sembollere de kullanıldığı yerlerde değinildiğinde siz de kullanımına alışacaksınız.
