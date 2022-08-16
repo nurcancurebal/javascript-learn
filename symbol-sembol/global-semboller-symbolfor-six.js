@@ -1,14 +1,11 @@
 /* Görüldüğü üzere semboller her zaman, isimleri aynı olsa bile, birbirinden farklıdır. Bazen durumlarda aynı isimdeki sembolün aynı anlama gelmesi istenebilir.
-Örneğin, uygulamnın bir yerinde "id" isminde bir sembol oluşturdunuz, başka bir yerinde ise aynı bu objeye erişmek istiyorsunuz. */
-
-/* Bunu yapabilmek için global sembol kaydı kullanılabilir. Sembolleri bunun içinde yaratılabilir ve sonra kullanılabilir. Bu aynı isme sahip sembollerin aynı değeri döndereceğini garantiler. */
-
-/* Bu kayıt bölümünden sembolleri okumak için Symbol.for(anahtar) kullanılır. */
-
-/* Bu global kayıt bölümünü kontrol eder. Eğer bir sembol anahtarolarak tanımalnmışsa bunu döndürür. Eğer böyle bir anahtar yok ise Symbol(anahtar) metodu çalışır ve bu yeni anahtar global sembol kaydı bölümüne kaydedilir. */
-
+Örneğin, uygulamnın bir yerinde "id" isminde bir sembol oluşturdunuz, başka bir yerinde ise aynı bu objeye erişmek istiyorsunuz. 
+Bunu yapabilmek için global sembol kaydı kullanılabilir. Sembolleri bunun içinde yaratılabilir ve sonra kullanılabilir. Bu aynı isme sahip sembollerin aynı değeri döndereceğini garantiler.
+Bu kayıt bölümünden sembolleri okumak için Symbol.for(anahtar) kullanılır. 
+Bu global kayıt bölümünü kontrol eder. Eğer bir sembol anahtar olarak tanımlanmışsa bunu döndürür. Eğer böyle bir anahtar yok ise Symbol(anahtar) metodu çalışır ve bu yeni anahtar global sembol kaydı bölümüne kaydedilir. */
 
 // Global kayıt bölümünden oku
+
 let id = Symbol.for("id"); // Eğer bu sembol varsa getir yoksa kaydet!
 
 // tekrar oku
