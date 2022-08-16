@@ -23,3 +23,17 @@ posetTwo[meyveTwo] = 10;
 // …fakat biraz daha iyi görünür.
 
 console.log(posetTwo.elma); // 10
+
+
+// Köşeli parantez içerisinde daha karmaşık ifadeler de kullanabilirsiniz:
+
+let meyveThree = 'elma';
+let posetThree = {
+
+    [meyveThree + 'Yedim']: 15
+};
+
+console.log(posetThree.elmaYedim = 15); // 15
+
+
+// Köşeli parantez nokta yazımına göre çok daha güçlüdür. Her türlü özellik ismini ve değişkeni desteklerler. Fakat yazımı biraz gariptir. Eğer özellik isimleri tek kelime ise çoğunlukla nokta yazımı kullanılır. Eğer daha karmaşık ise bu durumda köşeli parantez kullanılır.
