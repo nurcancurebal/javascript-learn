@@ -5,7 +5,7 @@ let kullanici = {
   selamVer: function () { console.log(this.isim) }
 }
 
-  (kullanici.selamVer)();
+(kullanici.selamVer)();
 
 // ReferenceError: Başlatmadan önce 'kullanici'ye erişilemiyor , hatası verir
 
