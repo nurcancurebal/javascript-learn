@@ -13,7 +13,7 @@ console.log(kullanici.ref.isim); // Sonuç nedir?, undefined
 
 /* Çünkü this'i tanımlayan kurallar obje tanımına bakmaz.
 Kodda kullaniciOlustur() içindeki this undefined'dır. Çünkü bu fonksiyon olarak çağırıldı metod olarak değil!.
-Ve objet tanımının this'e doğrudan bir etkisi yoktur. this tüm fonksiyonu kapsar, kod bloğu veya obje tanımı bunu etkilemez.
+Ve object tanımının this'e doğrudan bir etkisi yoktur. this tüm fonksiyonu kapsar, kod bloğu veya obje tanımı bunu etkilemez.
 Öyleyse, ref: this aslında fonksiyonun thsi değerini alır.
 Şimdi tersi bir duruma bakalım: */
 
