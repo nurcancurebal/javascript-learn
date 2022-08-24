@@ -35,6 +35,9 @@ tamsayının sonuna n eklenerek BigInt değeri oluşturulur: */
 içine null değer attığınızda bellekte bir alan tahsis edilir ancak içerisinde bir değer olmadığını söylemiş oluruz. Bu özel
 durum aslında JavaScript’de hala çözülememiş bir bug olarak devam etmektedir. Null çok özel ve önemli bir veridir. */
 
+/* Objeler ilkellere göre daha “ağırdırlar”. Daha fazla kaynak gerektirirler. Fakat özellikler ve metodlar çok önemli
+olduklarından JavaScript motoru bunları olabildiğince optimize eder. */
+
 
 // bigint örneği
 
