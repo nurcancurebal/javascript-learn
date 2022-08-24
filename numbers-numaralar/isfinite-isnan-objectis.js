@@ -6,10 +6,11 @@ Her ikisi de number tipine aittirler, fakat “normal” sayı değildirler. Bun
 fonksiyonlar bulunmaktadır. */
 
 
-// -> isNaN(deger) argümanı sayıya çevirir ve sayı olup olmadığını kontrol eder. Sayı değilse true döner.
+// -> isNaN(deger) argümanı sayıya çevirir ve sayı olup olmadığını kontrol eder. Sayı ise false döner.
 
 console.log(isNaN(NaN)); // true
 console.log(isNaN("str")); // true
+console.log(isNaN("3")); // false
 
 /* Bu fonksiyona ihtiyacınız var mı? Sadece === NaN kullanılsa ? Malesef ihtiyaç var. NaN kendi başına hiçbir şeye eşit
 değildir, hatta kendisine bile: */
@@ -36,9 +37,15 @@ console.log(isFinite(num)); // true
 
 /* -> Object.is ile karşılaştırma
 Özel bir dahili metod olan Object.is ile değerler === gibi karşılaştırılabilir. İki durum için daha güvenlidir denebilir:
-1. NaN ile çalışır: Object.is(NaN, NaN) === true bu iyi
-2. 0 ve -0 farklıdır: Object.is(0, -0) === false, neredeyse hiç kullanılmaz, ama yinede teknik olarak farklıdırlar.
-Tüm durumlarda Object.is(a, b) a === b ile aynıdır.
+1. NaN ile çalışır: */
+
+console.log(Object.is(NaN, NaN)); // true, === true bu iyi
+
+// 2. 0 ve -0 farklıdır:
+
+console.log(Object.is(0, -0)); // false, === false neredeyse hiç kullanılmaz, ama yinede teknik olarak farklıdırlar.
+
+/* Tüm durumlarda Object.is(a, b) a === b ile aynıdır.
 
 Bu tür karşılaştırma genelde JavaScript içerisinde kullanılır. JavaScript içinde eğer algoritma iki değerin kesinlikle aynı
 olup olmadığını kontrol etmek istiyorsa Object.is kullanılır. */
