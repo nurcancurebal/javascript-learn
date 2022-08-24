@@ -1,5 +1,7 @@
+// Rasyonel Sayılar(float)
 // bir sayıyı bir dizeye dönüştürür. Dizeyi belirtilen sayıda ondalık basamağa yuvarlar.
 // Ondalık sayıların sayısı sayıdan büyükse, sıfırlar eklenir.
+
 
 let num = 5.56789;
 
