@@ -2,6 +2,7 @@
 Girift metod çağrıları this kelimesini kaybedebilir, örneğin: */
 
 let kullanici = {
+
     isim: "Nurcan",
     selamVer() { console.log(this.isim); },
     yolcuEt() { console.log("Güle Güle"); }
@@ -13,7 +14,7 @@ kullanici.selamVer(); //Nurcan,  Basit metod beklendiği gibi çalışır
 
 (kullanici.isim == "Nurcan" ? kullanici.selamVer : kullanici.yolcuEt)(); // undefined, Hata!
 
-/* Son satırda kullanıcı ismine göre kullanici.selamVer veya kullanici.yolcuEt cagrilir.kullanici.selamVer ile çağrıldığında çalışmaz.
+/* Son satırda kullanıcı ismine göre kullanici.selamVer veya kullanici.yolcuEt cagrilir.kullanici.selamVer () ile çağrıldığında çalışmaz.
 Bunun nedeni çağrı içerisinde this'in undefined olmasıdır.
 Aşağıdaki çalışır: */
 
@@ -54,3 +55,4 @@ kullanici2.selamVer erişimi fonksiyon değil Referans Tipi döndürür.Sıkı m
 /* Referans Tipinde() çağrıldığında obje ve onun metodu hakkında tüm bilgileri alınır ve this(bizim durumumuzda kullanici2) belirlenir.
 Atama gibi işlemler selamVer = kullanici2.selamVer referans tipini tamamen iptal eder, kullanici2.selamVer(fonksiyon) değerini alır ve bunu paslar.Bu şekilde de this tanımsız kalır.
 Bundan dolayı this in çalışabilmesi için metodun doğrudan obj.metod() şeklinde veya obj[metod]() şeklinde çalıştırılması gerekmektedir. */
+// TODO
