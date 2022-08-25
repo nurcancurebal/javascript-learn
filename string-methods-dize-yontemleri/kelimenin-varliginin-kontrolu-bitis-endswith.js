@@ -1,4 +1,4 @@
-//endsWith()
+//endsWith(): kelime ile bitip bitmediğinin kontrolü
 
 let string = 'love is the best to in this world';
 
