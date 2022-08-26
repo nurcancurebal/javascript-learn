@@ -3,10 +3,11 @@ truncate(str, maxlength) fonksiyonu str'nin uzunluğunu kontrol eder. Eğer maxl
 bitirir ve uzunluğunu maxlength'e kadar getirir.
 Fonksiyonun sonucunda eğer gerekliyse metin kesilmelidir. */
 
-truncate("Size bu konuda söylemek istediğim şey:", 20) = "Size bu konuda sö..."
-truncate("Merhaba!", 20) = "Merhaba!"
+console.log(truncate("Size bu konuda söylemek istediğim şey:", 20)); // Size bu konuda sö...
+
+console.log(truncate("Merhaba!", 20)); // = Merhaba!
 
 function truncate(str, maxlength) {
-    
-    
+
+    return (str.length > maxlength) ? str.slice(0, maxlength - 3) + '...' : str;
 }
