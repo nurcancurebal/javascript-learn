@@ -10,5 +10,6 @@ console.log(extractCurrencyValue('$120') === 120); // true
 
 function extractCurrencyValue(str) {
 
-    return +str.slice(1);
+    return +str.slice(1); // başındaki +' yı number olsun diye koyduk bizden sıkı eşitlik istediği için string 120' miyi
+    // numbera çevirdik
 }
