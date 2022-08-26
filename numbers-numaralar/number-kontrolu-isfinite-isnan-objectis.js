@@ -18,7 +18,7 @@ değildir, hatta kendisine bile: */
 console.log(NaN === NaN); // false
 
 
-// -> isFinite(deger) argümanı sayıya çevirir ve normal sayı ise true, değil ise NaN/Infinity/-Infinity döndürür:
+// -> isFinite(deger): argümanı sayıya çevirir ve normal sayı ise true, değil ise NaN/Infinity/-Infinity döndürür:
 
 console.log(isFinite("15")); // true
 console.log(isFinite("str")); // false,  NaN döndürür.
