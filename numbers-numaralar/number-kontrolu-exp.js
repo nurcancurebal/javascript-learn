@@ -6,16 +6,20 @@ function sayiOku() {
 
     for (let index = 0; index < arguments.length; index++) {
 
-        if (arguments[index] === 'null' || arguments[index] === '') {
-
-            console.log('null');
-        }
-
         if (isFinite(arguments[index])) {
 
             return console.log(`Girilen sayı number ${arguments[index]}`);
         }
     }
+
+    for (let index = 0; index < arguments.length; index++) {
+
+        if (arguments[index] === 'null' || arguments[index] === '') {
+
+            console.log('null');
+        }
+    }
+    return;
 }
 
-sayiOku('2', 'Nurcan', '', 3, 'null');
+sayiOku('Nurcan', '2', '', 3, 'null');
