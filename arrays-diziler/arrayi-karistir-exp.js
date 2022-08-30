@@ -35,7 +35,7 @@ Fakat sıralama fonksiyonu bu amaçla kullanılamaz. Tüm permütasyon aynı ola
 
 Aşağıdaki koda bakılacak olursa karistir 1000000 defa çalıştırılacak olursa bile olası sonuçlar şu şekildedir: */
 
-function shuffle(array) {
+function karistir(array) {
 
     array.sort(() => Math.random() - 0.5);
 }
@@ -119,7 +119,7 @@ for (let i = 0; i < 1000000; i++) {
     count2[array.join('')]++;
 }
 
-// show counts of all possible permutations
+// tüm olası permütasyonların sayısını göster
 for (let key in count2) {
 
     console.log(`${key}: ${count2[key]}`);
@@ -136,3 +136,5 @@ for (let key in count2) {
 Şimdi daha iyi görünüyor: tüm permütasyonlar yakın olasılıkla.
 
 Performans yönünden Fisher-Yates algoritması harikatıdır. Hiç sıralama ile uğraşmaya gerek yok. */
+
+// TODO boş vaktinde tekrar üzerinden geç
