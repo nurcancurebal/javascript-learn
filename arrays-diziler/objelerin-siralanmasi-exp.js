@@ -7,7 +7,7 @@ let mehmet = { adi: "Mehmet",yas: 30 };
 let ahmet = { adi: "Ahmet", yas: 28 };
 
 
-let arr = [   muzaffer , mehmet, ahmet ];
+let arr = [ muzaffer , mehmet, ahmet ];
 
 sortByName(arr);
 
@@ -19,16 +19,15 @@ console.log(arr[1].adi) // Mehmet
 
 function sortByName(arr) {
 
-    arr.sort((a, b) => a.adi > b.adi);
+    return arr.sort((a, b) => a.adi.length - b.adi.length); // küçükten büyüğe sıraladık
 }
 
 let muzaffer = { adi: "Muzaffer", yas: 25 };
-let mehmet = { adi: "Mehmet", yas: 30 };
 let ahmet = { adi: "Ahmet", yas: 28 };
+let mehmet = { adi: "Mehmet", yas: 30 };
 
-let arr = [muzaffer, mehmet, ahmet];
 
-sortByName(arr);
+let arr = [muzaffer, ahmet, mehmet];
 
 // şimdi: [ahmet, mehmet, muzaffer]
-console.log(arr[1].adi) // Mehmet
+console.log(sortByName(arr));
