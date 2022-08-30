@@ -2,7 +2,7 @@
 
 Örneğin: */
 
-let arr = [1, 2, 15];
+let arr = [2, 15, 1];
 
 // metod dizinin içeriğini sıralar ve döndürür.
 arr.sort();
@@ -33,7 +33,7 @@ function compareNumeric(a, b) {
     if (a < b) return -1;
 }
 
-let arr2 = [1, 2, 15];
+let arr2 = [2, 15, 1];
 
 arr2.sort(compareNumeric);
 
@@ -66,7 +66,7 @@ Aslında, karşılaştırma fonksiyonu “büyük” olduğunu belirtmek için p
 
 Bu daha kısa fonksiyon yazılmasına olanak sağlar: */
 
-let arr3 = [1, 2, 15];
+let arr3 = [2, 15, 1];
 
 arr3.sort(function (a, b) { return a - b; });
 

@@ -6,6 +6,6 @@
 
 let arr = [5, 2, 1, -10, 8];
 
-arr.sort((a, b) => b - a);
+arr.sort((a, b) => b - a); // büyükten küçüğe
 
 console.log(arr); // [ 8, 5, 2, 1, -10 ]
