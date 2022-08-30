@@ -50,3 +50,25 @@ kullaniciMapped = [
 
 console.log(kullaniciMapped[0].id) // 1
 console.log(kullaniciMapped[0].adi_soyadi) // Ahmet Doğtaş
+
+
+/*  Dikkat ederseniz ok fonksiyonunda süslü parantez kullanmamız gerekti.
+
+Aşağıdaki gibi yazılamaz:
+
+let kullaniciMapped = kullanicilar.map(kullanici => {
+  adi_soyadi: `${kullanici.adi} ${kullanici.soyadi}`,
+  id: kullanici.id
+});
+
+Hatırlayacağınız üzere iki türlü ok fonksiyonu bulunmaktadır: Gövdesi olmadan deger => ifade veya gövdeli deger => {...}
+
+Bizim kullandığımız şekliyle JavaScript {'i fonksiyon başlangıcı olarak kabul etmektedir. Objenin başlangıcı değil. Halbuki biz obje olmasını istiyoruz. Bu durumda bunları “normal” parantez içine almamız gerekmekte.
+
+let kullaniciMapped = kullanicilar.map(kullanici => ({
+
+  adi_soyadi: `${kullanici.adi} ${kullanici.soyadi}`,
+  id: kullanici.id
+}));
+
+Şimdi çalışır. */
