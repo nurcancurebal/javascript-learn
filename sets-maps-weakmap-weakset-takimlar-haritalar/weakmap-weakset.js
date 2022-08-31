@@ -67,7 +67,7 @@ john3 = null; // referansın üzerine yazalım (overwrite)
 // john bellekten silindi!
 console.log(weakMap3); // WeakMap { <items unknown> }
 
-/* Yukarıdaki normal Map örneğiyle karşılaştırın. Şimdi eğer john sadece WeakMap anahtarı olarak var olduysa – otomatik olarak silinir.
+/*! Yukarıdaki normal Map örneğiyle karşılaştırın. Şimdi eğer john sadece WeakMap anahtarı olarak var olduysa – otomatik olarak silinir.
 
 …Ve WeakMap keys(), values(), entries() metodlarını desteklemez, yineleme yapamayız. Bu yüzden tüm anahtar veya değerleri çekmemizin bir yolu yoktur.
 
@@ -87,7 +87,7 @@ JavaScript motoru buna karar verir. Bellek temizliğini hemen gerçekleştirmeyi
 WeakMap fikri, var olan bir nesne için sadece var olduğu sürece bir şeyler depolayabilmemizdir. Ancak, nesneyi, onun için bir şey depoladığımız gerçeğiyle yaşamaya zorlamıyoruz.
 
 weakMap.put(john, "gizli belgeler");
--- eğer john ölürse, gizli belgeler yok olacak.
+eğer john ölürse, gizli belgeler yok olacak.
 
 Objeler için bir yerde ana depolama alanına sahip olduğumuz ve sadece obje var olduğu sürece amacımıza yönelik ek bilgileri tutmamız gerektiği durumlarda kullanışlıdır.
 
@@ -127,6 +127,7 @@ eda2 = null;
 
 // WeakMap dışında bir referans yoktur,
 // Bu yüzden obje hafıza ve ziyaretSayisiMap'ten otomatik olarak silinir.
+console.log(ziyaretSayisiMap2); // WeakMap { <items unknown> }
 
 /* Sıradan Map ile, bir kullanıcı ayrıldıktan sonra temizlik yapmak sıkıcı bir iş haline gelir: kullanıcıyı yalnızca ana depolama alanından (değişken veya dizi olsun) kaldırmamız değil, aynı zamanda ziyaretSayisiMap gibi ek alanları da temizlememiz gerekir. Ayrıca, kullanıcıların kodun bir yerinde yönetildiği ve ek yapının başka bir yerde olduğu ve kaldırma işlemleri hakkında bilgi almadığı daha karmaşık durumlarda hantal olabilir.
 
