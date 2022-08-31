@@ -46,8 +46,8 @@ Bunun yanı sıra, Map yerleşik forEach metoduna sahiptir, tıpkı Dizi gibi: *
 
 yemekMap.forEach((value, key, map) => {
 
-    console.log(`${key}: ${value}`);
+    console.log(key, value, map);
 });
-// salatalik: 500
-// domates: 350
-// sogan: 50
+// salatalik 500 Map(3) { 'salatalik' => 500, 'domates' => 350, 'sogan' => 50 }
+// domates 350 Map(3) { 'salatalik' => 500, 'domates' => 350, 'sogan' => 50 }
+// sogan 50 Map(3) { 'salatalik' => 500, 'domates' => 350, 'sogan' => 50 }
