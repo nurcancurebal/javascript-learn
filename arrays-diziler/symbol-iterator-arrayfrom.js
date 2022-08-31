@@ -18,7 +18,7 @@ let diziBenzeri = { //  indekslere ve uzunluğa sahiptir => dizi-benzeri
 };
 
 // Hata Symbol.iterator bulunmamaktadır.
-for (let eleman of diziBenzeri) { }
+// for (let eleman of diziBenzeri) { }
 
 /* Ortak noktalaraı ikisinin de dizi olmamasıdır. Bunların push veya pop gibi metodları bulunmamaktadır. Eğer dizi ile çalışmak istiyorsanız bunlar yetersiz kalırlar. */
 
@@ -36,16 +36,16 @@ let diziBenzeri2 = {
 
 let arr = Array.from(diziBenzeri2); // (*)
 
-console.log(arr.pop()); // Dünya (metod çalışmakta)
+console.log(arr); // [ 'Merhaba', 'Dünya' ]
 
 /* (*) satırında bulunan Array.from objeyi alır. Objenin sıralı erişim objesi mi yoksa dizi-benzeri mi olduğunu kontrol eder ve ardından bu değerleri kopyalayarak yeni dizi yaratır.
 
 Aynısı sıralı erişim objesi için de yapılabilir: */
 
 // Aralığın yukarıdaki örnekten alındığını varsayarsanız.
-let arr2 = Array.from(aralik);
+/* let arr2 = Array.from(aralik);
 
-console.log(arr2); // 1,2,3,4,5 (dizinin toString metodu çalışır)
+console.log(arr2); // 1,2,3,4,5 (dizinin toString metodu çalışır) */
 
 /* Bunun yanında Array.from metodu opsiyonel olarak “mapping” fonksiyonuna izin verir:
 
@@ -57,9 +57,9 @@ mapFn argümanı her elemanın diziye eklenmeden önce uygulanacağı fonksiyond
 // aralik'in yukarıdan alındığı varsayılırsa
 
 // her sayının karesinin alınması.
-let arr3 = Array.from(aralik, num => num * num);
+/* let arr3 = Array.from(aralik, num => num * num);
 
-console.log(arr3); // 1,4,9,16,25
+console.log(arr3); // 1,4,9,16,25 */
 
 // burada Array.from kullanarak karakter karakter dizisi haline getirilmiştir.
 
@@ -85,7 +85,7 @@ for (let char of str2) {
     chars2.push(char);
 }
 
-console.log(chars2);
+console.log(chars2); // [ '𝒳' , '😂' ]
 
 /* …fakat daha kısa.
 
