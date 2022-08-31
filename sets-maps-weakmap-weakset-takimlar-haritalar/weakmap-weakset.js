@@ -52,7 +52,7 @@ weakMap.set(obj, "ok"); // düzgün çalışır (anahtar bir obje)
 
 console.log(weakMap); // WeakMap { <items unknown> }
 
-//*weakMap.set("test", "Whoops"); // Hata verir, çünkü "test" ilkel bir tipte
+weakMap.set("test", "Whoops"); // Hata verir, çünkü "test" ilkel bir tipte
 
 /* Şimdi, bir nesneyi anahtar olarak kullanırsak ve o nesneye başka referanslar yoksa – otomatik olarak bellekten (ve mapten) kaldırılır. */
 
@@ -131,7 +131,7 @@ console.log(ziyaretSayisiMap2); // WeakMap { <items unknown> }
 
 /* Sıradan Map ile, bir kullanıcı ayrıldıktan sonra temizlik yapmak sıkıcı bir iş haline gelir: kullanıcıyı yalnızca ana depolama alanından (değişken veya dizi olsun) kaldırmamız değil, aynı zamanda ziyaretSayisiMap gibi ek alanları da temizlememiz gerekir. Ayrıca, kullanıcıların kodun bir yerinde yönetildiği ve ek yapının başka bir yerde olduğu ve kaldırma işlemleri hakkında bilgi almadığı daha karmaşık durumlarda hantal olabilir.
 
-WeakMap işleri daha basit hale getirebilir, çünkü otomatik olarak temizlenir. Yukarıdaki örnekte ziyaret sayısı gibi bilgiler, yalnızca anahtar nesne var olduğunda yaşar.
+! WeakMap işleri daha basit hale getirebilir, çünkü otomatik olarak temizlenir. Yukarıdaki örnekte ziyaret sayısı gibi bilgiler, yalnızca anahtar nesne var olduğunda yaşar.
 
 -> WeakSet benzer şekilde davranır:
 
@@ -150,12 +150,16 @@ let messages = [
 let unreadSet = new WeakSet(messages);
 
 // unreadSet'i mesajın okunup okunmadığını görmek için kullanabiliriz
-console.log(unreadSet.has(messages[1])); // true
-// okuduktan sonra sil
-unreadSet.delete(messages[1]); // true
+console.log(unreadSet.has(messages[1])); // true, has: varlığının kontrolü
 
-// mesaj geçmişini kaydırdığımızda set otomatik olarak temizlenir
+// okuduktan sonra sil
+unreadSet.delete(messages[1]); // true, delete: bir elemanı silme
+
+console.log(unreadSet); // WeakSet { <items unknown> }
+
+//shift: mesaj geçmişini kaydırdığımızda set otomatik olarak temizlenir
 messages.shift();
+
 // unreadSet'i temizlememize gerek yok, şu an 2 elemanı var
 // ne yazık ki, öğelerin tam sayısını elde etmek için bir yöntem yoktur, bu yüzden gösteremezsiniz
 
