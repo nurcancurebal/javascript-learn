@@ -1,5 +1,4 @@
-// Ayarlayıcı(Setter) yöntemi, belirli özelliklerin değerini değiştirmemize izin verir. Anahtar kelime seti ve ardından bir fonksiyon
-// kullanarak bir setter yöntemi yazıyoruz.
+// Ayarlayıcı(Setter) yöntemi, belirli özelliklerin değerini değiştirmemize izin verir. Anahtar kelime seti ve ardından bir fonksiyon kullanarak bir setter yöntemi yazıyoruz.
 
 //! setler return dönmez, class' ın içindeki verileri değiştirmek için kullanılır. Güvenlik açaığını kapatmak için kullanılır.
 
@@ -56,15 +55,8 @@ person2.setSkill = 'Planning';
 person2.setSkill = 'Managing';
 person2.setSkill = 'Organizing';
 
-console.log(person1.score);
-console.log(person2.score);
+console.log(person1.score); // 2
+console.log(person2.score); // 2
 
-console.log(person1.skills);
-console.log(person2.skills);
-
-
-
-// 2
-// 2
-// [ 'HTML', 'CSS', 'JavaScript' ]
-// [ 'Planning', 'Managing', 'Organizing' ]
+console.log(person1.skills); // [ 'HTML', 'CSS', 'JavaScript' ]
+console.log(person2.skills); // [ 'Planning', 'Managing', 'Organizing' ]
