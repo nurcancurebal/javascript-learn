@@ -15,48 +15,47 @@ showMenu("My Menu", undefined, undefined, ["Item1", "Item2"])
 
 /* Bu çok çirkin. Ve daha fazla parametre ile uğraştığımızda okunamaz hale gelir.
 
-Yıkım kurtarmaya geliyor!
+-> Yıkım kurtarmaya geliyor!
 
 Parametreleri bir nesne olarak iletebiliriz ve fonksiyon onları anında değişkenlere dönüştürür: */
 
 // we pass object to function
-let options = {
-    title: "My menu",
-    items: ["Item1", "Item2"]
+let options1 = {
+    title1: "My menu",
+    items1: ["Item1", "Item2"]
 };
 
-// ...and it immediately expands it to variables
-function showMenu({ title = "Untitled", width = 200, height = 100, items = [] }) {
-    // title, items – taken from options,
-    // width, height – defaults used
-    console.log(`${title} ${width} ${height}`); // Menu 100 200
-    console.log(items); // My menu 100 200
+// ...ve onu hemen değişkenlere genişletir
+function showMenu1({ title1 = "Untitled", width1 = 200, height1 = 100, items1 = [] }) {
+
+    console.log(`${title1} ${width1} ${height1}`); // My menu 200 100
+    console.log(items1); // [ 'Item1', 'Item2' ]
 }
 
-showMenu(options);
+showMenu1(options1);
 
 // İç içe nesneler ve iki nokta üst üste eşlemelerle daha karmaşık yıkımı da kullanabiliriz:
 
-let optionsTwo = {
-    title: "My menu",
-    items: ["Item1", "Item2"]
+let options2 = {
+    title2: "My menu",
+    items2: ["Item1", "Item2"]
 };
 
-function showMenu({
+function showMenu2({
 
-    title = "Untitled",
-    width: w = 100,  // width goes to w
-    height: h = 200, // height goes to h
-    items: [item1, item2] // items first element goes to item1, second to item2
+    title2 = "Untitled",
+    width2: w2 = 100,  // width goes to w
+    height2: h2 = 200, // height goes to h
+    items2: [item11, item21] // items first element goes to item1, second to item2
 
 }) {
 
-    console.log(`${title} ${w} ${h}`); // My Menu 100 200
-    console.log(item1); // Menu 100 200
-    console.log(item2); // Menu 100 200
+    console.log(`${title2} ${w2} ${h2}`); // My Menu 100 200
+    console.log(item11); // Item1
+    console.log(item21); // Item2
 }
 
-showMenu(optionsTwo);
+showMenu2(options2);
 
 // Sözdizimi, bir yıkım atamasıyla aynıdır:
 
@@ -76,11 +75,11 @@ showMenu(); // this would give an error
 // {}Bunu , tüm yıkım olayı için varsayılan değeri yaparak düzeltebiliriz :
 
 // simplified parameters a bit for clarity
-function showMenu({ title = "Menu", width = 100, height = 200 } = {}) {
+function showMenu3({ title3 = "Menu", width3 = 100, height3 = 200 } = {}) {
 
-    console.log(`${title} ${width} ${height}`);
+    console.log(`${title3} ${width3} ${height3}`);
 }
 
-showMenu(); // Menu 100 200
+showMenu3(); // Menu 100 200
 
 // Yukarıdaki kodda, tüm argümanlar nesnesi {}varsayılan olarak vardır, bu nedenle her zaman tahrip edilecek bir şey vardır.
