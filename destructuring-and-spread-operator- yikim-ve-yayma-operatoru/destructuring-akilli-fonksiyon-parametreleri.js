@@ -19,7 +19,7 @@ showMenu("My Menu", undefined, undefined, ["Item1", "Item2"])
 
 Parametreleri bir nesne olarak iletebiliriz ve fonksiyon onları anında değişkenlere dönüştürür: */
 
-// we pass object to function
+// nesneyi fonksiyona aktarıyoruz
 let options1 = {
     title1: "My menu",
     items1: ["Item1", "Item2"]
@@ -34,25 +34,24 @@ function showMenu1({ title1 = "Untitled", width1 = 200, height1 = 100, items1 = 
 
 showMenu1(options1);
 
+
 // İç içe nesneler ve iki nokta üst üste eşlemelerle daha karmaşık yıkımı da kullanabiliriz:
 
 let options2 = {
-    title2: "My menu",
-    items2: ["Item1", "Item2"]
+    title2: "My book",
+    items2: ["dolma", "domates"]
 };
 
 function showMenu2({
-
     title2 = "Untitled",
-    width2: w2 = 100,  // width goes to w
-    height2: h2 = 200, // height goes to h
-    items2: [item11, item21] // items first element goes to item1, second to item2
-
+    width2: w2 = 28,  // keyleri daha kısa isimlerle değiştirme
+    height2: h2 = 4346,
+    items2: [item11, item21] // öğeler ilk öğe, öğe1'e gider, ikinci öğe öğe2'ye gider
 }) {
 
-    console.log(`${title2} ${w2} ${h2}`); // My Menu 100 200
-    console.log(item11); // Item1
-    console.log(item21); // Item2
+    console.log(`${title2} ${w2} ${h2}`); // My book 28 4346
+    console.log(item11); // dolma
+    console.log(item21); // domates
 }
 
 showMenu2(options2);
@@ -67,19 +66,17 @@ showMenu2(options2);
 
 /* Lütfen bu tür bir yıkımın showMenu()bir argümanı olduğunu varsaydığını unutmayın. Varsayılan olarak tüm değerleri istiyorsak, boş bir nesne belirtmeliyiz: */
 
-showMenu({});
-
-
-showMenu(); // this would give an error
+showMenu({}); // doğru kullanım
+showMenu(); // bu bir hata verir
 
 // {}Bunu , tüm yıkım olayı için varsayılan değeri yaparak düzeltebiliriz :
 
-// simplified parameters a bit for clarity
-function showMenu3({ title3 = "Menu", width3 = 100, height3 = 200 } = {}) {
+// netlik için biraz basitleştirilmiş parametreler
+function showMenu3({ title3 = "Bal", width3 = 5, height3 = 99 } = {}) {
 
     console.log(`${title3} ${width3} ${height3}`);
 }
 
-showMenu3(); // Menu 100 200
+showMenu3(); // Bal 5 99
 
 // Yukarıdaki kodda, tüm argümanlar nesnesi {}varsayılan olarak vardır, bu nedenle her zaman tahrip edilecek bir şey vardır.
