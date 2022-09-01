@@ -4,4 +4,4 @@ const c = [...a, ...b]; // rest parametresi
 
 const cSet = new Set(c);
 
-console.log(cSet);
+console.log(cSet); // Set(6) { 4, 5, 8, 9, 3, 7 }
