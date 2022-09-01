@@ -34,7 +34,8 @@ Bu tarihin en basit biçimde gösterimidir. Her türlü bu zaman damgasından ye
 
 // new Date(tarih_metni)
 
-// Eğer bir argüman var ve bu da karakter dizisi ise, Date.parse algoritmasına göre bakılır ve uygunsa tarih oluşturulur.
+
+// -> Eğer bir argüman var ve bu da karakter dizisi(string) ise, Date.parse algoritmasına göre bakılır ve uygunsa tarih oluşturulur.
 
 let date = new Date("2017-01-26");
 
@@ -46,10 +47,10 @@ console.log(date); // 2017-01-26T00:00:00.000Z
 // Yerel zamanda Date objesi oluşturmak için sadece ilk iki argüman zorunludur.
 
 /* 
-yıl 4 basamaktan oluşmalıdır. 2013 olur, 98 olmaz.
-ay sıfırdan başlar. Yani 0 Ocak, 11 Aralıktır.
-gün parametresi girilmez ise 1 olarak kabul edilir.
-saat/dakika/saniye/milisaniye değerleri girilmez ise 0 olarak kabul edilir. */
+*yıl 4 basamaktan oluşmalıdır. 2013 olur, 98 olmaz.
+*ay sıfırdan başlar. Yani 0 Ocak, 11 Aralıktır.
+*gün parametresi girilmez ise 1 olarak kabul edilir.
+*saat/dakika/saniye/milisaniye değerleri girilmez ise 0 olarak kabul edilir. */
 
 
 new Date(2011, 0, 1, 0, 0, 0, 0); // 1 Jan 2011, 00:00:00
