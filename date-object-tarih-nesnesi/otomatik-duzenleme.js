@@ -32,5 +32,5 @@ date4.setDate(1); // ayın 1. günü
 
 console.log(date4); // 2015-12-31T22:00:00.000Z
 
-date4.setDate(0); // İlk gün 1 olduğundan dolayı 0 geçen ayın son gününü verir. min day is 1, so the last day of the previous month is assumed
-console.log(date4); // 2015-12-30T22:00:00.000Z, 31 Aralık 2015
+date4.setDate(0); // İlk gün 1 olduğundan dolayı 0 geçen ayın son gününü verir. min gün 1'dir, bu nedenle önceki ayın son günü varsayılır
+console.log(date4); // 2015-12-30T22:00:00.000Z
