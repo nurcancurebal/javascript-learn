@@ -5,13 +5,13 @@ let oda1 = {
     sayi: 23
 };
 
-let toplanti2 = {
+let toplanti1 = {
     baslik: "Konferans",
     tarih: new Date(Date.UTC(2017, 0, 1)),
     oda1
 };
 
-console.log(JSON.stringify(toplanti2));
+console.log(JSON.stringify(toplanti1));
 // {"baslik":"Konferans","tarih":"2017-01-01T00:00:00.000Z","oda1":{"sayi":23}}
 
 /* Gördüğünüz gibi date (1) karaktere dönüştü. Bunun nedeni date objesinin toJSON metoduna sahip olmasıdır.
