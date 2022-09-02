@@ -102,12 +102,13 @@ console.log('Total time for diffGetTime: ' + time2); // Total time for diffGetTi
 
 /* Modern JavaScript motorları “sıcak kod” için daha gelişmiş optimizasyon yapmaya başladılar. Bu nadiren çalışan kodlar yerine daha çok fazlaca tekrar eden kodların optimizasyonu anlamına gelmektedir. Böylece ilk çalışmalar çok ta optimize edilmezler. */
 
-/* // ana döngüye girmeden ısınma turu:
+// ana döngüye girmeden ısınma turu:
+/*
 bench(diffSubtract);
-bench(diffGetTime);
+bench(diffGetTime); */
 
 // şimdi ise karşılaştırma ( benchmark )
-for (let i = 0; i < 10; i++) {
+/* for (let i = 0; i < 10; i++) {
 
     time1 += bench(diffSubtract);
     time2 += bench(diffGetTime);
@@ -118,3 +119,5 @@ for (let i = 0; i < 10; i++) {
 Modern JavaScript motorları kod üzerinde birçok iyileştirme yaparlar. Normal kullanımdan ziyade yapay test sonuçları üzerinde değişikliklere neden olabilirler. Özellikle çok küçük karşılaştırmalarda. Bundan dolayı eğer performan sizin için çok ciddi bir konu ise, JavaScript motorlarının nasıl çalıştığını öğrenmeniz gerekmektedir. Öğrendiğinizde mikro seviyede bir karşılaştırmaya ihtiyacınız kalmayacaktır.
 
 V8 motoru ile ilgili makaleleri http://mrale.ph adresinden bulabilirsiniz. */
+
+// TODO çalıştırdığım zaman durmuyor bitmiyor
