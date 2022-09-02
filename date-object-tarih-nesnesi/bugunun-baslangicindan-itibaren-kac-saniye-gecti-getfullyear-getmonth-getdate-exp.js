@@ -16,10 +16,10 @@ Bunun sonucu milisaniye cinsinden olacaktır, bundan dolayı dönen değeri 1000
 
 function bugundenSaniye() {
 
-  let simdi = new Date();
+  let simdi = new Date(); // Fri Sep 02 2022 18:27:19 GMT+0300 (GMT+03:00)
 
   // o anki gün/ay/yıl'ı kullanarak yeni bir tarih objesi oluşturur.
-  let bugun = new Date(simdi.getFullYear(), simdi.getMonth(), simdi.getDate());
+  let bugun = new Date(simdi.getFullYear(), simdi.getMonth(), simdi.getDate()); // Fri Sep 02 2022 00:00:00 GMT+0300 (GMT+03:00)
 
   let fark = simdi - bugun; // ms cinsinden
 
