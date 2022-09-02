@@ -21,7 +21,7 @@ console.log(kullanici); // { adi: 'Nurcan', yasi: 30, toString: [Function: toStr
 
 Neyseki bunların hiçbiri için kod yazmaya gerek yok. Bu problem bizim için çözülmüş durumda. */
 
-/* JSON.stringify
+/* -> JSON.stringify
 JSON (JavaScript Object Notation) genelde objelerin değerlerini ifade eder.RFC 4627 standardında tanımı yapılmıştır. Öncelikle JavaScript düşünülerek yapılmış olsa da birçok dil de kendine has kütüphanelerle JSON desteği vermektedir. Böylece client JavaScript kullanırken server Ruby/PHP/Java/Herneyse… kullansa bile JSON kullanımında bir sorun oluşturmaz.
 
 JavaScript aşağıdaki metodları destekler:
@@ -32,7 +32,7 @@ JavaScript aşağıdaki metodları destekler:
 Örneğin, aşağıda JSON.stringify metodu ögrenci objesi için kullanılmıştır: */
 
 let ogrenci = {
-  adi: 'Ahmet',
+  adi: 'Nurcan',
   yasi: 30,
   adminMi: false,
   dersler: ['html', 'css', 'js'],
@@ -46,7 +46,7 @@ console.log(typeof json); // string, dönecektir.!
 console.log(json);
 /* JSON'a çevirilmiş obje:
 {
-  "adi": 'Ahmet',
+  "adi": 'Nurcan',
   "yasi": 30,
   "adminMi": false,
   "dersler": ['html', 'css', 'js'],
@@ -57,7 +57,7 @@ console.log(json);
 
 JSON kodlanmış objenin normal obje ile arasında bir kaç tane önemli farklılık vardır:
 
-. Karakterler çift tırnak kullanır. JSON’da tek tırnak veya ters tırnak kullanılmaz. Bundan dolayı 'Ahmet' → "Ahmet" olur.
+. Karakterler çift tırnak kullanır. JSON’da tek tırnak veya ters tırnak kullanılmaz. Bundan dolayı 'Nurcan' → "Nurcan" olur.
 . Obje özelliklerinin isimleri de çift tırnak içinde alınır. Bu da zorunludur. Bundan dolayı yas:30 , "yas":30 olur.
 JSON.stringify ilkel tiplere de uygulanabilir.
 
@@ -83,7 +83,8 @@ console.log(JSON.stringify(true)); // true
 
 console.log(JSON.stringify([1, 2, 3])); // [1,2,3]
 
-/* JSON sadece veriyi tanımlayan diller arası bir şartname bulunmaktadır. Bundan dolayı Javascript’e özel obje özelliklerikleri JSON.stringify tarafından pas geçilir.
+
+/* -> JSON sadece veriyi tanımlayan diller arası bir şartname bulunmaktadır. Bundan dolayı Javascript’e özel obje özelliklerikleri JSON.stringify tarafından pas geçilir.
 
 Yani:
 
@@ -107,7 +108,8 @@ console.log(JSON.stringify(kullanici2)); // {}, (boş obje)
 
 /* Bu özellik kabul edilebilir. Eğer istediğiniz bu değilse, bu işlemi nasıl özelleştirebilirsiniz bunu göreceksiniz.
 
-Harika olan ise iç içe objeler otomatik olarak çevrilir.
+
+-> Harika olan ise iç içe objeler otomatik olarak çevrilir.
 
 Örneğin: */
 
@@ -115,15 +117,16 @@ let tanisma = {
   baslik: "Konferans",
   oda: {
     sayi: 123,
-    katilimcilar: ["ahmet", "mehmet"]
+    katilimcilar: ["Nurcan", "mehmet"]
   }
 };
 
 console.log(JSON.stringify(tanisma));
 /* tüm yapı karakter şekline çevrildi:
-{"baslik":"Konferans","oda":{"sayi":123,"katilimcilar":["ahmet","mehmet"]}} */
+{"baslik":"Konferans","oda":{"sayi":123,"katilimcilar":["Nurcan","mehmet"]}} */
 
-/* Önemli bir sınırlama: Dairesel referans olmamalıdır.
+
+/* -> Önemli bir sınırlama: Dairesel referans olmamalıdır.
 
 Örneğin: */
 
@@ -133,7 +136,7 @@ let oda = {
 
 let tanisma2 = {
   baslik: "Konferans",
-  katilimcilar: ["ahmet", "mehmet"]
+  katilimcilar: ["Nurcan", "mehmet"]
 };
 
 tanisma2.yeri = oda;       // tanisma2 odaya referans veriyor.
@@ -142,4 +145,4 @@ oda.dolduruldu = tanisma2; // oda tanisma2 ye referans veriyor
 
 //* JSON.stringify(tanisma2); // Hata: Dairesel yapı JSON'a çevrilememiştir.
 
-// Çeviri yapılırken hata olmasının nedeni: oda.dolduruldu tanisma'ya referans olurken. tanisma.yeri oda'ya referans verir.
+//! Çeviri yapılırken hata olmasının nedeni: oda.dolduruldu tanisma'ya referans olurken. tanisma.yeri oda'ya referans verir.
