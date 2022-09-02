@@ -8,6 +8,7 @@ function printFullName(firstName, lastName) { // dışarıdan değer alır, işl
 
     return fullname;
 };
+
 console.log(printFullName('Nurcan', 'Cürebal'));
 
 

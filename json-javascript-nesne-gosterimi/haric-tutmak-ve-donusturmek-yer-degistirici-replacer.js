@@ -91,10 +91,10 @@ adi:         Mehmet
 yer:        [object Object]
 sayi:       23
 dolduruldu: [object Object]
-{"baslik":"Konferans","katilimcilar":[{"adi":"Ahmet"},{"adi":"Mehmet"}],"yer":{"sayi":23}}
-*/
+{"baslik":"Konferans","katilimcilar":[{"adi":"Ahmet"},{"adi":"Mehmet"}],"yer":{"sayi":23}}*/
 
-/* degistirici fonksiyonu içiçe objeler ve diziler dahil her şeyi alır. Tüm objelere yinelemeli olarak uygulanır. this'in değeri degistirici içerisinde o anki özellikleri tutar.
+
+/* degistirici fonksiyonu iç içe objeler ve diziler dahil her şeyi alır. Tüm objelere yinelemeli olarak uygulanır. this'in değeri degistirici içerisinde o anki özellikleri tutar.
 
 İlk çağrı özeldir. “Sarıcı obje” vasıtasıyla: {"": tanisma}. Diğer bir deyişle ilk (anahtar, deger) çifti boş anahtar ile gelir ve değeri hedef objenin tamamıdır. Bundan dolayı yukarıdaki örnekte ilk satır: ":[object Object]"'dir.
 

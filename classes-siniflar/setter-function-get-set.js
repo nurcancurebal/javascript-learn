@@ -50,13 +50,14 @@ person1.setSkill = 'HTML';
 person1.setSkill = 'CSS';
 person1.setSkill = 'JavaScript';
 
+console.log(person1.score); // 2
+console.log(person1.skills); // [ 'HTML', 'CSS', 'JavaScript' ]
+
 person2.setScore = 1;
 person2.setSkill = 'Planning';
 person2.setSkill = 'Managing';
 person2.setSkill = 'Organizing';
 
-console.log(person1.score); // 2
 console.log(person2.score); // 2
 
-console.log(person1.skills); // [ 'HTML', 'CSS', 'JavaScript' ]
 console.log(person2.skills); // [ 'Planning', 'Managing', 'Organizing' ]

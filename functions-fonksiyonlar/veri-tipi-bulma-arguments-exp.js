@@ -35,6 +35,7 @@ function dataType() {
         return "Veri tipleri aynı. Number";
 
     } else if (number == 0 && string != 0 && boolean == 0) {
+        
         return "Veri tipleri aynı. String";
 
     } else {

@@ -22,12 +22,6 @@ const person1 = new Person("Nurcan", "Cürebal", "27", "Canada", "Ottava");
 const person2 = new Person("Erdinç", "Cürebal", "27", "İstanbul", "Sancaktepe");
 
 console.log(person1);
-console.log(person1.getFullName());
-
-console.log(person2);
-console.log(person2.getFullName());
-
-
 // Person {
 //     firstName: 'Nurcan',
 //     lastName: 'Cürebal',
@@ -35,7 +29,10 @@ console.log(person2.getFullName());
 //     country: 'Canada',
 //     city: 'Ottava'
 //   }
-//   Nurcan Cürebal
+
+console.log(person1.getFullName()); // Nurcan Cürebal
+
+console.log(person2);
 //   Person {
 //     firstName: 'Erdinç',
 //     lastName: 'Cürebal',
@@ -43,4 +40,5 @@ console.log(person2.getFullName());
 //     country: 'İstanbul',
 //     city: 'Sancaktepe'
 //   }
-//   Erdinç Cürebal
+
+console.log(person2.getFullName()); // Erdinç Cürebal

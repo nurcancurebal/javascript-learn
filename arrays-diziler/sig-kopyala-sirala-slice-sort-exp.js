@@ -13,5 +13,11 @@ console.log(arr); // HTML, JavaScript, CSS (değişmedi) */
 let arr = ["HTML", "JavaScript", "CSS"];
 
 function copySorted(arr) {
-    
+
+  return  arr.slice().sort(); // slice= sığ bir kopyasını aldık( aynı referansı göstermedi)
 }
+
+let sorted = copySorted(arr);
+
+console.log(sorted); // CSS, HTML, JavaScript
+console.log(arr); // HTML, JavaScript, CSS (değişmedi)

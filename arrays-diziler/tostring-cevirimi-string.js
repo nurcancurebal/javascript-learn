@@ -1,5 +1,5 @@
 /* toString
-Dizilerin kendi toStringuygulaması mevcuttur. Bu dizilerin arasına virgül konularak geri dönderilir. */
+Dizilerin kendi toString uygulaması mevcuttur. Bu dizilerin arasına virgül konularak geri dönderilir. */
 
 let arr = [1, 2, 3];
 
