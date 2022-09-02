@@ -14,7 +14,7 @@ console.log( formatTarih(new Date(new Date - 30 * 1000)) ); // "30 saniye önce"
 
 console.log( formatTarih(new Date(new Date - 5 * 60 * 1000)) ); // "5 dakika önce"
 
- dün için gün 31.12.2016, 20:00
+dün için gün 31.12.2016, 20:00
 console.log( formatTarih(new Date(new Date - 86400 * 1000)) ); */
 
 // çözüm
