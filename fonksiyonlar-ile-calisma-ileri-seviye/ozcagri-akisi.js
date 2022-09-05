@@ -5,11 +5,11 @@ Bir firma hayal edin. Çalışanların yapısı obje olarak şu şekilde tanıml
 
 let firma1 = {
     satis: [{
-        adi: 'Ahmet',
-        maasi: 1000
+        adi: 'Erdinç',
+        ucret: 1000
     }, {
         adi: 'Mehmet',
-        salary: 150
+        ucret: 150
     }],
 
     gelistirme: {
@@ -29,17 +29,11 @@ let firma1 = {
 };
 
 /* Diğer bir deyişle bu firmanın departmanları bulunmaktadır.
-
-. Bir departman çalışanlar dizilerinden oluşabilir. Öreğin satis departmanı 2 tane çalışana sahiptir: Ahmet ve Mehmet.
-
+. Bir departman çalışanlar dizilerinden oluşabilir. Öreğin satis departmanı 2 tane çalışana sahiptir: Erdinç ve Mehmet.
 . Veya bazen departmanlar alt departmanlara ayrılabilirler. Örneğin gelistirme departmanı siteler ve dahili olmak üzere ikiye ayrılmıştır. Her bir alt departmanın kendine ait çalışanları vardır.
-
 . Bunun yanında departmanların büyüyüp alt departmanlara ayrılması da mümkündür.
-
 Örneğin siteler departmanı ileride iki ayrı takıma siteA ve siteB şeklinde ayrılabilirler. Ve yine potansiyele göre ileride bu takımlar da alt takımlara ayrılabilirler.
-
 Öyle bir fonksiyon olsun ki tüm çalışanların maaşlarının toplamını dönsün. Bu nasıl yapılır?
-
 Döngü yaklaşımı kolay değildir, çünkü yapı kolay değildir. Önce firma için bir for döngüsü kullanıldığını ve bununla ilk seviye departmanları bulduğunuzu varsayın. Sonrasında bunun içine bir döngü daha yapıp siteler'i bulmanız gerekir. Ayrıca ilerisi için bir tane daha for döngüsü yapmanız lazım ve belki yine onun içerisine de bir döngü koymanız lazım. 3. basamakta mı 4. basamakta mı durmalı? Eğer ileride bu yapı sadece bir seviyeye indirilirse kodda karmaşıklık meydana gelir.
 
 Özçağrı yaklaşımıyla.
@@ -59,7 +53,7 @@ Algoritma kodunu okumak oldukça kolaydır: */
 let firma = {
 
     satis: [{
-        adi: 'Ahmet',
+        adi: 'Erdinç',
         ucret: 1000
     }, {
         adi: 'Mehmet',
@@ -85,7 +79,7 @@ let firma = {
 // İşi yapan fonksiyon
 function maaslariTopla(firma) {
 
-    if (Array.isArray(firma)) { // (1). durum
+    if (Array.isArray(firma)) { // (1). durum, array ise true döner
 
         return firma.reduce((onceki, suanki) => onceki + suanki.ucret, 0); // diziyi topla
 
@@ -95,7 +89,7 @@ function maaslariTopla(firma) {
 
         for (let altDep of Object.values(firma)) {
 
-            toplam += maaslariTopla(altDep); // özçağrı ile alt departmanların çağrılması, bunu sum ile topla.
+            toplam += maaslariTopla(altDep); // özçağrı ile alt departmanların çağrılması, bunu toplam ile topla.
 
         }
 
@@ -105,14 +99,6 @@ function maaslariTopla(firma) {
 
 console.log(maaslariTopla(firma)); // 2700
 
-/* Kod oldukça kısa ve anlaması kolay(umarım). Burada özçağrının gücünden bahsetmek mümkün, her seviye alt departman için çalışacaktır. */
+/* Kod oldukça kısa ve anlaması kolay. Burada özçağrının gücünden bahsetmek mümkün, her seviye alt departman için çalışacaktır. */
 
-
-/* Prensip basitçe şu şekilde açıklanabilir: Obje için {...} altçağrıları yapılır, [...] ise özçağrı ağacının “yapraklarıdır”, anında sonucu dönerler.
-
-Kodun akıllı özellikler kullandığına dikkat edin, bunlar daha önceki kolarda işlenmişti:
-
-. arr.reduce metodu Dizi Metodları bölümünde bir dizinin toplamını almak için kullanılmıştı.
-. for(val of Object.values(obj)) objenin değerlerini dönmek için kullanılmıştı: Object.values objenin değerlerini dizi olarak döner. */
-
-// TODO burayı oku
+/* Prensip basitçe şu şekilde açıklanabilir: Obje için {...} altçağrıları yapılır, [...] ise özçağrı ağacının “yapraklarıdır”, anında sonucu dönerler.*/

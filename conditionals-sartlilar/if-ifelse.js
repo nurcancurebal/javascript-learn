@@ -1,6 +1,6 @@
 let num = 3;
 
-if (num > 0) {
+if (num > 0) { // true olursa süslü parantezin içini yapar
 
     console.log(`${num} is a pozitif number`);
 }; // num değişkeni 0 dan küçük olur ise çalışmaz, her hangi bir çıktı vermez
