@@ -21,18 +21,23 @@ let mesajlar = [
 
 
 const dateNow = () => {
-    return {
+    let date = {
         year: new Date().getFullYear(),
         mounth: new Date().getMonth() + 1,
         dayNumber: new Date().getDate()
     }
+
+    let nowDate = date.dayNumber + '.' + date.mounth + '.' + date.year;
+
+    return { nowDate };
 }
 
 let readMap = new WeakMap();
 
 mesajlar.forEach((element) => {
-    readMap.set(element, {...element, ...dateNow() });
+
+    readMap.set(element, { element, ...dateNow() });
 });
 
-// TODO
-console.log(readMap.get(mesajlar[1]))
+console.log(readMap.get(mesajlar[1]));
+// { element: { metin: 'Nasıl Gidiyor?', kimden: 'Ahmet' }, nowDate: '6.9.2022' }

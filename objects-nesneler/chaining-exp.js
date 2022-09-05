@@ -100,5 +100,3 @@ merdiven3
     .yukari()
     .asagi()
     .adimiGoster(); // 1
-
-//TODO
