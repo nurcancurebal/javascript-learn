@@ -106,7 +106,8 @@ let aralik2 = {
     }
 };
 
-for (let num of aralik2) { //TODO num değerini current++ nın arttırılmadan önceki halini alıyor (nasıl?)
+for (let num of aralik2) {
+    //! num değerini value dan alır current++ nın arttırılmadan önceki hali current artıyor ama value artmıyor o yüzden current buraya ilk geldiğinde 2 iken value 1 olduğu için 1 i yazarak başlar
 
     console.log(num);
 }

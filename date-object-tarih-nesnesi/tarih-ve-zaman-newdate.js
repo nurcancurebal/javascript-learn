@@ -24,11 +24,11 @@ let Jan01_1970 = new Date(0);
 console.log(Jan01_1970); // 1970-01-01T00:00:00.000Z
 
 // Buna 24 saat eklemek için, get 02.01.1970 UTC+0
-let Jan02_1970 = new Date(24 * 3600 * 1000);
+let Jan02_1970 = new Date(24 * 60 * 60 * 1000);
 
 console.log(Jan02_1970); // 1970-01-02T00:00:00.000Z
 
-/* 1 ocak 1970’den buyana geçen milisaniyeye timestamp ( zaman damgası ) denir. // TODO bu ne demek?
+/* 1 ocak 1970’den buyana geçen milisaniyeye timestamp ( zaman damgası ) denir.
 
 Bu tarihin en basit biçimde gösterimidir. Her türlü bu zaman damgasından yeni bir tarih oluşturmak mümkündür. Veya yine herhangi bir tarihten bu zaman damgasını date.getTime() ile almak mümkündür. */
 

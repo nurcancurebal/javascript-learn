@@ -6,7 +6,7 @@
 //getMinutes()      (0-59)      56
 //getSeconds()      (0-59)      41
 //getMilisecond()   (0-999)     341
-//getTime()         (miliseconds since january 1, 1970)   1578092201341
+//getTime()         (1 Ocak 1970'den beri geçen milisaniye)   1578092201341
 //getDay            (0-6)       6 (pazar gününü 0 alır)
 
 

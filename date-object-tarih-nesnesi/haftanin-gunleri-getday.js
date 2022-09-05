@@ -18,11 +18,13 @@ Eğer günler için bir dizi yapılırsa bu diziye göre günü dönmek mümkün
 
 function haftaninGunleriniAl(tarih) {
 
-  let gunler = ['PT', 'SA', 'ÇA', 'PR', 'CM', 'CT', 'PZ' ];
+  const gunler = ['PZ', 'PT', 'SA', 'ÇA', 'PR', 'CM', 'CT']; // o pazar olduğu için buşekilde yazılır
 
-  return gunler[tarih.getDay()];
+  const findDayNumber = tarih.getDay()
+
+  return gunler[findDayNumber];
 }
 
 let tarih = new Date(2014, 0, 3); // 3 Jan 2014
 
-console.log( haftaninGunleriniAl(tarih) ); // CM // TODO neden CT dönüyor?
+console.log(haftaninGunleriniAl(tarih)); // CM
