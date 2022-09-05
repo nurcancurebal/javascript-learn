@@ -39,7 +39,7 @@ function topla(n) {
     return toplam;
 }
 
-console.log(topla(100)); // 5050
+console.log(topla(100)); // 5050, 2. hızlı
 
 // Özçağrı kullanarak toplama:
 
@@ -50,7 +50,7 @@ function topla(n) {
     return n + topla(n - 1);
 }
 
-console.log(topla(100)); // 5050
+console.log(topla(100)); // 5050, en yavaş
 
 // Aritmetik işlemler ile toplama: topla(n) = n*(n+1)/2:
 
@@ -59,9 +59,9 @@ function topla(n) {
     return n * (n + 1) / 2;
 }
 
-console.log(topla(100)); // 5050
+console.log(topla(100)); // 5050, en hızlı
 
-/* Not: Doğal olarak formül en hızlı olanırıd. n'in her değeri için 3 defa operasyon yapmaktadır. Matematik yardımcı olur!
+/* Not: Doğal olarak formül en hızlı olanırıd. n'in her değeri için 3 defa operasyon yapmaktadır.
 
 Döngü hız bakımından ikinci sırada yer alır. Döngüde ve özçağrıda aynı sayılar toplanır. Fakat özçağrı iç içe çağrılar kullanarak çalışıtırma yığını yönetimi gerektirir. Bu da ayrıca bir kaynak demektir, bundan dolayı yavaştır.
 
