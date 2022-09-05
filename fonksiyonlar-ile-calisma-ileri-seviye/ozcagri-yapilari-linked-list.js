@@ -26,7 +26,7 @@ Diyelim objelerin sıralı şekilde liste halinde tutmak istiyorsunuz.
 
 Diziler ile aşağıdaki gibi yapılabilir: */
 
-let arr = [obj1, obj2, obj3];
+//*let arr = [obj1, obj2, obj3];
 
 /* … Fakat diziler “eleman silme”, “eleman ekle” gibi olaylar için çok işlem yaparlar. Örneğin arr.unshift(ob) işlemi tüm elemanları yeni eleman için tekrardan sıraya dizer, eğer dizi büyükse bu zaman alır. Aynısı arr.shift() için de geçerlidir.
 
@@ -55,37 +55,71 @@ let list1 = {
 
 // Bu yapıyı yaratmanın alternatif yolu şu şekildedir:
 
-let list = { deger: 1 };
-list.sonraki = { deger: 2 };
-list.sonraki.sonraki = { deger: 3 };
-list.sonraki.sonraki.sonraki = { deger: 4 };
+let list2 = { deger: 1 };
+list2.sonraki = { deger: 2 };
+list2.sonraki.sonraki = { deger: 3 };
+list2.sonraki.sonraki.sonraki = { deger: 4 };
+
+console.log(list2);
+/*  {
+    deger: 1,
+    sonraki: { deger: 2, sonraki: { deger: 3, sonraki: [Object] } }
+} */
 
 /* Burada görüldüğü üzere her obje degere sahiptir ve komşusu olan sonrakini gösterir. list değişkeni bu zincirin ilk halkasıdır, sonrasında sonraki pointer’ını takip eder.
 
 Liste kolayca birçok parçaya bölünebilir ve sonradan tek bir yapı haline getirilebilir: */
 
-let ikinciList = list.sonraki.sonraki;
-list.sonraki.sonraki = null;
+let ikinciList = list2.sonraki.sonraki;
+list2.sonraki.sonraki = null;
+
+console.log(list2); // { deger: 1, sonraki: { deger: 2, sonraki: null } }
+
+console.log(ikinciList); // { deger: 3, sonraki: { deger: 4 } }
 
 // Birleştirme:
 
-list.sonraki.sonraki = ikinciList;
+list2.sonraki.sonraki = ikinciList;
+
+console.log(list2);
+/* {
+    deger: 1,
+    sonraki: { deger: 2, sonraki: { deger: 3, sonraki: [Object] } }
+} */
 
 /* Ve istenildiği gibi elemanlar bir yerden silinebilir veya eklenebilir.
 
 Örneğin yeni bir değer ekleneceği zaman, listenin başlangıcının güncellenmesi gerekir: */
 
-let list = { deger: 1 };
-list.sonraki = { deger: 2 };
-list.sonraki.sonraki = { deger: 3 };
-list.sonraki.sonraki.sonraki = { deger: 4 };
+let list3 = { deger: 1 };
+list3.sonraki = { deger: 2 };
+list3.sonraki.sonraki = { deger: 3 };
+list3.sonraki.sonraki.sonraki = { deger: 4 };
+
+console.log(list3);
+/* {
+    deger: 1,
+    sonraki: { deger: 2, sonraki: { deger: 3, sonraki: [Object] } }
+} */
 
 // Yeni bir değer ekleneceği zaman
-list = { deger: "yeni eleman", sonraki: list };
+list3 = { deger: "yeni eleman", sonraki: list3 }; //* özçağrı
 
-// Yine ortalardan bir yerden veri silineceği zaman sonraki'nin bir öncekine getirilmesi gerekri.
+console.log(list3);
+/* {
+    deger: 'yeni eleman',
+    sonraki: { deger: 1, sonraki: { deger: 2, sonraki: [Object] } }
+} */
 
-list.sonraki = list.sonraki.sonraki;
+// Yine ortalardan bir yerden veri silineceği zaman sonraki'nin bir öncekine getirilmesi gerekir..
+
+list3.sonraki = list3.sonraki.sonraki;
+
+console.log(list3);
+/* {
+    deger: 'yeni eleman',
+    sonraki: { deger: 2, sonraki: { deger: 3, sonraki: [Object] } }
+} */
 
 /* list.sonraki'nin değeri 1'den 2'ye geçirildi. 1 değeri artık zincirden çıkarıldı. Eğer bu değer başka bir yerde tutulmuyor ise, bu değer ileride otomatik olarak hafızadan silinecektir.
 
