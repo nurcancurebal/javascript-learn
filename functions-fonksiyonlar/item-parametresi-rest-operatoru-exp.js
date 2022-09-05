@@ -4,7 +4,7 @@ const array = ["Bursa", "Antalya", "İzmir", "Ankara"];
 
 console.log(addItem(array, "Bodrum", "Kıbrıs"));
 
-function addItem(funcArray, ...arg) { // TODO
+function addItem(funcArray, ...arg) { //...arg bundan sonrakileri al manasında kullanılmıştır.
 
     const newArray = [];
 

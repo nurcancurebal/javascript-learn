@@ -7,15 +7,33 @@ let kullanici = {
 
     isim: "Nurcan",
 
+    deneme: () => {
+        console.log(this.isim); //* undefined
+    },
+
+    func() {
+        console.log(this.isim); //* Nurcan
+    },
+
     selamVer() {
-        let ok = () => console.log(this.isim);
+
+        console.log(this.isim); //* Nurcan
+
+        let ok = () => {
+            console.log(this.isim) //* Nurcan
+        };
 
         ok();
+        func();
+
+        function func() {
+            console.log(this.isim); //* undefined
+        }
     }
 };
 
-kullanici.selamVer(); // Nurcan
+kullanici.selamVer();
+kullanici.func();
 
 /* Bu ok fonksiyonlarının bir özelliğidir. Ayrı bir this kullanmak yerine her zaman bir üstteki bölümden this i alması baya
 kullanışlıdır. Ok fonksiyonları bölümü içerisinde bu konu derinlemesine incelenecektir. */
-//TODO

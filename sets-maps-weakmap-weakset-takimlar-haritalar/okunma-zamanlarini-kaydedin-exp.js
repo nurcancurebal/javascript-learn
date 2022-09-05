@@ -19,12 +19,20 @@ let mesajlar = [
     { metin: "Sonra görüşürüz", kimden: "Mehmet" }
 ];
 
+
+const dateNow = () => {
+    return {
+        year: new Date().getFullYear(),
+        mounth: new Date().getMonth() + 1,
+        dayNumber: new Date().getDate()
+    }
+}
+
 let readMap = new WeakMap();
 
-let year = date.getFullYear(),
-    mounth = date.getMonth() + 1,
-    dayNumber = date.getDate();
+mesajlar.forEach((element) => {
+    readMap.set(element, {...element, ...dateNow() });
+});
 
-readMap.set(mesajlar[0], date = new Date()); // TODO bunu burada nasıl kullanabiliriz
-
-console.log(`${readMap}, ${dayNumber}. ${mounth}. ${year}`);
+// TODO
+console.log(readMap.get(mesajlar[1]))

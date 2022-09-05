@@ -119,5 +119,3 @@ bench(diffGetTime); */
 Modern JavaScript motorları kod üzerinde birçok iyileştirme yaparlar. Normal kullanımdan ziyade yapay test sonuçları üzerinde değişikliklere neden olabilirler. Özellikle çok küçük karşılaştırmalarda. Bundan dolayı eğer performan sizin için çok ciddi bir konu ise, JavaScript motorlarının nasıl çalıştığını öğrenmeniz gerekmektedir. Öğrendiğinizde mikro seviyede bir karşılaştırmaya ihtiyacınız kalmayacaktır.
 
 V8 motoru ile ilgili makaleleri http://mrale.ph adresinden bulabilirsiniz. */
-
-// TODO çalıştırdığım zaman durmuyor bitmiyor

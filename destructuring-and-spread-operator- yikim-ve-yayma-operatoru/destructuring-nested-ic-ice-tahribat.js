@@ -9,7 +9,7 @@ let options = {
         height: 200
     },
     items: ["Cake", "Donut"],
-    extra: true    // yok etmeyeceğimiz ekstra bir şey
+    extra: true    // yok etmeyeceğimiz ekstra bir şey,
 };
 
 // netlik için birden fazla satıra bölünmüş yıkım ataması
@@ -28,7 +28,7 @@ console.log(height); // 200
 console.log(item1);  // Cake
 console.log(item2);  // Donut
 
-console.log(options); //! title yok //TODO
+console.log(options); //! title yok, çünkü ekleme işlemi yapmadık sadece options' u çıkart demiş olduk
 // {
 //     size: { width: 100, height: 200 },
 //     items: [ 'Cake', 'Donut' ],
