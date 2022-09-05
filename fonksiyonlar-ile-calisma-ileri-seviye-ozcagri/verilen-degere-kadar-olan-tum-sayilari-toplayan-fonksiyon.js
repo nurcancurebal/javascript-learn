@@ -17,7 +17,8 @@ Sonuc:
 
 function topla(n) { ... kodunuz ... }
 
-/* console.log( topla(100) ); // 5050
+console.log( topla(100) ); // 5050
+
 Not: Hangi yöntem daha hızlıdır? Hangisi yavaştır? Neden?
 
 Not2: Özçağrı ile topla(100000) çalıştırılabilir mi?
