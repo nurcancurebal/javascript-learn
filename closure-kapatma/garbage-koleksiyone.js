@@ -102,7 +102,7 @@ function f6() {
 
     function g6() {
 
-        debugger; // in console: type console.log( value ); Surprise!
+        debugger; // in console: type console.log( deger6 ); Surprise!
     }
 
     return g6;
