@@ -1,8 +1,4 @@
-/* Şu anda clouse’ların genel olarak nasıl çalıştığını biliyorsunuz, artık daha derinine inme vakti geldi.
-
-Aşağıda sayacUret fonksiyonunun adımları gösterilmektedir, her şeyi anladığınıza emin olun. Basamaklarda göreceğiniz [[Environment]] henüz işlenmedi.
-
-1. Kod çalışmaya başkadığında sadece bir tane Sözcüksel Ortam bulunmaktadır:
+/* 1. Kod çalışmaya başkadığında sadece bir tane Sözcüksel Ortam bulunmaktadır:
 
 
 Başlangıçta sadece sayacUret fonksiyonu bulunmaktadır, çünkü bu fonksiyon tanımıdır. Henüz çalışmadı.
@@ -59,11 +55,6 @@ Genel olarak, sözcüksel ortam objesi fonksiyon kullanılabilir olduğu sürece
 7. Sonraki sayac() da aynısını yapar.
 
 Başlangıçta sorulan ikinci sorunun cevabı şimdi açıklık kazanmış olmalı.
-
-Aşağıda isim özelliği calisanUret() fonksiyonu tarafından bulunduğu ortamdan kullanılmıştır:
-
-
-Sonuç görüşdüğü gibi "Pete" olacaktır.
 
 …Fakat eğer calisanUret() fonksiyonu içerisinde let name tanımlanmamış olsaydı, bu durumda değişkeni arayış evrensel değişkenler ile devam edecekti ve bu durumda sonuç "John" olacaktı.
 
