@@ -19,14 +19,14 @@ Her eleman aynı olasılıkla sıralanmalıdır. Örneğin [1,2,3] [1,2,3] veya 
 
 // En basit çözümü aşağıdaki gibi olabilir.
 
-function karistir(dizi) {
+function karistir1(dizi) {
 
-    dizi.sort(() => Math.random() - 0.5);
+    dizi.sort(() => Math.random() - 0.5); // random sıralama
 }
 
 let dizi = [1, 2, 3];
 
-karistir(dizi);
+karistir1(dizi);
 console.log(dizi); // [ 2, 3, 1 ]
 
 /* Yukarıdaki çalışıyor denebilir çünkü Math.random()-0.5 rasgele bir sayıdır ve pozitif veya negatif olabilir. Böylece sıralama fonksiyonu rasgele elemanları dizer.
@@ -35,7 +35,7 @@ Fakat sıralama fonksiyonu bu amaçla kullanılamaz. Tüm permütasyon aynı ola
 
 Aşağıdaki koda bakılacak olursa karistir 1000000 defa çalıştırılacak olursa bile olası sonuçlar şu şekildedir: */
 
-function karistir(array) {
+function karistir2(array) {
 
     array.sort(() => Math.random() - 0.5);
 }
@@ -55,7 +55,7 @@ for (let i = 0; i < 1000000; i++) {
 
     let array = [1, 2, 3];
 
-    karistir(array);
+    karistir2(array);
     count[array.join('')]++;
 }
 
@@ -73,31 +73,18 @@ for (let key in count) {
 231: 124880
 312: 125148
 321: 125223
-Görüğünüz gibi 123 ve 213 ün çıkma olasılığı daha fazladır.
 
 Sonuçlar JavaScript motoruna göre değişebilir. Fakat görüldüğü gibi bu fonksiyon çok güvenilir değildir.
-
-Neden çalışmadı? Genel olarak konuşmak gerekirse sort kara kutudur: biz buraya bir dizi göndeririz o içinde karşılaştırma fonksiyonları vs. kullanır ve biz sıralanmış şekilde bu diziyi alırız. Bu kadar fazla rasgele karşılaştırmadan dolayı bu kara kutu deliye döndü, bu deliye dönme olayında nasıl davranacağı da JavaScript motoruna bağlıdır.
-
+Neden çalışmadı? Genel olarak konuşmak gerekirse sort kara kutudur: biz buraya bir dizi göndeririz o içinde karşılaştırma fonksiyonları vs. kullanır ve biz sıralanmış şekilde bu diziyi alırız.
 Bu problem bir kaç yöntemle çözülebilir. Fisher-Yates shuffle. Fikre göre dizi tersten başlayarak rasgele sayı ile değiştirilecek şekilde yazılmalıdır: */
 
-function karistir(array) {
+function karistir3(array) {
 
     for (let i = array.length - 1; i > 0; i--) {
 
         let j = Math.floor(Math.random() * (i + 1)); // random index  0 ile i arasında
+
         [array[i], array[j]] = [array[j], array[i]]; // elemanların yer değiştirmesi için.
-    }
-}
-
-// Aynı şekilde test edilirse:
-
-function karistir(array) {
-
-    for (let i = array.length - 1; i > 0; i--) {
-
-        let j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
     }
 }
 
@@ -115,7 +102,7 @@ for (let i = 0; i < 1000000; i++) {
 
     let array = [1, 2, 3];
 
-    karistir(array);
+    karistir3(array);
     count2[array.join('')]++;
 }
 
@@ -133,8 +120,5 @@ for (let key in count2) {
 231: 167517
 312: 166199
 321: 166316
-Şimdi daha iyi görünüyor: tüm permütasyonlar yakın olasılıkla.
 
-Performans yönünden Fisher-Yates algoritması harikatıdır. Hiç sıralama ile uğraşmaya gerek yok. */
-
-// TODO boş vaktinde tekrar üzerinden geç
+Şimdi daha iyi görünüyor: tüm permütasyonlar yakın olasılıkla.*/

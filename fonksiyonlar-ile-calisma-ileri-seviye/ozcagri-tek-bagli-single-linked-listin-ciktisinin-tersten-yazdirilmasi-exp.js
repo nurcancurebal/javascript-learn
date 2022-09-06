@@ -72,4 +72,3 @@ function geriListeYazdır(list) {
 }
 
 geriListeYazdır(list2);
-// TODO oku

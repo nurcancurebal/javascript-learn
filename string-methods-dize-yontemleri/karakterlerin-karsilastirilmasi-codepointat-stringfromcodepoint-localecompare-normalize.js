@@ -10,8 +10,7 @@ console.log('a' > 'Z'); // true
 
 console.log('Österreich' > 'Zealand'); // true
 
-/* Eğer ülke isimlerini karşılaştırmak istiyorsanız bu garip sonuçlara neden olabilir. Örneğin Zealand normalde Österreich'ten
-sonra gelmesi beklenirken önce gelir.
+/* Eğer ülke isimlerini karşılaştırmak istiyorsanız bu garip sonuçlara neden olabilir. Örneğin Zealand normalde Österreich'ten sonra gelmesi beklenirken önce gelir.
 Ne olduğunu anlamak için JavaScript karakter dizilerini nasıl tanımlıyor buna bakmak lazım.
 Tük karakter dizileri UTF-16 ile kodlanmıştır. Buna göre: Tüm karakterler sayısal olarak kodlanır. Bu koda göre karakteri
 geri döndürecek özel metodlar mevcuttur. */
@@ -91,9 +90,7 @@ istediğinizi veya "a" ile "á"'nın aynı şekilde davranılmasını isteyip i
 /* -> Unicod ve Internaller.
 -- İleri derecede bilgiler
 Bu bölümde karakter dizilerinin daha derin özelliklerine değinilecektir. Bu bilgiler emoji, hiyeroglif veya matematiksel
-ifadelerde yardımcı olur.
-
-Eğer bu konuda bir ihtiyacınız yoksa bu bölümü atlayabilirsiniz. */
+ifadelerde yardımcı olur. */
 
 
 /* -> Vekil Çiftler
@@ -126,17 +123,12 @@ yaramaz.
 
 Teknik olarak, bu çiftler kodlarına bakılarak ayırt edilebilir: Eğer bir karakter 0xd800..0xdbff aralığında ise bu çiftin
 ilk karakteri demektir. İkinci karakter ise 0xd800..0xdbff aralığında olmalıdır. Bu aralıklar özel olarak çiftler için
-ayrılmıştır.
-
-Yukarıdaki duruma göre: */
+ayrılmıştır. */
 
 // charCodeAt çiftlere uygun değildir, bundan dolayı sadece kodlar verilir.
 
 console.log('𝒳'.charCodeAt(0).toString(16)); // d835, 0xd800 ile 0xdbff arasında
 console.log('𝒳'.charCodeAt(1).toString(16)); // dcb3, 0xdc00 ile 0xdfff arasında
-
-/* Sıralı erişim ( Iterable ) bölümünde bu çifler ile ilgili daha fazla bilgi bulabilirsiniz. Muhtemelen bunun ile ilgili
-kütüphaneler de vardır, fakat burada önerecek kadar meşhur olan yok henüz. */
 
 
 /* -> Aksan işaretleri ve normalleştirme
@@ -146,19 +138,9 @@ kütüphaneler de vardır, fakat burada önerecek kadar meşhur olan yok henüz.
 Hepsi değil tabi fakat çoğu birleşik karakter bu tabloda yer alır.
 
 Elle bu karakterleri birleştirmek için, UTF-16 bazı unicode karakter kullanmamıza olanak verir. Böylece temel karakterin
-üzerine bir veya daha fazla “işaret” eklenerek yeni bir karakter “üretilebilir”
-
-Örneğin, S harfinin üstüne “nokta” eklemek isterseniz \u0307 kullanabilirsiniz. Bunu kullandığınızda Ṡ elde etmiş olursunuz. */
+üzerine bir veya daha fazla “işaret” eklenerek yeni bir karakter “üretilebilir” */
 
 console.log('S\u0307'); // Ṡ
-
-/* Eğer bu karakterin üstüne veya altına farklı işaretler eklemek istiyorsanız gerekli karakterleri istediğiniz gibi
-ekleyebilirsiniz.
-
-Örneğin, eğer “aşağı nokta” kodunu ( \u0323) eklerseniz, “S’in altına ve üstüne nokta” demiş olursunuz ve şu şekilde bir
-karakter elde edersiniz: Ṩ
-
-Örneğin: */
 
 console.log('S\u0307\u0323'); // Ṩ
 
@@ -186,9 +168,4 @@ console.log("S\u0307\u0323".normalize().length); // 1
 console.log("S\u0307\u0323".normalize() == "\u1e68"); // true
 
 /* Gerçekte bu durumla çok nadir karşılaşılır. Bu karakter bile Ṩ oldukça “yaygın” olduğundan, UTF-16 standart tablosu
-içerisinde yer almaktadır.
-
-Eğer normalizasyon kurallarını ve tiplerini daha derinlemesine öğrenmek istiyorsanız Unicode Normalization Forms adresinden
-inceleyebilirsiniz. Pratikte yukarıda verilen bilgiler yeterli olacaktır. */
-
-//TODO sonra tekrar etmek için tekrar oku
+içerisinde yer almaktadır. */
