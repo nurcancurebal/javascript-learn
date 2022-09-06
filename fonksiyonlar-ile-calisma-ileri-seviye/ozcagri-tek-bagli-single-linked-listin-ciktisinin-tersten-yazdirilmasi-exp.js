@@ -34,7 +34,6 @@ function geriListeYazdır(list) {
 geriListeYazdır(list);
 
 /* Döngü versiyonu
-Döngü versiyonu da bir öncekine göre biraz daha karmaşıktır.
 
 list'teki son değerin alınması gibi bir yol yoktur. Ayrıca “geri doğru” gidilemez.
 
@@ -59,7 +58,7 @@ function geriListeYazdır(list) {
     let dizi = [];
     let tmp = list;
 
-    while (tmp) {
+    while (tmp) { // {deger: 1, sonraki: {...}}
 
         dizi.push(tmp.deger);
         tmp = tmp.sonraki;

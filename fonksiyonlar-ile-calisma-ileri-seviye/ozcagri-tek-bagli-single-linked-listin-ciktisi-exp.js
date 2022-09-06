@@ -38,23 +38,23 @@ let list2 = {
     }
 };
 
-function listeYaz(list) {
+function listeYaz1(list) {
 
-    let tmp = list;
+    let tmp = list; // TODO burada tmp ye ne gerek var?
 
     while (tmp) {
 
-        console.log(tmp.deger);
+        console.log(tmp.deger); // 1, 2, 3, 4
 
         tmp = tmp.sonraki;
     }
 }
 
-console.log(listeYaz(list2)); // TODO undefined
+listeYaz1(list2);
 
 /* Dikkat ederseniz tmp adında geçici bir değişken tutarak listeni üzerinden geçildi. Bunun yerine list fonksiyon parametresi de kullanılabilir: */
 
-function listeYaz(list) {
+function listeYaz2(list) {
 
     while (list) {
 
@@ -87,18 +87,18 @@ let list3 = {
     }
 };
 
-function listeYaz(list3) {
+function listeYaz3(list3) {
 
     console.log(list3.deger); // 1, 2, 3, 4, elemanın çıktısını bas
 
     if (list3.sonraki) {
 
-        listeYaz(list3.sonraki); // listenin geri kalan elemanları için de aynısını yap
+        listeYaz3(list3.sonraki); // listenin geri kalan elemanları için de aynısını yap
     }
 
 }
 
-listeYaz(list3);
+listeYaz3(list3);
 
 /* Hangisi daha iyi?
 
