@@ -19,9 +19,8 @@ console.log( arr.filter(arasinda(3, 6)) ); // 3,4,5,6
 
 console.log( arr.filter(diziIcinde([1, 2, 10])) ); // 1,2 */
 
-
 // arasinda Filtresi
-function arasinda1(a, b) {
+function arasinda(a, b) {
 
     return function (x) {
 
@@ -29,12 +28,11 @@ function arasinda1(a, b) {
     };
 }
 
-let arr1 = [1, 2, 3, 4, 5, 6, 7];
+let arr = [1, 2, 3, 4, 5, 6, 7];
 
-console.log(arr1.filter(arasinda1(3, 6))); // [3, 4, 5, 6]
+console.log(arr.filter(arasinda(3, 6))); // [3, 4, 5, 6]
 
 // diziIcinde Filtresi
-
 function diziIcinde(arr) {
 
     return function (x) {
@@ -42,7 +40,5 @@ function diziIcinde(arr) {
         return arr.includes(x);
     };
 }
-
-let arr = [1, 2, 3, 4, 5, 6, 7];
 
 console.log(arr.filter(diziIcinde([1, 2, 10]))); // [1, 2]
