@@ -7,7 +7,6 @@ Her fonksiyon kendi numara çıktısını verir. Fakat bir hata var… */
 function orduYap1() {
 
     let nisancilar = [];
-
     let i = 0;
 
     while (i < 10) {
@@ -15,11 +14,9 @@ function orduYap1() {
         let nisanci = function () { // Nişancılar fonksiyonu
 
             console.log(i); // 10, 10
-
         };
 
         nisancilar.push(nisanci);
-
         i++;
     }
 
@@ -30,19 +27,11 @@ let ordu1 = orduYap1();
 
 ordu1[0](); // nisanci 0 fakat 10 gösteriyor.
 ordu1[5](); // nisancı 5 fakat yine 10 gösteriyor.
-// ... tüm nişancılar kendi numaraları yerine 10 gösteriyorlar.
+// ... tüm nişancılar kendi numaraları yerine 10 gösteriyorlar. Neden tüm nişancılar aynı? Kodu olması gerektiği duruma getiriniz.
 
-/* Neden tüm nişancılar aynı? Kodu olması gerektiği duruma getiriniz.
+// çözüm
 
-Testler ile korunaklı olan aç. */
-
-/* çözüm
-
-orduYap fonksiyonunun içine bakılacak olursa sonuç daha açık bir şekilde görülecektir.
-
-Boş nisancilar dizisi yaratır. */
-
-// 1.
+// 1. Boş nisancilar dizisi yaratır.
 let nisancilar = [];
 
 /*2. nisancilar.push(function..) döngüsü ile doldurur.
@@ -70,8 +59,6 @@ Peki neden tüm fonksiyonlar aynı şeyi gösterir?
 
 Bunun nedeni nisancilar fonksiyonunun içinde i değişkeninin olmamasıdır. Böyle bir i fonksiyonu çağırıldığında i değeri dış ortamdan alınır.
 
-i'nin değeri nedir ?
-
 Yine kaynak koda bakılacak olursa: */
 
 function orduYap2() {
@@ -89,8 +76,7 @@ function orduYap2() {
     //...
 }
 
-/* …Sizin de görebilecğeiniz gibi orduYap() ile aynı sözcüksel ortamda bulunmaktadır. Fakat ordu[5]() çağırıldığında, orduYap() işini bitirmiş ve son değeri olan 10'u almış oluyor.( while'ın sonu 10 olmaktadır.
-
+/* …Sizin de görebilecğeiniz gibi orduYap() ile aynı sözcüksel ortamda bulunmaktadır. Fakat ordu[5]() çağırıldığında, orduYap() işini bitirmiş ve son değeri olan 10'u almış oluyor.( while'ın sonu 10 olmaktadır.)
 Sonuç olarak tüm nisanci fonksiyonları dış sözcüksel ortamdan i=10 değerini alırlar.
 
 Bu basit bir şekilde düzeltilebilir: */
@@ -101,7 +87,7 @@ function orduYap3() {
 
     for (let i = 0; i < 10; i++) {
 
-        let nisanci = function () { // nisanci fonksiyonu
+        let nisanci = function () {
 
             console.log(i); // 0, 5
         };
@@ -136,7 +122,7 @@ function orduYap4() {
 
         let j = i;
 
-        let nisanci = function () { // nisanci fonksiyonu
+        let nisanci = function () {
 
             console.log(j); // 0, 5
         };
@@ -154,23 +140,6 @@ let ordu4 = orduYap4();
 ordu4[0](); // 0
 ordu4[5](); // 5
 
-/* while döngüsü değişkedi fakat for döngüsünde olduğu gibi değerler her döngüde oluşan Sözcüksel Ortama atanacak şekilde ayarlandı. Böylece her nisanci çağırıldığında doğru değeri alması garantilendi.
+/* while döngüsü değişkendi fakat for döngüsünde olduğu gibi değerler her döngüde oluşan Sözcüksel Ortama atanacak şekilde ayarlandı. Böylece her nisanci çağırıldığında doğru değeri alması garantilendi.
 
 let j = i ile i nin yerel bir kopyasını oluşturmuş olduk. İlkel değişkenler “değer ile” kopyalandığından dolayı artık i den tamamen farklı bir değişkene sahip olduk. */
-
-function orduYap5() {
-
-    let nisancilar = [];
-
-    for (let i = 0; i < 10; i++) {
-
-        let nisanci = function () { // nisanci fonksiyonu
-
-            console.log(i); // numarayı yazmalı
-        };
-
-        nisancilar.push(nisanci);
-    }
-
-    return nisancilar;
-}
