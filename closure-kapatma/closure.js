@@ -7,12 +7,12 @@ Peki ya dışarıdaki değişken değişirse? Fonksiyon en son değerini mi alac
 
 Ayrıca diyelim ki fonksiyon başka bir yere gönderildi ve oradan çağrıldığında ne olur, yeni yerinden dışarıda bulunan değişkenlere erişebilir mi?
 
-Bu sorulara farklı diller farklı cevaplar vermektedir, bu bölümde JavaScriptin bu sorulara cevabını öğreneceksiniz.
+Bu sorulara farklı diller farklı cevaplar vermektedir.
 
 Birkaç soru
 Örnek olması amacıyla iki soru formülize edilecek olursa, sonrasında içsel mekanizması parça parça incelenecektir, ileride daha karmaşık sorulara cevap verebilirsiniz.
 
-selamVer fonksiyonu dışarıda bulunan isim değişkenini kullanmaktadır. Fonksiyon çalıştığında, hangi isim değişkeni kullanılacaktır? */
+1. selamVer fonksiyonu dışarıda bulunan isim1 değişkenini kullanmaktadır. Fonksiyon çalıştığında, hangi isim değişkeni kullanılacaktır? */
 
 let isim1 = "Erdinç";
 
@@ -23,13 +23,13 @@ function selamVer() {
 
 isim1 = "Mehmet";
 
-selamVer(); // "Erdinç" mi yoksa "Mehmet" mi gösterilecek?
+selamVer(); // "Erdinç" mi yoksa "Mehmet" mi gösterilecek? // Merhaba, Mehmet
 
 /* Böyle durumlara tarayıcı ve sunucu tabanlı geliştirmelerde oldukça sık karşılaşılır. Bir fonksiyon yaratıldığı anda değil de daha sonra çalışmak üzere programlanabilir. Örneğin bir kullanıcı aksiyonu veya ağ üzerinden istekler bu gruba girer.
 
 Öyleyse soru: son değişiklikleri alır mı?
 
-calisanYarat diğer bir fonksiyon yaratır ve bunu döner. Bu yeni fonksiyon herhangi bir yerden çağrılabilir. Peki yaratıldığı yerin dışındaki değişkenlere veya çağrılan yerin dışındaki değişkenlere veya ikisine birden erişebilece mi? */
+2. calisanYarat diğer bir fonksiyon yaratır ve bunu döner. Bu yeni fonksiyon herhangi bir yerden çağrılabilir. Peki yaratıldığı yerin dışındaki değişkenlere veya çağrılan yerin dışındaki değişkenlere veya ikisine birden erişebilecek mi? */
 
 function calisanYarat() {
 
@@ -37,14 +37,16 @@ function calisanYarat() {
 
     return function () {
 
-        console.log(isim2);
+        return isim2;
     };
 }
 
 let isim2 = "Zafer";
 
+console.log(calisanYarat()); // [Function (anonymous)]
+
 // fonksiyon yarat
 let is = calisanYarat();
 
 // çağır
-is(); // burada "Mehmet" mi yoksa "Zafer" mi gösterilecek ?
+console.log(is()); // burada "Mehmet" mi yoksa "Zafer" mi gösterilecek ? // Mehmet
