@@ -31,12 +31,12 @@ Fonksiyon ilk çalıştığında yeni bir Sözcüksel Ortam otomatik olarak yara
 
 Fonksiyon çağrıldığında ise iki tane sözcüksel ortam bulunmaktadır: içte olan(fonksiyon çağrısı için) ve dışta olan(evrensel):
 
-. İçte olan sözcüksel ortam say fonksiyonunun o anki durumuna bakar, o anda tek adi degiskeni bulunmaktadır. say("Erdinç") çağrıldığından dolayı idi değişkeninin değeri "Erdinç" olur.
+. İçte olan sözcüksel ortam say fonksiyonunun o anki durumuna bakar, o anda tek adi degiskeni bulunmaktadır. say("Erdinç") çağrıldığından dolayı say değişkeninin değeri "Erdinç" olur.
 . Dış Sözcük Ortamı ise bu durumda Evrensel Sözcük Ortamıdır.
 
 İç Sözcük ortamı outer ile Dış Sözcük Ortamına referans olur.
 
-~ Kod değişkene ulaşmak istediğinde – önce İç Sözcük ortamında arar, daha sonra dış sözcüm ortamına bakar ve daha sonra daha dıştakine bakar bu şekilde zincirin en sonuna kadar devam eder
+~ Kod değişkene ulaşmak istediğinde – önce İç Sözcük ortamında arar, daha sonra dış sözcük ortamına bakar ve daha sonra daha dıştakine bakar bu şekilde zincirin en sonuna kadar devam eder
 
 Eğer değişken hiçbir yerde bulunamazsa, sıkı modda hata verir. use strict kullanılmazsa tanımsız değişken yeni bir global değişken yaratır.
 
@@ -48,8 +48,6 @@ Arama olayı bizim yazdığımız kodlarda nasıl işliyor buna bakalım:
 Şimdi bölümün ilk başında sorulan sorulara cevap bulunabilir.
 
 ~ Bir fonksiyon dışta bulunan değişkenin en son değerini alır.
-
-Bunun nedeni tanımlanan mekanizmadan dolayıdır. Eski değişkenler bir yere kaydedilmezler. Fonksiyon bunları istediğinde iç sözcük ortamından veya dış sözcük ortamından o anki değeri alır.
 
 Bundan dolayı ilk sorunun cevabı Mehmet olacaktır: */
 
