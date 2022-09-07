@@ -51,56 +51,18 @@ Bu biraz amacının dışında da olsa şuna benzer:
 <iframe src="/" id="iframe"></iframe>
 
 <script>
-  console.log( innerWidth ); //  içerideki boyutu olır ( sadece tarayıcı için)
-  console.log( Array ); // o anki pencerenin dizisini alır.get Array of the current window (javascript core builtin)
+  console.log( innerWidth ); //  içerideki boyutu alır ( sadece tarayıcı için)
+  console.log( Array ); // o anki pencerenin dizisini alır.geçerli pencerenin Dizisini al (javascript çekirdeği yerleşik)
 
-   when the iframe loads...
+   iframe yüklendiğinde...
   iframe.onload = function() {
+
      iframe'in genişliğini al
     console.log( iframe.contentWindow.innerWidth );
+
      iframe penceresinin dizisini al.
     console.log( iframe.contentWindow.Array );
   };
 </script>
-Burada ilk iki console.log var olan pencereyi kullanmaktadır, geriye kalan iki tanesi de iframe'den değişken almaktadır. Bu eğer iframe aynı protocol/host/port’tan besleniyor ise herhangi bir değişken olabilir.
 
-
--> “this” ve evrensel objeler
-Bazen, this'in değeri tamamen evrensel obje olur. Bu çok nadir de olsa bazı kod sayfalarında görülmektedir.
-
-1. Tarayıcıda this'in global alandaki değeri window'dur: */
-
-// fonksiyonların dışında
-console.log(this === window); // true
-
-/* Tarayıcı olmayan çevrelerde ise, this için farklı değer kullanabilirler.
-
-2. Sıkı olmayan modda bir fonksiyon this çağırırsa, evrensel obje olan this'i kabul eder: */
-
-// Sıkı modda değil (!)
-function f() {
-
-    console.log(this); // [object Window]
-}
-
-f(); // obje olmadan çağırıldı.
-
-/* Tanım gereği, this bu durumda evrensel obje olmalı, Node.JS ortamında olmasa bile this evrensel objedir. Bu eski kodlar ile uyumluluk amacıyladır, sıkı modda this tanımsız olabilir. */
-
-
-/* -> Polyfill’ler İçin Kullanma
-Modern dil özelliklerinin desteğini test etmek için global nesneyi kullanıyoruz.
-
-Örneğin, yerleşik bir “Promise” nesnesinin olup olmadığını test edelim (gerçekten eski tarayıcılarda yoktur): */
-
-if (!window.Promise) {
-
-    console.log("Senin tarayıcın gerçekten çok yaşlı");
-}
-
-/* Hiçbiri yoksa (örneğin, eski bir tarayıcıdayız), “pollyfills(çoklu dolgular)” oluşturabiliriz: çevre tarafından desteklenmeyen, ancak modern standartta var olan işlevler ekleyebiliriz. */
-
-if (!window.Promise) {
-
-    // window.Promise = ... // modern dil özelliğinin özel uygulaması
-}
+Burada ilk iki console.log var olan pencereyi kullanmaktadır, geriye kalan iki tanesi de iframe'den değişken almaktadır. Bu eğer iframe aynı protocol/host/port’tan besleniyor ise herhangi bir değişken olabilir. */
