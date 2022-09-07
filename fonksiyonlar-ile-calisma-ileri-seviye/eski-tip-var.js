@@ -9,20 +9,18 @@ let ve const Sözcüksel Ortam anlamında birbiri ile tam olarak aynıdır.
 
 Fakat var bunlardan çok farklıdır. Bunun dilin ilk oluşmaya başladığı zamanlara dayanır. Genelde modern stilde pek kullanılmazlar fakat yine de arada sırada görebilirsiniz.
 
-Eğer böyle bir yazımla karşılaşmayacağınıza eminseniz bu bölümü geçebiir veya sonra tekrar gelebilirsiniz.
-
 İlk görüşte var let ile benzer şekilde çalışıyormuş gibi görünür. İkisi de değişken tanımlamaya yarar: */
 
 function selamVer1() {
 
-    var terim1 = "Merhaba"; // yeerl değişken "let" yerine "var" kullanılmıştır.
+    var terim1 = "Merhaba"; // yerel değişken "let" yerine "var" kullanılmıştır.
 
     console.log(terim1); // Merhaba
 }
 
 selamVer1();
 
-console.log(terim1); // Hata! terim tanımlı değil.
+//*console.log(terim1); // Hata! terim tanımlı değil.
 
 // …Fakat farklılık tam da burada ortaya çıkar.
 
@@ -51,18 +49,6 @@ console.log(i); // 10,"i" döngüden sonra görülebilirdir, evrensel değişken
 
 // Eğer fonksiyonun içinde bir if bloğu varsa bu durumda var fonksiyon seviyesinde bir değişken olur:
 
-function selamVer2() {
-
-    if (true) {
-
-        var terim2 = "Merhaba";
-    }
-
-    console.log(terim2); // çalışıyor
-}
-
-selamVer2();
-console.log(terim2); // Hata: terim tanımlı değildir.
 
 /* Eğer if, for'a rağmen çalışan var değişkenleri görürseniz bunun nedeni önceden JavaScript’te blokların Sözcüksel Ortama dahil olmamasındandır. */
 
@@ -110,7 +96,7 @@ function selamVer5() {
 
 /* Bu davranışa “yükseltilme” davranışı da denir, çünkü tüm var ile tanımlamalar fonksiyonun başına “yükseltilme”
 
-Bundan dolayı yukarıdaki örnekte if(false) hiçbir zaman çalışmayacaktır, zaten önemli de değildir. İçinde bulunan var fonksiyonun başında işlenir. Yani (*) anında zaten terim değişkeni vardır.
+Bundan dolayı yukarıdaki örnekte if(false) hiçbir zaman çalışmayacaktır, zaten önemli de değildir. İçinde bulunan var fonksiyonun başında işlenir. Yani (*) anında zaten terim5 değişkeni vardır.
 
 ~ Tanımlar yükseltilir fakat atamalar yükseltilmez
 
@@ -118,14 +104,14 @@ Bir örnekle göstermek gerekirse: */
 
 function selamVer6() {
 
-    console.log(terim6);
+    console.log(terim6); // undefined
 
     var terim6 = "Merhaba";
 }
 
 selamVer6();
 
-// var terim = "Merhaba" iki tane aksiyon barındırır:
+// var terim6 = "Merhaba" iki tane aksiyon barındırır:
 
 /* 1. Değişken tanımlama var
 2. Değişken atama =.
@@ -136,7 +122,7 @@ function selamVer7() {
 
     var terim7; // tanımalma başlangıçta çalışır.
 
-    console.log(terim7); // tanımsız
+    console.log(terim7); // undefined, tanımsız
 
     terim7 = "Merhaba"; // ...atama burada yapılır.
 }
