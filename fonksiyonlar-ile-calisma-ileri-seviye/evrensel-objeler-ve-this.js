@@ -1,7 +1,7 @@
 /* -> “this” ve evrensel objeler
 Bazen, this'in değeri tamamen evrensel obje olur. Bu çok nadir de olsa bazı kod sayfalarında görülmektedir.
 
-1. Tarayıcıda this'in global alandaki değeri window'dur: */ 
+1. Tarayıcıda this'in global alandaki değeri window'dur: */
 
 // fonksiyonların dışında
 console.log(this === window); // true
@@ -21,7 +21,7 @@ f(); // obje olmadan çağırıldı.
 /* Tanım gereği, this bu durumda evrensel obje olmalı, Node.JS ortamında olmasa bile this evrensel objedir. Bu eski kodlar ile uyumluluk amacıyladır, sıkı modda this tanımsız olabilir. */
 
 
-/* -> Polyfill’ler İçin Kullanma
+/* -> Polyfill(çoklu dolgular)’ler İçin Kullanma
 Modern dil özelliklerinin desteğini test etmek için global nesneyi kullanıyoruz.
 
 Örneğin, yerleşik bir “Promise” nesnesinin olup olmadığını test edelim (gerçekten eski tarayıcılarda yoktur): */
@@ -35,5 +35,5 @@ if (!window.Promise) {
 
 if (!window.Promise) {
 
-    // window.Promise = ... // modern dil özelliğinin özel uygulaması
+    // window.Promise = // ... modern dil özelliğinin özel uygulaması
 }
