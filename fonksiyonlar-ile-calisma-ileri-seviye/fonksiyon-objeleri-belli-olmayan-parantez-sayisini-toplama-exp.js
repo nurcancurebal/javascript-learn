@@ -15,18 +15,18 @@ Bu fonksiyon çağrıları arasında hafızada değer tutabilmeli.
 Göreve göre, fonksiyon == kullanıldığında sayı olmalıdır. Fonksiyonlar obje olduğundan dolayı dönüşümleri Objelerin ilkel çevirileri bölümünde anlatıldığı gibi çevrilirler, bu objenin sayı olarak dönebilmesi için kendi metodumuzu kullanabiliriz.
 */
 
-function topla(a) {
+function topla(a) { //! NOT: topla funk. returnü kendini çağırmadığı için 1 parametre aldı
 
     let anlikToplam = a; // 1. fonksiyon burada başlıyor
 
-    function f(b) { // 4. console.log' dan f' in değerini alıyor ve içine giriyor
+    function f(b) { // 4. console.log' dan f' in değerini alıyor ve içine giriyor //! kendini çağırdığı için her parametre için alıp başa dönüyor bitene kadar
 
-        anlikToplam += b; // 5.işlemi yapıyor, 7.
+        anlikToplam += b; // 5. işlemi yapıyor, 7.
 
         return f; // 6. diğer değeri almaya gidiyor consol' a, 8. consol' a gidip alacağı var mı diye bakıyor
     }
 
-    f.toString = function () { // 2. anlikToplam değerini aldıktan sonra buraya bakıyor
+    f.toString = function () { // 2. anlikToplam değerini aldıktan sonra buraya bakıyor // TODO tostring burada f ' in içine ekleme mi yapılmış?
 
         return anlikToplam; // 9. son çıkışı buradan alıyor
     };
