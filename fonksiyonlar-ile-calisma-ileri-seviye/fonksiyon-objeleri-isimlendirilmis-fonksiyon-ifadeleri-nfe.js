@@ -15,27 +15,22 @@ let selamVer2 = function func(kim) {
     console.log(`Merhaba, ${kim}`);
 };
 
-/* Peki buradaki mantık ne? Ayrıca bir "func" eklemenin ne anlamı var?
+selamVer2("Erdinç"); // Selam, Erdinç
 
-Tekrar etmek gerekirse, hala bir Fonksiyon İfadeniz var. Fonksiyon ifadesine "function" 'dan sonra "func" eklemek bu fonksiyonu Fonksiyon Tanımı haline getirmez çünkü hala bir atama operasyonu ile tanımlanmıştır.
+/* Ayrıca bir "func" eklemenin ne anlamı var?
+
+Hala bir Fonksiyon İfadeniz var. Fonksiyon ifadesine "function" 'dan sonra "func" eklemek bu fonksiyonu Fonksiyon Tanımı haline getirmez çünkü hala bir atama operasyonu ile tanımlanmıştır.
 
 Böyle bir isim eklemek hiçbir soruna neden olmaz.
 
 Fonksiyon hala selamVer() şeklinde kullanılabilir: */
-
-let selamVer3 = function func(kim) {
-
-    console.log(`Selam, ${kim}`);
-};
-
-selamVer3("Ahmet"); // Selam, Ahmet
 
 /* func ismine ait iki tane özellik vardır:
 
 1. Bu şekilde fonksiyonun kendisine içerisinden referans vermek mümkündür.
 2. Fonksiyonun dışından erişilemez.
 
-Örneğin, selamVer fonksiyonu eğer bir parametre olmadan çağırılırsa kendisini "Misafir" ile tekrardan çağırabilir. */
+Örneğin, selamVer4 fonksiyonu eğer bir parametre olmadan çağırılırsa kendisini "Misafir" ile tekrardan çağırabilir. */
 
 let selamVer4 = function func(kim) {
 
@@ -90,7 +85,7 @@ selamVer6 = null;
 
 hosGeldin6(); //Artık selamVer6 çağırılamaz.
 
-/* Bunun olmasının nedeni fonksiyonun selamVer'i dış ortamdan alıyor olmasıdır. Yerel bir selamVer bulunmadığından dıştaki değişken kullanılmaktadır. O anda da dışta bulunan selamVer null'dur.
+/* Bunun olmasının nedeni fonksiyonun selamVer'i dış ortamdan alıyor olmasıdır. Yerel bir selamVer bulunmadığından dıştaki değişken kullanılmaktadır. O anda da dışta bulunan selamVer6 null'dur.
 
 Opsiyonel olarak konulan isim tam olarak Fonksiyon İfadesinin bu problemini çözer.
 
@@ -116,7 +111,7 @@ hosGeldin7(); // Selam, Misafir (iç çağrı çalışır)
 
 /* Şimdi çalışır, bunun nedeni "func"'in lokal fonksiyon olmasındandır. Dışarıdan alınmaz ( dışarıdan görünmez de ). Bu şekilde yazıldığında var olan fonksiyonu referans vereceği garantidir.
 
-Dışta bulunan kod hala selamVer veya hosGeldin değişkenlerine sahiptir. Dıştaki değişkenlere bir şey olsa bile func“iç fonksiyon ismi”'dir. Kendisini gizli biçimde çağırabilir. */
+Dışta bulunan kod hala selamVer7 veya hosGeldin7 değişkenlerine sahiptir. Dıştaki değişkenlere bir şey olsa bile func“iç fonksiyon ismi”'dir. Kendisini gizli biçimde çağırabilir. */
 
 
 /* -> Fonksiyon Tanımı diye bir şey yoktur.
