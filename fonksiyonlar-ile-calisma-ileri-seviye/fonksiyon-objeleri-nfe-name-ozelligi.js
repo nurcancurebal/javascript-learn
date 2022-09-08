@@ -12,27 +12,27 @@ Fonksiyon objelerinin kullanışlı özellikleri bulunmaktadır.
 
 Örneğin, fonksiyonun ismi “name” özelliği ile alınabilir. */
 
-function selamVer() {
+function selamVer1() {
 
   console.log("Selam");
 }
 
-console.log(selamVer.name); // selamVer
+console.log(selamVer1.name); // selamVer1
 
 // “name” özelliği atama o kadar akıllıdır ki, fonksiyon tanımlama ifadelerindeki ismi bile doğru alır.
 
-let selamVer = function () {
+let selamVer2 = function () {
 
   console.log("Selam");
 }
 
-console.log(selamVer.name); // selamVer
+console.log(selamVer2.name); // selamVer2
 
 // Hatta atama varsayılan değer ile yapıldığında bile çalışır:
 
-function f(selamVer = function () { }) {
+function f(selamVer3 = function () { }) {
 
-  console.log(selamVer.name); // selamVer (çalıştı!)
+  console.log(selamVer3.name); // selamVer3
 }
 
 f();
@@ -56,7 +56,7 @@ let kullanici = {
 console.log(kullanici.selamVer.name); // selamVer
 console.log(kullanici.yolcuEt.name); // yolcuEt
 
-/* Burada bir sihir yoktur. İsmin çıkarılamadığı birçok durum meydana gelebilir.
+/* İsmin çıkarılamadığı birçok durum meydana gelebilir.
 
 Böyle durumlarda aşağıdaki gibi boş dönerler: */
 
@@ -65,4 +65,3 @@ let arr = [function () { }];
 
 console.log(arr[0].name); // <boş>
 // motorun doğru ismi bulmasına imkan yok bundan dolayı boş dönüyor.
-// Pratikte çoğu fonksiyonun ismi bulunmaktadır.
