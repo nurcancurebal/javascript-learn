@@ -107,7 +107,7 @@ count3(); // 4685ms de tamamlandı 3
 /* -> Browserdaki iç içe zamanlayıcıların arasında bulunan minimum gecikmeler
 Tarayıcıda, iç içe zamanlayıcıların kullanımına ait bir limit bulunmaktadır. HTML5 standard dediğine göre: “5 iç içe zamanlayıcıdan sonra, döngü en az 4 ms durmak zorundadır.”
 
-Bunu aşağıdaki bulunan örnekte gösterelim. setTimeout çağrısı kendisini 0ms sonra tekrarn çağırıyor. Her bir çağrı bir öncekinin zamanını times dizisinden hatırlıyor. Gecikme nasıl olacak bakalım: */
+Bunu aşağıdaki bulunan örnekte gösterelim. setTimeout çağrısı kendisini 0ms sonra tekrar çağırıyor. Her bir çağrı bir öncekinin zamanını times dizisinden hatırlıyor. Gecikme nasıl olacak bakalım: */
 
 let start4 = Date.now();
 let times = [];
@@ -129,3 +129,5 @@ setTimeout(function run() {
 Bu limitasyonların nedeni de yine eski zamanlara dayanmaktadır. Çoğu kod bu prensibe göre çalıştığından dolayı bu kurallar devam etmektedir.
 
 Sunucu tabanlı JavaScript için ise bu kısıtlama geçerli değildir. Ayrıca anlık olarak asenkronron işlerin zamanlaması amacıyla başka yollar da bulunmaktadır. Örneğin process.nextTick ve setImmediate gibi. Yani buradaki kısıtlamanın tarayıcı bazlı olduğu sonucunu çıkarabilirsiniz. */
+
+// TODO hiç bir şey anlamadım
