@@ -1,13 +1,12 @@
 /* -> "new Function" yazımı
-Çok az kullanılsa da bir çeşit daha fonksiyon yaratma şekli vardır. Çok az kullanılsa da bazen alternatifsizdirler. */
+Çok az kullanılsa da bazen alternatifsizdirler. */
 
 /* -> Yazım
 Fonksiyon yaratmak için: */
 
 let func1 = new Function('a', 'b', 'return a + b');
 
-// new Function'ın tüm argümanları karakter dizisidir. Parametreler önce, çalışacak kodun içeriği en son olarak yazılır.
-
+// new Function'ın tüm argümanları karakter dizisidir. Önce parametreler, en son olarak çalışacak kodun içeriği yazılır.
 
 let sum = new Function('arg1', 'arg2', 'return arg1 + arg2');
 
@@ -23,13 +22,17 @@ selamVer(); // Selam
 
 Diğer tüm tanımlamalar programcıların kod yazmasını gerektirir.
 
-Fakat new Function herhangi bir metini fonksiyona çevirebilir. Örneğin sunucudan metin olarak bir fonksiyon alıp bunu çalıştırmak mümkündür. */
+! Fakat new Function herhangi bir metini fonksiyona çevirebilir. Örneğin sunucudan metin olarak bir fonksiyon alıp bunu çalıştırmak mümkündür. */
 
-let str //= ... Serverdan dinamik olarak gelen metin...
+let str = 'serverdan_dinamik_olarak_gelen_metin';
 
-let func2 = new Function(str);
+let func2 = new Function(console.log(str));
 
 func2();
+// aşağıdakiler yaratılır
+// (function anonymous() { undefined })
+// length: 0 (yani argüman yok demek)
+// name: 'anonymouns'
 
 /* Tabi bunlar çok özel haller, örneğin sunucudan bir metini alıp çalıştırmak, veya temadan dinamik olarak derleme. Bunun gibi ihtiyaçlar genelde geliştirmenin ileriki safhalarında karşılaşılır. */
 
@@ -65,7 +68,7 @@ FonkAl()(); // test, test  --> "test", FonkAl'ın sözcüksel ortamından.
 
 /* new Function özelliği biraz garip dursa da çok kullanışlı ve pratiktir.
 
-Düşününkü gerçekten de karakter dizisinden fonksiyon yaratmanız gerekti. O fonksiyonun ne olduğu hangi kodları kapsadığı baştan belli olmayacaktı ( bundan dolayı normal fonksiyonlar kullanılamaz ), fakat çalışma anında fonksiyon yaratılacak. Bu fonksiyon sunucudan veya diğer bir kaynaktan alınabilir.
+Düşününkü gerçekten de karakter dizisinden fonksiyon yaratmanız gerekti. O fonksiyonun ne olduğu hangi kodları kapsadığı baştan belli olmayacaktı ( bundan dolayı normal fonksiyonlar kullanılamaz ), fakat çalışma anında fonksiyon yaratılacak.
 
 Yeni fonksiyon ana kod akışı ile etkileşime geçme ihtiyacında olabilir.
 
