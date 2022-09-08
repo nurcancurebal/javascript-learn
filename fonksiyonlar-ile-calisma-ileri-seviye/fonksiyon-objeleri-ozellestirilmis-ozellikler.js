@@ -64,5 +64,6 @@ let counter3 = makeCounter3();
 counter3.count3 = 10;
 
 console.log(counter3()); // 10
+console.log(counter3()); // 11
 
 // Bundan dolayı asıl önemli olan sizin hangi şekilde kullanmak istediğiniz.
