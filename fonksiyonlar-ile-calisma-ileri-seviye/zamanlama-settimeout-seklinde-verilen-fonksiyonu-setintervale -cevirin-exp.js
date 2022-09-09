@@ -17,7 +17,6 @@ function count() {
         setTimeout(count, 0);
     }
 
-    // zorlu bir görev
     for (let j = 0; j < 1000000; j++) {
 
         i++;
