@@ -8,14 +8,14 @@ let worker1 = {
 
     someMethod() {
 
-        return 1;
+        return 3;
     },
 
     slow(x) {
 
         console.log("Called with " + x); // Called with 1, Called with 2
 
-        return x * this.someMethod(); // (*)
+        return x * this.someMethod(); // (*) ilkinde sonuç 3 yani slow(x) in sonucu 3,
     }
 };
 
@@ -31,27 +31,27 @@ function cachingDecorator(func) { // func slow(x) ten alır değerini
             return cache.get(x); // x i getir
         }
 
-        let result = func(x); // (**) // TODO func? nedir nereden geldi? nereden çekiyor? fonksiyon olarak x i kaydet mi demek?
+        let result = func(x); // (**), buradaki func: f slow(x){}
 
-        cache.set(x, result); // cache in içine ekle, key value şeklinde
+        cache.set(x, result); // cache in içine ekle, key value şeklinde, '1' => '3' şeklinde ekleyecek
 
         return result;
     };
 }
 
-console.log(worker1.slow(1)); // 1,  orjinal metod çalışmakta
+console.log(worker1.slow(1)); // 3,  orjinal metod çalışmakta
 
 worker1.slow = cachingDecorator(worker1.slow); // şimdi saklamaya alındı.(cachingDecorator paremetresi olarak worker1 in içindeki slow fonksyonunun çıktısını gönderiyoruz sonucu worker1 in içindeki slow fonksiyonuna atıyoruz)
 
-console.log(worker1.slow(2)); // 2, Whoops! Error: Özellik okunamamaktadır. `someMethod` tanımsız.
+//------------console.log(worker1.slow(2)); // 2, Whoops! Error: Özellik okunamamaktadır. `someMethod` tanımsız.
 
 /* (*) satırında hata olur this.someMethod'a erişmeye çalışır fakat başırılı olamaz.
 
 Sebebi (**) satırında orjinal func(x) çağırılmıştır. Bu şekilde çağırıldığında, fonksiyon this = undefined alır.
 Aşağıdaki kod çalıştırılırsa da aynısı görülebilir: */
 
-let func = worker1.slow;
-func(2);
+/* -----------let func = worker1.slow;
+func(2); */
 
 /* Saklayıcı çağrıyı gerçek çalışacak metoda gönderir. Fakat this olmadığından dolayı hata alır.
 
@@ -61,20 +61,20 @@ Bunu düzeltmek için.
 
 Yazımı aşağıdaki gibidir: */
 
-func.call(context, arg1, arg2/*, ...*/)
+//--------------func.call(context, arg1, arg2/*, ...*/)
 
 /* İlk argüman this'dir diğerleri ise fonksiyon için gerekli argümanlardır.
 
 Kullanımı şu şekildedir: */
 
-func(1, 2, 3);
-func.call(obj, 1, 2, 3)
+/*--------------- func(1, 2, 3);
+func.call(obj, 1, 2, 3) */
 
 /* Her ikisi de aslında func fonksiyonlarını 1, 2, 3 argümanları ile çağırır tek fark func.call fonksiyonunda this de gönderilir.
 
 Örneğin, aşağıdaki kod sayHi metodunu iki farklı objeye değer atayarak çağırır. Birinci satırda this=user1 ikinci satırda ise this=admin değeri atanarak bu çağrı gerçekleştirilir. */
 
-function sayHi() {
+/*------------ function sayHi() {
 
     console.log(this.name);
 }
@@ -136,7 +136,7 @@ function cachingDecorator(func) {
 worker.slow = cachingDecorator(worker.slow); // şimdi önbelleğe alma
 
 console.log(worker.slow(2)); // 2, çalışır
-console.log(worker.slow(2)); // 2, orjinali değilde hafızadaki çalışır.
+console.log(worker.slow(2));  */// 2, orjinali değilde hafızadaki çalışır.
 
 /* Şimdi her şey beklendiği gibi çalışıyor.
 

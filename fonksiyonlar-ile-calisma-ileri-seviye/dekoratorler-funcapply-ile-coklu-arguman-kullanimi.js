@@ -11,7 +11,7 @@ let worker = {
 // aynı argüman ile çağırılmalıdır.
 worker.slow = cachingDecorator(worker.slow);
 
-/* min ve max değerlerinin bu bellek haritasında anahtar olarak nasıl tutulacak?. Önceki konuda tek x argümanı için cache.set(x,result) şeklinde sonucu belleğe kaydetmiş ve sonra cache.get(x) şeklinde almıştık. Fakat şimdi sonucu argümanların birleşimi şeklinde hatırlamak gerekmektedir. Normalde Map anahtarı tek değer olarak almaktadır.
+/* Birinci görev min ve max değerlerinin bu bellek haritasında anahtar olarak nasıl tutulacak?. Önceki konuda tek x argümanı için cache.set(x,result) şeklinde sonucu belleğe kaydetmiş ve sonra cache.get(x) şeklinde almıştık. Fakat şimdi sonucu argümanların birleşimi şeklinde hatırlamak gerekmektedir. Normalde Map anahtarı tek değer olarak almaktadır.
 
 Bu sorunun çözümü için bazı çözümler şu şekildedir:
 
@@ -24,7 +24,7 @@ Bu sorunun çözümü için bazı çözümler şu şekildedir:
 
 Burada kullanılacak diğer metod func.apply’dır. */
 
-// ----func.apply(context, args)
+func.apply(context, args)
 
 /* Bu func'ı this=context ve args için dizi benzeri bir argüman dizisi ile çalıştırır.
 
@@ -33,7 +33,7 @@ Burada kullanılacak diğer metod func.apply’dır. */
 func(1, 2, 3);
 func.apply(context, [1, 2, 3])
 
-// Her ikisi de func'ı 1,2,3argümanları ile çalıştırır. Fakat apply ayrıca this=context'i ayarlar.
+// Her ikisi de func'ı 1,2,3 argümanları ile çalıştırır. Fakat apply ayrıca this=context'i ayarlar.
 
 function say(time, phrase) {
 
@@ -42,14 +42,15 @@ function say(time, phrase) {
 
 let user = { name: "John" };
 
-let messageData = ['10:00', 'Hello']; // time, phrase'e dönüşür.
+let messageData = ['10:00', 'Hello']; // time, phrase
 
 // this = user olur , messageData liste olarak (time,phrase) şeklinde gönderilir.
+
 say.apply(user, messageData); // [10:00] John: Hello (this=user)
 
 /* call argüman listesi beklerken apply dizi benzeri bir obje ile onları alır.
 
-Yayma operatörü Gerisi parametreleri ve yayma operatörleri konusunda ... yayma operatörünün ne iş yaptığını işlemiştik. Dizilerin argüman listesi şeklinde gönderilebileceğinden bahsemiştik. Öyleyse call ile bunu kullanırsak neredeyse apply'ın işlevini görebiliriz.
+Yayma operatörünün ne iş yaptığını işlemiştik. Dizilerin argüman listesi şeklinde gönderilebileceğinden bahsemiştik. Öyleyse call ile bunu kullanırsak neredeyse apply'ın işlevini görebiliriz.
 
 Aşağıdaki iki çağrı birbirinin aynısıdır: */
 
@@ -78,7 +79,7 @@ let wrapper = function () {
 
 Böyle bir saklayıcı kod çağırıldığında içerideki orjinal fonksiyon çağıran tarafından ayrıştırılamaz.
 
-Şimdi bunları daha güçlü cachingDecoratır'da işleyelim: */
+Şimdi bunları daha güçlü cachingDecorator'da işleyelim: */
 
 let worker2 = {
 
@@ -96,16 +97,16 @@ function cachingDecorator(func, hash) {
 
     return function () {
 
-        let key = hash(arguments); // (*)
+        let key = hash(arguments); // (*) hash(arguments)= clg(worker2.slow(3,5))
 
         if (cache.has(key)) {
 
             return cache.get(key);
         }
 
-        let result = func.apply(this, arguments); // (**)
+        let result = func.apply(this, arguments); // (**) (this: {slow:f}= bunu func ın içinden aldı, func: slow(min,max)). Burayı okuduktan sonra slow fonksiyonunu yapmaya gidiyor
 
-        cache.set(key, result);
+        cache.set(key, result); // key: '3,5', result: 8
 
         return result;
     };
@@ -113,13 +114,13 @@ function cachingDecorator(func, hash) {
 
 function hash(args) {
 
-    return args[0] + ',' + args[1];
+    return args[0] + ',' + args[1]; // return: '3,5'
 }
 
 worker2.slow = cachingDecorator(worker2.slow, hash);
 
-console.log(worker2.slow(3, 5)); // 8, works
-console.log("Again " + worker2.slow(3, 5)); // Again 8,  same (cached)
+console.log(worker2.slow(3, 5)); // 8
+console.log("Again " + worker2.slow(3, 5)); // Again 8
 
 /* Şimdi saklayıcı(wrapper) birçok argüman ile çalışabilir.
 
