@@ -1,5 +1,5 @@
 /* -> Kaynak için “func.all” kullanmak.
-Yukarıda bahsettiğimiz saklama dekoratörü obje metodları ile çalışmak için müsait değildir.
+Saklama dekoratörü obje metodları ile çalışmak için müsait değildir.
 
 Örneğin aşağıdaki kodda user.format() dekorasyondan sonra çalışmayı durdurur: */
 
@@ -20,20 +20,20 @@ let worker1 = {
 };
 
 // eskisiyle aynı kod
-function cachingDecorator(func) {
+function cachingDecorator(func) { // funck slow(x) ten alır değerini
 
     let cache = new Map();
 
     return function (x) {
 
-        if (cache.has(x)) {
+        if (cache.has(x)) { // cache içinde x varsa true döner
 
-            return cache.get(x);
+            return cache.get(x); // x i getir
         }
 
         let result = func(x); // (**)
 
-        cache.set(x, result);
+        cache.set(x, result); // cache in içine ekle, key value şeklinde
 
         return result;
     };
@@ -41,7 +41,7 @@ function cachingDecorator(func) {
 
 console.log(worker1.slow(1)); // 1,  orjinal metod çalışmakta
 
-worker1.slow = cachingDecorator(worker1.slow); // şimdi saklamaya alındı. // TODO burada nasıl bir işlem var
+worker1.slow = cachingDecorator(worker1.slow); // şimdi saklamaya alındı.(cachingDecorator paremetresi olarak worker1 in içindeki slow fonksyonunun çıktısını gönderiyoruz sonucu worker1 in içindeki slow fonksiyonuna atıyoruz)
 
 console.log(worker1.slow(2)); // 2, Whoops! Error: Özellik okunamamaktadır. `someMethod` tanımsız.
 
@@ -71,9 +71,9 @@ Kullanımı şu şekildedir: */
 func(1, 2, 3);
 func.call(obj, 1, 2, 3)
 
-/* Her ikisi de aslında func fonksiyonlarını 1, 2, 3 argümanları ile çağırır tek fark func.call fonksiyonunda thisde gönderilir.
+/* Her ikisi de aslında func fonksiyonlarını 1, 2, 3 argümanları ile çağırır tek fark func.call fonksiyonunda this de gönderilir.
 
-Örneğin, aşağıdaki kod sayHi metodunu iki farklı objeye değer atayarak çağırır. Birinci satırda this=user ikinci satırda ise this=admin değeri atanarak bu çağrı gerçekleştirilir. */
+Örneğin, aşağıdaki kod sayHi metodunu iki farklı objeye değer atayarak çağırır. Birinci satırda this=user1 ikinci satırda ise this=admin değeri atanarak bu çağrı gerçekleştirilir. */
 
 function sayHi() {
 
@@ -147,5 +147,3 @@ Daha açıklayıcı olması için this'in nasıl ilerlediğini inceleyebiliriz:
 1. Dekorasyon işleminden sonra worker.slow artık function(x){ ...} halini almıştır.
 2. Öyleyse worker.slow(2) çalıştırıldığında saklayıcı 2 ve this=worker ( noktadan önceki obje ) argümanlarını alır.
 3. Saklayıcı(wrapper) içinde sonucun henüz belleğe alınmadığını varsayarsak func.call(this,x) o anki this (=worker) ve (’=2`) değerini orjinal metoda gönderir. */
-
-// TODO bu sayfayı çalış
