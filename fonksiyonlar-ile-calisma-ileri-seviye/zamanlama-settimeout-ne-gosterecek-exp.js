@@ -21,16 +21,16 @@ for(let j = 0; j < 100000000; j++) {
 
 çözüm */
 
-/* setTimeout'ların hepsi o anda çalışan kod bittikten sonra başlar. // TODO yani bu kod bittikten sonra settime out için 100 ms daha beklettikten sonra i değişkenini ekrana yazacak mı demek?
+/* setTimeout'ların hepsi o anda çalışan kod bittikten sonra başlar.
 
 i en son 100000000 olacaktır. */
 
 let i = 0;
 
-setTimeout(() => console.log(i), 100); // 100000000
+setTimeout(() => console.log(i), 100); // 100000000, her türlü i değerini 100 ms olunca verir
 
 // bu fonksiyonu çalışma zamanı >100 ms varsayın.
-for (let j = 0; j < 100000000; j++) {
+for (let j = 0; j < 100000000; j++) { //senkron yapı
 
   i++;
 }
