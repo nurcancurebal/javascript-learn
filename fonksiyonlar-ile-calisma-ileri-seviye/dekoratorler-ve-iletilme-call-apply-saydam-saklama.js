@@ -12,20 +12,21 @@ Fakat bunu slow() fonksiyonunun içine yazmak yerine yeni bir wrapper yazmak dah
 function slow(x) {
 
     // burada baya yoğun işlemci gücüne ihtiyaç duyan işler yapılmaktadır.
+
     console.log(`${x} ile çağırıldı`); // 1 ile çağırıldı, 2 ile çağırıldı
 
     return x;
 }
 
-function cachingDecorator(func) {
+function cachingDecorator(func) { // parametre olarak slow fonksiyonunun çıktısı yani x i alıyor
 
     let cache = new Map();
 
-    return function (x) { // TODO x i slow fonksiyonunun çıktısından mı alıyor?
+    return function (x) {
 
         if (cache.has(x)) { // eğer x map içerisinde ise
 
-            return cache.get(x); // değeri gönder(cache in içindeki x in valuesunu çağırma)
+            return cache.get(x); // cache in içindeki x in valuesunu çağırma
         }
 
         let result = func(x); // aksi halde hesap yap
@@ -36,7 +37,7 @@ function cachingDecorator(func) {
     };
 }
 
-slow = cachingDecorator(slow);
+slow = cachingDecorator(slow); // TODO burada slowa eşitleme işlemi neden yapıldı ne işe yaradı?
 
 console.log(slow(1)); //1, slow(1) saklandı
 console.log("Tekrar: " + slow(1)); // Tekrar: 1
@@ -44,7 +45,7 @@ console.log("Tekrar: " + slow(1)); // Tekrar: 1
 console.log(slow(2)); // 2, slow(2) saklandı (new map in içerisinde 1 => 1 değeri var, yukarıda ekledik)
 console.log("Tekrar: " + slow(2)); //Tekrar: 2
 
-/* Yuarkıdaki kodda cachingDecorator bir dekoratör’dür: Diğer bir fonksiyonu alan ve bunun davranışını değiştiren özel bir fonksiyon. // TODO burayı kodda gösterir misin?
+/* Yukarıdaki kodda cachingDecorator bir dekoratör’dür: Diğer bir fonksiyonu alan ve bunun davranışını değiştiren özel bir fonksiyon. // TODO burayı kodda gösterir misin?
 
 Aslında her bir fonksiyon için cachingDecorator çağrılabilir ve o da saklama mekanizmasını kullanır. Harika, bu şekilde ihtiyacı olacak birçok fonksiyonumuz olabilir. Tek yapmamız gereken bu fonksiyonlara cachingDecorator uygulamak.
 

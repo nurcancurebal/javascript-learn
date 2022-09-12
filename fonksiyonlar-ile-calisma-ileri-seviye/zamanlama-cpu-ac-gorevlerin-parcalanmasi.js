@@ -9,7 +9,7 @@ Daha basit bir örnekten anlatmaya çalışırsak. Bir fonksiyonunuz olsun ve 1'
 
 Eğer kodu çalıştırırsanız işlemci tepki vermemeye başlar. Sunucu tabanlı JS kodlarında bu kolay bir şekilde fark edilebilir fakat eğer bu kodu tarayıcı üzerinde çalıştırıyorsanız diğer butonlara tıkladığınızda JavaScript’in durduğunu ve bunun bitene kadar da başka bir şeyin çalışmadığını görürsünüz. */
 
-/* let i1 = 0;
+let i1 = 0;
 
 let start1 = Date.now();
 
@@ -23,7 +23,7 @@ function count1() {
     console.log((Date.now() - start1) + 'ms de tamamlandı 1');
 }
 
-count1(); // 1749ms de tamamlandı 1 */
+count1(); // 1749ms de tamamlandı 1
 
 /* Hatta tarayıcı “bu kodun çalışması uzun zaman alıyor” uyarısı verebilir.
 
@@ -38,9 +38,9 @@ function count2() {
     // zorlu görevin bir bölümünü yap (*)
     do {
 
-        i2++; // TODO neden sürekli artıyor kalan sıfır değilse arttırması gerekmiyor mu?
+        i2++;
 
-    } while (i2 % 1e6 != 0); // true olduğu sürece i2 yi arttırır(kalan sıfır değilse true verecek i2 yi arttıracak)
+    } while (i2 % 1e6 != 0); // kalan sıfır değilse true verecek i2 yi arttıracak, 1 % 1000000 = 0,000001 
 
     if (i2 == 1e9) {
 
@@ -60,7 +60,7 @@ count2(); // 4749ms de tamamlandı 2
 
 1. İlk çalışma: i=1...1000000..
 2. ikinci çalışma: i=1000001..2000000
-3. … bu şekilde while i nin 100000'e bölünüp bölünmediğine kadar.
+3. … bu şekilde while i nin 1000000'e bölünüp bölünmediğine kadar.
 
 Eğer işlem hala bitmemişse (**) zamanlayıcısı tekrar çalışır.
 
@@ -72,14 +72,14 @@ Bu süreleri daha da yakınlaştırabilmek için neler yapılabilir bakalım.
 
 Zamanlamayı count() fonksiyonunun başına alalım: */
 
-/* let i3 = 0;
+let i3 = 0;
 
 let start3 = Date.now();
 
 function count3() {
 
     // zamanlama başa taşındı
-    if (i3 < 1e9 - 1e6) {
+    if (i3 < 1e9 - 1e6) { // i3 < 999,000000(6 sıfır), en son 1e9 gelir buda 1e9 < 1e9 - 1e6 yanlıştır if ten çıkar
 
         setTimeout(count3, 0); // yeni çağrıyı zamanla
     }
@@ -88,7 +88,7 @@ function count3() {
 
         i3++;
 
-    } while (i3 % 1e6 != 0);
+    } while (i3 % 1e6 != 0); // i3 1000000 olunca bu döngü durur, sonra 2000000, ... olunca döngüden çıkar 1e9 a kadar
 
     if (i3 == 1e9) {
 
@@ -96,9 +96,9 @@ function count3() {
     }
 }
 
-count3(); // 4749ms de tamamlandı 2 */
+count3(); // 4749ms de tamamlandı 2
 
-/* Şimdi ise count() ile başlıyoruz ve count fonksiyonunun birden fazla çağırılacağınız biliyoruz.
+/* Şimdi ise count() ile başlıyoruz ve count fonksiyonunun birden fazla çağırılacağını biliyoruz.
 
 Çalıştırırsanız belirgin biçimde daha kısa süreceğini göreceksiniz. */
 
@@ -108,7 +108,7 @@ Tarayıcıda, iç içe zamanlayıcıların kullanımına ait bir limit bulunmakt
 
 Bunu aşağıdaki bulunan örnekte gösterelim. setTimeout çağrısı kendisini 0ms sonra tekrar çağırıyor. Her bir çağrı bir öncekinin zamanını times dizisinden hatırlıyor. Gecikme nasıl olacak bakalım: */
 
-/* let start4 = Date.now();
+let start4 = Date.now();
 let times = [];
 
 setTimeout(function run() {
@@ -119,12 +119,11 @@ setTimeout(function run() {
 
     else setTimeout(run, 0); // değilse tekrar zamanla
 
-}, 0); */
+}, 0);
+// [ 1, 1, 1, 1, 9, 15, 20, 24, 30, 35, 40, 45, 50, 55, 59, 64, 70, 75, 80, 85, 90, 95, 100]
 
-// Çıktının örneği:
-// 1,1,1,1,9,15,20,24,30,35,40,45,50,55,59,64,70,75,80,85,90,95,100
 /* İlk zamanlayıcılar anında çalışacaktır ( dökümantasyonda yazdığı gibi ) bundan dosnra gecikmeler oyuna dahil olur. 9, 15, 20, 24...
 
 Bu limitasyonların nedeni de yine eski zamanlara dayanmaktadır. Çoğu kod bu prensibe göre çalıştığından dolayı bu kurallar devam etmektedir.
 
-Sunucu tabanlı JavaScript için ise bu kısıtlama geçerli değildir. Ayrıca anlık olarak asenkronron işlerin zamanlaması amacıyla başka yollar da bulunmaktadır. Örneğin process.nextTick ve setImmediate gibi. Yani buradaki kısıtlamanın tarayıcı bazlı olduğu sonucunu çıkarabilirsiniz. */
+Sunucu tabanlı JavaScript için ise bu kısıtlama geçerli değildir. Ayrıca anlık olarak asenkron işlerin zamanlaması amacıyla başka yollar da bulunmaktadır. Örneğin process.nextTick ve setImmediate gibi. Yani buradaki kısıtlamanın tarayıcı bazlı olduğu sonucunu çıkarabilirsiniz. */

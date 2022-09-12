@@ -40,7 +40,7 @@ let list2 = {
 
 function listeYaz1(list) {
 
-    let tmp = list; // TODO burada tmp ye ne gerek var?
+    let tmp = list; // burada list object tipinde olduğu için referans değişkendir // TODO tmp gereksiz mi?
 
     while (tmp) {
 
