@@ -1,5 +1,4 @@
-/* -> “func.apply” ile çoklu argüman kullanımı
-cachingDecorator daha evrensel yapmak için ne değişiklikler yapmalıdır? */
+/* -> “func.apply” ile çoklu argüman kullanımı */
 
 let worker = {
 
@@ -12,9 +11,7 @@ let worker = {
 // aynı argüman ile çağırılmalıdır.
 worker.slow = cachingDecorator(worker.slow);
 
-/* Burada çözmemiz gereken iki problem bul
-
-İlki min ve max değerlerinin bu bellek haritasında anahtar olarak nasıl tutulacağı. Önceki konuda tek x argümanı için cache.set(x,result) şeklinde sonucu belleğe kaydetmiş ve sonra cache.get(x) şeklinde almıştık. Fakat şimdi sonucu argümanların birleşimi şeklinde hatırlamak gerekmektedir. Normalde Map anahtarı tek değer olarak almaktadır.
+/* min ve max değerlerinin bu bellek haritasında anahtar olarak nasıl tutulacak?. Önceki konuda tek x argümanı için cache.set(x,result) şeklinde sonucu belleğe kaydetmiş ve sonra cache.get(x) şeklinde almıştık. Fakat şimdi sonucu argümanların birleşimi şeklinde hatırlamak gerekmektedir. Normalde Map anahtarı tek değer olarak almaktadır.
 
 Bu sorunun çözümü için bazı çözümler şu şekildedir:
 
@@ -33,8 +30,8 @@ Burada kullanılacak diğer metod func.apply’dır. */
 
 Örneğin aşağıdaki iki çağrı tamamen aynıdır. */
 
-/* ------func(1, 2, 3);
-func.apply(context, [1, 2, 3]) */
+func(1, 2, 3);
+func.apply(context, [1, 2, 3])
 
 // Her ikisi de func'ı 1,2,3argümanları ile çalıştırır. Fakat apply ayrıca this=context'i ayarlar.
 
@@ -56,10 +53,10 @@ Yayma operatörü Gerisi parametreleri ve yayma operatörleri konusunda ... yaym
 
 Aşağıdaki iki çağrı birbirinin aynısıdır: */
 
-/* ---let args = [1, 2, 3];
+let args = [1, 2, 3];
 
 func.call(context, ...args); // dizileri yayma operatörü ile liste şeklinde gönderir.
-func.apply(context, args);   // aynısını apply ile yapar. */
+func.apply(context, args);   // aynısını apply ile yapar.
 
 /* İşleme daha yakından bakılacak olursa call ile apply arasında oldukça küçük bir fark vardır.
 
@@ -129,4 +126,4 @@ console.log("Again " + worker2.slow(3, 5)); // Again 8,  same (cached)
 İki tane değişiklik oldu:
 
 . (*) satırında bir has ile argümanlardan tek bir anahtar meydana getirildi. Bunun için basit “birleştirme” fonksiyonu kullanılmıştır. (3,5) "3,5" şekline getirildi. Tabi başka hash fonksiyonları için daha karmaşık bir yapı gerekebilir.
-. (**) satırında ise func.apply ile hem kaynak ( this ) hem de saklayıcı argümanları (ne kadar olduğu önemli değil) orjinal fonksiyona iletilmiştir. *///TODO ÇALIŞ
+. (**) satırında ise func.apply ile hem kaynak ( this ) hem de saklayıcı argümanları (ne kadar olduğu önemli değil) orjinal fonksiyona iletilmiştir. */

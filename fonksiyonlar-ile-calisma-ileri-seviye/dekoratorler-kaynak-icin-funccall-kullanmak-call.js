@@ -20,7 +20,7 @@ let worker1 = {
 };
 
 // eskisiyle aynı kod
-function cachingDecorator(func) { // funck slow(x) ten alır değerini
+function cachingDecorator(func) { // func slow(x) ten alır değerini
 
     let cache = new Map();
 
@@ -31,7 +31,7 @@ function cachingDecorator(func) { // funck slow(x) ten alır değerini
             return cache.get(x); // x i getir
         }
 
-        let result = func(x); // (**)
+        let result = func(x); // (**) // TODO func? nedir nereden geldi? nereden çekiyor? fonksiyon olarak x i kaydet mi demek?
 
         cache.set(x, result); // cache in içine ekle, key value şeklinde
 
@@ -47,8 +47,7 @@ console.log(worker1.slow(2)); // 2, Whoops! Error: Özellik okunamamaktadır. `s
 
 /* (*) satırında hata olur this.someMethod'a erişmeye çalışır fakat başırılı olamaz.
 
-Sebebi (**) satırında orjinal func(x) çağırılmıştır. Bu şekilde çağırıldığında, fonksiyon this = undefined alır. // TODO anlamadım
-
+Sebebi (**) satırında orjinal func(x) çağırılmıştır. Bu şekilde çağırıldığında, fonksiyon this = undefined alır.
 Aşağıdaki kod çalıştırılırsa da aynısı görülebilir: */
 
 let func = worker1.slow;
@@ -87,7 +86,6 @@ let admin = { name: "Admin" };
 sayHi.call(user1); // John
 sayHi.call(admin); // Admin
 
-// Burada say metodunu çağırarak ne söyleneceğini gönderiyoruz:
 
 function say(phrase) {
 
@@ -127,7 +125,7 @@ function cachingDecorator(func) {
             return cache.get(x);
         }
 
-        let result = func.call(this, x); // "this" is passed correctly now
+        let result = func.call(this, x);
 
         cache.set(x, result);
 
@@ -135,7 +133,7 @@ function cachingDecorator(func) {
     };
 }
 
-worker.slow = cachingDecorator(worker.slow); // now make it caching
+worker.slow = cachingDecorator(worker.slow); // şimdi önbelleğe alma
 
 console.log(worker.slow(2)); // 2, çalışır
 console.log(worker.slow(2)); // 2, orjinali değilde hafızadaki çalışır.

@@ -37,7 +37,7 @@ function cachingDecorator(func) { // parametre olarak slow fonksiyonunun çıkt�
     };
 }
 
-slow = cachingDecorator(slow); // TODO burada slowa eşitleme işlemi neden yapıldı ne işe yaradı?
+slow = cachingDecorator(slow); // burada saklama işlemi yapılıyor (***)
 
 console.log(slow(1)); //1, slow(1) saklandı
 console.log("Tekrar: " + slow(1)); // Tekrar: 1
@@ -45,7 +45,7 @@ console.log("Tekrar: " + slow(1)); // Tekrar: 1
 console.log(slow(2)); // 2, slow(2) saklandı (new map in içerisinde 1 => 1 değeri var, yukarıda ekledik)
 console.log("Tekrar: " + slow(2)); //Tekrar: 2
 
-/* Yukarıdaki kodda cachingDecorator bir dekoratör’dür: Diğer bir fonksiyonu alan ve bunun davranışını değiştiren özel bir fonksiyon. // TODO burayı kodda gösterir misin?
+/* Yukarıdaki kodda cachingDecorator bir dekoratör’dür: Diğer bir fonksiyonu alan ve bunun davranışını değiştiren özel bir fonksiyon.(***)
 
 Aslında her bir fonksiyon için cachingDecorator çağrılabilir ve o da saklama mekanizmasını kullanır. Harika, bu şekilde ihtiyacı olacak birçok fonksiyonumuz olabilir. Tek yapmamız gereken bu fonksiyonlara cachingDecorator uygulamak.
 
