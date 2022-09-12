@@ -7,13 +7,13 @@ Zamanlanmış fonksiyon ne zaman çalışacak ?
 Döngü bittikten sonra
 Döngüden önce
 Döngünün başında
-console.log ne gösterecek?
 
 let i = 0;
 
 setTimeout(() => console.log(i), 100); // ?
 
 bu fonksiyonu çalışma zamanı >100 ms varsayın.
+
 for(let j = 0; j < 100000000; j++) {
 
   i++;
@@ -32,5 +32,5 @@ setTimeout(() => console.log(i), 100); // 100000000
 // bu fonksiyonu çalışma zamanı >100 ms varsayın.
 for (let j = 0; j < 100000000; j++) {
 
-    i++;
+  i++;
 }

@@ -11,7 +11,7 @@ Kendini tekrar eden setTimeout kullanarak. */
 
 function printNumbers1(from, to) {
 
-    let current = from;
+    let current = from; // from number ilkel bir tip olduğu için kopyalayarak işlem yaptık from değişmedi yalnızca current değişti
 
     let timerId = setInterval(function () {
 
@@ -44,9 +44,9 @@ function printNumbers2(from, to) {
             setTimeout(go, 5000);
         }
 
-        current++; // TODO her seferinde burayı arttırdıktan sonra aşağıdaki 5 i okuyor mu?
+        current++; // currenti arttırıp 5 sn bekliyor
 
-    }, 5000); // TODO buradaki 5 sn ertelemesi 1 defa mı çalışıyor
+    }, 5000); // buradaki 5 sn ertelemesi 1 defa çalışıyor
 }
 
 printNumbers2(5, 10);
@@ -54,6 +54,8 @@ printNumbers2(5, 10);
 /* İki çözümde de ilk çıktı için bir gecikme söz konusudur. Bazen bir satır ekleyerek ilk çıktının hemen verilmesini sağlayabilirsiniz.
 
 Ayrıca fonksiyonun hemen çalışmasını istiyorsak, aşağıdaki gibi ayrı bir hatta ek bir çağrı ekleyebiliriz: */
+
+// ilk değişken için 5 sn beklemeden çalıştırmak için:
 
 function printNumbers3(from, to) {
 
@@ -71,7 +73,7 @@ function printNumbers3(from, to) {
         current++;
     }
 
-    go();
+    go(); // fonksiyonu 1 defa çalıştırıyor burada  ondan sonra aşağıdaki timerId ye bakıyor
 
     let timerId = setInterval(go, 5000);
 }

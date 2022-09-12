@@ -9,14 +9,13 @@ Daha basit bir örnekten anlatmaya çalışırsak. Bir fonksiyonunuz olsun ve 1'
 
 Eğer kodu çalıştırırsanız işlemci tepki vermemeye başlar. Sunucu tabanlı JS kodlarında bu kolay bir şekilde fark edilebilir fakat eğer bu kodu tarayıcı üzerinde çalıştırıyorsanız diğer butonlara tıkladığınızda JavaScript’in durduğunu ve bunun bitene kadar da başka bir şeyin çalışmadığını görürsünüz. */
 
-let i1 = 0;
+/* let i1 = 0;
 
 let start1 = Date.now();
 
 function count1() {
 
-    // yoğun bir iş
-    for (let j = 0; j < 1e9; j++) {
+    for (let j = 0; j < 1e9; j++) { // 1e9 = 1000000000 9 tane sıfır manasında (yoğun bir iş)
 
         i1++;
     }
@@ -24,9 +23,9 @@ function count1() {
     console.log((Date.now() - start1) + 'ms de tamamlandı 1');
 }
 
-count1(); // 1808ms de tamamlandı 1
+count1(); // 1749ms de tamamlandı 1 */
 
-/* Hatta taryıcı “bu kodun çalışması uzun zaman alıyor” uyarısı verebilir.
+/* Hatta tarayıcı “bu kodun çalışması uzun zaman alıyor” uyarısı verebilir.
 
 Kodu setTimeout ile bölecek olursak: */
 
@@ -39,9 +38,9 @@ function count2() {
     // zorlu görevin bir bölümünü yap (*)
     do {
 
-        i2++;
+        i2++; // TODO neden sürekli artıyor kalan sıfır değilse arttırması gerekmiyor mu?
 
-    } while (i2 % 1e6 != 0);
+    } while (i2 % 1e6 != 0); // true olduğu sürece i2 yi arttırır(kalan sıfır değilse true verecek i2 yi arttıracak)
 
     if (i2 == 1e9) {
 
@@ -53,7 +52,7 @@ function count2() {
     }
 }
 
-count2(); // 4685ms de tamamlandı 2
+count2(); // 4749ms de tamamlandı 2
 
 /* Şimdi tarayıcı ekranı “sayma işlemi” gerçekleşirken tamamen çalışır durumdadır.
 
@@ -73,7 +72,7 @@ Bu süreleri daha da yakınlaştırabilmek için neler yapılabilir bakalım.
 
 Zamanlamayı count() fonksiyonunun başına alalım: */
 
-let i3 = 0;
+/* let i3 = 0;
 
 let start3 = Date.now();
 
@@ -97,7 +96,7 @@ function count3() {
     }
 }
 
-count3(); // 4685ms de tamamlandı 3
+count3(); // 4749ms de tamamlandı 2 */
 
 /* Şimdi ise count() ile başlıyoruz ve count fonksiyonunun birden fazla çağırılacağınız biliyoruz.
 
@@ -109,7 +108,7 @@ Tarayıcıda, iç içe zamanlayıcıların kullanımına ait bir limit bulunmakt
 
 Bunu aşağıdaki bulunan örnekte gösterelim. setTimeout çağrısı kendisini 0ms sonra tekrar çağırıyor. Her bir çağrı bir öncekinin zamanını times dizisinden hatırlıyor. Gecikme nasıl olacak bakalım: */
 
-let start4 = Date.now();
+/* let start4 = Date.now();
 let times = [];
 
 setTimeout(function run() {
@@ -120,7 +119,7 @@ setTimeout(function run() {
 
     else setTimeout(run, 0); // değilse tekrar zamanla
 
-}, 0);
+}, 0); */
 
 // Çıktının örneği:
 // 1,1,1,1,9,15,20,24,30,35,40,45,50,55,59,64,70,75,80,85,90,95,100
@@ -129,5 +128,3 @@ setTimeout(function run() {
 Bu limitasyonların nedeni de yine eski zamanlara dayanmaktadır. Çoğu kod bu prensibe göre çalıştığından dolayı bu kurallar devam etmektedir.
 
 Sunucu tabanlı JavaScript için ise bu kısıtlama geçerli değildir. Ayrıca anlık olarak asenkronron işlerin zamanlaması amacıyla başka yollar da bulunmaktadır. Örneğin process.nextTick ve setImmediate gibi. Yani buradaki kısıtlamanın tarayıcı bazlı olduğu sonucunu çıkarabilirsiniz. */
-
-// TODO hiç bir şey anlamadım
