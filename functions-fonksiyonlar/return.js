@@ -25,3 +25,13 @@ if (yasKontrolu(yas)) {
 }
 
 // return değer döndürmek zorunda değildir. Bu fonksiyondan anında çıkmayı sağlar.
+
+function filmGoster(yas) {
+
+    if (!yasKontrolu(yas)) {
+
+        return;
+    }
+
+    console.log("Filmleri izleyebilirsin");
+}

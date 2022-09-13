@@ -1,6 +1,6 @@
 /* Kısma Dekoratörleri
 
-“Sıkma” dekoratörü throttle(f,ms) oluşturun ve bu bir kapsayıcı döndersin, bu kapsayıcı çağrıyı f'e iletsin ve bu çağrıyı belirtilen ms içerisinde sadece bir defa yapabilsin. Geri kalan “cooldown” periyodundakiler görmezden gelinsin.
+“Kısma” dekoratörü throttle(f,ms) oluşturun ve bu bir kapsayıcı döndersin, bu kapsayıcı çağrıyı f'e iletsin ve bu çağrıyı belirtilen ms içerisinde sadece bir defa yapabilsin. Geri kalan “cooldown” periyodundakiler görmezden gelinsin.
 
 ** Geri sektiren dekoratör ile Kısma dekoratörü arasındaki fark; görmezden gelinen çağrı eğer belirlenen süre zarfında yaşayabilirse, gecikme sonrasında çağırılır.
 
@@ -118,4 +118,5 @@ function throttle(func, ms) {
 
     return wrapper;
 }
+
 // TODO çalış
