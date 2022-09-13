@@ -1,10 +1,10 @@
 /* -> Fonksiyon bağlama
 Obje metodları ile setTimeout kullanıldığında veya obje metodları iletilirken, this'in kaybolması bilinen bir problemdir.
 
-Aniden, this kaybolur. Bu problem başlangıç seviyesi geliştiriciler için çok tipiktir, bazen deneyimli geliştiriceler de bu hataya düşerler.
-*/
+Aniden, this kaybolur. Bu problem başlangıç seviyesi geliştiriciler için çok tipiktir, bazen deneyimli geliştiriceler de bu hataya düşerler.*/
 
-/* -> “this”'in kaybetme
+
+/* -> “this”'i kaybetme
 JavaScript’te this in ne kadar kolay bir şekilde kaybolduğunu zaten biliyorsunuz. Eğer bir metod objeden farklı bir yere iletilirse this kaybolur.
 
 Bu setTimeout ile nasıl olur bakalım: */
@@ -23,13 +23,13 @@ setTimeout(user1.sayHi1, 1000);
 
 /* Gördüğünüz gibi, çıktı “John”'u göstermedi bunun yerine undefined döndü!
 
-Bunun nedeni setTimeout'un user1.sayHi fonksiyonunun objeden ayrı olmasıdır. Son satır şu şekilde yazılabilri: */
+Bunun nedeni setTimeout'un user1.sayHi1 fonksiyonunun objeden ayrı olmasıdır. Son satır şu şekilde yazılabilir: */
 
 let f1 = user1.sayHi1;
 
 setTimeout(f1, 1000); // lost kullanıcı kaynağı kayboldu
 
-/* Tarayıcıda setTimeout kullanımı biraz özeldir: this=window olarak ayarlanır. ( Node.JS için this timer objesi olur, fakat burada pek de önemli değil.) Öyleyse this.firstName bu değeri window.firstName'den almaya çalışır, fakat böyle bir şey yok. Buna benzer durumlarda siz de göreceksiniz this genelde undefined olur.
+/* Tarayıcıda setTimeout kullanımı biraz özeldir: this = window olarak ayarlanır. ( Node.JS için this timer objesi olur, fakat burada pek de önemli değil.) Öyleyse this.firstName bu değeri window.firstName'den almaya çalışır, fakat böyle bir şey yok. Buna benzer durumlarda siz de göreceksiniz this genelde undefined olur.
 
 Aslında yapmak istediğimiz çok basit obje metodunu çağrılan yere ( – ) iletmek istiyoruz ( burada – zamanlayıcıdır.) Bunun doğru kaynakta çağırıldığına nasıl emin olunabilir? */
 
@@ -54,7 +54,6 @@ setTimeout(function () {
 }, 1000);
 
 /* Çalışmasının nedeni user2'ı dış sözcük ortamından almasıdır, sonrasında metodu normal bir şekilde çalıştırır.
-
 Aynısı, fakat biraz daha kısa hali: */
 
 setTimeout(() => user2.sayHi2(), 1000);
@@ -75,10 +74,10 @@ let user3 = {
 
 setTimeout(() => user3.sayHi3(), 1000);
 
-// ...within 1 second
+// ...1 saniye içinde
 user3 = { sayHi3() { console.log("Another user3 in setTimeout!"); } }; // Another user3 in setTimeout!
 
-// Bir sonraki çözüm içe böyle bir şeyin olmasınıngeller. e
+// Bir sonraki çözüm böyle bir şeyin olmasını engeller.
 
 
 /* -> Çözüm 2: bağlama
@@ -86,14 +85,13 @@ Fonksiyonlar bind varsayılan fonksiyonu sağlarlar. Bu fonksiyon this'in sabitl
 
 Basitçe yazımı şu şekildedir: */
 
-// daha karmaşık yazımlarına ileride geleceğiz.
 // let boundFunc = func.bind(kaynak);
 
 /* func.bind(kaynak)'ın sonucu özel bir fonksiyon benzeri “egzotik obje”'dir. Fonksiyon gibi çağırılabilir ve saydam bir şekilde çağrıyı func'a this=kaynak olacak şekilde iletir.
 
 Diğer bir deyişle boundFunc aslında sabit this'e sahip func'dur.
 
-Örneğin burada funcUser çağrıyı func fonksiyonuna this=user4 olacak şekilde iletir. */
+Örneğin burada funcUser4 çağrıyı func4 fonksiyonuna this=user4 olacak şekilde iletir. */
 
 let user4 = {
 
@@ -126,7 +124,7 @@ function func5(phrase) {
 // this'i user5'a bağla.
 let funcUser5 = func5.bind(user5);
 
-funcUser5("Hello"); // ("Hello" iletildi ve this=user5 oldu)
+funcUser5("Hello");
 
 // Bunu obje metodu ile deneyecek olursak:
 
@@ -146,7 +144,7 @@ sayHi6();
 
 setTimeout(sayHi6, 1000);
 
-/* (*) satırında user6.sayHi metodunu aıyoruz ve user6'a bağlıyoruz. sayHi bu durumda bağlanmış fonksiyon oluyor. Böylece tek başına çağrılabilir veya setTimeout içerisinde çağrılabilir. Nereden çağırıldığı çok da önemli değidlir. Kaynağı her zaman doğru olacaktır.
+/* (*) satırında user6.sayHi6 metodunu aıyoruz ve user6'a bağlıyoruz. sayHi6 bu durumda bağlanmış fonksiyon oluyor. Böylece tek başına çağrılabilir veya setTimeout içerisinde çağrılabilir. Nereden çağırıldığı çok da önemli değidlir. Kaynağı her zaman doğru olacaktır.
 
 Gördüğünüz gibi tüm argümanlar “olduğu gibi” iletilir, sadece this bind tarafından sabitlenmiştir: */
 
@@ -162,12 +160,12 @@ let user7 = {
 
 let say7 = user7.say7.bind(user7);
 
-say7("Hello"); // ("Hello" `say` fonksiyonuna iletildi)
-say7("Bye"); // ("Bye" `say` fonksiyonuna iletildi.)
+say7("Hello");
+say7("Bye");
 
 
 /* -> Kullanışlı metod: bindAll
-Eğer bir objenin birçok metodu var ise bunu aktik olarak gerekli yerlere iletep, bunları bir döngü içerisine alabiliriz: */
+Eğer bir objenin birçok metodu var ise bunu aktif olarak gerekli yerlere iletip, bunları bir döngü içerisine alabiliriz: */
 
 for (let key in user7) {
 
