@@ -1,10 +1,10 @@
 /* Soru `this`'i kaybediyor.
 
-askPassword1() çağrısı şifreyi kontrol etmeli ve buna göre user.loginOk veya user.loginFail'i çağırmalıdır.
+askPassword1() çağrısı şifreyi kontrol etmeli ve buna göre user1.loginOk veya user1.loginFail'i çağırmalıdır.
 
 Fakat bu bir hataya neden oluyor. Neden?
 
-Sadece üstü çizili satırda değişiklik yaparak her şeyin doğru çalışmasını sağlayınız. ( diğer satırlarda değişiklik yapılmamalıdır) */
+Sadece (*) olan satırda değişiklik yaparak her şeyin doğru çalışmasını sağlayınız. */
 
 function askPassword1(ok, fail) {
 
@@ -30,7 +30,7 @@ let user1 = {
     },
 };
 
-askPassword1(user1.loginOk, user1.loginFail);
+askPassword1(user1.loginOk, user1.loginFail); // (*)
 
 /* Nedeni ask'ın loginOk/loginFail fonksiyonlarını obje olmadan almasıdır.
 
@@ -64,11 +64,8 @@ let user = {
 
 askPassword(user.loginOk.bind(user), user.loginFail.bind(user));
 
-/* Şimdi çalışacaktır.
+// Alternatif çözüm şu şekilde olabilir:
 
-Alternatif çözüm şu şekilde olabilir: */
-
-//...
 askPassword(() => user.loginOk(), () => user.loginFail());
 
 // Genelde bu da çalışır. Fakat daha karmaşık durumlarda user'ın soru ve () => user.loginOk() arasında üzerine yazılabilir.
