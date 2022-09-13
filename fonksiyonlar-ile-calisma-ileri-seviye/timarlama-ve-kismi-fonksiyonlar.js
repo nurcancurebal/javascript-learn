@@ -1,5 +1,4 @@
 /* -> Tımarlama ve kısmi fonksiyonlar
-Şimdiye kadar fonksiyon bağlar iken sadece this hakkında konuşmuştuk. Bunu bir adım ileri götürme vakti geldi.
 
 Aslında sadece this değil argümanları da bağlamak mümkün. Çok nadir yapılan bir teknik fakat bilmekte fayda var.
 
