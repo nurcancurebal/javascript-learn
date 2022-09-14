@@ -5,15 +5,17 @@ function curry(func) {
 
     return function curried(...args) {
 
-        if (args.length >= func.length) {
+        if (args.length >= func.length) { // (*) args: [1, 2, 3] , func: sum(a, b, c)
+            // (**) args: [1] , func: sum(a, b, c)
 
-            return func.apply(this, args);
+            return func.apply(this, args); // (*, **, ***) func sum olduğu için suma gidip içini yapıyor
 
         } else {
 
             return function (...args2) {
 
-                return curried.apply(this, args.concat(args2));
+                return curried.apply(this, args.concat(args2)); // concat: arrayleri birleştir
+                // (**) önce 1 i aldıktan sonra buraya geliyor args2 için tekrar almaya gidiyor
             }
         }
     };
@@ -27,17 +29,15 @@ function sum(a, b, c) {
 let curriedSum = curry(sum);
 
 // normal şekilde çağırılabilir.
-console.log(curriedSum(1, 2, 3)); // 6
+console.log(curriedSum(1, 2, 3)); // 6 (*)
 
 // önce curried(1) ile kısmı fonksiyon alınır sonra diğer iki argüman ile çağırılır.
-console.log(curriedSum(1)(2, 3)); // 6
+console.log(curriedSum(1)(2, 3)); // 6 (**)
 
 // tamamı tımarlanmış hali.
-console.log(curriedSum(1)(2)(3)); // 6
+console.log(curriedSum(1)(2)(3)); // 6 (***)
 
-/* Yeni yazdığımız tımar fonksiyonu karmaşık görünebilir, fakat aslında anlaması oldukça kolay.
-
-curr(func)'ın sonucu curried'ın saklayıcısıdır ve aşağıdaki gibi görünür: */
+/* curr(func)'ın sonucu curried'ın saklayıcısıdır ve aşağıdaki gibi görünür: */
 
 // func dönüştürülecek fonksiyondur.
 function curried(...args) {
@@ -48,7 +48,7 @@ function curried(...args) {
 
     } else {
 
-        return function pass(...args2) { // (2)
+        return function pass(...args2) { // (2) saklayıcı
 
             return curried.apply(this, args.concat(args2));
         }
@@ -66,7 +66,7 @@ curried(1)(2)(3) çağrısı için:
 
 1. İlk curried(1) çağrısı 1'i kendi sözcük çevresinde hatırlar ve pass adında bir saklayıcı döner.
 
-2. pass saklayıcısı (2) ile çağırılır: bir önceki argüman ( 1)'i alır ve (2) ile birleştirir. Böylece çağrı curred(1,2) şeklini alır.
+2. pass saklayıcısı (2) ile çağırılır: bir önceki argüman (1)'i alır ve (2) ile birleştirir. Böylece çağrı curred(1,2) şeklini alır.
 
 Argüman sayısı hala 3’den az olduğundan curry yine pass döndürür.
 
