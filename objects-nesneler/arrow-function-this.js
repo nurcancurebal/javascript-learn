@@ -8,7 +8,7 @@ let kullanici = {
     isim: "Nurcan",
 
     deneme: () => {
-        console.log(this.isim); //* undefined
+        console.log(this.isim); //* undefined // TODO global değil mi neden çalışmadı?
     },
 
     func() {
@@ -20,7 +20,7 @@ let kullanici = {
         console.log(this.isim); //* Nurcan
 
         let ok = () => {
-            console.log(this.isim) //* Nurcan
+            console.log(this.isim) //* Nurcan // TODO burda nasıl çalıştı?
         };
 
         ok();

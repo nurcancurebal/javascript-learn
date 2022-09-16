@@ -35,5 +35,5 @@ if (!window.Promise) {
 
 if (!window.Promise) {
 
-    // window.Promise = // ... modern dil özelliğinin özel uygulaması
+    // window.Promise = ... modern dil özelliğinin özel uygulaması
 }

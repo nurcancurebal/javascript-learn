@@ -14,50 +14,49 @@ Bir fonksiyon yaratıp bunu başka bir yerlere iletmek JavaScript’in ruhuna ta
 
 
 /* -> Ok fonksiyonlarının “this”'i yoktur.
-Daha önceki bölümden de Objelerin metodları ve "this" kelimesi. hatırlayacağınız üzere, ok fonksiyonlarının this'i olmaz. Eğer this erişilmiş ise bu dışarıdaki this'dir.
+ok fonksiyonlarının this'i olmaz. Eğer this erişilmiş ise bu dışarıdaki this'dir.
 
 Örneğin bunu objenin içerisinde dönme amaçlı kullanabiliriz: */
 
 let group1 = {
 
-    title1: "Our Group",
+    title: "Our Group",
 
-    students1: ["John", "Pete", "Alice"],
+    students: ["John", "Pete", "Alice"],
 
-    showList1() {
+    showList() {
 
-        this.students1.forEach(
+        this.students.forEach(
 
-            student => console.log(this.title1 + ': ' + student)
-        );
+            student => console.log(this.title + ': ' + student) // Our Group: John, Our Group: Pete, Our Group: Alice
+        ); // TODO hani arrow functionda this yoktu? nasıl aldı o zaman
     }
 };
 
-group1.showList1();
+group1.showList();
 
-/* Buradaki forEach'te ok fonksiyonu kullanılmıştır, ve this.title tam olarak dışarıdaki showList metodu ile aynı içeriğe sahiptir. Yani group.title’dır. */
+/* Buradaki forEach'te ok fonksiyonu kullanılmıştır, ve this.title tam olarak dışarıdaki showList metodu ile aynı içeriğe sahiptir. Yani group1.title’dır. */ // TODO function da this olsaydı ne olacakti ki? farkı anlamadım?
 
 // Eğer bunu “normal” bir fonksiyon ile yazsaydık, hata alırdık:
 
 let group2 = {
 
-    title2: "Our Group",
+    title: "Our Group",
 
-    students2: ["John", "Pete", "Alice"],
+    students: ["John", "Pete", "Alice"],
 
-    showList2() {
+    showList() {
 
-        this.students2.forEach(function (student) {
+        this.students.forEach(function (student) {
 
-            // Hata: 'title' özelliği tanımsız.
-            console.log(this.title2 + ': ' + student) // undefined: John, undefined: Pete, undefined: Alice
+            console.log(this.title + ': ' + student) // undefined: John, undefined: Pete, undefined: Alice // TODO bura neden çalışmadı
         });
     }
 };
 
-group2.showList2();
+group2.showList();
 
-/* Hatanın sebebi forEach çalışırken this=undefined varsayılan olarak çalışır, bundan dolayı undefined.title çağrısı yapılır.
+/* Hatanın sebebi forEach çalışırken this=undefined varsayılan olarak çalışır, bundan dolayı undefined.title çağrısı yapılır. // TODO neden?
 
 Bu ok fonksiyonlarında işlemez çünkü ok fonksiyonlarında this bulunmamaktadır. */
 

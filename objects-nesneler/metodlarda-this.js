@@ -29,7 +29,7 @@ let kullanici2 = {
 
 };
 
-/* … Fakat böyle bir koda güvenilmez. Diyelim ki kullanici objesini kopyaladınız ve yonetici = kullanici3 yaptınız. Sonra kullanici objesinin üzerine yazdınız bu durumda yanlış objeye erişmiş olacaksınız. Bir örnekle açıklamak gerekirse: */
+/* … Fakat böyle bir koda güvenilmez. Diyelim ki kullanici2 objesini kopyaladınız ve yonetici = kullanici3 yaptınız. Sonra kullanici2 objesinin üzerine yazdınız bu durumda yanlış objeye erişmiş olacaksınız. Bir örnekle açıklamak gerekirse: */
 
 /* let kullanici3 = {
     isim: "Bal",
@@ -41,13 +41,12 @@ let kullanici2 = {
 
 };
 
-
 let yonetici = kullanici3;
 kullanici3 = null;
 
 yonetici.selamVer(); */ // `selamVer()` içerisinde `kullanici3` kullanıldığından dolayı hata verecektir.
 
-// Eğer kullanici3.isim yerine this.isim yazmış olsaydınız kod çalışacaktı.
+// Eğer kullanici3.isim yerine this.isim yazmış olsaydınız kod çalışacaktı. //TODO objeler referans değişken olduğu için kullanici3 değiştiği zaman her türlü yonetici de değişmez mi yani this de yazsak göstermemesi lazım?
 
 
 /* “this” bağımsız bir şekilde kullanılabilir.
