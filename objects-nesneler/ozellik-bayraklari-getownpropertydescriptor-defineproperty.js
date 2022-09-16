@@ -26,7 +26,7 @@ Bilgi alınacak obje
 
 ~ propertyName
 Özelliğin ismi
-Buradan dönen bir değer döner buna “özellik tanımlayıcısı” denir. Bu obje tüm bayrak bilgilerini içerir. */
+Buradan bir değer döner buna “özellik tanımlayıcısı” denir. Bu obje tüm bayrak bilgilerini içerir. */
 
 let user2 = {
 

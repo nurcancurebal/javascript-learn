@@ -2,7 +2,7 @@ let obj = {
 
     names: 'Nurcan',
 
-    surname: this // TODO buradaki this neden boş bir obje oldu?
+    surname: this.names // TODO buradaki this neden boş bir obje oldu?
 }
 
 console.log(obj);
