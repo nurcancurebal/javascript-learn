@@ -3,7 +3,7 @@ arr.map metodu en fazla kullanılan ve kullanışlı olan metodlardandır. */
 
 
 let sonuc = arr.map(function (eleman, index, dizi) {
-    
+
     // eleman yerine yeni değer döndürür.
 })
 

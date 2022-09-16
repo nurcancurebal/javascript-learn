@@ -5,7 +5,7 @@ Burada arr.find metodu yararlı olur.
 Yazımı: */
 
 let result = arr.find(function (elaman, index, dizi) {
-    
+
     //  eğer aranan eleman bulunursa true döndürmeli.
 });
 

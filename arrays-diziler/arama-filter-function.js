@@ -6,7 +6,7 @@ Birden fazlası için ise arr.filter(fn) kullanılabilir.
 Yazımı neredeyse find ile aynıdır, fakat tek bir eleman yerine kurala uyan elemanları dizi halinde döner. */
 
 let results = arr.filter(function (eleman, index, dizi) {
-    
+
     // eğer elemanlar filtreye uygunsa true döndürür.
 });
 

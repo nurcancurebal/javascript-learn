@@ -6,7 +6,7 @@ function hash1(args) {
     return args[0] + ',' + args[1];
 }
 
-console.log(hash1('Erdinç', 'Nurcan','Bal')); // E,r
+console.log(hash1('Erdinç', 'Nurcan', 'Bal')); // E,r
 
 /* Bundan sonra bu fonksiyon sadece iki argümanla çalışacak. Bunun yerine belirsiz sayıdaki argümanla çalışsa daha iyi olur.
 
@@ -17,7 +17,7 @@ function hash2(args) {
     return args.join();
 }
 
-console.log(hash2('Erdinç', 'Nurcan','Bal')); // Error: arguments.join fonksiyon değil.
+console.log(hash2('Erdinç', 'Nurcan', 'Bal')); // Error: arguments.join fonksiyon değil.
 
 /* … Malesef bu çalışmaz. Çünkü hash(argümanlar) çağırılmakta ve arguments objesi hem döngülenebilir hemde dizi-benzeri olduğundan, fakat gerçek dizi olmadığından çalışmaz.
 

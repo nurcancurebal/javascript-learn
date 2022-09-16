@@ -2,7 +2,7 @@ let obj = {
 
     names: 'Nurcan',
 
-    surname: this.names // surname: undefined çünkü: henüz tanımlanmadı eğer function olsaydı okurdu
+    surname: this.names // surname: undefined çünkü: henüz tanımlanmadı eğer function olsaydı okurdu çünkü fonksiyonu ilk çalıştığında okumuş oluyor
 }
 
 console.log(obj);
@@ -25,10 +25,7 @@ let obj3 = {
 
     names: 'Nurcan',
 
-    surname: () => {
-
-        this.names
-    }
+    surname: () => this.names
 }
 
-console.log(obj3.surname()); // undefined // TODO çalış
+console.log(obj3.surname()); // undefined arrow fonksiyonun this i yoktur

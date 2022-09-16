@@ -36,8 +36,8 @@ let kullanicilar = [ahmet, mehmet, muzaffer];
 
 let kullaniciMapped = kullanicilar.map(kullanici => ({
 
-    adi_soyadi: `${kullanici.adi} ${kullanici.soyadi}`,
-    id: kullanici.id
+  adi_soyadi: `${kullanici.adi} ${kullanici.soyadi}`,
+  id: kullanici.id
 }));
 
 /*

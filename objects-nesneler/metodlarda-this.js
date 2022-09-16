@@ -42,11 +42,10 @@ let kullanici3 = {
 };
 
 let yonetici = kullanici3;
-kullanici3.selamVer = null;
+kullanici3 = null;
 
-yonetici.selamVer(); // `selamVer()` içerisinde `kullanici3` kullanıldığından dolayı hata verecektir.
-
-// Eğer kullanici3.isim yerine this.isim yazmış olsaydınız kod çalışacaktı.
+yonetici.selamVer();
+//* `selamVer()` içerisinde `kullanici3` kullanıldığından dolayı hata verecektir. Eğer kullanici3.isim yerine this.isim yazmış olsaydınız kod çalışacaktı. Objeler referans değişken olmasına rağmen selamVer' in içine this yazıldığında yonetici.selamVer(); fonksiyonu çalışıyor bunun sebebi kullanici3 objesinin ismini değiştirince obje ile olan bağını kopartmış oluyoruz ama o objenin içerisinde selamVer hala mevcut durumda.
 
 
 /* “this” bağımsız bir şekilde kullanılabilir.
@@ -78,4 +77,4 @@ yonetici4.f = selamVer;
 kullanici4.f(); // Timur ,  (this == kullanici4)
 yonetici4.f(); // Figen , (this == yonetici4)
 
-yonetici4['f'](); // Figen , Köşeli parantez veya noktalı yazım farketmez, her ikisi de çalışır. // TODO çalış
+yonetici4['f'](); // Figen , Köşeli parantez veya noktalı yazım farketmez, her ikisi de çalışır.

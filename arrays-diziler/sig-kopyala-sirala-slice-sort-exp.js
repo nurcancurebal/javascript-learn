@@ -14,7 +14,7 @@ let arr = ["HTML", "JavaScript", "CSS"];
 
 function copySorted(arr) {
 
-  return  arr.slice().sort(); // slice= sığ bir kopyasını aldık( aynı referansı göstermedi)
+  return arr.slice().sort(); // slice= sığ bir kopyasını aldık( aynı referansı göstermedi)
 }
 
 let sorted = copySorted(arr);

@@ -13,7 +13,7 @@ JavaScript’te bir sürü başka yerde çalıştırılması gereken kolayca yaz
 Bir fonksiyon yaratıp bunu başka bir yerlere iletmek JavaScript’in ruhuna tam da uyan bir işlemdir. Böyle fonksiyonlarda var olan kaynağın (context) kaybolması istenmez. */
 
 
-/* -> Ok fonksiyonlarının “this”'i yoktur.
+/* -> Ok fonksiyonlarının “this”'i yoktur. Yani normal fonksiyon gibi kendinden önceki blok scope u kullanamaz.
 ok fonksiyonlarının this'i olmaz. Eğer this erişilmiş ise bu dışarıdaki this'dir.
 
 Örneğin bunu objenin içerisinde dönme amaçlı kullanabiliriz: */
@@ -29,13 +29,13 @@ let group1 = {
         this.students.forEach(
 
             student => console.log(this.title + ': ' + student) // Our Group: John, Our Group: Pete, Our Group: Alice
-        ); // TODO hani arrow functionda this yoktu? nasıl aldı o zaman
+        );
     }
 };
 
 group1.showList();
 
-/* Buradaki forEach'te ok fonksiyonu kullanılmıştır, ve this.title tam olarak dışarıdaki showList metodu ile aynı içeriğe sahiptir. Yani group1.title’dır. */ // TODO function da this olsaydı ne olacakti ki? farkı anlamadım?
+/* Buradaki forEach'te ok fonksiyonu kullanılmıştır, ve this.title tam olarak dışarıdaki showList metodu ile aynı içeriğe sahiptir. Yani group1.title’dır. */
 
 // Eğer bunu “normal” bir fonksiyon ile yazsaydık, hata alırdık:
 
@@ -49,14 +49,14 @@ let group2 = {
 
         this.students.forEach(function (student) {
 
-            console.log(this.title + ': ' + student) // undefined: John, undefined: Pete, undefined: Alice // TODO bura neden çalışmadı
+            console.log(this.title + ': ' + student) // undefined: John, undefined: Pete, undefined: Alice
         });
     }
 };
 
 group2.showList();
 
-/* Hatanın sebebi forEach çalışırken this=undefined varsayılan olarak çalışır, bundan dolayı undefined.title çağrısı yapılır. // TODO neden?
+/* Hatanın sebebi forEach çalışırken this=undefined varsayılan olarak çalışır, bundan dolayı undefined.title çağrısı yapılır.
 
 Bu ok fonksiyonlarında işlemez çünkü ok fonksiyonlarında this bulunmamaktadır. */
 
@@ -91,7 +91,7 @@ function sayHi(who) {
     console.log('Hello, ' + who); // Hello, John (2 sn sonra)
 }
 
-let sayHiDeferred = defer3(sayHi, 2000);
+let sayHiDeferred = defer3(sayHi, 2000); // defer3(sayHi, 2000)("John") bu şekildede yazılabilir
 
 sayHiDeferred("John");
 

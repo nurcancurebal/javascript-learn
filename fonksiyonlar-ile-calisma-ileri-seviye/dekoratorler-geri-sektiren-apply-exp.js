@@ -6,7 +6,7 @@ Diğer bir deyişle “debounced” fonksiyonu çağırıldığında, ms'e yakı
 
 /* Pratikte geri sektiren dekoratör değişmeyeceğini bildiğimiz bir zaman süresince aynı kaynağı tekrar çağırmamak için kullanılabilir. */
 
-function debounce(ms) {
+function debounce(f, ms) {
 
     let isCooldown = false;
 
@@ -14,7 +14,7 @@ function debounce(ms) {
 
         if (isCooldown) return;
 
-        console.log(arguments[0]);
+        f.apply(this, arguments); // console.log(arguments[0]); bunun ile aynı şey , 1' i burada hemen yazıyor
 
         isCooldown = true;
 
@@ -23,40 +23,26 @@ function debounce(ms) {
     };
 }
 
-let f = debounce(1000);
+let f = debounce(console.log, 1000); // debounce(console.log, 1000)(1) gibi de yazılabilirdi
+
+//* f lerin hepsi aynı anda çalışmaya başlıyor
 
 f(1); // Anında çalışacak // 1 i arguments a yolluyor
-console.log("1X");
+f(2); // görmezden gelinecek çünkü 1 sn bekliyor false yapmak için ama f(2) hiç beklemedi yani isCooldown true
 
-f(2); // görmezden gelinecek
-console.log("2X");
+setTimeout(() => f(3), 100); // görmezden gelinecek ( 100 ms'de çalıştığından ) , isCooldown hala true
 
-setTimeout(() => f(3), 100); // görmezden gelinecek ( 100 ms'de çalıştığından )
-console.log("3X");
+setTimeout(() => f(4), 950); // görmezden gelinecek (1 sn den az beklediği için)
 
-setTimeout(() => f(4), 950); // çalışır
-console.log("4X");
+setTimeout(() => f(5), 1100); // çalışır
 
-setTimeout(() => f(5), 1100); // görmezden gelinecek çünkü son çağrıdan itibaren 1000ms'den az bir zaman geçmiştir.
-console.log("5X");
+setTimeout(() => f(6), 1300); // görmezden gelinecek (her 1 sn de bir false yaptığı için ilk önüne geleni çalıştırdı diğerlerinin çalışması için 1 sn daha beklemesi gerekiyor çünkü her seferinde ilk önüne gelen 1 f i çalıştırıyor )
 
-setTimeout(() => f(6), 1300); // görmezden gelinecek çünkü son çağrıdan itibaren 1000ms'den az bir zaman geçmiştir.
-console.log("6X");
+setTimeout(() => f(7), 1500); // görmezden gelinecek
 
-setTimeout(() => f(7), 1500); // görmezden gelinecek çünkü son çağrıdan itibaren 1000ms'den az bir zaman geçmiştir.
-console.log("7X");
+setTimeout(() => f(8), 1700); // görmezden gelinecek
 
-setTimeout(() => f(8), 1700); // görmezden gelinecek çünkü son çağrıdan itibaren 1000ms'den az bir zaman geçmiştir.
-console.log("8X");
-
-setTimeout(() => f(9), 2300); // görmezden gelinecek çünkü son çağrıdan itibaren 1000ms'den az bir zaman geçmiştir.
-console.log("9X");
-
-setTimeout(() => f(10), 2400); // görmezden gelinecek çünkü son çağrıdan itibaren 1000ms'den az bir zaman geçmiştir.
-console.log("10X");
-
-setTimeout(() => f(11), 3305); // görmezden gelinecek çünkü son çağrıdan itibaren 1000ms'den az bir zaman geçmiştir.
-console.log("11X");
+setTimeout(() => f(9), 2300); // çalışır
 
 /* debounce çağrısı bir saklayıcı döner. İki durum söz konusudur:
 
@@ -65,5 +51,3 @@ isCooldown = true – timeout’u bekliyor…
 İlk çağırıldığında isCooldown false döner, bundan dolayı çalışır ve isCooldown true olur.
 
 isCooldown true iken diğer çağrılar görmezden gelinir. setTimeout belirlenen vakit geçtikten sonra tekrar isCooldown'u false’a çevirir. */
-
-// TODO çalış

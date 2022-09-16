@@ -47,15 +47,15 @@ for (let index = 0; index < 3; index++) {
 console.log(closureWay());
 
 
-function toplam(){
+function toplam() {
     return toplam.counter
 }
 
-function artirici(){
+function artirici() {
     toplam.counter++
 }
 
-function azaltici(){
+function azaltici() {
     toplam.counter--
 }
 
@@ -71,7 +71,7 @@ artirici()
 azaltici()
 azaltici()
 
-console.log( toplam() );
+console.log(toplam());
 
 
 // TODO çalış

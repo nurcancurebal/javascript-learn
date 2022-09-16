@@ -11,9 +11,9 @@ var kullanici = "Evrensel";
 
 function selamVer() {
 
-    var kullanici = "Yerel";
+  var kullanici = "Yerel";
 
-    console.log(window.kullanici); // Evrensel
+  console.log(window.kullanici); // Evrensel
 }
 
 selamVer();
@@ -28,7 +28,7 @@ Bunu window.XMLHttpRequest üzerinden okuyabilirsiniz. */
 
 if (window.XMLHttpRequest) {
 
-    console.log('XMLHttpRequest tanımlı!')
+  console.log('XMLHttpRequest tanımlı!')
 }
 
 /* Eğer böyle bir global fonksiyon olmasaydı undefined dönerdi.
@@ -37,7 +37,7 @@ window olmadan da bunu test etmek mümkündür: */
 
 if (typeof XMLHttpRequest == 'function') {
 
-    /*  XMLHttpRequest? fonksiyonu var mı? */
+  /*  XMLHttpRequest? fonksiyonu var mı? */
 }
 
 /* Burada window kullanılmasa da (teorik olarak) daha az güvenilirdir, çünkü typeof yerel XMLHttpRequest kullanabilir, halbuki biz evrensel olanını kontrol etmek istiyoruz.

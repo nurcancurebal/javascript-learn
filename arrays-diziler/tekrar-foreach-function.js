@@ -20,7 +20,7 @@ Nazgul 2 [ 'Bilbo', 'Gandalf', 'Nazgul' ] */
 // Aşağıdaki kod elemanın dizideki pozisyonu hakkında daha açıklayıcıdır:
 
 ["Bilbo", "Gandalf", "Nazgul"].forEach((item, index, array) => {
-    
+
     console.log(`${item} ${array}'in ${index}. indeksinde`);
 });
 

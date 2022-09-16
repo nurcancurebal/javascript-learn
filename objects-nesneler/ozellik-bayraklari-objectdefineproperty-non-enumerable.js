@@ -1,7 +1,7 @@
 /* -> Non-enumerable
-Şimdi user'a toString metodu ekleyelim.
+Şimdi user1'e toString metodu ekleyelim.
 
-Normalde toString objeler için non-enumerable’dır yani for ile objenin özelliklerini dönerken görünmez. Fakat bu özelliği kendiniz eklerseniz for..in içeriisnde görünür. Şu şekilde: */
+Normalde toString objeler için non-enumerable’dır yani for ile objenin özelliklerini dönerken görünmez. Fakat bu özelliği kendiniz eklerseniz for..in içerisinde görünür. Şu şekilde: */
 
 let user1 = {
 
@@ -36,4 +36,4 @@ for (let key in user2) console.log(key); // name
 
 // Non-enumerable özellikler de Object.keys'den çıkarılacaktır:
 
-console.log(Object.keys(user2)); // [ 'name' ] // TODO çalış
+console.log(Object.keys(user2)); // [ 'name' ]

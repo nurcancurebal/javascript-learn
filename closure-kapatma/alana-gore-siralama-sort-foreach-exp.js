@@ -25,14 +25,14 @@ Böylece fonksiyon yazmak yerine sadece alanIle(alanAdı) yazılabilir.
 alanIle fonksiyonunu yazınız. */
 
 let kullanicilar = [
-    { ad: "Erdinç", yas: 20, soyad: "Zurnacı" },
-    { ad: "Hideo", yas: 18, soyad: "Konami" },
-    { ad: "Jane", yas: 19, soyad: "Hathaway" }
+  { ad: "Erdinç", yas: 20, soyad: "Zurnacı" },
+  { ad: "Hideo", yas: 18, soyad: "Konami" },
+  { ad: "Jane", yas: 19, soyad: "Hathaway" }
 ];
 
 function alanIle(alan) {
 
-    return (a, b) => a[alan] > b[alan] ? 1 : -1; // NOT: console.log(kullanicilar[0]['ad']); // Erdinç
+  return (a, b) => a[alan] > b[alan] ? 1 : -1; // NOT: console.log(kullanicilar[0]['ad']); // Erdinç
 }
 
 kullanicilar.sort(alanIle('ad'));
