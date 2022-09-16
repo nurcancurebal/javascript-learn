@@ -52,7 +52,7 @@ Object.defineProperty(obj, propertyName, descriptor2)
 /* ~ obj, propertyName
 Üzerinde çalışılacak obje ve özellik.
 
-~ descriptor
+~ descriptor2
 Uygulanacak özellik tanımlayıcı
 Eğer özellik var ise defineProperty bu özelliğin bayraklarını günceller. Diğer türlü, bu özelliği yaratır ve verilen bayrakları ayarlar. Bu durumda eğer bayrak verilmemiş ise false kabul edilir.
 
