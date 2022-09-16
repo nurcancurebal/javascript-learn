@@ -1,5 +1,5 @@
 /* İsteğe göre uyarlanmış “toJSON”
-Karakterlerin çeviriminde toString metodunun kullanılabileceğini daha önce söylemiştil. Objeler için toJSON metodu varsa JSON.stringify çağırıldığında bu otomatik olarak çağrılır. */
+Karakterlerin çeviriminde toString metodunun kullanılabileceğini daha önce söylemiştik. Objeler için toJSON metodu varsa JSON.stringify çağırıldığında bu otomatik olarak çağrılır. */
 
 let oda1 = {
     sayi: 23

@@ -9,7 +9,7 @@ Obje özellikleri değer dışında, 3 özelliğe sahiptir ( bunlara “bayrakla
 
 . yazılabilir – eğer true ise değiştirilebilir aksi halde sadece okunabilir.
 . sayılabilir – eğer true ise döngü içinde listelenmiştir, aksi halde listelenmemiştir.
-. ayarlanabilir – eğer true ise özellik silinebilir ve nitelikler ( attributes ) değiştirilebilir, diğer türlü değiştirilemez.
+. ayarlanabilir – eğer true ise özellik silinebilir ve nitelikler (attributes) değiştirilebilir, diğer türlü değiştirilemez.
 
 Bunları henüz görmediniz, genel olarak da zaten pek gösterilmezler. Bir özellik yarattığınızda “normal yolla” bu değerlerin tümü true olarak ayarlanır. Fakat biz bunları istediğimiz zaman değiştirebiliriz.
 
@@ -30,7 +30,7 @@ Buradan dönen bir değer döner buna “özellik tanımlayıcısı” denir. Bu
 
 let user2 = {
 
-    name: "John"
+  name: "John"
 };
 
 let descriptor2 = Object.getOwnPropertyDescriptor(user2, 'name');
@@ -62,7 +62,7 @@ let user3 = {};
 
 Object.defineProperty(user3, "name", {
 
-    value: "John"
+  value: "John"
 });
 
 let descriptor3 = Object.getOwnPropertyDescriptor(user3, 'name');

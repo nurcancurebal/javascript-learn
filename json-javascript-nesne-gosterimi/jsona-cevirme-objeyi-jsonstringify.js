@@ -1,7 +1,6 @@
-// Nesneyi JSON olarak değiştirmek istediğimizde JSON.stringify() kullanırız. stringify yöntemi, bir gerekli parametre ve
-// iki isteğe bağlı parametre alır. Değiştirici(Yedek) filtre olarak kullanılır ve boşluk bir girintidir. Nesnedeki
-// anahtarlardan herhangi birini filtrelemek istemiyorsak, tanımsız(undefined) olarak geçebiliriz.
-
+/* Nesneyi JSON olarak değiştirmek istediğimizde JSON.stringify() kullanırız.
+stringify yöntemi, bir gerekli parametre ve iki isteğe bağlı parametre alır.
+Değiştirici(Yedek) filtre olarak kullanılır ve boşluk bir girintidir. Nesnedeki anahtarlardan herhangi birini filtrelemek istemiyorsak, tanımsız(undefined) olarak geçebiliriz. */
 
 // JSON.stringify(obj, replacer, space);
 // json veya metin, veri
