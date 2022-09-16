@@ -74,7 +74,7 @@ this'in olmaması bazı sınırlamalara neden olur: ok fonksiyonları constructo
 /* -> Ok fonksiyonlarının “argümanları” olmaz.
 Ok fonksiyonlarının argüman değişkenleri olmaz.
 
-Var olan this ve argümanlar ile çağrıyı yönelendirmek istediğimizde ( dekoratör ) çok yararlı olur.
+Var olan this ve argümanlar ile çağrıyı yönlendirmek istediğimizde (dekoratör) çok yararlı olur.
 
 Örneğin defer(f, ms) fonksiyonu bir fonksiyon alıyor ve çağrıyı ms kadar geciktiren bir saklayıcı ile dönderiyor: */
 
