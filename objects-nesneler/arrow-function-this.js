@@ -8,7 +8,7 @@ let kullanici = {
     isim: "Nurcan",
 
     deneme: () => {
-        console.log(this.isim); //* undefined // TODO global değil mi neden çalışmadı?
+        console.log(this.isim); //* undefined
     },
 
     func() {
@@ -20,7 +20,7 @@ let kullanici = {
         console.log(this.isim); //* Nurcan
 
         let ok = () => {
-            console.log(this.isim) //* Nurcan // TODO burda nasıl çalıştı?
+            console.log(this.isim) //* Nurcan
         };
 
         ok();
@@ -37,3 +37,5 @@ kullanici.func();
 
 /* Bu ok fonksiyonlarının bir özelliğidir. Ayrı bir this kullanmak yerine her zaman bir üstteki bölümden this i alması baya
 kullanışlıdır. Ok fonksiyonları bölümü içerisinde bu konu derinlemesine incelenecektir. */
+
+// TODO çalış

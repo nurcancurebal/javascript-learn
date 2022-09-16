@@ -31,22 +31,22 @@ let kullanici2 = {
 
 /* … Fakat böyle bir koda güvenilmez. Diyelim ki kullanici2 objesini kopyaladınız ve yonetici = kullanici3 yaptınız. Sonra kullanici2 objesinin üzerine yazdınız bu durumda yanlış objeye erişmiş olacaksınız. Bir örnekle açıklamak gerekirse: */
 
-/* let kullanici3 = {
+let kullanici3 = {
+
     isim: "Bal",
     yas: 30,
 
     selamVer() {
         console.log(kullanici3.isim); // hataya neden olur
     }
-
 };
 
 let yonetici = kullanici3;
-kullanici3 = null;
+kullanici3.selamVer = null;
 
-yonetici.selamVer(); */ // `selamVer()` içerisinde `kullanici3` kullanıldığından dolayı hata verecektir.
+yonetici.selamVer(); // `selamVer()` içerisinde `kullanici3` kullanıldığından dolayı hata verecektir.
 
-// Eğer kullanici3.isim yerine this.isim yazmış olsaydınız kod çalışacaktı. //TODO objeler referans değişken olduğu için kullanici3 değiştiği zaman her türlü yonetici de değişmez mi yani this de yazsak göstermemesi lazım?
+// Eğer kullanici3.isim yerine this.isim yazmış olsaydınız kod çalışacaktı.
 
 
 /* “this” bağımsız bir şekilde kullanılabilir.
@@ -78,4 +78,4 @@ yonetici4.f = selamVer;
 kullanici4.f(); // Timur ,  (this == kullanici4)
 yonetici4.f(); // Figen , (this == yonetici4)
 
-yonetici4['f'](); // Figen , Köşeli parantez veya noktalı yazım farketmez, her ikisi de çalışır.
+yonetici4['f'](); // Figen , Köşeli parantez veya noktalı yazım farketmez, her ikisi de çalışır. // TODO çalış

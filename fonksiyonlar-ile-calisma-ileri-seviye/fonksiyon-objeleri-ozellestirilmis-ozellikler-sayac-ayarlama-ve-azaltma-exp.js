@@ -11,48 +11,67 @@ Not: Closure veya fonksiyon özelliği kullanabilirsiniz. Her iki şekilde yazsa
 
 Çözüm: sayac yerel değişkenini kullanmaktadır, buna ek olarak metodlar doğrudan sayac'in icerisine yazılmıştır. Aynı dış ortamı paylaştıklarından dolayı var olan sayac değişkenine erişebilirler. */
 
-// Closure ile
+// Closure 
 
-function sayacUcret() {
+function sayacUret() {
 
-    function sayac() {
-
-        return sayac++;
-    }
-
-    sayac.set = deger => sayac = deger;
-
-    sayac.azalt = () => sayac--;
-   
-    return sayac;
-}
-
-let sayac = 0;; // ilk değer
-
-console.log(sayacUcret());
-/* [Function: sayac] {
-    set: [Function (anonymous)],
-    azalt: [Function (anonymous)]
-  } */
-  
-// fonksiyon özelliği yöntemi ile
-
-/* function sayacUcret() {
-
-    let sayac = 0;
+    let say = 0;
 
     function sayac() {
-
-        return sayac++;
+        return say;
     }
 
-    sayac.set = deger => sayac = deger;
+    sayac.set = deger => say = deger;
 
-    sayac.azalt = () => sayac--;
+    sayac.azalt = () => --say;
+    sayac.artir = () => ++say;
 
     return sayac;
+
 }
 
-console.log(sayacUcret()); */
+const closureWay = sayacUret();
 
-// TODO yapamadım
+closureWay.set(5)
+
+console.log(closureWay());
+
+closureWay.azalt()
+
+console.log(closureWay());
+
+for (let index = 0; index < 3; index++) {
+    closureWay.azalt();
+}
+
+console.log(closureWay());
+
+
+function toplam(){
+    return toplam.counter
+}
+
+function artirici(){
+    toplam.counter++
+}
+
+function azaltici(){
+    toplam.counter--
+}
+
+toplam.counter = 0;
+
+artirici()
+artirici()
+artirici()
+artirici()
+artirici()
+artirici()
+
+azaltici()
+azaltici()
+
+console.log( toplam() );
+
+
+// TODO çalış

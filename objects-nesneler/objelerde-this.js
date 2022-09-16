@@ -2,7 +2,7 @@ let obj = {
 
     names: 'Nurcan',
 
-    surname: this.names // TODO buradaki this neden boş bir obje oldu?
+    surname: this.names // surname: undefined çünkü: henüz tanımlanmadı eğer function olsaydı okurdu
 }
 
 console.log(obj);
@@ -14,18 +14,21 @@ let obj2 = {
 
     surname: function () {
 
-        return this
+        return this.names
     }
 }
 
-console.log(obj2); // surname: f
+console.log(obj2.surname()); // Nurcan
 
 
 let obj3 = {
 
     names: 'Nurcan',
 
-    surname: () => this
+    surname: () => {
+
+        this.names
+    }
 }
 
-console.log(obj3); // TODO üsttekiyle arasında ne fark var?
+console.log(obj3.surname()); // undefined // TODO çalış
