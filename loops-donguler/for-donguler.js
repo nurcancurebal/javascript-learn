@@ -21,7 +21,7 @@ for (i = 0; i <= 5; i++) {
 
 // bu örneği incele istediğimiz kadar isim ekleyebiliyoruz
 
-let name = ['nurcan', 'erdinç', 'bal', 'cürebal', 'avustralya', 'kanada'];  
+let name = ['nurcan', 'erdinç', 'bal', 'cürebal', 'avustralya', 'kanada'];
 
 for (i = 0; i < name.length; i++) {
 

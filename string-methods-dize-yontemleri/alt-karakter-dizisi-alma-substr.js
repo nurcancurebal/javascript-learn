@@ -11,4 +11,4 @@ console.log(string.substr(4, 5));  // ekran çıktısı = Scrip 4.karakterden ba
 
 let str = "stringify";
 
-console.log( str.substr(-4, 2) ); // gi, 4. pozisyondan 2 karakter al.
+console.log(str.substr(-4, 2)); // gi, 4. pozisyondan 2 karakter al.

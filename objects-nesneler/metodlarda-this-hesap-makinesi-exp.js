@@ -9,7 +9,7 @@ let hesapMakinesi = {
     oku(one, two) {
 
         this.one = one,
-        this.two = two
+            this.two = two
     },
 
     topla() {

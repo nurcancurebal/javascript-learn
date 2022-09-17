@@ -1,4 +1,3 @@
-
 // replace() iki verinin yerini değiştirme, replaceAll() dersen cümlenin içinde ne kadar o kelimeden varsa hepsini değiştirir
 
 let string = '30 Days Of JavaScript, my favorite language is JavaScript';

@@ -28,9 +28,9 @@ let str3 = '{"baslik":"Konferans","tarih":"2017-11-30T12:00:00.000Z"}';
 
 let tanisma3 = JSON.parse(str3, function (anahtar, deger) {
 
-    if (anahtar == 'tarih') return new Date(deger);
+  if (anahtar == 'tarih') return new Date(deger);
 
-    return deger;
+  return deger;
 });
 
 console.log(tanisma3.tarih.getDate()); // 30, Şimdi çalışıyor!
@@ -48,9 +48,9 @@ let program = `{
 
 program = JSON.parse(program, function (anahtar, deger) {
 
-    if (anahtar == 'tarih') return new Date(deger);
+  if (anahtar == 'tarih') return new Date(deger);
 
-    return deger;
+  return deger;
 });
 
 console.log(program.tanismalar[1].tarih.getDate()); // 18, çalışır!

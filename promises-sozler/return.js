@@ -16,7 +16,7 @@ async function main() {
 
             resolve(15);
 
-            return; 
+            return;
 
             console.log("asdasd");  // return' ün altına her hangi bir kod yazarsan çalışmaz
 

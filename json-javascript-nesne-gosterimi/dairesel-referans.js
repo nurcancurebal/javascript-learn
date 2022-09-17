@@ -1,11 +1,11 @@
 let oda1 = {
-    sayi: 23
+  sayi: 23
 };
 
 let tanisma1 = {
-    baslik: "Konferans",
-    katilimcilar: [{ adi: "Ahmet" }, { adi: "Mehmet" }],
-    yer: oda1 // tanışma1 oda1 i referans gösteriyor.
+  baslik: "Konferans",
+  katilimcilar: [{ adi: "Ahmet" }, { adi: "Mehmet" }],
+  yer: oda1 // tanışma1 oda1 i referans gösteriyor.
 };
 
 oda1.dolduruldu = tanisma1; // oda1 tanışma1 i referans gösteriyor.

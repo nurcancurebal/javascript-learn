@@ -1,5 +1,4 @@
-/*
-Bitsel operatörler argümanlara 32-bitlik doğal sayı gibi davranır ve ikili gösterimleri düzeyinde çalışır.
+/* Bitsel operatörler argümanlara 32-bitlik doğal sayı gibi davranır ve ikili gösterimleri düzeyinde çalışır.
 
 Bu operatörler JavaScript’e özgü değildir. Çoğu programlama dilinde bulunurlar.
 

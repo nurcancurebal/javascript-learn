@@ -18,11 +18,11 @@ console.log(nameTwo.slice(0, -1)); // Erdin , -1 sondaki karakter demek
 
 let str = "stringify";
 
-console.log( str.slice(2) ); // ringify, ikinci pozisyondan sonuna kadar.
+console.log(str.slice(2)); // ringify, ikinci pozisyondan sonuna kadar.
 
 
 // basla/bitir için negatif değerler kullanmakta mümkündür. Bu pozisyonun karakter bitiminden itibaren çalıştığı anlamına
 // gelir.
 
 // sağdan 4. pozisyondan başla ve yine sağdan 1. pozisyona kadar al.(sağdan 1 den başlıyor saymaya)
-console.log( str.slice(-4, -1) ); // gif
+console.log(str.slice(-4, -1)); // gif

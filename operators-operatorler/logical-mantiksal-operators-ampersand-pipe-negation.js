@@ -43,7 +43,7 @@ console.log(isim); // "Nurcan" seçilir – ilk doğru değeri bulduğundan dola
 
 // Aşağıdaki örnekte 1 && 0 önce hesaplanır.
 
-console.log( 0 || 1 && 5 ); // 5
+console.log(0 || 1 && 5); // 5
 
 
 

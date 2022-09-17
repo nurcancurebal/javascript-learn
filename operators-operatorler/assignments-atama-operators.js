@@ -1,5 +1,4 @@
-/*
-assignments operators(atama operatörleri)
+/* assignments operators(atama operatörleri)
 
 operatörler     kullanım şekli       description
 =                x = y                x = y

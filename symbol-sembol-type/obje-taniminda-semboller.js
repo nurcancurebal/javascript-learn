@@ -1,5 +1,4 @@
-/*
-Obje Tanımında Semboller
+/* Obje Tanımında Semboller
 Eğer obje tanımlanırken sembol doğrudan yazılmak istenirse, köşeli parantez gerekmektedir.
 Aşağıdaki Gibi: */
 

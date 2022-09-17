@@ -6,12 +6,12 @@ JSON.stringify(deger, degistirici, boşluk)'ın 3. argümanı formatlamayı güz
 Burada bosluk = 2 kullanılmıştır, iç içe objelerin bir kaç satırda ve objeler arasında 2 boşluk olacak şekilde ayarlamasını söyler. */
 
 let kullanici = {
-    adi: "Nurcan",
-    yas: 25,
-    roller: {
-        admin: false,
-        editor: true
-    }
+  adi: "Nurcan",
+  yas: 25,
+  roller: {
+    admin: false,
+    editor: true
+  }
 };
 
 console.log(JSON.stringify(kullanici, null, 2));

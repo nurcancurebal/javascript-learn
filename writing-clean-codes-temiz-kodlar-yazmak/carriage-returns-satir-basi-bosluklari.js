@@ -1,5 +1,4 @@
-/*
-İki türlü satır başı standardı vardır.
+/* İki türlü satır başı standardı vardır.
 
 Yatay boşluklar:2(4) boşluk.
 
@@ -9,11 +8,11 @@ Boşluk tuşu ile satıra başlamanın “Tab” a göre üstünlü daha esnek a
 Örneğin argümanlar şu şekilde hizalanabilir: */
 
 goster(parametreler,
-     hizalandı, // soldan 5 boşluk
-     ilki,
-     sonra,
-     digeri
-) {
+    hizalandı, // soldan 5 boşluk
+    ilki,
+    sonra,
+    digeri
+), {
     // ...
 }
 
