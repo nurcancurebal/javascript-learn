@@ -13,7 +13,7 @@ Not: Closure veya fonksiyon özelliği kullanabilirsiniz. Her iki şekilde yazsa
 
 // Closure 
 
-function sayacUret() {
+/* function sayacUret() {
 
     let say = 0;
 
@@ -27,51 +27,51 @@ function sayacUret() {
     sayac.artir = () => ++say;
 
     return sayac;
-
 }
 
 const closureWay = sayacUret();
 
 closureWay.set(5)
 
-console.log(closureWay());
+console.log(closureWay()); // 5
 
 closureWay.azalt()
 
-console.log(closureWay());
+console.log(closureWay()); // 4
 
 for (let index = 0; index < 3; index++) {
+
     closureWay.azalt();
 }
 
-console.log(closureWay());
+console.log(closureWay()); // 1 */
 
+
+// fonksiyon özelliği
 
 function toplam() {
-    return toplam.counter
+
+    // let counter = 0;
+    // return counter; bu şekilde olmadı çünkü diğer fonksiyonlar fonksiyonun içindeki değişkene erişemezler
+
+    return toplam.counter; // TODO burada return counter neden çalışmıyor?
 }
 
 function artirici() {
-    toplam.counter++
+    toplam.counter++;
 }
 
 function azaltici() {
-    toplam.counter--
+    toplam.counter--;
 }
 
-toplam.counter = 0;
+toplam.counter = 0; // TODO bu fonksiyonun içerisine counter: 0 ekle demek değil mi?
 
-artirici()
-artirici()
-artirici()
-artirici()
-artirici()
-artirici()
+artirici();
+artirici();
+artirici();
 
-azaltici()
-azaltici()
+azaltici();
+azaltici();
 
-console.log(toplam());
-
-
-// TODO çalış
+console.log(toplam()); // 1
