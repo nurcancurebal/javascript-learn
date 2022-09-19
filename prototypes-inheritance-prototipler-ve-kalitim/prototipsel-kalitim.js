@@ -81,6 +81,7 @@ let rabbit3 = {
 rabbit3.walk();
 
 
+// Prototip zinciri daha da uzun olabilir:
 
 let animal4 = {
 
