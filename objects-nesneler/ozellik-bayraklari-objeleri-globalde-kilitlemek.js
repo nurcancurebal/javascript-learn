@@ -21,6 +21,6 @@ Eğer özellik engellenmiş ise false aksi halde true dönderilir.
 Eğer özellik ekleme/silme engellenmiş ise true, tüm var olan özellikler configurable: false'e sahipse.
 
 ~ Object.isFrozen(obj)
-Eüer özellik ekleme/silme/değiştirme engellenmiş ve tüm özellikler configurable:false, writable:false ise true döndür.
+Eğer özellik ekleme/silme/değiştirme engellenmiş ve tüm özellikler configurable:false, writable:false ise true döndür.
 
 Bu metodlar pratikte çok az kullanılır. */
