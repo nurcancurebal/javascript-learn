@@ -10,7 +10,7 @@ let animal = {
     eats: true,
 
     walk() {
-        /* Bu metod rabbit tarafından kullanılmayacaktır. */
+        // Bu metod rabbit tarafından kullanılmayacaktır.
     }
 };
 
@@ -39,12 +39,12 @@ let user = {
 
     surname: "Smith",
 
-    set fullName(value) {
+    set fullNameGet(value) {
 
-        [this.name, this.surname] = value.split(" ");
+        [this.name, this.surname] = value.split(" "); // TODO set neden get ile aynı ismi almayınca çalışmıyor?
     },
 
-    get fullName() {
+    get fullNameGet() { // Get ve set aynı isim olmayınca çalışmıyor(get çağırmaya yarıyor)
 
         return `${this.name} ${this.surname}`;
     }
@@ -57,9 +57,19 @@ let admin = {
     isAdmin: true
 };
 
-console.log(admin.fullName); // John Smith (*)
+console.log(admin.fullNameGet); // John Smith (*) , get ile alıyor çıktıyı , set olmadanda çalışıyor
 
 // Ayarlayıcılar uyarıldı!
 admin.fullName = "Alice Cooper"; // (**)
 
 /* (*) satırında admin.fullName özelliği user prototipinde alıcıya sahiptir. Bundan dolayı çağırılır. (**) satırında ise ayarlayıcıya sahip olduğundan bu da çağırılır. */
+
+
+/* -> “this”'in değeri
+Aklınıza şöyle bir soru gelebilir. set fullName(value) içerisinde this'in değeri nedir? this.name ve this.surname yazılan yerlerde admin mi yoksa user mı kullanılır?
+
+Cevap basittir: this prototip tarafından hiçbir şekilde etkilenmez.
+
+Metodun bulunduğu yerin önemi olmaksızın, metod çağrısında this her zaman noktadan önceki bölümdür.
+
+Öyleyese aslında ayarlayıcı admin'i this olarak kullanır. user'ı değil. */
