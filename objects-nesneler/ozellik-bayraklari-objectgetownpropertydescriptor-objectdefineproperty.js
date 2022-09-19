@@ -46,7 +46,6 @@ console.log(JSON.stringify(descriptor2, null, 2));
 
 // Bayrakları değiştirmek için Object.defineProperty kullanılabilir.
 
-
 Object.defineProperty(obj, propertyName, descriptor2)
 
 /* ~ obj, propertyName
