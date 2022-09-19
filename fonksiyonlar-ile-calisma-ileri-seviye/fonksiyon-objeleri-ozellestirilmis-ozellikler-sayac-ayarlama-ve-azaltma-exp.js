@@ -54,7 +54,7 @@ function toplam() {
     // let counter = 0;
     // return counter; bu şekilde olmadı çünkü diğer fonksiyonlar fonksiyonun içindeki değişkene erişemezler
 
-    return toplam.counter; // TODO burada return counter neden çalışmıyor?
+    return toplam.counter; // fonksiyonun thisine ulaşmak için toplam.counter yaptık
 }
 
 function artirici() {
@@ -65,7 +65,7 @@ function azaltici() {
     toplam.counter--;
 }
 
-toplam.counter = 0; // TODO bu fonksiyonun içerisine counter: 0 ekle demek değil mi?
+toplam.counter = 0; // bu fonksiyonun this ine counter: 0 eklemek
 
 artirici();
 artirici();
