@@ -1,7 +1,7 @@
 /* -> Uyumluluk için kullanma
 Getter/setter fikrinin amacı aslında “normal” veri özelliklerinin kontrolünü her an elde tutabilmektir.
 
-Örneğin, kullanıcı objesini name ve age özellikleri ekleyelim: */
+Örneğin, kullanıcı objesine name ve age özellikleri ekleyelim: */
 
 function User1(name, age) {
 
@@ -11,9 +11,9 @@ function User1(name, age) {
 
 let john1 = new User1("John", 25);
 
-console.log(john1.age); // 25
+console.log(john1); // User1 { name: 'John', age: 25 }
 
-/* … Bu ilerde muhtemeldir değişebilir. Örneğin age yerine ileride birthday verisi tutmak istebiliriz, böylece daha kesin yaş bilgisi tutulabilir: */
+/* Bu ilerde muhtemeldir değişebilir. Örneğin age yerine ileride birthday verisi tutmak istebiliriz, böylece daha kesin yaş bilgisi tutulabilir: */
 
 function User2(name, birthday) {
 
@@ -36,7 +36,7 @@ function User3(name, birthday) {
     this.name = name;
     this.birthday = birthday;
 
-    // age is calculated from the current date and birthday
+    // yaş, geçerli tarih ve doğum gününden hesaplanır
     Object.defineProperty(this, "age", {
         get() {
             let todayYear = new Date().getFullYear();
@@ -49,5 +49,6 @@ let john3 = new User3("John", new Date(1992, 6, 1));
 
 console.log(john3.birthday); // 1992-06-30T21:00:00.000Z
 console.log(john3.age);      // 30
+console.log(john3); // User3 { name: 'John', birthday: 1992-06-30T21:00:00.000Z }
 
 // Şimdi eski kod da çalışır, ayrıca yeni bir özelliğe de sahip olmuş oluruz.
