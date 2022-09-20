@@ -13,9 +13,7 @@ console.log(obj); // {}
 
 /* "[object Object]" yazısını oluşturan kod nerede? Bu varsayılan toString metodu, ama asıl soru nerede? bu obj boş!
 
-…Fakat obj = {} ile obj = new Object() aslında aynı anlama gelmektedir. Object object yapıcı fonksiyonudur. Bu fonksiyon Object.prototype'e ki bu da büyük bir toString'e sahip objeye ve diğer fonksiyonlara sahiptir.
-
-Tamamı gömülüdür.
+…Fakat obj = {} ile obj = new Object() aslında aynı anlama gelmektedir. Object object yapıcı fonksiyonudur. Bu fonksiyon Object.prototype'e ki bu da büyük bir toString'e sahip objeye ve diğer fonksiyonlara sahiptir. Tamamı gömülüdür.
 
 new Object() çağrıldığında ( veya {...} ile yaratıldığında ) Objenin [[Prototype]]'i bir önceki bölümde bahsettiğimiz gibi Object.prototype'a ayarlanır.
 
