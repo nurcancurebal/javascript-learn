@@ -1,4 +1,4 @@
-/* -> Kaynak için “func.all” kullanmak.
+/* -> Kaynak için “func.call” kullanmak.
 Saklama dekoratörü obje metodları ile çalışmak için müsait değildir.
 
 Örneğin aşağıdaki kodda user.format() dekorasyondan sonra çalışmayı durdurur: */
@@ -43,15 +43,15 @@ console.log(worker1.slow(1)); // 3,  orjinal metod çalışmakta
 
 worker1.slow = cachingDecorator(worker1.slow); // şimdi saklamaya alındı.(cachingDecorator paremetresi olarak worker1 in içindeki slow fonksyonunun çıktısını gönderiyoruz sonucu worker1 in içindeki slow fonksiyonuna atıyoruz)
 
-//------------console.log(worker1.slow(2)); // 2, Whoops! Error: Özellik okunamamaktadır. `someMethod` tanımsız.
+console.log(worker1.slow(2)); // 6, Whoops! Error: Özellik okunamamaktadır. `someMethod` tanımsız.
 
 /* (*) satırında hata olur this.someMethod'a erişmeye çalışır fakat başırılı olamaz.
 
 Sebebi (**) satırında orjinal func(x) çağırılmıştır. Bu şekilde çağırıldığında, fonksiyon this = undefined alır.
 Aşağıdaki kod çalıştırılırsa da aynısı görülebilir: */
 
-/* -----------let func = worker1.slow;
-func(2); */
+let func = worker1.slow;
+func(2);
 
 /* Saklayıcı çağrıyı gerçek çalışacak metoda gönderir. Fakat this olmadığından dolayı hata alır.
 
@@ -61,20 +61,20 @@ Bunu düzeltmek için.
 
 Yazımı aşağıdaki gibidir: */
 
-//--------------func.call(context, arg1, arg2/*, ...*/)
+func.call(context, arg1, arg2/*, ...*/)
 
 /* İlk argüman this'dir diğerleri ise fonksiyon için gerekli argümanlardır.
 
 Kullanımı şu şekildedir: */
 
-/*--------------- func(1, 2, 3);
-func.call(obj, 1, 2, 3) */
+func(1, 2, 3);
+func.call(obj, 1, 2, 3)
 
 /* Her ikisi de aslında func fonksiyonlarını 1, 2, 3 argümanları ile çağırır tek fark func.call fonksiyonunda this de gönderilir.
 
 Örneğin, aşağıdaki kod sayHi metodunu iki farklı objeye değer atayarak çağırır. Birinci satırda this=user1 ikinci satırda ise this=admin değeri atanarak bu çağrı gerçekleştirilir. */
 
-/*------------ function sayHi() {
+function sayHi() {
 
     console.log(this.name);
 }
@@ -89,13 +89,13 @@ sayHi.call(admin); // Admin
 
 function say(phrase) {
 
-    console.log(this.name + ': ' + phrase);
+    console.log(this.name + ': ' + phrase); // John: Hello
 }
 
 let user = { name: "John" };
 
 // user `this` olmakta ve `phrase` ilk argüman olmaktadır.
-say.call(user, "Hello"); // John: Hello
+say.call(user, "Hello");
 
 // Bizim durumumuzda saklayıcı içinde call kullanarak içeriği orijinal fonksiyona aktarabiliriz:
 
@@ -136,7 +136,7 @@ function cachingDecorator(func) {
 worker.slow = cachingDecorator(worker.slow); // şimdi önbelleğe alma
 
 console.log(worker.slow(2)); // 2, çalışır
-console.log(worker.slow(2));  */// 2, orjinali değilde hafızadaki çalışır.
+console.log(worker.slow(2)); // 2, orjinali değilde hafızadaki çalışır.
 
 /* Şimdi her şey beklendiği gibi çalışıyor.
 

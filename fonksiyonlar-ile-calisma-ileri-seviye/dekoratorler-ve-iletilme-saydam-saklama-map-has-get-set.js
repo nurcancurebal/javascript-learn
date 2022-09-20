@@ -1,4 +1,4 @@
-/* -> ekoratörler ve iletilme, call/apply
+/* -> Dekoratörler ve iletilme, call/apply
 JavaScript fonksiyonlar ile uğraşırken inanılmaz derecede esneklik sağlamaktadır. Fonksiyonlar başka fonksiyonlara gönderilebilir, obje olarak kullanılabilir. Şimdi ise bunların nasıl iletileceği ve nasıl dekore edileceğinden bahsedilecektir; */
 
 
