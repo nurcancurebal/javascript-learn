@@ -13,10 +13,10 @@ let animal1 = {
     eats: true
 };
 
-// animal prototipi ile yeni bir rabbit1 objesi yaratma.
-let rabbit1 = Object.create(animal1);
+let rabbit1 = Object.create(animal1); // animal1 prototipi ile yeni bir rabbit1 objesi yaratma.
 
 console.log(rabbit1.eats); // true
+
 console.log(Object.getPrototypeOf(rabbit1) === animal1); // true , rabbit1'in prototipini alma
 
 Object.setPrototypeOf(rabbit1, {}); // rabbit1'in prototipini {}'e çevirme.
