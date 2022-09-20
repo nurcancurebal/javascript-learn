@@ -49,9 +49,9 @@ console.log(rabbit3); // Rabbit2 { name: "Black Rabbit" }
 
 /* Bir obje var fakat bu objenin ( 3. parti kütüphanelerden gelebilir) hangi yapıcısının kullanıldığını bilmiyorsak ve aynısını yaratmak istiyorsak oldukça kullanışlıdır.
 
-Muhtemelen "contructor" hakkındaki en önemli şey…
+Muhtemelen "contructor" hakkındaki EN ÖNEMLİ ŞEY…
 
-… JavaScript "contructor" değerinin doğru olduğuna garanti vermez.
+~ JavaScript "contructor" değerinin doğru olduğuna garanti vermez.
 
 Evet, varsayılan "prototype" da bulunur fakat hepsi budur, sonrasındaki her şey bize aittir.
 

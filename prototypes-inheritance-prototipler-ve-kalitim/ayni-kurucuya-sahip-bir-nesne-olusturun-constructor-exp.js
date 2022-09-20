@@ -1,10 +1,10 @@
-/* Bir yapıcı işlev tarafından yaratılan rastgele bir nesne nesnemiz olduğunu hayal edin - hangisini bilmiyoruz, ancak onu kullanarak yeni bir nesne oluşturmak istiyoruz.
+/* Bir yapıcı fonksiyon tarafından yaratılan rastgele bir nesnemiz olduğunu hayal edin - hangisini bilmiyoruz, ancak onu kullanarak yeni bir nesne oluşturmak istiyoruz.
 
 Böyle yapabilir miyiz? */
 
-//-------let obj2 = new obj.constructor();
+// let obj2 = new obj.constructor();
 
-// Bu tür kodun doğru çalışmasına izin veren obj için bir yapıcı işlev örneği verin. Ve yanlış çalışmasını sağlayan bir örnek.
+// Bu tür kodun doğru çalışmasına izin veren obj için bir yapıcı işlev örneği verin. Ve onu yanlış yapan bir örnek.
 
 // Çözüm
 
@@ -22,9 +22,11 @@ let user2 = new user1.constructor('Pete');
 
 console.log(user2.name); // Pete (worked!)
 
+console.log(user1.name); // john
+
 /* Çalıştı, çünkü User1.prototype.constructor == Kullanıcı.
 
-…Ama eğer birisi, deyim yerindeyse, User1.prototype'ın üzerine yazar ve "constructor"ı yeniden yaratmayı unutursa, o zaman başarısız olur.
+Ama eğer birisi, deyim yerindeyse, User1.prototype'ın üzerine yazar ve "constructor"ı yeniden yaratmayı unutursa, o zaman başarısız olur.
   
 Örneğin: */
 
@@ -38,7 +40,9 @@ let user3 = new User3('John');
 
 let user4 = new user3.constructor('Pete');
 
+console.log(user3.name); // John
 console.log(user4.name); // undefined
+
 
 /* user4.name neden tanımsız?
 

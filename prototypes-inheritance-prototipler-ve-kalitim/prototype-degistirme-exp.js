@@ -1,6 +1,6 @@
 /* -> "prototype"'i değiştirme
 
-Aşağıdaki kodda new Rabbitile yeni bir Rabbit oluşturulmuş sonra prototype’ı değiştirilmeye çalışılmıştır.
+Aşağıdaki kodda new Rabbit1 ile yeni bir Rabbit1 oluşturulmuş sonra prototype’ı değiştirilmeye çalışılmıştır.
 
 Başlangıçta aşağıdaki koda sahibiz: */
 
@@ -30,7 +30,10 @@ Rabbit2.prototype = {};
 
 console.log(rabbit2.eats); // ? (true)
 
-// …Eğer kod aşağıdaki gibi değiştirilirse ne olur ( bir satır değiştirildi )?
+// Rabbit.prototype ataması [[Prototype]]'I ayarlasada bu yeni objelerde etki eder. Var olanlarda bir değişikliğe neden olmaz.
+
+
+// Eğer kod (*) satırındaki gibi değiştirilirse ne olur ?
 
 function Rabbit3() { }
 
@@ -41,9 +44,14 @@ Rabbit3.prototype = {
 
 let rabbit3 = new Rabbit3();
 
-Rabbit3.prototype.eats = false;
+Rabbit3.prototype.eats = false; // (*)
 
 console.log(rabbit3.eats); // ? (false)
+
+/* Objeler referanslar ile atanır. Rabbit.prototype'tan alınan obje kopya değildir, hala hem Rabbit.prototype hem de rabbit'in [[Prototype]]'ı tarafından referans edilir.
+
+Bundan dolayı referans edilen herhangi bir yerden içerik değişirse bu diğerini de etkiler. */
+
 
 // Ya böyle ? ( bir satır değiştirildi )
 
@@ -60,7 +68,10 @@ delete rabbit4.eats;
 
 console.log(rabbit4.eats); // ? (true)
 
-// Son şekli:
+/* Tüm delete operasyonları objeye doğrudan etki eder. Mesela delete rabbit.eats rabbit'ten eats özelliğini silmeye çalışır fakat yapamaz. Bundan dolayı bu operasyonun hiçbir etkisi olmayacaktır. */
+
+
+// Son olarak
 
 function Rabbit5() { }
 
@@ -75,22 +86,4 @@ delete Rabbit5.prototype.eats;
 
 console.log(rabbit5.eats); // ? (undefined)
 
-/* Cevaplar:
-
-true.
-
-Rabbit.prototype ataması [[Prototype]]'I ayarlasada bu yeni objelerde etki eder. Var olanlarda bir değişikliğe neden olmaz.
-
-false.
-
-Objeler referanslar ile atanır. Rabbit.prototype'tan alınan obje kopya değildir, hala hem Rabbit.prototype hem de rabbit'in [[Prototype]]'ı tarafından referans edilir.
-
-Bundan dolayı referans edilen herhangi bir yerden içeriik değişirse bu diğerini de etkiler.
-
-true.
-
-Tüm delete operasyonları objeye doğrudan etki eder. Mesela delete rabbit.eats rabbit'ten eats özelliğini silmeye çalışır fakat yapaz. Bundan dolayı bu operasyonun hiçbir etkisi olayacaktır.
-
-undefined.
-
-eats prototip’ten silindiğinden dolayı artık bir etkisi olmayacaktır. */
+// eats prototip’ten silindiğinden dolayı artık bir etkisi olmayacaktır.
