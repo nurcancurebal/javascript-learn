@@ -32,3 +32,5 @@ let rabbit = new Rabbit("White Rabbit"); //  rabbit.__proto__ == animal
 console.log(rabbit.eats); // true
 
 /* Rabbit.prototype = animal sözcük anlamıyla: “Eğer yeni bir Rabbit yaratılırsa new Rabbit, bunun [[Prototype]]ını animal'a ata” */
+
+// "prototip" yataydaki oktur, sıranda bir özelliktir. [[Prototype]] ise dikeydir ve rabbit'in animal'dan miras aldığını ifade eder.

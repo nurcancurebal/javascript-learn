@@ -43,6 +43,10 @@ let rabbit2 = new Rabbit2("White Rabbit");
 
 let rabbit3 = new rabbit2.constructor("Black Rabbit");
 
+console.log(rabbit2); // Rabbit2 { name: "White Rabbit" }
+
+console.log(rabbit3); // Rabbit2 { name: "Black Rabbit" }
+
 /* Bir obje var fakat bu objenin ( 3. parti kütüphanelerden gelebilir) hangi yapıcısının kullanıldığını bilmiyorsak ve aynısını yaratmak istiyorsak oldukça kullanışlıdır.
 
 Muhtemelen "contructor" hakkındaki en önemli şey…
