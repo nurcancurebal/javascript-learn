@@ -16,6 +16,7 @@ class Animal {
     run(speed) {
 
         this.speed += speed;
+
         console.log(`${this.name} runs with speed ${this.speed}.`); // White rabbit runs with speed 5.
     }
 
@@ -27,7 +28,7 @@ class Animal {
 
 }
 
-// Inherit from Animal
+// Animal'dan Devral
 class Rabbit extends Animal {
 
     hide() {
@@ -42,7 +43,6 @@ rabbit.run(5);
 rabbit.hide();
 
 /* extends kelimesi aslında Rabbit.prototype'dan referans alıp bunun [[Prototype]]'ını Animal.prototype'a ekler. Aynen daha önce de gördüğümüz gibi.
-
 
 Artık rabbit hem kendi metodlarına hem de Animal metodlarına erişebilir. */
 
@@ -60,7 +60,7 @@ function f(phrase) {
     }
 }
 
-class User extends f("Hello") { }
+class User extends f("Hello") { } // üst sınıfı yaratan yeni bir fonksiyon çağrısı
 
 new User().sayHi(); // Hello
 
