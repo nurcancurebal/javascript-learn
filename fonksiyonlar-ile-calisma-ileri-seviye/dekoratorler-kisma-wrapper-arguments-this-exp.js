@@ -29,29 +29,26 @@ function throttle(func, ms) { //  throttle(func,ms)'e yapılan çağrı saklayı
 
     function wrapper() {
 
-        if (isThrottled) { // (2)
-            // sakinleştikten sonra son argümanları çağırmak için kaydet.
+        if (isThrottled) { // (2) // argümanları kaydet.
 
-            savedArgs = arguments;
+            savedArgs = arguments; // ...isThrottled true ise savedArgs 2 yi aldı, this global...
             savedThis = this;
             return;
         }
 
-        // diğer türlü sakinleşme durumuna geç.
-        func.apply(this, arguments); // (1)
+        // false sa burayı yap
+        func.apply(this, arguments); // (1) func = f , f ise console.log olan fonksiyon, arguments 1
 
         isThrottled = true;
 
-        setTimeout(function () {
+        setTimeout(function () { // savedArgs 3 ü aldı settimeout un içine girdi
 
             isThrottled = false; // (3)
 
-            if (savedArgs) {
+            if (savedArgs) { // savedThis/savedArgs değerleri mevcut ise true
 
-                // eğer çağrı varsa savedThis/savedArgs değerleri mevcuttur.
-                // Kendini yineleyen çağrılar fonksiyonu çağırır ve tekrar sakin duruma geçer.
                 wrapper.apply(savedThis, savedArgs);
-                savedArgs = savedThis = null;
+                savedArgs = savedThis = null; // yeni bir atama yapıldığı için tekrar kendi fonksiyonununun (yani settimeoutun) içine girer ve isThrottled false çekip bitirir fonksiyonu.
             }
         }, ms);
     }
@@ -79,5 +76,3 @@ f1000(3); // 3 yazar
 Bu durumda tüm çağrılar savedArgs/savedThis içerisinde tutulur. Bu kaynaklar ve argümanlar hafızada tutulmalıdır. Çünkü çağrıyı eşzamanlı olarak çoğaltmamız için bu bilgiler gereklidir.
 … ms süresi geçtikten sonra setTimeout çalışır. Yavaşlama durumu sona erer (isThrottled = false ). Eğer görmezden gelinmiş çağrı var ise saklayıcı son hafızada tutulan kaynağı ve argüman ile çalışır.
 Son adım func yerine wrapper çalıştırır, çünkü sadece func'ın çalışması yetmez ayrıca yavaşlama durumuna girilmesi gereklidir. */
-
-// TODO çalış
