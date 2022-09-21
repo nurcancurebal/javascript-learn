@@ -1,7 +1,7 @@
 /* -> Bir metodu geçersiz kılma, üstüne yazma.
 Şimdi biraz daha ileri gidelim ve metodun üstüne yazalım. Şimdiden sonra Rabbit1 stop metodunu kalıtım alır, bu metod this.speed=0'ı Animal sınıfında ayarlamaya yarar.
 
-Eğer Rabbit1 içerisinde kendi stop metodunuzu yazarsanız buna üstüne yazma denir ve Animal'da yazılmış stop metodu kullanılmaz. */
+Eğer Rabbit1 içerisinde kendi stop metodunuzu yazarsanız buna üstüne yazma denir ve Animal1'de yazılmış stop metodu kullanılmaz. */
 
 class Rabbit1 extends Animal1 {
 
@@ -10,7 +10,7 @@ class Rabbit1 extends Animal1 {
     }
 }
 
-/* …Fakat genelde üst metodun üzerine yazmak istenmez, bunun yerine küçük değişiklikler yapmak veya fonksiyonliteyi genişletmek daha fazla tercih edilen yöntemdir. Metodda birçeyler yapar ve genelde bundan önce/sonra veya işlerken üst metodu çağırırız.
+/* …Fakat genelde üst metodun üzerine yazmak istenmez, bunun yerine küçük değişiklikler yapmak veya fonksiyonliteyi genişletmek daha fazla tercih edilen yöntemdir. Metodda birşeyler yapar ve genelde bundan önce/sonra veya işlerken üst metodu çağırırız.
 
 Sınıflar bunun için "super" anahtar kelimesini sağlarlar.
 
@@ -18,7 +18,7 @@ Sınıflar bunun için "super" anahtar kelimesini sağlarlar.
 
 . super(...) üst metodun yapıcısını (constructor) çağırmak için kullanılır.
 
-Örneğin, Rabbit otomatik olarak durduğunda gizlensin. */
+Örneğin, Rabbit2 otomatik olarak durduğunda gizlensin. */
 
 class Animal2 {
 
@@ -32,14 +32,14 @@ class Animal2 {
 
         this.speed += speed;
 
-        console.log(`${this.name} runs with speed ${this.speed}.`);
+        console.log(`${this.name} runs with speed ${this.speed}.`); // White Rabbit runs with speed 5.
     }
 
     stop() {
 
         this.speed = 0;
 
-        console.log(`${this.name} stopped.`);
+        console.log(`${this.name} stopped.`); // White Rabbit stopped.
     }
 }
 
@@ -47,7 +47,7 @@ class Rabbit2 extends Animal2 {
 
     hide() {
 
-        console.log(`${this.name} hides!`);
+        console.log(`${this.name} hides!`); // White rabbit hides!
     }
 
     stop() {
@@ -59,8 +59,8 @@ class Rabbit2 extends Animal2 {
 
 let rabbit = new Rabbit2("White Rabbit");
 
-rabbit.run(5); // White Rabbit runs with speed 5.
-rabbit.stop(); // White Rabbit stopped. White rabbit hides!
+rabbit.run(5);
+rabbit.stop();
 
 // Artık Rabbit2, stop metodunda üst sınıfın super.stop()'unu çağırmaktadır.
 
