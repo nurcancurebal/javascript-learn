@@ -54,4 +54,4 @@ Bu iyi, çünkü eğer bir nesne üzerinde for..in yaparsak, genellikle onun sı
 
 3. Sınıflar her zaman strict(katı) kullanır. Sınıf yapısındaki tüm kodlar otomatik olarak katı(strict) moddadır.
 
-Ayrıca, temel işleyişine ek olarak, sınıf sözdizimi, daha sonra inceleyeceğimiz birçok başka özelliği de beraberinde getirir. */ // TODO
+Ayrıca, temel işleyişine ek olarak, sınıf sözdizimi, daha sonra inceleyeceğimiz birçok başka özelliği de beraberinde getirir. */

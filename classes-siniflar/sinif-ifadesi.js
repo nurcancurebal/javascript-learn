@@ -12,7 +12,7 @@ let User1 = class {
 
 Sınıf ifadesinin bir adı varsa, yalnızca sınıfın içinde görünür: */
 
-// "Named Class Expression" (spesifikasyonda böyle bir terim yok, ancak bu Adlandırılmış İşlev İfadesine benzer)
+// "Adlandırılmış Sınıf İfadesi" (spesifikasyonda böyle bir terim yok, ancak bu Adlandırılmış İşlev İfadesine benzer)
 let User = class MyClass {
 
     sayHi() {
@@ -39,7 +39,7 @@ function makeClass(phrase) {
     };
 }
 
-// Create a new class
+// Yeni bir sınıf oluştur
 let User2 = makeClass("Hello");
 
-new User2().sayHi(); // Hello // TODO
+new User2().sayHi(); // Hello
