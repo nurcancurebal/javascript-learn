@@ -17,11 +17,11 @@ dictionary1.__proto__ = "test"; // __proto__ burada normal özellik olarak kulla
 // sadece apple ve __proto__ yazmalı
 for (let key in dictionary1) {
 
-    console.log(key); // apple , __proto__
+    console.log(key); // apple, sonra __proto__
 }
 
 // Artık sizin yazacağınız toString metodu burada çalışmalıdır.
-console.log(dictionary1); // [Object: null prototype] { apple: 'Apple', ['__proto__']: 'test' }
+console.log(dictionary1); // apple,__proto__ olmalı
 
 // çözüm
 /* Metod tüm dönülebilir anahtarlını Object.keys ile alır ve listesini döner.
@@ -49,8 +49,6 @@ for (let key in dictionary) {
 }
 
 // listenin virgül ile ayrılmış versiyonu döner.
-console.log(dictionary); // [Object: null prototype] { apple: 'Apple', ['__proto__']: 'test' }
+console.log(dictionary); // "apple,__proto__"
 
-/* Tanımlayıcı ile özellik yarattığımızda bunun bayrakları varsayılan olarak false olur. Bundan dolayı yukarıdaki dictionary.toString dönülemezdir.
-
-Daha fazla bilgi için Özellik bayrakları ve tanımlayıcılar bölümünü inceleyebilirsiniz. */
+/* Tanımlayıcı ile özellik yarattığımızda bunun bayrakları varsayılan olarak false olur. Bundan dolayı yukarıdaki dictionary.toString dönülemezdir. */
