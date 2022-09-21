@@ -5,7 +5,7 @@ Artık super'in derinliklerine dalma vakti geldi. Altında yatan ilginç şeyler
 
 Ever gerçekten, kendimize soralım, nasıl teknik olarak böyle bir şey çalışabilir? Bir obje metodu çalıştığında var olan objeyi this olarak alır. Eğer biz super.method()'u çağırırsak metod'u nasıl alabilir? Doğal olarak method'u var olan objenin prototipinden almak gerekmektedir. Peki teknik olarak bunu JavaScript motoru nasıl halledebilir?
 
-Belki thisin [[Prototype]]'ını this.__proto__.method olarak alıyordur? Malesef böyle çalışmıyor.
+Belki this in [[Prototype]]'ını this.__proto__.method olarak alıyordur? Malesef böyle çalışmıyor.
 
 Bunu test edelim. Sınıflar olmadan basit objelerle, fazladan karmaşıklaştırmadan deneyelim.
 
@@ -57,7 +57,7 @@ let rabbit2 = {
 
     eat() {
         // ...tavşan-stili ayla ve üst sınıfı çağır.
-        this.__proto__.eat.call(this); // (*) maksimum çağrı yığını boyutu aşıldı
+        this.__proto__.eat.call(this); // (*)
     }
 };
 
@@ -71,7 +71,7 @@ let longEar = {
     }
 };
 
-longEar.eat(); // Error: Maximum call stack size exceeded
+longEar.eat(); // Error: Maksimum çağrı yığını boyutu aşıldı
 
 /* Yazdığınız kod artık çalışmıyor! longEar.eat()'i çağırırken hata olduğunu görebilirsiniz.
 
@@ -83,6 +83,7 @@ Bu çok açık olmayabilir, fakat longEar.eat() in hata kodlarını takip ederse
 
 // longEar.eat() içerisinde this = longEar şeklinde kullanmaktayız.
 this.__proto__.eat.call(this) // (**)
+
 // olur
 longEar.__proto__.eat.call(this)
 // bu da
@@ -92,6 +93,7 @@ rabbit2.eat.call(this);
 
 // rabbit2.eat() içerisinde thiss= longEar bulunmakta
 this.__proto__.eat.call(this) // (*)
+
 // olur
 longEar.__proto__.eat.call(this)
 // veya (yine)
