@@ -45,7 +45,7 @@ let longEar = {
 
 longEar.eat();  // Long Ear eats.
 
-/* Her metod kendi objesinin [[HomeObject]] özelliğini hatırlamakta. Sonra superbunu üst objenin prototipini çözerken kullanır.
+/* Her metod kendi objesinin [[HomeObject]] özelliğini hatırlamakta. Sonra super bunu üst objenin prototipini çözerken kullanır.
 
 [[HomeObject]] sınıflar veya sade objeler’de tanımlanan metodlar için tanımlanır. Fakat objeler için, metodlar aynen şu şekilde tanımlanmalıdır: method(), "method:function()" şeklinde değil.
 
@@ -150,4 +150,4 @@ let rabbit4 = {
     }
 };
 
-rabbit4.eat();  // super çağrılırken hata oluştu (çünkü [[HomeObject]] yok) // TODO
+rabbit4.eat();  // super çağrılırken hata oluştu (çünkü [[HomeObject]] yok)
