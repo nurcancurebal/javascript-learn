@@ -16,8 +16,10 @@ function User2() { }
 
 User2.staticMethod = function () {
 
-    console.log(this === User2);
+    console.log(this === User2); // true
 };
+
+User2.staticMethod();
 
 /* Bunun User2.staticMethod() içindeki değeri, sınıf kurucusu User2'ın kendisidir ("noktadan önceki nesne" kuralı).
 Genellikle, statik yöntemler, sınıfa ait olan ancak sınıfın herhangi bir nesnesine ait olmayan işlevleri uygulamak için kullanılır.
@@ -37,7 +39,6 @@ class Article1 {
     }
 }
 
-// usage
 let articles = [
     new Article1("HTML", new Date(2019, 1, 1)),
     new Article1("CSS", new Date(2019, 0, 1)),
@@ -48,7 +49,7 @@ articles.sort(Article1.compare);
 
 console.log(articles[0].title); // CSS
 
-/* Burada Article1.compare, onları karşılaştırmanın bir yolu olarak makalelerin “üzerinde” duruyor. Bu bir makale yöntemi değil, tüm sınıfın yöntemidir. Başka bir örnek, "fabrika" olarak adlandırılan bir yöntem olacaktır.
+/* Burada Article1.compare, onları karşılaştırmanın bir yolu olarak makalelerin(articleların) “üzerinde” duruyor. Bu bir makale yöntemi değil, tüm sınıfın yöntemidir. Başka bir örnek, "fabrika" olarak adlandırılan bir yöntem olacaktır.
 Bir makale oluşturmak için birkaç yola ihtiyacımız olduğunu hayal edin:
 
 1. Verilen parametrelere göre oluşturun (başlık, tarih vb.).

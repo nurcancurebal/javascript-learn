@@ -23,7 +23,7 @@ class Animal {
 
 }
 
-// Inherit from Animal
+// Animal'dan Devral
 class Rabbit extends Animal {
 
     hide() {
