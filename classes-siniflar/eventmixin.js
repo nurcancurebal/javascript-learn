@@ -81,7 +81,7 @@ class Menu {
     }
 }
 // mixin ekle
-Object.assign(Menu.prototype, eventMixin);
+Object.assign(Menu.prototype, eventMixin); // eventMixini Menu ye kopyalama işlemi
 
 let menu = new Menu();
 
@@ -93,4 +93,4 @@ menu.choose("123");
 
 /* Artık kullanıcının seçimine farklılık gösteren bir kodumuz var ise bunu menu.on(...) ile kullanabiliriz.
 
-eventMix böyle bir davranışa istediğimiz kadar sınıfa eklenebilir bunu yaparken de kalıtım zincirine dokunulmamış olur. */ // TODO tekrar et
+eventMix böyle bir davranışa istediğimiz kadar sınıfa eklenebilir bunu yaparken de kalıtım zincirine dokunulmamış olur. */
