@@ -5,13 +5,7 @@ Ancak dahili arayüzü harici olandan ayırmak, bunları sorunsuz bir şekilde k
 
 
 /* -> Gerçek hayattan bir örnek
-Örneğin, bir kahve makinesi. Dışarıdan basit: bir düğme, bir ekran, birkaç delik… Ve elbette sonuç – harika kahve! :)
-
-"/article/private-protected-properties-methods/kahve.jpg" görseli
-Ama içeride… (tamir kılavuzundan bir resim)
-
-"/article/private-properties-methods/coffee-inside.jpg" görseli görseli
-Bir sürü detay. Ama hiçbir şey bilmeden kullanabiliriz.
+Örneğin, bir kahve makinesi. Dışarıdan basit: bir düğme, bir ekran, birkaç delik… Ve elbette sonuç – harika kahve!
 
 Kahve makineleri oldukça güvenilir, değil mi? Birini yıllarca kullanabiliriz ve ancak bir şeyler ters giderse - tamir için getirin.
 
@@ -38,8 +32,6 @@ Nesnenin çalışması için dahili bir arayüz kullanılır, detayları birbiri
 Ancak dışarıdan bir kahve makinesi koruyucu kapakla kapatılır, böylece kimse bunlara ulaşamaz. Ayrıntılar gizlidir ve erişilemez. Özelliklerini harici arayüz üzerinden kullanabiliriz.
 
 Yani, bir nesneyi kullanmak için ihtiyacımız olan tek şey onun dış arayüzünü bilmek. İçeride nasıl çalıştığının tamamen farkında olmayabiliriz ve bu harika.
-
-Bu genel bir girişti.
 
 JavaScript'te üç tür özellik ve üye vardır:
 
