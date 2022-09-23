@@ -1,7 +1,7 @@
 /* -> Yerleşik sınıfları genişletme
 Array, Map ve diğerleri gibi yerleşik sınıflar da genişletilebilir.
 
-Örneğin, burada PowerArray yerelden miras alınır Array: */
+Örneğin, burada PowerArray1 yerelden miras alınır Array1: */
 
 class Array1 { }
 
@@ -23,19 +23,19 @@ let filteredArr1 = arr1.filter(item => item >= 10);
 console.log(filteredArr1); // 10, 50
 console.log(filteredArr1.isEmpty()); // false
 
-/* Lütfen çok ilginç bir şeye dikkat edin. filter, ve diğerleri gibi yerleşik yöntemler map– tam olarak miras alınan türden yeni nesneler döndürür. constructorBunu yapmak için mülke güvenirler .
+/* Lütfen çok ilginç bir şeye dikkat edin. filter, ve diğerleri gibi yerleşik yöntemler map– tam olarak miras alınan türden yeni nesneler döndürür. constructor Bunu yapmak için yapıcı(constructor) özelliğine güvenirler.
 
 Yukarıdaki örnekte, */
 
 arr1.constructor === PowerArray1
 
-/* Yani çağrıldığında, temel değil arr.filter()tam olarak kullanarak yeni sonuç dizisini dahili olarak oluşturur . Bu aslında çok güzel, çünkü sonuçta daha fazla yöntem kullanmaya devam edebiliriz.new PowerArrayArrayPowerArray
+/* Bu nedenle arr.filter() çağrıldığında, temel Array1 yerine tam olarak yeni PowerArray1 kullanarak yeni sonuç dizisini dahili olarak oluşturur. Bu aslında çok güzel, çünkü sonuçta PowerArray1 yöntemlerini kullanmaya devam edebiliriz.
 
 Dahası, bu davranışı özelleştirebiliriz.
 
-Symbol.speciesSınıfa özel bir statik alıcı ekleyebiliriz . Varsa, JavaScript'in içinde yeni varlıklar oluşturmak için dahili olarak kullanacağı yapıcıyı döndürmelidir, mapvb filter.
+Sınıfa özel bir statik alıcı Symbol.species ekleyebiliriz. Varsa, haritada(map), filtrede(filter) vb. yeni varlıklar oluşturmak için JavaScript'in dahili olarak kullanacağı yapıcıyı döndürmelidir.
 
-, gibi yerleşik yöntemlerin normal diziler döndürmesini istiyorsak map, burada olduğu gibi filtergeri dönebiliriz :ArraySymbol.species */
+map, filter gibi yerleşik yöntemler istiyorsak normal diziler döndürecek, burada olduğu gibi Symbol.species'te Array döndürebiliriz: */
 
 class Array2 { }
 
@@ -49,7 +49,7 @@ class PowerArray2 extends Array2 {
     // yerleşik yöntemler bunu yapıcı(constructor) olarak kullanacak
     static get [Symbol.species]() {
 
-        return Array;
+        return Array2;
     }
 }
 
@@ -58,9 +58,9 @@ let arr2 = new PowerArray2(1, 2, 5, 10, 50);
 console.log(arr2.isEmpty()); // false
 
 // filtre, yapıcı olarak arr.constructor[Symbol.species] kullanarak yeni dizi oluşturur
-let filteredArr2 = arr2.filter(item => item >= 10);
+let filteredArr2 = arr2.filter(item => item >= 10); // TODO hata verdi olmadı olacağını iddia ediyor?
 
 // filteredArr2 is not PowerArray2, but Array
 console.log(filteredArr2.isEmpty()); // Error: filteredArr.isEmpty is not a function
 
-// Gördüğünüz gibi, şimdi .filtergeri dönüyor Array. Böylece genişletilmiş işlevsellik daha fazla aktarılmaz.
+// Gördüğünüz gibi, şimdi .filter, Array'i döndürüyor. Böylece genişletilmiş işlevsellik daha fazla aktarılmaz.
