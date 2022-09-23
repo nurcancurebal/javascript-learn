@@ -100,4 +100,4 @@ try {
     console.log("External catch got: " + e); // External catch got: ReferenceError: blabla is not defined
 }
 
-/* Burada readData sadece SyntaxError ile nasıl başa çıkacağını biliyor. Bunun yanında dıştaki try..catch ise geri kalan her şeyi idare ediyor. */
+/* Burada readData sadece SyntaxError ile nasıl başa çıkacağını biliyor. Bunun yanında dıştaki try..catch ise geri kalan her şeyi idare ediyor. */ // TODO
