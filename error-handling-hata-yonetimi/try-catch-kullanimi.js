@@ -12,12 +12,9 @@ let json = '{"name":"John", "age": 30}'; // sunucudan gelen veri.
 let user = JSON.parse(json); // bu veriyi JS objesine dönüştür.
 
 //Artık user karakter dizisinden oluşan objelere sahiptir.
-console.log(user.name); // John
-console.log(user.age);  // 30
+console.log(user); // { name: 'John', age: 30 }
 
-/* JSON hakkında daha derin bilgiyi JSON metodları, toJSON bölümünden öğrenebilirsiniz.
-
-~ Eğer json düzgün gelmiyorsa JSON.parse hata üretir ve kod anında “ölür”.
+/* ~ Eğer json düzgün gelmiyorsa JSON.parse hata üretir ve kod anında “ölür”.
 
 Bunun ile yetinmeli miyiz? Elbette hayır
 
@@ -29,16 +26,16 @@ let json2 = "{ bad json }";
 
 try {
 
-    let user = JSON.parse(json2); // <-- when an error occurs...
+    let user = JSON.parse(json2); // <-- bir hata oluştuğunda...
 
-    console.log(user.name); // doesn't work
+    console.log(user.name); // çalışmıyor
 
 } catch (e) {
 
     // ...çalışma buradan devam eder.
-    console.log("Kusura bakmayın, veride hata var.Talep tekrar yapacaktır");
-    console.log(e.name);
-    console.log(e.message);
+    console.log("Kusura bakmayın, veride hata var.Talep tekrar yapacaktır"); // Kusura bakmayın, veride hata var.Talep tekrar yapacaktır
+    console.log(e.name); // SyntaxError
+    console.log(e.message); // Unexpected token b in JSON at position 2
 }
 
-/* Burada catch bloğu sadece mesajı göstermek için kullanılmıştır. Fakat burada ağ talebi, kullanıcıya başka bir yöntem sunma, loglama için hata loginin tutulması gibi işlemler yapılabilir. */ // TODO
+/* Burada catch bloğu sadece mesajı göstermek için kullanılmıştır. Fakat burada ağ talebi, kullanıcıya başka bir yöntem sunma, loglama için hata loginin tutulması gibi işlemler yapılabilir. */

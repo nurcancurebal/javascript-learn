@@ -27,17 +27,13 @@ try {
 
 Öyleyse try {...} içerisindeki kod doğrudan sona eremez, bize catch içerisinde bunu idare etmemiz için olanak sağlar.
 
-Bir kaç örnek ile daha da pekiştirelim:
-
 . Hatasız örnek: console.log (1) ve (2)'yi gösterir: */
 
 try {
 
-    console.log('try başladı');  // (1) <--
+    console.log('try başladı');  // (1) // try başladı
 
-    // ...no errors here
-
-    console.log('try bitti');   // (2) <--
+    console.log('try bitti');   // (2) // try bitti
 
 } catch (err) {
 
@@ -45,13 +41,12 @@ try {
 
 }
 
-console.log("...Kod normal çalışmasına devam etti.");
+console.log("...Kod normal çalışmasına devam etti."); // ...Kod normal çalışmasına devam etti.
 
-// . Hatalı örnek: (1) ve (3)'ü gösterir:
 
 try {
 
-    console.log('try başladı');  // (1) <--
+    console.log('try başladı');  // (1) // try başladı
 
     lalala; // hata,  değişken tanımlı değil!
 
@@ -59,11 +54,10 @@ try {
 
 } catch (err) {
 
-    console.log(`Hata meydana geldi!`); // (3) <--
-
+    console.log(`Hata meydana geldi!`); // (3) // Hata meydana geldi!
 }
 
-console.log("...Kod normal çalışmasına devam etti.");
+console.log("...Kod normal çalışmasına devam etti."); // ...Kod normal çalışmasına devam etti.
 
 
 /* -> try..catch sadece çalışma zamanlı hatalar içindir
@@ -71,57 +65,47 @@ try..catch'in çalışabilmesi için kod çalışabilir olmalıdır. Diğer bir 
 
 Eğer kod yazımsal olarak hatalıysa çalışmayacaktır, örneğin süslü parantezler açılmış ama kapatılmamışsa: */
 
+/* try {
+    {{{{{{{{{{{{
+  } catch(e) {
+
+    console.log("JavaScript motoru bunu anlayamaz, çünkü geçerli bir kod değildir.");
+} */
+
+/* JavaScript motoru önce kodu okur, sonra çalıştırır. Eğer hata okuma safhasında meydana gelirse bunlara “ayrıştırma-zamanı” hataları denir ve kurtarılamaz hatalardır. Bundan dolayı JavaScript motoru bunları anlayamaz.
+ 
+Bundan dolayı try..catch ancak ve ancak gerçerli kodlarda oluşacak hataları idare edebilir. Bu hatalara “çalışma zamanı hataları” veya bazen “istisnalar”(Exception) denilmektedir. */
+
+
+/* -> try..catch Senkronize olarak çalışmaktadır
+Eğer “zamanlanmış” bir kodda, setTimeout gibi, bir hata meydana gelirse try..catch bunu yakalayamaz: */
+
 try {
-    {
-        {
-            {
-                {
-                    {
-                        {
-                            {
-                                {
-                                    {
-                                        {
-                                            {
-                                                { } catch (e) {
 
-                                                    console.log("JavaScript motoru bunu anlayamaz, çünkü geçerli bir kod değildir.");
-                                                }
+    setTimeout(function () {
 
-                                                /* JavaScript motoru önce kodu okur, sonra çalıştırır. Eğer hata okuma safhasında meydana gelirse bunlara “ayrıştırma-zamanı” hataları denir ve kurtarılamaz hatalardır. Bundan dolayı JavaScript motoru bunları anlayamaz.
-                                                
-                                                Bundan dolayı try..catch ancak ve ancak gerçerli kodlarda oluşacak hataları idare edebilir. Bu hatalara “çalışma zamanı hataları” veya bazen “istisnalar”(Exception) denilmektedir. */
+        noSuchVariable; // kod burada ölecektir.
 
+    }, 1000);
 
-                                                /* -> try..catch Senkronize olarak çalışmaktadır
-                                                Eğer “zamanlanmış” bir kodda, setTimeout gibi, bir hata meydana gelirse try..catch bunu yakalayamaz: */
+} catch (e) {
 
-                                                try {
+    console.log("çalışmaz");
+}
 
-                                                    setTimeout(function () {
+/* Bunun nedeni try..catch'in aslında fonksiyonu zamanlayan setTimeout'u kapsamasından dolayıdır. Fakat fonksiyon daha sonra çlışır. O anda aslında motor try..catchi geçmiş olur.
+ 
+Eğer zamanlanmış fonksiyon içerisinde bu hatayı yakalamak istiyorsanız, try..catch bloğunu fonksiyonun içerisine yazmalısınız: */
 
-                                                        noSuchVariable; // kod burada ölecektir.
+setTimeout(function () {
 
-                                                    }, 1000);
+    try {
 
-                                                } catch (e) {
+        noSuchVariable; // try..catch hataları yakalayacaktır.
 
-                                                    console.log("çalışmaz");
-                                                }
+    } catch (e) {
 
-                                                /* Bunun nedeni try..catch'in aslında fonksiyonu zamanlayan setTimeout'u kapsamasıdan dolayıdır. Fakat fonksiyon daha sonra çlışır. O anda aslında motor try..catchi geçmiş olur.
-                                                
-                                                Eğer zamanlanmış fonksiyon içerisinde bu hatayı yakalamak istiyorsanız, try..catch bloğunu fonksiyonun içerisine yazmalısınız: */
+        console.log("hata burada yakalandı!"); // hata burada yakalandı!
 
-                                                setTimeout(function () {
-
-                                                    try {
-
-                                                        noSuchVariable; // try..catch hataları yakalayacaktır.
-
-                                                    } catch (e) {
-
-                                                        console.log("hata burada yakalandı!");
-
-                                                    }
-                                                }, 1000); // TODO
+    }
+}, 1000);

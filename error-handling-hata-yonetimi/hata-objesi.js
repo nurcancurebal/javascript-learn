@@ -4,7 +4,7 @@ try {
 
     // ...
 
-} catch (err) { // <-- the "error object", could use another word instead of err
+} catch (err) { // <-- "hata nesnesi", err yerine başka bir kelime kullanabilir
 
     // ...
 }
@@ -29,10 +29,10 @@ try {
 } catch (err) {
 
     console.log(err.name); // ReferenceError
-    console.log(err.message); // lalala tanımlı değil
-    console.log(err.stack); // ReferenceError: lalala şurada tanımlanmadı ...
+    console.log(err.message); // lalala is not defined (lalala tanımlı değil)
+    console.log(err.stack); // ReferenceError: lalala is not defined (ReferenceError: lalala şurada tanımlanmadı ...)
 
     // ayrıca hatayı tümüyle göstermek de mümkündür.
     // hata karakter dizisine "name:message" gibi çevirildi.
     console.log(err); // ReferenceError: lalala tanımlı değil
-} // TODO
+}

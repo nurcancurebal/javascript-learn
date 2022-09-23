@@ -9,7 +9,7 @@ try {
 
     let user = JSON.parse(json); // <-- hata yok
 
-    console.log(user.name); // ama isim de yok!
+    console.log(user.name); // undefined, ama isim de yok!
 
 } catch (e) {
 
@@ -18,4 +18,4 @@ try {
 
 /* Burada JSON.parse doğru bir şekilde çalışır, "name"'in olmaması aslında bir sorundur.
 
-Hata idaresini birleştirmek adına burada throw operatörü kullanılacaktır. */ // TODO
+Hata idaresini birleştirmek adına burada throw operatörü kullanılacaktır. */

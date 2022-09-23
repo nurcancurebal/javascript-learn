@@ -1,11 +1,11 @@
 /* -> Tekrar atma (Rethrowing)
 Yukarıdaki örnekte yanlış veri ile başa çıkmak için try..catch kullandık. Peki başka beklenmeyen hata varsa ne yapacağız? Mesela değişken tanımsız olabilir veya bilmediğimiz bir hata ile de karşılaşabiliriz. */
 
-let json = '{ "age": 30 }'; // tamamlanmamış veri
+let json1 = '{ "age": 30 }'; // tamamlanmamış veri
 
 try {
 
-    user = JSON.parse(json); // <-- user'dan önce "let" kullanmayı unuttuysak
+    user = JSON.parse(json1); // <-- user'dan önce "let" kullanmayı unuttuysak
 
     // ...
 } catch (err) {
@@ -41,11 +41,11 @@ try {
 
 Aşağıdaki kodda catch sadece SyntaxError'ü idare etmektedir: */
 
-let json = '{ "age": 30 }'; // tamamlanmamış veri
+let json2 = '{ "age": 30 }'; // tamamlanmamış veri
 
 try {
 
-    let user = JSON.parse(json);
+    let user = JSON.parse(json2);
 
     if (!user.name) {
 
@@ -60,7 +60,7 @@ try {
 
     if (e.name == "SyntaxError") {
 
-        console.log("JSON Hatası: " + e.message);
+        console.log("JSON Hatası: " + e.message); // JSON Hatası: tamamlanmamış veri: isim yok
 
     } else {
 
@@ -76,7 +76,7 @@ Aşağıdaki örnekte bu hatalar nasıl bir try..catch seviyesi daha eklenerek i
 
 function readData() {
 
-    let json = '{ "age": 30 }';
+    let json3 = '{ "age": 30 }';
 
     try {
         // ...
@@ -97,7 +97,7 @@ try {
 
 } catch (e) {
 
-    console.log("External catch got: " + e); // burada yakala!
+    console.log("External catch got: " + e); // External catch got: ReferenceError: blabla is not defined
 }
 
-/* Burada readData sadece SyntaxError ile nasıl başa çıkacağını biliyor. Bunun yanında dıştaki try..catch ise geri kalan her şeyi idare ediyor. */ // TODO
+/* Burada readData sadece SyntaxError ile nasıl başa çıkacağını biliyor. Bunun yanında dıştaki try..catch ise geri kalan her şeyi idare ediyor. */
