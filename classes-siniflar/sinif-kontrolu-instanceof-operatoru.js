@@ -14,6 +14,7 @@ obj instanceof Class
 Örneğin: */
 
 class Rabbit1 { }
+
 let rabbit1 = new Rabbit1();
 
 // `Rabbit1` sınıfının bir objesimidir?
@@ -74,8 +75,8 @@ let rabbit3 = new Rabbit3();
 
 console.log(rabbit3 instanceof Animal3); // true
 
-// rabbit3.__proto__ == Rabbit3.prototype
-// rabbit3.__proto__.__proto__ == Animal3.prototype (match!)
+rabbit3.__proto__ == Rabbit3.prototype
+rabbit3.__proto__.__proto__ == Animal3.prototype // (match!)
 
 /* Ayrıca objA.isPrototypeOf(objB) metodu ile eğer objA objB'nin prototip zincirinin herhangi bir yerindeyse true döner. obj instanceof Class şu şekilde de yazılabilir Class.prototype.isPrototypeOf(obj)
 

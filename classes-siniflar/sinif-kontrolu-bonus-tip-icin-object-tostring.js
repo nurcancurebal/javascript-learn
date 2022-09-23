@@ -3,7 +3,7 @@ Bildiğiniz gibi basit objeler karakter dizisine [object Object] şeklinde çevr
 
 let obj = {};
 
-console.log(obj); // {}
+console.log(obj); // [object Object]
 console.log(obj.toString()); // [object Object]
 
 /* Bu toString'i bu şekilde tanımlamalarından dolayıdır. Fakat görünenden daha güçlü bir toString yazmak için gizli özellikler bulunmaktadır. Bunu typeof'un daha genişi ve instanceof'un alternatifi olarak görmek mümkün.
@@ -27,7 +27,7 @@ let objectToString = Object.prototype.toString;
 // Bu hangi tipte?
 let arr = [];
 
-console.log(objectToString.call(arr)); // [object Array]
+console.log(objectToString.call(arr)); // [object Array] , burada call= this i arr olarak çağırmak için kullanıldı
 
 /* Burada call’i kullandık ve Dekoratörler ve iletilme, call/apply bölümünde objectToString fonksiyonunun nasıl this=arr kaynağında kullanılacağı gösterilmişti.
 
