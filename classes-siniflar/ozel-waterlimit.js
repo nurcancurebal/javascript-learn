@@ -38,16 +38,16 @@ class CoffeeMachine {
 
 let coffeeMachine = new CoffeeMachine();
 
-//-----coffeeMachine.#checkWater(); // Error
-//----------coffeeMachine.#waterLimit = 1000; // Error
+coffeeMachine.#checkWater(); // Error (dışarıdan erişilemez)
+coffeeMachine.#waterLimit = 1000; // Error (dışarıdan erişilemez)
 
 coffeeMachine.waterAmount = 100; // Works
 
-/* Dil düzeyinde, #alanın özel olduğunun özel bir işaretidir. Ona dışarıdan veya miras alınan sınıflardan erişemiyoruz.
+/* Dil düzeyinde, # alanın özel olduğunun özel bir işaretidir. Ona dışarıdan veya miras alınan sınıflardan erişemiyoruz.
 
-Özel alanlar, genel alanlar ile çelişmez. Aynı anda hem özel hem de #waterAmountkamusal waterAmountalanlara sahip olabiliriz.
+Özel alanlar, genel alanlar ile çelişmez. Aynı anda hem özel hem de #waterAmount genel waterAmount alanlara sahip olabiliriz.
 
-waterAmountÖrneğin, bir erişimci yapalım #waterAmount: */
+waterAmount Örneğin, bir erişimci yapalım #waterAmount: */
 
 class CoffeeMachine2 {
 
@@ -70,17 +70,17 @@ let machine = new CoffeeMachine2();
 
 machine.waterAmount = 100;
 
-//---------console.log(machine.#waterAmount); // Error
+console.log(machine.#waterAmount); // Error
 
 /* Korunan alanların aksine, özel alanlar dilin kendisi tarafından zorlanır. Bu iyi birşey.
 
-Ancak 'den miras CoffeeMachine2 alırsak, 'ye doğrudan erişimimiz olmaz #waterAmount. waterAmountAlıcı/ayarlayıcıya güvenmemiz gerekecek : */
+Ancak 'den miras CoffeeMachine2 alırsak, 'ye doğrudan erişimimiz olmaz #waterAmount. waterAmount Alıcı/ayarlayıcıya güvenmemiz gerekecek : */
 
 class MegaCoffeeMachine extends CoffeeMachine2() {
 
     method() {
 
-       //------------ console.log(this.#waterAmount); // Error: can only access from CoffeeMachine2
+        console.log(this.#waterAmount); // Error: yalnızca CoffeeMachine2'den erişebilir
     }
 }
 

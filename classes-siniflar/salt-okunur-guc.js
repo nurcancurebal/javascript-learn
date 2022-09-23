@@ -52,12 +52,12 @@ class CoffeeMachine2 {
 
 new CoffeeMachine2().setWaterAmount(100);
 
-/* Bu biraz daha uzun görünüyor, ancak işlevler daha esnek. Birden fazla argümanı kabul edebilirler (şu anda onlara ihtiyacımız olmasa bile). Bu nedenle, gelecek için, bir şeyi yeniden düzenlememiz gerekirse, işlevler daha güvenli bir seçimdir.
+/* Bu biraz daha uzun görünüyor, ancak işlevler daha esnek. Birden fazla argümanı kabul edebilirler (şu anda onlara ihtiyacımız olmasa bile). Bu nedenle, gelecek için, bir şeyi yeniden düzenlememiz gerekirse, fonksiyonlar daha güvenli bir seçimdir.
 
 Elbette, bir takas var. Öte yandan, get/set sözdizimi daha kısadır, bu nedenle sonuçta katı bir kural yoktur, karar vermek size kalmış. */
 
 
 /* -> Korunan alanlar miras alınır
-miras alırsak , o zaman hiçbir şey yeni sınıfın yöntemlerine class MegaMachine extends CoffeeMachine2 erişmemizi this._waterAmountveya bunlardan kaçınmamızı engellemez.this._power
+miras alırsak , o zaman hiçbir şey yeni sınıfın yöntemlerine class MegaMachine extends CoffeeMachine2 erişmemizi this._waterAmount veya bunlardan kaçınmamızı engellemez. this._power
 
 Yani korunan alanlar doğal olarak kalıtsaldır. Aşağıda göreceğimiz özel olanların aksine. */
