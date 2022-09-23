@@ -12,8 +12,8 @@ Aslında şartnamede bunun ile ilgili bir belirti bulunmasa da çoğu ortam bunu
 
 Yazımı: */
 
-window.onerror = function(message, url, line, col, error) {
-  // ...
+window.onerror = function (message, url, line, col, error) {
+    // ...
 };
 
 /* ~ message
@@ -28,9 +28,9 @@ Hangi satır ve sütunda hatanın meydana geldiği.
 ~ error
 Hata objesi. */
 
-<script>
+{/* <script>
   window.onerror = function(message, url, line, col, error) {
-    console.log(`${message}\n At ${line}:${col} of ${url}`);
+    alert(`${message}\n At ${line}:${col} of ${url}`);
   };
 
   function readData() {
@@ -38,14 +38,15 @@ Hata objesi. */
   }
 
   readData();
-</script>
-window.onerror genel hata işleyicisinin görevi aslında kodu kurtarmak değildir. Bu anda kodu kurtarmak imkansızdır, bunun yerine geliştiriciye mesaj gönderebilir.
+</script> */}
+
+/* window.onerror genel hata işleyicisinin görevi aslında kodu kurtarmak değildir. Bu anda kodu kurtarmak imkansızdır, bunun yerine geliştiriciye mesaj gönderebilir.
 
 Bu hataları izlemek için aslında bazı servisler mevcuttur. Bunlardan bazıları https://errorception.com, http://www.muscula.com’dır.
 
 Aşağıdaki gibi çalışırlar:
 
-Servise kayıt olunur ve yazdığımız koda yerleştirmek için bir kod parçası alınır.
-Bu JS içerisinde bir çeşit window.onerror uygulaması mevcuttur.
-Hata meydana geldiğinde, bu servise ağ üzerinden bir istekte bulunur.
-Servise tekrar giriş yaptığınızda arayüzde bu hataları görürsünüz.
+1. Servise kayıt olunur ve yazdığımız koda yerleştirmek için bir kod parçası alınır.
+2. Bu JS içerisinde bir çeşit window.onerror uygulaması mevcuttur.
+3. Hata meydana geldiğinde, bu servise ağ üzerinden bir istekte bulunur.
+4. Servise tekrar giriş yaptığınızda arayüzde bu hataları görürsünüz. */ // TODO
