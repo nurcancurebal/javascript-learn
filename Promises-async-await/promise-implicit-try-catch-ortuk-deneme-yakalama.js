@@ -5,7 +5,7 @@ new Promise((resolve, reject) => {
 
     throw new Error("Whoops!");
 
-}).catch(alert); // Error: Whoops!
+}).catch(console.log); // Error: Whoops!
 
 // …Bununla tamamen aynı şekilde çalışır:
 
@@ -13,7 +13,7 @@ new Promise((resolve, reject) => {
 
     reject(new Error("Whoops!"));
 
-}).catch(alert); // Error: Whoops!
+}).catch(console.log); // Error: Whoops!
 
 /* try..catchYürütücünün etrafındaki "görünmez ", hatayı otomatik olarak yakalar ve bunu bir reddetme olarak değerlendirir.
 
@@ -25,9 +25,9 @@ new Promise((resolve, reject) => {
 
 }).then((result) => {
 
-    throw new Error("Whoops!"); // rejects the promise
+    throw new Error("Whoops!"); // sözü reddeder
 
-}).catch(alert); // Error: Whoops!
+}).catch(console.log); // Error: Whoops!
 
 // throwBu, yalnızca ifadenin neden olduğu hatalar için değil, tüm hatalar için geçerlidir . Örneğin, bir programlama hatası:
 
@@ -37,8 +37,8 @@ new Promise((resolve, reject) => {
 
 }).then((result) => {
 
-    blabla(); // no such function
+    blabla(); // öyle bir fonksiyon yok
 
-}).catch(alert); // ReferenceError: blabla is not defined
+}).catch(console.log); // ReferenceError: blabla is not defined
 
 // Final .catch, yalnızca açık reddetmeleri değil, aynı zamanda yukarıdaki işleyicilerde ara sıra hataları da yakalar.

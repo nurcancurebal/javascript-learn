@@ -5,14 +5,14 @@ Söz zincirleme bu açıdan harika. Bir söz reddedildiğinde, kontrol zincirdek
 
 Örneğin, aşağıdaki kodda URL yanlıştır (böyle bir site yok) ve .catchhatayı işler: */
 
-fetch('https://no-such-server.blabla') // rejects
+fetch('https://no-such-server.blabla') // rejects(reddeder)
     .then(response => response.json())
-    .catch(err => console.log(err)) // TypeError: failed to fetch (the text may vary)
+    .catch(err => console.log(err)) // TypeError: getirilemedi (metin farklılık gösterebilir)
 
 // Ya da belki sitede her şey yolundadır, ancak yanıt geçerli JSON değildir:
 
-fetch('/') // fetch works fine now, the server responds with the HTML page
-    .then(response => response.json()) // rejects: the page is HTML, not a valid json
+fetch('/') // getirme şimdi iyi çalışıyor, sunucu HTML sayfasıyla yanıt veriyor
+    .then(response => response.json()) // reddeder: sayfa HTML, geçerli bir json değil
     .catch(err => console.log(err)) // SyntaxError: Unexpected token < in JSON at position 0
 
 // Tüm hataları yakalamanın en kolay yolu .catch, zincirin sonuna eklemektir:

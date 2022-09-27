@@ -30,20 +30,20 @@ new Promise((resolve, reject) => {
 }).catch(function (error) { // (*)
 
     if (error instanceof URIError) {
-        // handle it
+        // idare et
     } else {
         console.log("Can't handle such error");
 
-        throw error; // throwing this or another error jumps to the next catch
+        throw error; // bunu veya başka bir hatayı atmak bir sonraki yakalamaya atlar
     }
 
 }).then(function () {
 
-    /* never runs here */
+    /* burada asla koşmaz */
 }).catch(error => { // (**)
 
     console.log(`The unknown error has occurred: ${error}`);
-    // don't return anything => execution goes the normal way
+    // hiçbir şeyi iade etme => yürütme normal yoldan gider
 });
 
 /* Ardından yürütme , zincir boyunca .catch (*)ilkinden diğerine atlar.(**)
