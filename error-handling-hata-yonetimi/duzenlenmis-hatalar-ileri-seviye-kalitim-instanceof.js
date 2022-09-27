@@ -1,54 +1,62 @@
 /* -> İleri seviye kalıtım
 ValidationError1 sınıfı çok genel bir sınıf. Çoğu şey yanlış gidebilir. Özellik eksik olabilir veya farklı formatta olabilir( örneğin age özelliğinin karakter dizisi olması). Bundan dolayı daha özel PropertyRequiredError1 sınıfını yazmakta fayda var. Bu eklenmeyen özellikle ilgili bilgi verecektir. */
 
+class Error {
+
+    constructor(message) {
+
+        this.message = message; // 8. buraya geliyor message: 'No property: name'
+        this.name = "Error"; // 9.
+    } // 10.
+}
+
 class ValidationError1 extends Error {
 
     constructor(message) {
 
-        super(message);
+        super(message); // 7. message: 'No property: name' aşağıdan yukarı doğru super lerden ilerliyor
 
-        this.name = "ValidationError1";
-    }
+        this.name = "ValidationError1"; // 11. name: 'Error' u ValidationError1 olarak değiştiriyor
+    } // 12.
 }
 
 class PropertyRequiredError1 extends ValidationError1 {
 
     constructor(property) {
 
-        super("No property: " + property);
+        super("No property: " + property); // 6. property: 'name'
 
-        this.name = "PropertyRequiredError1";
+        this.name = "PropertyRequiredError1"; // 13. name: ValidationError1 i PropertyRequiredError1 olarak değiştiriyor
 
-        this.property = property;
-    }
+        this.property = property; // 14.  property: 'name' this e ekledi
+    } // 15.
 }
 
-// Usage
 function readUser(json) {
 
-    let user = JSON.parse(json);
+    let user = JSON.parse(json); // 2. olarak buaraya geliyor {age:25} olarak çevirdi
 
-    if (!user.age) {
+    if (!user.age) { // 3. buraya geldi
 
         throw new PropertyRequiredError1("age");
     }
-    if (!user.name) {
+    if (!user.name) { // 4. name: undefined
 
-        throw new PropertyRequiredError1("name");
+        throw new PropertyRequiredError1("name"); // 5. buradaki 'name' i alıyor ve PropertyRequiredError1 ye gidiyor
     }
 
     return user;
 }
 
-// Working example with try..catch
+// try..catch ile çalışma örneği
 
 try {
 
-    let user = readUser('{ "age": 25 }');
+    let user = readUser('{ "age": 25 }'); // 1. olarak kod buradan başlıyor çalışmaya userı alıyor
 
 } catch (err) {
 
-    if (err instanceof ValidationError1) {
+    if (err instanceof ValidationError1) { // 16. err= message: 'No property:name' , name: 'PropertyRequiredError1' , property: 'name' (instanceof: hataların tipini kontrol eder)
 
         console.log("Invalid data: " + err.message); // Invalid data: No property: name
         console.log(err.name); // PropertyRequiredError1
@@ -60,7 +68,7 @@ try {
 
     } else {
 
-        throw err; // unknown error, rethrow it
+        throw err; // bilinmeyen hata, yeniden at
     }
 }
 
@@ -97,4 +105,4 @@ class PropertyRequiredError2 extends ValidationError2 {
 // name is correct
 console.log(new PropertyRequiredError2("field").name); // PropertyRequiredError2
 
-// Böylece hata sınıfları kısalmış oldu, özellikle "this.name=..."'i attıktan sonra ValidationError2 daha da kısalmış oldu. // TODO
+// Böylece hata sınıfları kısalmış oldu, özellikle "this.name=..."'i attıktan sonra ValidationError2 daha da kısalmış oldu.
