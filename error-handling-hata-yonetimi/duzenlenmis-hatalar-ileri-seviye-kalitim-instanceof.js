@@ -105,4 +105,12 @@ class PropertyRequiredError2 extends ValidationError2 {
 // name is correct
 console.log(new PropertyRequiredError2("field").name); // PropertyRequiredError2
 
+console.log(new PropertyRequiredError2("field"));
+
+/* PropertyRequiredError2 {
+    message: 'No property: field',
+    name: 'PropertyRequiredError2',
+    property: 'field'
+  } */
+
 // Böylece hata sınıfları kısalmış oldu, özellikle "this.name=..."'i attıktan sonra ValidationError2 daha da kısalmış oldu.

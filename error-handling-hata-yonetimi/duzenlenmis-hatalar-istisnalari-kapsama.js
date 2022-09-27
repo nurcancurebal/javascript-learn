@@ -9,9 +9,18 @@ Bunlar ışığında ReadError sınıfını yeniden yazacak olursak. Eğer readU
 
 Aşağıdaki kod ReadError'u tanımlamakta ve readUser ve try..catch'in nasıl kullanılacağını göstermektedir: */
 
+class Error {
+
+    constructor(message) { // message: 'SyntaxError'
+
+        this.message = message;
+        this.name = "Error";
+    }
+}
+
 class ReadError extends Error {
 
-    constructor(message, cause) {
+    constructor(message, cause) { // message: SyntaxError , cause: stack: SyntaxError: Unexpected token b in JSON at position 1
 
         super(message);
 
@@ -36,15 +45,15 @@ function validateUser(user) {
     }
 }
 
-function readUser(json) {
+function readUser(json) { // json: '{bad json}'
 
     let user;
 
     try {
 
-        user = JSON.parse(json);
+        user = JSON.parse(json); // user: undefined
 
-    } catch (err) {
+    } catch (err) { // err= stack: SyntaxError: Unexpected token b in JSON at position 1
 
         if (err instanceof SyntaxError) {
 
@@ -75,15 +84,14 @@ function readUser(json) {
 
 try {
 
-    readUser('{bad json}');
+    readUser('{bad json}'); // 1. olarak kod buradan çalışmaya başladı
 
 } catch (e) {
 
     if (e instanceof ReadError) {
 
-        console.log(e); // { [ReadError: Syntax Error] cause: [SyntaxError: Unexpected token b in JSON at position 1], name: 'ReadError' }
+        console.log(e); // ReadError { message: 'Syntax Error', name: 'ReadError', cause: SyntaxError: Unexpected token b in JSON at position 1 }
 
-        // Original error: SyntaxError: Unexpected token b in JSON at position 1
         console.log("Original error: " + e.cause); // Original error: SyntaxError: Unexpected token b in JSON at position 1
 
     } else {
@@ -96,4 +104,4 @@ try {
 
 Bundan dolayı dıştaki kod instanceof ReadError'u kontrol eder, hepsi bu! Diğer tüm muhtemel hataları listelemeye gerek yok.
 
-Bu yaklaşıma “İstisnaları kapsama” yaklaşımı denilir, “düşük seviye istisnalar”'ı alıp bunları “kapsayarak” ReadError haline getirdik. Böylece daha soyut, ve çağırması kolay bir kod yazmış olduk. Bu kullanım nesne tabanlı dillerde oldukça yaygındır. */ // TODO
+Bu yaklaşıma “İstisnaları kapsama” yaklaşımı denilir, “düşük seviye istisnalar”'ı alıp bunları “kapsayarak” ReadError haline getirdik. Böylece daha soyut, ve çağırması kolay bir kod yazmış olduk. Bu kullanım nesne tabanlı dillerde oldukça yaygındır. */
