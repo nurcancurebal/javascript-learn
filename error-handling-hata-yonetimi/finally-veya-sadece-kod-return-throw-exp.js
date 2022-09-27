@@ -38,7 +38,7 @@ Bir fonksiyon içerisinden baktığımızda farklılıklar daha aşikar olmakta.
 
 “dışarı sıçra” seçeneği olduğunda try..catch davranışı daha farklı olmaktadır.
 
-Örneğin try..catch içerieinde bir return olduğunda. try..catch bloğunun sonunda her türlü finally'e uğramak zorunludur, bu return bile olsa. */
+Örneğin try..catch içerisinde bir return olduğunda. try..catch bloğunun sonunda her türlü finally'e uğramak zorunludur, bu return bile olsa. */
 
 function f() {
 
@@ -85,4 +85,4 @@ function f() {
 
 f();
 
-// Burada finally temizliğin yapılacağının garantisini verir. Eğer temizlik kodunu f'in sonuna koyarsanız çalışmayabilir. // TODO
+// Burada finally temizliğin yapılacağının garantisini verir. Eğer temizlik kodunu f'in sonuna koyarsanız çalışmayabilir.

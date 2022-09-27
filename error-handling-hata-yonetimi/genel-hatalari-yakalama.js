@@ -49,4 +49,4 @@ Aşağıdaki gibi çalışırlar:
 1. Servise kayıt olunur ve yazdığımız koda yerleştirmek için bir kod parçası alınır.
 2. Bu JS içerisinde bir çeşit window.onerror uygulaması mevcuttur.
 3. Hata meydana geldiğinde, bu servise ağ üzerinden bir istekte bulunur.
-4. Servise tekrar giriş yaptığınızda arayüzde bu hataları görürsünüz. */ // TODO
+4. Servise tekrar giriş yaptığınızda arayüzde bu hataları görürsünüz. */

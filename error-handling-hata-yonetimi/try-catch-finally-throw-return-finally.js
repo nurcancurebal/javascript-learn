@@ -1,5 +1,4 @@
 /* -> try…catch…finally
-Aslında tamamı bu kadar değil!
 
 try..catch bloğu son olarak finally ile bitebilir.
 
@@ -11,13 +10,13 @@ Yazımı şu şekildedir: */
 
 try {
 
-  // ... try to execute the code ...
+  // ... kodu çalıştırmayı dene ...
 } catch (e) {
 
-  // ... handle errors ...
+  // ... hataları ele almak ...
 
 } finally {
-  // ... execute always ...
+  // ... her zaman çalıştır ...
 }
 
 // Aşağıdaki kodu çalıştırmayı deneyiniz:
@@ -56,7 +55,7 @@ let diff, result;
 
 function fib(n) {
 
-  if (n < 0 || Math.trunc(n) != n) {
+  if (n < 0 || Math.trunc(n) != n) { // Math.trunc(): kesirli basamağı kaldırarak bir sayının tamsayı kısmını döndürür.
 
     throw new Error("Must not be negative, and also an integer.");
   }
@@ -85,7 +84,7 @@ console.log(`execution took ${diff}ms`); // execution took 139ms
 
 /* Kodu çalıştırdığınızda 35 değeri girerseniz normal olarak try sonrasında finally sırası ile çalışır. Sonrasında -1 ile deneyin, anında hata alacaksınız. Çalışma süresi 0ms gösterecek. İki çalışmada da süre doğru bir şekilde tutuldu.
 
-Diğer bir deyişle, fonksiyondan çıkmanın iki yolu verdir. Bunlar return veya throw olabilir. finally ise bunların ikisini de idare edebilir. */
+Diğer bir deyişle, fonksiyondan çıkmanın iki yolu vardir. Bunlar return veya throw olabilir. finally ise bunların ikisini de idare edebilir. */
 
 
 /* -> Değişkenler try..catch..finally içerisinde yereldir
