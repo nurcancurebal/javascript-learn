@@ -9,6 +9,11 @@ Orjinal clock.js üzerinde bir değişiklik yapmayın. Bundan türetin. */
 
 class Clock {
 
+    constructor(options) {
+
+        this.options = options;
+    }
+
     setTimeout(() => {
 
     }, 1000)
