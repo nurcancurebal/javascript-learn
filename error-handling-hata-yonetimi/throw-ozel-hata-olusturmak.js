@@ -3,10 +3,10 @@
 // Aşağıdakilerin her biri bir özel durum oluşturur:
 
 
-throw 'Error2'; // bir dize değeriyle bir istisna oluşturur
+/* throw 'Error2'; // bir dize değeriyle bir istisna oluşturur
 throw 42;       // 42 değeriyle bir istisna oluşturur
 throw true;     // true değeriyle bir istisna oluşturur
-throw new Error('Required'); // Gerekli mesajıyla bir hata nesnesi oluşturur
+throw new Error('Required'); // Gerekli mesajıyla bir hata nesnesi oluşturur */
 
 
 
@@ -14,7 +14,7 @@ const throwErrorExampleFun = () => {
 
     let message;
 
-    let x = prompt('Enter a number: ');
+    let x = '';
 
     try {
 
@@ -30,12 +30,8 @@ const throwErrorExampleFun = () => {
 
     } catch (err) {
 
-        console.log(err);
+        console.log(err); // empty
     };
 };
 
 throwErrorExampleFun();
-
-// let x = prompt('Enter a number: ');
-//             ^
-// ReferenceError: prompt is not defined

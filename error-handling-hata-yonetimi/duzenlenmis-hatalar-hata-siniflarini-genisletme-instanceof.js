@@ -17,7 +17,7 @@ let json = `{ "name": "John", "age": 30 }`;
 
 /* Dahili olarak gelen JSON.parse kullanılacaktır. Eğer bozuk json gelirse bu durumda SyntaxError atar.
 
-Fakat json yazım olarak doğru olsa bile geçerli sayılmayabilir, değil mi? Belki bizim ihtiyacımız veri bulumamaktadır. Örneğin, name ve age özellikleri bulunmaz ise bu durumda bizim için geçerli bir veri sayılmaz.
+Fakat json yazım olarak doğru olsa bile geçerli sayılmayabilir, değil mi? Belki bizim ihtiyacımız veri bulamamaktadır. Örneğin, name ve age özellikleri bulunmaz ise bu durumda bizim için geçerli bir veri sayılmaz.
 
 readUser(json) fonksiyonu sadece JSON okumayacak, doğruluk kontrolü de yapacaktır. Eğer gerekli alanlar yok ise, format yanlışsa bu durumda bu bizim için hatadır. Ayrıca bu bir SyntaxError yani yazım hatası değildir. Çünkü yazım olarak doğru olsa da başka türde bir hatadır. Bu hatalara ValidationError diyeceğiz ve bunun için bir sınıf oluşturacağız. Bu tür hatalar ayrıca hatanın nedeni hakkında da bilgi içermelidir.
 
@@ -61,7 +61,7 @@ try {
 
   console.log(err.message); // Whoops!
   console.log(err.name); // ValidationError1
-  console.log(err.stack); // undefined , İç içe çağrıların hangi satırlarda olduğunun listesi.
+  console.log(err.stack); // İç içe çağrıların hangi satırlarda olduğunun listesi.
 }
 
 /* Yapıcıya bakarsanız:
@@ -81,19 +81,18 @@ class ValidationError2 extends Error {
   }
 }
 
-// Usage
 function readUser(json) {
 
   let user = JSON.parse(json);
 
   if (!user.age) {
 
-    throw new ValidationError2("No field: age"); // age alanı bulunmamakta
+    throw new ValidationError2("No field: age"); // No field: age
   }
 
   if (!user.name) {
 
-    throw new ValidationError2("No field: name");// name alanı bulunmamakta
+    throw new ValidationError2("No field: name");// No field: name
   }
 
   return user;
@@ -132,6 +131,6 @@ Ayrıca err.name'e şu şekilde bakabiliriz: */
 // } else if (err.name == "SyntaxError") { // (*)
 // ...
 
-/* instanceof kullanmak daha iyidir. İleride ValidationError2'u genişletir ve PropertyRequiredError gibi alt tipler oluşturursanız instanceof ile kalıtılan sınıfı da kontrol etmiş olursunuz. Bundan dolayı gelecekte olacak değişikliklere daha iyi tepki verir.
+/* instanceof kullanmak daha iyidir. İleride ValidationError2'yi genişletir ve PropertyRequiredError gibi alt tipler oluşturursanız instanceof ile kalıtılan sınıfı da kontrol etmiş olursunuz. Bundan dolayı gelecekte olacak değişikliklere daha iyi tepki verir.
 
-Ayrıca catch bilinmeyen bir hata olduğunda tekrardan bu hatayı atması (**) oldukça önemlidir. catch sadece veri kontrolü ve yazım hatalarını kontrol etmektedir. Diğer hatalar ise bilinmeyen hatalar bölümüne düşmektedir. */ // TODO
+Ayrıca catch bilinmeyen bir hata olduğunda tekrardan bu hatayı atması (**) oldukça önemlidir. catch sadece veri kontrolü ve yazım hatalarını kontrol etmektedir. Diğer hatalar ise bilinmeyen hatalar bölümüne düşmektedir. */
