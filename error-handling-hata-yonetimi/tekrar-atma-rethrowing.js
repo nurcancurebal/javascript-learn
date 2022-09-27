@@ -1,11 +1,11 @@
 /* -> Tekrar atma (Rethrowing)
-Yukarıdaki örnekte yanlış veri ile başa çıkmak için try..catch kullandık. Peki başka beklenmeyen hata varsa ne yapacağız? Mesela değişken tanımsız olabilir veya bilmediğimiz bir hata ile de karşılaşabiliriz. */
+Beklenmeyen hata varsa ne yapacağız? Mesela değişken tanımsız olabilir veya bilmediğimiz bir hata ile de karşılaşabiliriz. */
 
 let json1 = '{ "age": 30 }'; // tamamlanmamış veri
 
 try {
 
-    user = JSON.parse(json1); // <-- user'dan önce "let" kullanmayı unuttuysak
+    user = JSON.parse(json1); // user'dan önce "let" kullanmayı unuttuysak
 
     // ...
 } catch (err) {
@@ -14,9 +14,7 @@ try {
     // (hata aslında JSON ile alakalı değil)
 }
 
-/* Tabii ki her şey mümkün! Programcılar da hata yapar. Yıllardır milyonlarca kişinin kullandığı open-source projelerde bile hata vardır. Hatta öyle hatalar vardır ki bulunduğunda çok büyük belaya neden olabilir (ssh'ta bulunan hata)
-
-Biz denemelerimizde try..catchi "doğru olmayan veri"yi yakalamak için kullandık. Fakat aslında catch try'da olabilecek tüm hataları alır.Yukarıdaki örnekte beklenmeyecen bir hata almasına rağmen bundan dolayı `“JSON Error” mesajı verir. Bu aslında kod ayıklamayı zorlaştıran bir şeydir ve yanlış kullanımdır.
+/* Biz denemelerimizde try..catchi "doğru olmayan veri"yi yakalamak için kullandık. Fakat aslında catch try'da olabilecek tüm hataları alır.Yukarıdaki örnekte beklenmeyen bir hata almasına rağmen bundan dolayı `“JSON Error” mesajı verir. Bu aslında kod ayıklamayı zorlaştıran bir şeydir ve yanlış kullanımdır.
 
 Yine de ne hatası olduğunu name'den çıkarmak mümkündür. */
 
@@ -100,4 +98,4 @@ try {
     console.log("External catch got: " + e); // External catch got: ReferenceError: blabla is not defined
 }
 
-/* Burada readData sadece SyntaxError ile nasıl başa çıkacağını biliyor. Bunun yanında dıştaki try..catch ise geri kalan her şeyi idare ediyor. */ // TODO
+/* Burada readData sadece SyntaxError ile nasıl başa çıkacağını biliyor. Bunun yanında dıştaki try..catch ise geri kalan her şeyi idare ediyor. */

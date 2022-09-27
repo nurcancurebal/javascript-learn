@@ -44,9 +44,9 @@ let json = '{"yaş": 30 }'; // eksik veri
 
 try {
 
-    let user = JSON.parse(json); // <-- hata yok
+    let user = JSON.parse(json); // hata yok
 
-    if (!user.name) {
+    if (!user.name) { // user.name boş olduğu için false olur
 
         throw new SyntaxError("Tanımlanmamış veri:isim yok"); // (*)
     }

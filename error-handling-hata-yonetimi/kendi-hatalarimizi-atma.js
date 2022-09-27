@@ -1,7 +1,5 @@
 /* -> Kendi hatalarımızı atma
-Diyelim ki json yazım olarak doğru da "name" özelliğini olması gerekirken yoksa ?
-
-Aşağıdaki gibi: */
+Diyelim ki json yazım olarak doğru da "name" özelliğini olması gerekirken yoksa ? */
 
 let json = '{ "age": 30 }'; // verinin bütünlüğünde problem var.
 

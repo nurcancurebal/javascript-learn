@@ -132,4 +132,4 @@ function func() {
   }
 }
 
-/* Yukarıdaki kodda try içerisinde olacak herhangi bir hata doğrudan dışarı çıkacaktır. Akış dışarı sıçramadan önce finally çalışır. */ // TODO
+/* Yukarıdaki kodda try içerisinde olacak herhangi bir hata doğrudan dışarı çıkacaktır. Akış dışarı sıçramadan önce finally çalışır. */
