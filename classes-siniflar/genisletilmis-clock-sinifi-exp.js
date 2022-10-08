@@ -9,34 +9,37 @@ Orjinal clock.js üzerinde bir değişiklik yapmayın. Bundan türetin. */
 
 class Clock {
 
-    constructor(options) {
+    constructor(options) { // options = {precision: 1500, timer: 5} (alttan aldı)
 
+        this.timer = options.timer || 0; // timer= 5
         this.options = options;
     }
 
-    setTimeout(() => {
+    render() {
 
-    }, 1000)
+        this.timer++; // timer= 5 (ile başlar)
+        console.log("TIMER:", this.timer); //* ekrana ilk TIMER: 7 yazdı
+    }
 }
-
 
 class ExtendedClock extends Clock {
 
-    constructor(options) {
+    constructor(options = {}) { // options = {precision: 1500, timer: 5}
 
         super(options);
 
         let { precision = 1000 } = options;
 
-        this.precision = precision;
+        this.precision = precision; // precision= 1500
     }
 
     start() {
 
         this.render();
 
-        this.timer = setInterval(() => this.render(), this.precision);
+        setInterval(() => this.render(), this.precision); // precision= 1500
+
     }
 };
 
-// TODO clock yok
+new ExtendedClock({ precision: 1500, timer: 5 }).start();

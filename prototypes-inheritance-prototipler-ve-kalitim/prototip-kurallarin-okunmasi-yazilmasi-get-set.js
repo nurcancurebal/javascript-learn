@@ -39,12 +39,12 @@ let user = {
 
     surname: "Smith",
 
-    set fullNameGet(value) {
+    set fullName(value) {
 
-        [this.name, this.surname] = value.split(" "); // TODO set neden get ile aynı ismi almayınca çalışmıyor?
+        [this.name, this.surname] = value.split(" "); // set get ile aynı ismi almayıncada çalışıyor bir fark yok
     },
 
-    get fullNameGet() { // Get ve set aynı isim olmayınca çalışmıyor(get çağırmaya yarıyor)
+    get fullName() { // get çağırmaya yarıyor
 
         return `${this.name} ${this.surname}`;
     }
@@ -57,13 +57,14 @@ let admin = {
     isAdmin: true
 };
 
-console.log(admin.fullNameGet); // John Smith (*) , get ile alıyor çıktıyı , set olmadanda çalışıyor
+console.log(admin.fullName); // John Smith (*) , get ile alıyor çıktıyı , set olmadanda çalışıyor
 
 // Ayarlayıcılar uyarıldı!
 admin.fullName = "Alice Cooper"; // (**)
 
-/* (*) satırında admin.fullName özelliği user prototipinde alıcıya sahiptir. Bundan dolayı çağırılır. (**) satırında ise ayarlayıcıya sahip olduğundan bu da çağırılır. */
+console.log(admin.fullName); // Alice Cooper
 
+/* (*) satırında admin.fullName özelliği user prototipinde alıcıya sahiptir. Bundan dolayı çağırılır. (**) satırında ise ayarlayıcıya sahip olduğundan bu da çağırılır. */
 
 /* -> “this”'in değeri
 Aklınıza şöyle bir soru gelebilir. set fullName(value) içerisinde this'in değeri nedir? this.name ve this.surname yazılan yerlerde admin mi yoksa user mı kullanılır?
