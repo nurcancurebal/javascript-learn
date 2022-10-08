@@ -58,7 +58,7 @@ let arr2 = new PowerArray2(1, 2, 5, 10, 50);
 console.log(arr2.isEmpty()); // false
 
 // filtre, yapıcı olarak arr.constructor[Symbol.species] kullanarak yeni dizi oluşturur
-let filteredArr2 = arr2.filter(item => item >= 10); // TODO hata verdi olmadı olacağını iddia ediyor?
+let filteredArr2 = arr2.filter(item => item >= 10);
 
 // filteredArr2 is not PowerArray2, but Array
 console.log(filteredArr2.isEmpty()); // Error: filteredArr.isEmpty is not a function
