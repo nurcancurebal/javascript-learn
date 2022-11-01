@@ -32,8 +32,9 @@ const callback = (err, result) => {
 doSomething(callback);
 // 2 saniye sonra yazdıracak
 // It did not go well
-// Bu durumda hata yanlıştır ve sonuç olan else bloğunu döndürür.
 
+
+// Bu durumda hata yanlıştır ve sonuç olan else bloğunu döndürür.
 
 const doSomethingTwo = callback => {
 
@@ -41,7 +42,7 @@ const doSomethingTwo = callback => {
 
         const skills = ['HTML', 'CSS', 'JS'];
 
-        callback(false, skills);    // err= false
+        callback(false, skills);    // err= false , result= skills
 
     }, 2000);
 };
