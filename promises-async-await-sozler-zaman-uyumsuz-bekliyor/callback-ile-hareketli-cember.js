@@ -73,5 +73,3 @@ showCircle(150, 150, 100, div => {
 
 </body>
 </html> */}
-
-// TODO html css öğrenince örneğe bak</html>
