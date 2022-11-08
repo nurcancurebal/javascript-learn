@@ -35,8 +35,8 @@ let days = [
 
 let dateTime = ` ${dayNumber} ${months[mounth]} ${year} ${days[day]} ${hour}:${minute}:${second} `;
 
-console.log(dateTime);
+console.log(dateTime); //  2 kasım 2022 çarşamba 22:41:52
 
 let dateTimeTwo = `${year} - ${months[mounth]} - ${dayNumber}  ${hour}:${minute}`;
 
-console.log(dateTimeTwo);
+console.log(dateTimeTwo); // 2022 - kasım - 2  22:41

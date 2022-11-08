@@ -9,8 +9,8 @@ function loadScript(src, callback) {
 
     script.src = src;
 
-    script.onload = () => callback(null, script);
-    script.onerror = () => callback(new Error(`Script load error for ${src}`));
+    script.onload = () => callback(null, script); // onload= yüklendiyse
+    script.onerror = () => callback(new Error(`Script load error for ${src}`)); // onerror= hata aldıysa
 
     document.head.append(script);
 }
@@ -21,6 +21,7 @@ loadScript('/my/script.js', function (error, script) {
 
     if (error) {
         // handle error
+
     } else {
         // script loaded successfully
     }
