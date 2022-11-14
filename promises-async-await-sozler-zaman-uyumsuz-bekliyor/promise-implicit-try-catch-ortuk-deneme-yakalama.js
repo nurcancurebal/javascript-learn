@@ -1,5 +1,5 @@
 /* -> Örtük deneme… yakalama
-Bir söz yürütücüsünün ve söz işleyicilerinin kodunun try..catchçevresinde "görünmez" vardır. Bir istisna olursa, yakalanır ve reddedilmiş olarak değerlendirilir. */
+Bir söz yürütücüsünün ve söz işleyicilerinin kodunun try..catch çevresinde "görünmez" vardır. Bir istisna olursa, yakalanır ve reddedilmiş olarak değerlendirilir. */
 
 new Promise((resolve, reject) => {
 
@@ -17,7 +17,7 @@ new Promise((resolve, reject) => {
 
 /* try..catch Yürütücünün etrafındaki "görünmez ", hatayı otomatik olarak yakalar ve bunu bir reddetme olarak değerlendirir.
 
-Bu sadece yürütücüde değil, aynı zamanda işleyicilerinde de olur. Bir işleyicinin throwiçindeysek .then, bu reddedilen bir söz anlamına gelir, bu nedenle kontrol en yakın hata işleyicisine atlar.*/
+Bu sadece yürütücüde değil, aynı zamanda işleyicilerinde de olur. Bir işleyicinin throw içindeysek .then, bu reddedilen bir söz anlamına gelir, bu nedenle kontrol en yakın hata işleyicisine atlar.*/
 
 new Promise((resolve, reject) => {
 

@@ -1,4 +1,4 @@
-/* -> Promise.all
+/* -> Promise.all (söz.hepsi)
 Paralel olarak yürütülmek için birçok söz vermek isteriz ve hepsinin hazır olmasını bekleriz.
 
 Örneğin, paralel olarak birkaç URL’yi indirin ve hepsi bittiğinde içeriği işleyin.
@@ -19,6 +19,7 @@ Promise.all([
     new Promise(resolve => setTimeout(() => resolve(1), 3000)), // 1
     new Promise(resolve => setTimeout(() => resolve(2), 2000)), // 2
     new Promise(resolve => setTimeout(() => resolve(3), 1000))  // 3
+
 ]).then(console.log); // 1,2,3 sözler hazır olduğunda: her söz bir dizi üyesine katkıda bulunur
 
 /* Lütfen göreli siparişin aynı olduğunu unutmayın. İlk sözün sözülmesi uzun sürse bile sonuçta ilk sırada yer almaktadır.
@@ -59,6 +60,7 @@ Promise.all(requests2)
     })
     // Yanıt dizisini, içeriğini okumak için response.json() dizisine eşleyin
     .then(responses => Promise.all(responses.map(r => r.json())))
+
     // Tüm JSON cevapları ayrıştırılır: "users" bunların dizisidir.
     .then(users => users.forEach(user => console.log(user.name)));
 
@@ -71,10 +73,10 @@ Promise.all([
     new Promise((resolve, reject) => setTimeout(() => resolve(3), 3000))
 ]).catch(console.log); // Error: Whoops!
 
-/* İşte ikinci söz iki saniye içinde reddediyor. Bu Promise.allun hemen reddedilmesine yol açar, bu yüzden .catch çalıştırır: reddedilme hatası tüm Promise.allun sonucudur. */
+/* İşte ikinci söz iki saniye içinde reddediyor. Bu Promise.all un hemen reddedilmesine yol açar, bu yüzden .catch çalıştırır: reddedilme hatası tüm Promise.all un sonucudur. */
 
 
-/* -> In case of an error, other promises are ignored
+/* -> Bir hata durumunda, diğer taahhütler dikkate alınmaz
 Eğer bir söz reddederse, Promise.all derhal reddeder. Listedeki diğerlerini tamamen unutur. Onların sonuçları göz ardı edilir.
 
 Örneğin, yukarıdaki örnekte olduğu gibi birden fazla fetch çağrısı varsa ve biri başarısız olursa diğeri hala yürütülmeye devam eder. Ancak Promise.all artık onları izlememektedir. Muhtemelen yerleşecekler ancak sonuç göz ardı edilecektir.

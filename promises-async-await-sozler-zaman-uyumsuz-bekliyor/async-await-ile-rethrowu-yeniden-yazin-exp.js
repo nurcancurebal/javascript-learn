@@ -33,7 +33,7 @@ function loadJson1(url) {
 // github geçerli bir kullanıcı döndürene kadar bir kullanıcı adı isteyin
 function demoGithubUser1() {
 
-    let name = prompt("Enter a name?", "iliakan");
+    let name = "nurcan";
 
     return loadJson1(`https://api.github.com/users/${name}`)
         .then(user => {
@@ -94,7 +94,7 @@ async function demoGithubUser() {
 
     while (true) {
 
-        let name = prompt("Enter a name?", "iliakan");
+        let name = "nurcan";
 
         try {
 

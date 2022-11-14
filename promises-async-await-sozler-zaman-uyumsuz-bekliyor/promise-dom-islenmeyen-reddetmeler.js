@@ -1,9 +1,9 @@
 /* -> İşlenmeyen reddetmeler
-Bir hata işlenmediğinde ne olur? Örneğin, (*)yukarıdaki örnekte yeniden düzenlemeden sonra.
-
-Veya burada olduğu gibi zincirin sonuna bir hata işleyici eklemeyi unutabiliriz: */
+Bir hata işlenmediğinde ne olur?
+Burada olduğu gibi zincirin sonuna bir hata işleyici eklemeyi unutabiliriz: */
 
 new Promise(function () {
+
     noSuchFunction(); // Burada hata (böyle bir fonksiyon yok)
 })
     .then(() => {
@@ -20,7 +20,7 @@ JavaScript motoru bu tür reddetmeleri izler ve bu durumda genel bir hata oluşt
 
 Tarayıcıda, olayı kullanarak bu tür hataları yakalayabiliriz unhandledrejection:*/
 
-window.addEventListener('unhandledrejection', function (event) {
+window.addEventListener('unhandledrejection', function (event) { // Reddetme işleyicisi olmayan bir JavaScript reddedildiğinde unhandledrejection olay, komut dosyasının genel kapsamına gönderilir
 
     // olay nesnesinin iki özel özelliği vardır:
     console.log(event.promise); // [object Promise] - hatayı oluşturan söz
@@ -35,7 +35,7 @@ new Promise(function () {
 
 /* Olay, HTML standardının bir parçasıdır .
 
-Bir hata oluşursa ve yok .catchise, unhandledrejectionişleyici tetiklenir ve eventhatayla ilgili bilgi içeren nesneyi alır, böylece bir şeyler yapabiliriz.
+Bir hata oluşursa ve yok .catch ise, unhandledrejection işleyici tetiklenir ve event hatayla ilgili bilgi içeren nesneyi alır, böylece bir şeyler yapabiliriz.
 
 Genellikle bu tür hatalar kurtarılamaz, bu nedenle en iyi çıkış yolumuz kullanıcıyı sorun hakkında bilgilendirmek ve muhtemelen olayı sunucuya bildirmektir.
 

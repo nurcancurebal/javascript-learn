@@ -1,4 +1,4 @@
-/* -> Promise.reject
+/* -> Promise.reject (söz ver reddet)
 Söz dizimi: */
 
 let promise = Promise.reject(error);

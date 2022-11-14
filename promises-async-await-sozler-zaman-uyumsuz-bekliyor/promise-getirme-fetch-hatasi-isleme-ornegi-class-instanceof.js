@@ -1,4 +1,4 @@
-/* -> Getirme hatası işleme örneği
+/* -> Getirme hatası işleme örneği(Fetch error handling example)
 Kullanıcı yükleme örneği için hata işlemeyi iyileştirelim.
 
 Getirme tarafından döndürülen söz , istekte bulunmanın imkansız olduğu durumlarda reddedilir. Örneğin, bir uzak sunucu mevcut değil veya URL hatalı biçimlendirilmiş. Ancak uzak sunucu 404 hatasıyla veya hatta 500 hatasıyla yanıt verirse, geçerli bir yanıt olarak kabul edilir.
@@ -33,6 +33,7 @@ function loadJson(url) { // (2)
 
     return fetch(url)
         .then(response => {
+
             if (response.status == 200) {
 
                 return response.json();
@@ -47,11 +48,11 @@ function loadJson(url) { // (2)
 loadJson('no-such-user.json') // (3)
     .catch(console.log); // HttpError: 404 for .../no-such-user.json
 
-/* 1. HTTP Hatalarını diğer hata türlerinden ayırt etmek için özel bir sınıf oluşturuyoruz. responseAyrıca, yeni sınıfın nesneyi kabul eden ve onu hataya kaydeden bir yapıcısı vardır . Böylece hata işleme kodu cevaba erişebilecek.
+/* 1. HTTP Hatalarını diğer hata türlerinden ayırt etmek için özel bir sınıf oluşturuyoruz. response Ayrıca, yeni sınıfın nesneyi kabul eden ve onu hataya kaydeden bir yapıcısı vardır . Böylece hata işleme kodu cevaba erişebilecek.
 
 2. Ardından, istekte bulunan ve hata işleme kodunu bir araya getirerek, 200 olmayan herhangi bir durumu bir hata olarak değerlendiren url bir işleve yerleştiririz . Bu uygun, çünkü genellikle böyle bir mantığa ihtiyacımız var.
 
-3. Şimdi console.logdaha yararlı açıklayıcı bir mesaj gösteriyor.
+3. Şimdi console.log daha yararlı açıklayıcı bir mesaj gösteriyor.
 
 Hatalar için kendi sınıfımıza sahip olmanın harika yanı, bunu kullanarak hata işleme kodunda kolayca kontrol edebilmemizdir instanceof.
 
@@ -61,7 +62,7 @@ Aşağıdaki kod, GitHub'dan verilen ada sahip bir kullanıcıyı yükler. Böyl
 
 function demoGithubUser() {
 
-    let name ="iliakan";
+    let name = "nurcan";
 
     return loadJson(`https://api.github.com/users/${name}`)
         .then(user => {
@@ -72,11 +73,11 @@ function demoGithubUser() {
         })
         .catch(err => {
 
-            if (err instanceof HttpError && err.response.status == 404) {
+            if (err instanceof HttpError && err.response.status == 404) { // instanceof operatörü bir objenin belirli bir sınıfa ait olup olmadığını kontrol eder.
 
                 console.log("No such user, please reenter.");
 
-                return demoGithubUser();
+                return demoGithubUser(); // ismi prompt ile alıyoruz bu yüzden her seferinde değişir
 
             } else {
 
@@ -87,6 +88,6 @@ function demoGithubUser() {
 
 demoGithubUser();
 
-/* Lütfen dikkat: .catchburada tüm hataları yakalar, ancak yalnızca "nasıl ele alınacağını bilir" HttpError 404. Bu özel durumda, böyle bir kullanıcı olmadığı anlamına gelir ve .catchbu durumda yeniden dener.
+/* Lütfen dikkat: .catch burada tüm hataları yakalar, ancak yalnızca "nasıl ele alınacağını bilir" HttpError 404. Bu özel durumda, böyle bir kullanıcı olmadığı anlamına gelir ve .catch bu durumda yeniden dener.
 
 Diğer hatalar için neyin yanlış gidebileceği hakkında hiçbir fikri yoktur. Belki bir programlama hatası veya başka bir şey. Bu yüzden sadece satırda yeniden atar (*). */
