@@ -84,7 +84,7 @@ Eğer bir söz reddederse, Promise.all derhal reddeder. Listedeki diğerlerini t
 Promise.all sözlerinde “iptal” kavramı olmadığı için onları iptal edecek hiçbir şey yapmaz. Başka bir bölümde bu konuda yardımcı olmayı amaçlayan AbortControllerı ele alacağız. Ancak bu Promise API’sinin bir parçası değil. */
 
 
-/* -> Promise.all(...) allows non-promise items in iterable
+/* -> Promise.all(...)taahhüt dışı öğelere izin verir iterable
 Normalde, Promise.all(...) sözlerin yenilenebilir (çoğu durumda bir dizi) kabul eder. Ancak bu nesnelerden herhangi biri bir söz değilse Promise.respove içine sarılır.
 
 Örneğin burada `[1, 2, 3]` döner: */
@@ -99,4 +99,4 @@ Promise.all([
     3  // Promise.resolve(3) olarak kabul edildi.
 ]).then(console.log); // 1, 2, 3
 
-// Bu yüzden uygun olmayan durumlarda Promise.alla söz etmeyen değerleri aktarabiliriz.
+// Bu yüzden uygun olmayan durumlarda Promise.all a söz etmeyen değerleri aktarabiliriz.

@@ -1,4 +1,4 @@
-/* -> Promise.race
+/* -> Promise.race (söz.yarış)
 Promise.all benzer şekilde sözler yenilenebilir. Ancak hepsinin bitmesini beklemek yerine ilk sonucu (veya hatayı) bekler ve devam eder. */
 
 let promise = Promise.race(iterable);

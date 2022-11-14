@@ -1,4 +1,4 @@
-/* -> Polyfill
+/* -> Polyfill(çoklu dolgu)
 Eğer tarayıcı Promise.allSettled özelliğini desteklemiyorsa, polyfill kolaydır. */
 
 if (!Promise.allSettled) {
