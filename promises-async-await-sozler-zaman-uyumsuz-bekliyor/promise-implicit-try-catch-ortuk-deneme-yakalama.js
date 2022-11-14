@@ -15,9 +15,9 @@ new Promise((resolve, reject) => {
 
 }).catch(console.log); // Error: Whoops!
 
-/* try..catchYürütücünün etrafındaki "görünmez ", hatayı otomatik olarak yakalar ve bunu bir reddetme olarak değerlendirir.
+/* try..catch Yürütücünün etrafındaki "görünmez ", hatayı otomatik olarak yakalar ve bunu bir reddetme olarak değerlendirir.
 
-Bu sadece yürütücüde değil, aynı zamanda işleyicilerinde de olur. Bir işleyicinin throwiçindeysek .then, bu reddedilen bir söz anlamına gelir, bu nedenle kontrol en yakın hata işleyicisine atlar. */
+Bu sadece yürütücüde değil, aynı zamanda işleyicilerinde de olur. Bir işleyicinin throwiçindeysek .then, bu reddedilen bir söz anlamına gelir, bu nedenle kontrol en yakın hata işleyicisine atlar.*/
 
 new Promise((resolve, reject) => {
 
@@ -29,7 +29,7 @@ new Promise((resolve, reject) => {
 
 }).catch(console.log); // Error: Whoops!
 
-// throwBu, yalnızca ifadenin neden olduğu hatalar için değil, tüm hatalar için geçerlidir . Örneğin, bir programlama hatası:
+// throw Bu, yalnızca ifadenin neden olduğu hatalar için değil, tüm hatalar için geçerlidir . Örneğin, bir programlama hatası:
 
 new Promise((resolve, reject) => {
 

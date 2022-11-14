@@ -1,5 +1,5 @@
 /* -> setTimeout'ta hata
-Ne düşünüyorsun? tetikleyecek .catchmi? Cevabını açıkla. */
+Ne düşünüyorsun? tetikleyecek .catch mi? Cevabını açıkla. */
 
 new Promise(function (resolve, reject) {
 

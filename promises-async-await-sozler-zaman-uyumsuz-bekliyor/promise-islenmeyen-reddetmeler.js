@@ -18,7 +18,7 @@ Normal bir hata oluştuğunda ve yakalanmadığında ne olur try..catch? Senaryo
 
 JavaScript motoru bu tür reddetmeleri izler ve bu durumda genel bir hata oluşturur. Yukarıdaki örneği çalıştırırsanız konsolda görebilirsiniz.
 
-Tarayıcıda, olayı kullanarak bu tür hataları yakalayabiliriz unhandledrejection: */
+Tarayıcıda, olayı kullanarak bu tür hataları yakalayabiliriz unhandledrejection:*/
 
 window.addEventListener('unhandledrejection', function (event) {
 

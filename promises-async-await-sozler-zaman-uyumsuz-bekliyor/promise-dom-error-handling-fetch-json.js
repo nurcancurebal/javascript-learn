@@ -1,9 +1,9 @@
-/* -> Sözlerle işlem hatası
+/* -> Sözlerle hata işleme
 Zaman uyumsuz eylemler bazen başarısız olabilir: bir hata durumunda ilgili taahhüt reddedilir. Örneğin fetch, uzak sunucu mevcut değilse başarısız olur. .catchHataları (redleri) işlemek için kullanabiliriz .
 
 Söz zincirleme bu açıdan harika. Bir söz reddedildiğinde, kontrol zincirdeki en yakın reddetme işleyicisine atlar. Bu pratikte çok uygun.
 
-Örneğin, aşağıdaki kodda URL yanlıştır (böyle bir site yok) ve .catchhatayı işler: */
+Örneğin, aşağıdaki kodda URL yanlıştır (böyle bir site yok) ve .catch hatayı işler: */
 
 fetch('https://no-such-server.blabla') // rejects(reddeder)
     .then(response => response.json())
@@ -22,17 +22,17 @@ fetch('/article/promise-chaining/user.json')
     .then(user => fetch(`https://api.github.com/users/${user.name}`))
     .then(response => response.json())
     .then(githubUser => new Promise((resolve, reject) => {
-        
+
         let img = document.createElement('img');
         img.src = githubUser.avatar_url;
         img.className = "promise-avatar-example";
         document.body.append(img);
 
-        setTimeout(() => {
-            img.remove();
+        setTimeout(() => { // TODO burada ne oluyor?
+            img.remove(); // remove: bir veya daha fazla öğeyi Html belgesinden kaldırabiliriz 
             resolve(githubUser);
         }, 3000);
     }))
     .catch(error => console.log(error.message));
 
-/* Normalde .catchhiç tetiklenmez çünkü hata yoktur. Ancak yukarıdaki vaatlerden herhangi biri reddedilirse (bir ağ sorunu veya geçersiz json veya her neyse), o zaman onu yakalayacaktır. */
+/* Normalde .catch hiç tetiklenmez çünkü hata yoktur. Ancak yukarıdaki vaatlerden herhangi biri reddedilirse (bir ağ sorunu veya geçersiz json veya her neyse), o zaman onu yakalayacaktır.*/

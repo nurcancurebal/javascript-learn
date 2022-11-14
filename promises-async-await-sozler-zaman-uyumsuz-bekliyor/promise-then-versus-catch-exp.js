@@ -1,27 +1,26 @@
 /* Promise: then versus catch
-Are these code fragments equal? In other words, do they behave the same way in any circumstances, for any handler functions? */
+Bu kod parçaları eşit mi? Başka bir deyişle, herhangi bir işleyici işlevi için herhangi bir koşulda aynı şekilde mi davranıyorlar? */
 
 promise.then(f1).catch(f2);
 
-// Versus:
+// Versus(Karşı):
 
 promise.then(f1, f2);
 
 // çözüm
 
-/* The short answer is: no, they are not the equal:
+/* Kısa cevap: hayır, eşit değiller:
 
-The difference is that if an error happens in f1, then it is handled by .catch here: */
+Fark, f1'de bir hata meydana gelirse, bunun burada .catch tarafından işlenmesidir: */
 
 promise
     .then(f1)
     .catch(f2);
 
-// …But not here:
-
+// …Ama burada değil:
 promise
     .then(f1, f2);
 
-/* That’s because an error is passed down the chain, and in the second code piece there’s no chain below f1.
+/* Bunun nedeni, zincirden bir hata iletilmesi ve ikinci kod parçasında f1'in altında zincir olmamasıdır..
 
-In other words, .then passes results/errors to the next .then/catch. So in the first example, there’s a catch below, and in the second one – there isn’t, so the error is unhandled. */
+Başka bir deyişle, .then sonuçları/hataları sonraki .then/catch öğesine iletir. Yani ilk örnekte, aşağıda bir yakalama var ve ikincisinde – yok, bu yüzden hata işlenmedi. */
