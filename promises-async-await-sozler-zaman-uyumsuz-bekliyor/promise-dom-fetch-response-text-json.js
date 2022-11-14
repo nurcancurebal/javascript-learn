@@ -20,7 +20,7 @@ fetch('/article/promise-chaining/user.json')
     })
     .then(function (text) {
         // ...ve uzak sunucudan gelen içerik
-        console.log(text); // {"name": "iliakan", isAdmin: true}
+        console.log(text); // {"name": "nurcan", isAdmin: true}
     });
 
 /* Ayrıca response.json() metodu gelen veriyi doğruca JSON formatına çözümler. Örnekteki senaryoya daha uygun olduğundan kodda bu kısmı değiştirelim.
@@ -30,7 +30,7 @@ Arrow fonksiyon kullanarak da daha sade bir biçime ulaşabilmek için kodu tekr
 // yukarıdan farklı olarak response.json() kullanıyoruz
 fetch('/article/promise-chaining/user.json')
     .then(response => response.json())
-    .then(user => console.log(user.name)); // iliakan
+    .then(user => console.log(user.name)); // nurcan
 
 /* Şimdi de elde ettiğimiz kullanıcı verisiyle bir şeyler yapalım.
 
@@ -38,20 +38,26 @@ fetch('/article/promise-chaining/user.json')
 
 // user.json dosyasına istek yolla
 fetch('/article/promise-chaining/user.json')
+
     // json formatına dönüştür
     .then(response => response.json())
+
     // GitHub sayfasına isteği yolla
     .then(user => fetch(`https://api.github.com/users/${user.name}`))
+
     // dönütü json formatına dönüştür
     .then(response => response.json())
+
     // kullanıcı avatar resmini (githubUser.avatar_url) 3 saniye boyunca göster
     .then(githubUser => {
+
         let img = document.createElement('img');
+
         img.src = githubUser.avatar_url;
         img.className = "promise-avatar-example";
-        document.body.append(img);
+        document.body.append(img); // append() sonsuz sayıda yeni elemanı parametre olarak alabilir.
 
-        setTimeout(() => img.remove(), 3000); // (*)
+        setTimeout(() => img.remove(), 3000); // (*) remove(), belgeden bir öğeyi (veya düğümü) kaldırır.
     });
 
 /* Yukarıdaki kod bloğu istediğimiz şekilde çalışmakta fakat burada potansiyel bir sorun da mevcut.
@@ -65,13 +71,14 @@ fetch('/article/promise-chaining/user.json')
     .then(user => fetch(`https://api.github.com/users/${user.name}`))
     .then(response => response.json())
     .then(githubUser => new Promise(function (resolve, reject) {
+
         let img = document.createElement('img');
         img.src = githubUser.avatar_url;
         img.className = "promise-avatar-example";
-        document.body.append(img);
+        document.body.append(img); // append() sonsuz sayıda yeni elemanı parametre olarak alabilir.
 
         setTimeout(() => {
-            img.remove();
+            img.remove(); // remove(), belgeden bir öğeyi (veya düğümü) kaldırır.
             resolve(githubUser);
         }, 3000);
     }))
@@ -106,12 +113,12 @@ function showAvatar(githubUser) {
 
         img.src = githubUser.avatar_url;
         img.className = "promise-avatar-example";
-        document.body.append(img);
+        document.body.append(img); // append() sonsuz sayıda yeni elemanı parametre olarak alabilir. // TODO burada ne oluyor?
 
         setTimeout(() => {
 
-            img.remove();
-            resolve(githubUser);
+            img.remove(); //remove(), belgeden bir öğeyi (veya düğümü) kaldırır. // TODO burada ne oluyor?
+            resolve(githubUser); // TODO burada ne oluyor?
 
         }, 3000);
     });

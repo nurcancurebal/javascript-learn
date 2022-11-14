@@ -1,14 +1,13 @@
 /* -> Tüketiciler: then, catch, finally
-Promise(Söz objesi) çalıştırıcı(“üretici kod”, “şarkıcı”) ve tüketici(“fanlar”) arasında bir bağ oluşturur, bu sonuç veya hata objesi bekler. Tüketici fonksiyonlar .then, .catch ve .finally ile kayıt olabilirler. */
+Promise(Söz objesi) çalıştırıcı(“üretici kod”) ve tüketici arasında bir bağ oluşturur, bu sonuç veya hata objesi bekler. Tüketici fonksiyonlar .then, .catch ve .finally ile kayıt olabilirler. */
 
 
 /* -> then
 En önemli ve temel olan then'dir. */
 
 /* promise.then(
-  //function(result) { /* başarılı bir sonucu işle */ //},
-  //function(error) { /* hayatı işle  }
-//);*/
+  function(result) { /* başarılı bir sonucu işle */ //},
+// function(error) { /* hatayı işle  } );*/
 
 /* .then'in ilk argümanı:
 
@@ -22,7 +21,7 @@ En önemli ve temel olan then'dir. */
 
 Örneğin, aşağıdaki başarılı bir şekilde çözülen söz örneği: */
 
-let promise1 = new Promise(function(resolve, reject) {
+let promise1 = new Promise(function (resolve, reject) {
 
   setTimeout(() => resolve("done!"), 1000);
 });
@@ -38,7 +37,7 @@ promise1.then(
 
 Red durumunda ikincisi çalışır: */
 
-let promise2 = new Promise(function(resolve, reject) {
+let promise2 = new Promise(function (resolve, reject) {
 
   setTimeout(() => reject(new Error("Whoops!")), 1000);
 });
@@ -67,7 +66,6 @@ let promise4 = new Promise((resolve, reject) => {
   setTimeout(() => reject(new Error("Whoops!")), 1000);
 });
 
-// .catch(f) ile promise.then(null, f) aynıdır
 promise4.catch(console.log); // 1 sn sonra "Error: Whoops!" ekrana basılır.
 
 // .catch(f) ile .then(null, f) aynı anlama gelmektedir. Birincisi sadece kısa yazım.
@@ -84,7 +82,7 @@ new Promise((resolve, reject) => {
 
   /* zaman alan bir iş yap ve çözüm/red'i çağır. */
 })
-  // Söz herhangi bir şekilde tamamlandığında çalıştır.
+// Söz herhangi bir şekilde tamamlandığında çalıştır.
 /*   .finally(() => stop loading indicator)
   .then(result => show result, err => show error) */
 
@@ -103,6 +101,7 @@ new Promise((resolve, reject) => {
   .finally(() => console.log("Promise ready"))
   .then(result => console.log(result)); // <-- .then sonuçları işler
 
+
 // Burada ise sözde bir problem meydana gelmektedir, finally'den catch bloğuna geçmektedir:
 
 new Promise((resolve, reject) => {
@@ -114,7 +113,6 @@ new Promise((resolve, reject) => {
 
 /* Aslında bu çok uygun, çünkü finally içerisinde sözün sonucunu işleme gibi bir niyetimiz yok. Bunları üzerinden geçirse yeterli.
 
-Promiseler ve bunların zincirlemesi hakkında ilerleyen konularda daha derin bilgi verilecektir.
 
 3. finally(f) kullanmak yazım olarak .then(f,f)'den daha uygundur çünkü f fonksiyonunu tekrar yazmanıza gerek kalmaz. */
 
@@ -127,6 +125,4 @@ let promise5 = new Promise(resolve => resolve("done!"));
 
 promise5.then(console.log); // done! (hemen görünür)
 
-/* .then işleyicisi her türlü çalışır, söz zaman alsa da anında bitse de önemli değil.
-
-Bir sonraki bölümde, sözlerin nasıl asenkron kod yazarken işimize yarayabileceği üzerinde duralım. */
+// .then işleyicisi her türlü çalışır, söz zaman alsa da anında bitse de önemli değil.

@@ -1,5 +1,5 @@
 /* -> Promise Zinciri
-Callback fonksiyonlarına giriş bölümünde bahsettiğimiz probleme tekrar göz atalım. Burada bir seri asenkron görevin ardaşık bir biçimde çağırılması gerekmekte. Örneğin script dosyalarının yüklenmesi. Bunu Promise ile nasıl yapabiliriz?
+Burada bir seri asenkron görevin ardaşık bir biçimde çağırılması gerekmekte. Örneğin script dosyalarının yüklenmesi. Bunu Promise ile nasıl yapabiliriz?
 
 Promise bize bunu gerçekleştirebilmemiz için bazı yöntemler sunmakta.
 
@@ -50,7 +50,7 @@ new Promise(function (resolve, reject) {
 
 }).then(function (result) {
 
-    console.log(result);
+    console.log(result); // 1
     return result * 2; // <-- (1)
 
 }) // <-- (2)
@@ -84,8 +84,6 @@ promise.then(function (result) {
 });
 
 /* Burada tek bir Promise objesine birden fazla işleyicinin eklenmesi ve bu işleyicilerin birbirleri arasında veriyi aktarmadan, yanlızca ilk dönütü birbirlerinden bağımsız olarak işledikleri görülmektedir.
-
-Burada durumu niteleyen akışı görebiliriz (bunu yukarıdaki zincir akışını göz önüne alarak inceleyiniz):
 
 
 Aynı Promise üzerindeki tüm .then işleyicileri yukarıdaki örnekte aynı sonucu vermekte. Yani console.log fonksiyonu sürekli olarak 1 değerini gösterir.

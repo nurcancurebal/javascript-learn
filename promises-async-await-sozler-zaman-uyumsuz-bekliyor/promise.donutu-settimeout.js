@@ -28,7 +28,6 @@ new Promise(function (resolve, reject) {
 }).then(function (result) {
 
     console.log(result); // 4
-
 });
 
 /* Buradaki ilk .then işleyicisi console.log fonksiyonu ile 1 değerini gösterir ve yeni bir Promise objesi oluşturarak döndürür. Bir sonraki .then işleyicisi result parametresi olarak gönderdiğimiz Promise’ i alır. 1000ms sonrasında bu Promise sonuçlanır ve kendi tanım aralığındaki result değerini kullanarak result * 2 değerini döner.(**) satırında tanımlanmış olan işleyici içerisindeki console.log fonksiyonu çalışır ve 2 değerini gösterir.

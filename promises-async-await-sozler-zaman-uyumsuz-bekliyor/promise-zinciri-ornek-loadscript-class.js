@@ -71,9 +71,9 @@ class Thenable {
     }
     then(resolve, reject) {
 
-        console.log(resolve); // function() { native code }
-        // this.num*2 değerini 1 saniye sonra çözümle
+        console.log(resolve); // function() { yerel/ana kod }
 
+        // this.num*2 değerini 1 saniye sonra çözümle
         setTimeout(() => resolve(this.num * 2), 1000); // (**)
     }
 }
