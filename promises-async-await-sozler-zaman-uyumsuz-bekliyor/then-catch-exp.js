@@ -3,7 +3,7 @@ Bu kod parçaları eşit mi? Başka bir deyişle, herhangi bir işleyici işlevi
 
 promise.then(f1).catch(f2);
 
-// Versus(Karşı):
+// Versus(Karşılaştırmak):
 
 promise.then(f1, f2);
 

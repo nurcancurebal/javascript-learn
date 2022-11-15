@@ -36,7 +36,7 @@ Promise.allSettled(urls.map(url => fetch(url)))
                 console.log(`${urls[num]}: ${result.value.status}`);
             }
             if (result.status == "rejected") {
-                
+
                 console.log(`${urls[num]}: ${result.reason}`);
             }
         });

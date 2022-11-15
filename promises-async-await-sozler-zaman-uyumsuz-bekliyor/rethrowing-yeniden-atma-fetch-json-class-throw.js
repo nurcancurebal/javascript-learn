@@ -42,7 +42,7 @@ new Promise((resolve, reject) => {
     /* burada asla koşmaz */
 }).catch(error => { // (**)
 
-    console.log(`The unknown error has occurred: ${error}`);
+    console.log(`The unknown error has occurred: ${error}`); // The unknown error has occurred: Error: Whoops!
     // hiçbir şeyi iade etme => yürütme normal yoldan gider
 });
 
@@ -87,7 +87,7 @@ function loadJson(url) { // (2)
                 return response.json();
 
             } else {
-                
+
                 throw new HttpError(response);
             }
         })

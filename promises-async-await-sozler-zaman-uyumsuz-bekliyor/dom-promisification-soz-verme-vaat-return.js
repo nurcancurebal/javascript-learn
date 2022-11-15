@@ -13,7 +13,7 @@ function loadScript(src, callback) {
 
     script.src = src;
 
-    script.onload = () => callback(null, script);
+    script.onload = () => callback(null, script); // TODO bu ne demek callback(null, script)
     script.onerror = () => callback(new Error(`Script load error for ${src}`));
 
     document.head.append(script);
@@ -27,7 +27,7 @@ let loadScriptPromise1 = function (src) {
 
     return new Promise((resolve, reject) => {
 
-        loadScript(src, (err, script) => {
+        loadScript(src, (err, script) => { // TODO burada ne yapıyor?
 
             if (err) reject(err)
 
@@ -40,13 +40,13 @@ let loadScriptPromise1 = function (src) {
 // loadScriptPromise1('path/script.js').then(...)
 /* Şimdi loadScriptPromise1 söze dayalı kodumuza çok iyi uyuyor.
 
-Gördüğümüz gibi, tüm işi orijinale devreder loadScriptve söz vermek anlamına gelen kendi geri aramasını sağlar resolve/reject.
+Gördüğümüz gibi, tüm işi orijinale devreder loadScript ve söz vermek anlamına gelen kendi geri aramasını sağlar resolve/reject.
 
 Pek çok fonksiyona söz vermemiz gerekebileceğinden, bir yardımcı kullanmak mantıklıdır.
 
-Bu aslında çok basit – promisify(f)aşağıda bir taahhüt işlevi alır fve bir sarmalayıcı işlevi döndürür.
+Bu aslında çok basit – promisify(f) aşağıda bir taahhüt işlevi alır f ve bir sarmalayıcı işlevi döndürür.
 
-Bu sarmalayıcı, yukarıdaki koddakiyle aynı şeyi yapar: bir söz verir ve aramayı orijinal föğesine ileterek sonucu özel bir geri aramada izler: */
+Bu sarmalayıcı, yukarıdaki koddakiyle aynı şeyi yapar: bir söz verir ve aramayı orijinal f öğesine ileterek sonucu özel bir geri aramada izler: */
 
 function promisify(f) {
 
@@ -68,7 +68,7 @@ function promisify(f) {
 
             args.push(callback); // argümanların sonuna özel geri aramamızı ekleyin
 
-            f.call(this, ...args); // orijinal fonksiyonu çağır
+            f.call(this, ...args); // orijinal fonksiyonu çağır // TODO burada ne oluyor?
         });
     };
 };
@@ -78,13 +78,13 @@ let loadScriptPromise2 = promisify(loadScript);
 
 // loadScriptPromise2(...).then(...);
 
-/* Burada orijinal fonksiyonun iki argümanlı bir geri arama beklediğini varsayıyoruz (err, result). En sık karşılaştığımız şey bu. O zaman özel geri aramamız tam olarak doğru biçimdedir ve promisifyböyle bir durum için harika çalışır.
+/* Burada orijinal fonksiyonun iki argümanlı bir geri arama beklediğini varsayıyoruz (err, result). En sık karşılaştığımız şey bu. O zaman özel geri aramamız tam olarak doğru biçimdedir ve promisify böyle bir durum için harika çalışır.
 
 Ama ya orijinal f, daha fazla argüman içeren bir geri arama bekliyorsa callback(err, res1, res2)?
 
-İşte promisifybir dizi çoklu geri arama sonucu döndüren bir değişiklik: */
+İşte promisify bir dizi çoklu geri arama sonucu döndüren bir değişiklik: */
 
-// promisify(f, true) to get array of results
+// promisify(f, true) sonuç dizisini almak için
 function promisify(f, manyArgs = false) {
 
     return function (...args) {
@@ -116,13 +116,13 @@ f = promisify(f, true);
 
 // f(...).then(arrayOfResults => ..., err => ...)
 
-/* Bazı durumlarda, errhiç olmayabilir: callback(result)veya geri arama biçiminde egzotik bir şey var, o zaman bu tür işlevleri, yardımcıyı kullanmadan manuel olarak vaat edebiliriz.
+/* Bazı durumlarda, err hiç olmayabilir: callback(result) veya geri arama biçiminde egzotik bir şey var, o zaman bu tür işlevleri, yardımcıyı kullanmadan manuel olarak vaat edebiliriz.
 
-Biraz daha esnek taahhüt işlevlerine sahip modüller de vardır, örneğin es6-promisify . Node.js'de bunun için yerleşik bir util.promisifyişlev vardır. */
+Biraz daha esnek taahhüt işlevlerine sahip modüller de vardır, örneğin es6-promisify . Node.js'de bunun için yerleşik bir util.promisify işlev vardır. */
 
 
 /* -> Dikkate değer:
-Söz vermek, özellikle kullandığınızda async/await(sonraki bölüme bakın) harika bir yaklaşımdır, ancak geri aramaların tam olarak yerine geçmez.
+Söz vermek, özellikle kullandığınızda async/await harika bir yaklaşımdır, ancak geri aramaların tam olarak yerine geçmez.
 
 Unutmayın, bir sözün yalnızca bir sonucu olabilir, ancak teknik olarak bir geri arama birçok kez çağrılabilir.
 

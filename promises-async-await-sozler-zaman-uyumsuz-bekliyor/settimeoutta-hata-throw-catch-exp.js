@@ -5,7 +5,7 @@ new Promise(function (resolve, reject) {
 
     setTimeout(() => {
 
-        throw new Error("Whoops!");
+        throw new Error("Whoops!"); // Whoops!
     }, 1000);
 
 }).catch(console.log);
