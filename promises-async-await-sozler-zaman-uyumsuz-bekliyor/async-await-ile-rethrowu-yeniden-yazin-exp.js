@@ -1,7 +1,7 @@
-/* -> async/await ile "rethrow"u yeniden yazın
-Aşağıda Promise Zinciri bölümünden “rethrow” örneğini bulabilirsiniz . async/awaityerine kullanarak yeniden yazın .then/catch.
+/* -> async/await ile "rethrow(yeniden atma)"u yeniden yazın
+Aşağıda Promise Zinciri bölümünden “rethrow” örneğini bulabilirsiniz. async/await yerine kullanarak yeniden yazın .then/catch.
 
-Ve bir döngü lehine özyinelemeden kurtulun demoGithubUser: bununla async/awaityapmak kolaylaşır. */
+Ve bir döngü lehine özyinelemeden kurtulun demoGithubUser: bununla async/await yapmak kolaylaşır. */
 
 class HttpError1 extends Error1 {
 
@@ -60,7 +60,7 @@ function demoGithubUser1() {
 demoGithubUser1();
 
 /* çözüm
-Burada hile yok. Sadece içeride .catchile değiştirin ve gerektiğinde ekleyin :try...catchdemoGithubUserasync/await */
+Burada hile yok. Sadece içeride .catch ile değiştirin ve gerektiğinde ekleyin :try...catch demoGithubUser async/await */
 
 class HttpError extends Error {
 

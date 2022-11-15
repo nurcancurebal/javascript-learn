@@ -1,13 +1,13 @@
 /* -> async/await kullanarak yeniden yaz
-Promise Zinciri bölümündeki örneklerden birini async/awaityerine kullanarak yeniden yazınız .then/catch: */
+Promise Zinciri bölümündeki örneklerden birini async/await yerine kullanarak yeniden yazınız .then/catch: */
 
-function loadJson(url) {
+function loadJson1(url) {
     return fetch(url)
         .then(response => {
             if (response.status == 200) {
 
                 return response.json();
-                
+
             } else {
 
                 throw new Error(response.status);
@@ -15,11 +15,10 @@ function loadJson(url) {
         })
 }
 
-loadJson('no-such-user.json') // (3)
+loadJson1('no-such-user.json') // (3)
     .catch(console.log); // Error: 404
 
-/* çözüm
-Notlar kodun altındadır: */
+// çözüm
 
 async function loadJson(url) { // (1)
 
@@ -41,9 +40,9 @@ loadJson('no-such-user.json')
 
 1. Fonksiyon loadJson olur async.
 
-2. Tüm .theniç ile değiştirilir await.
+2. Tüm .then iç await ile değiştirilir.
 
-3. return response.json()Bunu beklemek yerine şöyle yapabiliriz : */
+3. return response.json() Bunu beklemek yerine şöyle yapabiliriz : */
 
 if (response.status == 200) {
 
@@ -52,4 +51,4 @@ if (response.status == 200) {
 
 /* await O zaman bu sözün çözülmesi için dış kodun olması gerekirdi . Bizim durumumuzda önemli değil.
 
-4. Atılan hata loadJsontarafından işlenir .catch. Orada kullanamayız çünkü bir fonksiyonda await loadJson(…)değiliz .async */
+4. Atılan hata loadJson tarafından işlenir .catch. Bir fonksiyonda olmadığımız için await loadJson(…) orayı kullanamayız async.*/

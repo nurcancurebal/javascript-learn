@@ -1,5 +1,5 @@
 /* -> Hata yönetimi
-Bir söz normal olarak çözülürse await promise, sonucu döndürür. throwAncak red durumunda sanki o satırda bir ifade varmış gibi error veriyor.
+Bir söz normal olarak çözülürse await promise, sonucu döndürür. throw Ancak red durumunda sanki o satırda bir ifade varmış gibi error veriyor.
 
 Bu kod: */
 
@@ -15,9 +15,9 @@ async function f() {
     throw new Error("Whoops!");
 }
 
-/* Gerçek durumlarda, sözün reddedilmesi biraz zaman alabilir. Yani awaitbekleyecek ve sonra bir hata atacak.
+/* Gerçek durumlarda, sözün reddedilmesi biraz zaman alabilir. Yani await bekleyecek ve sonra bir hata atacak.
 
-try..catchBu hatayı normal ile aynı şekilde kullanarak yakalayabiliriz throw: */
+try..catch Bu hatayı normal ile aynı şekilde kullanarak yakalayabiliriz throw: */
 
 async function f() {
 
@@ -33,7 +33,7 @@ async function f() {
 
 f();
 
-// Bir hata durumunda kontrol catchbloğa atlar. Birden çok satırı da sarabiliriz:
+// Bir hata durumunda kontrol catch bloğa atlar. Birden çok satırı da sarabiliriz:
 
 async function f() {
 
@@ -51,7 +51,7 @@ async function f() {
 
 f();
 
-/* Eğer sahip try..catchdeğilsek, zaman uyumsuz işlevin çağrısı tarafından oluşturulan söz f()reddedilir. .catchBunu işlemek için ekleyebiliriz : */
+/* Eğer try..catch sahip değilsek, zaman uyumsuz işlevin çağrısı tarafından oluşturulan söz f() reddedilir. Bunu işlemek için .catch ekleyebiliriz : */
 
 async function f() {
 
@@ -62,20 +62,20 @@ async function f() {
 
 f().catch(console.log); // TypeError: failed to fetch // (*)
 
-/* Oraya eklemeyi unutursak .catch, işlenmeyen bir söz verme hatası alırız (konsolda görüntülenebilir). Bu tür hataları, Sözlerle hata işleme bölümünde açıklandığı gibi global bir olay işleyici kullanarak yakalayabiliriz . */
+/* Oraya .catch eklemeyi unutursak, işlenmeyen bir söz verme hatası alırız (konsolda görüntülenebilir). Bu tür hataları, Sözlerle hata işleme bölümünde açıklandığı gibi global bir olay işleyici kullanarak yakalayabiliriz . */
 
 
 /* -> async/await ve promise.then/catch
 
-Kullandığımızda async/await, nadiren ihtiyacımız olur .then, çünkü awaitbizi bekleyen işi halleder. try..catchVe bunun yerine bir normal kullanabiliriz .catch. Bu genellikle (her zaman değil) daha uygundur.
+async/await kullandığımızda, .then nadiren ihtiyacımız olur, çünkü await bizi bekleyen işi halleder. try..catch Ve bunun yerine bir normal kullanabiliriz .catch. Bu genellikle (her zaman değil) daha uygundur.
 
-Ancak kodun en üst düzeyinde, herhangi bir işlevin dışındayken, asyncsözdizimsel olarak kullanamayız , bu nedenle nihai sonucu veya düşme hatalarını işlemek awaitiçin eklemek normal bir uygulamadır ..then/catch
+Ancak kodun en üst düzeyinde, herhangi bir işlevin dışındayken, async sözdizimsel olarak kullanamayız , bu nedenle nihai sonucu veya düşme hatalarını işlemek await için ..then/catch eklemek normal bir uygulamadır
 
 (*)Yukarıdaki örneğin satırında olduğu gibi. */
 
 
 /* -> async/await ile iyi çalışır Promise.all
-Birden fazla söz beklememiz gerektiğinde, onları sarabiliriz Promise.allve sonra await: */
+Birden fazla söz beklememiz gerektiğinde, onları sarabiliriz Promise.all ve sonra await: */
 
 // sonuç dizisini bekleyin
 let results = await Promise.all([
@@ -84,4 +84,4 @@ let results = await Promise.all([
     //...
 ]);
 
-/* Bir hata olması durumunda, her zamanki gibi yayılır: başarısız sözden öğesine ve ardından çağrı etrafında Promise.allkullanarak yakalayabileceğimiz bir istisna haline gelir .try..catch */
+/* Bir hata olması durumunda, her zamanki gibi yayılır: başarısız sözden öğesine ve ardından çağrı etrafında Promise.all kullanarak yakalayabileceğimiz bir istisna haline gelir .try..catch */

@@ -15,11 +15,11 @@ console.log("code finished"); // bu console.log ilk önce gösterir
 
 Bu garip, çünkü söz kesinlikle baştan yapılıyor.
 
-Tetik neden .thendaha sonra oldu? Neler oluyor? */
+Tetik neden .then daha sonra oldu? Neler oluyor? */
 
 
 /* -> mikro görevler
-Asenkron görevlerin uygun şekilde yönetilmesi gerekir. Bunun için standart PromiseJobs, daha çok "mikro görev kuyruğu" (v8 terimi) olarak adlandırılan bir dahili kuyruk belirtir.
+Asenkron görevlerin uygun şekilde yönetilmesi gerekir. Bunun için standart Promise Jobs, daha çok "mikro görev kuyruğu" (v8 terimi) olarak adlandırılan bir dahili kuyruk belirtir.
 
 Spesifikasyonda belirtildiği gibi :
 

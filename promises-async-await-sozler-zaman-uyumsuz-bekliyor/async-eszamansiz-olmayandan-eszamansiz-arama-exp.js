@@ -1,5 +1,5 @@
 /* -> Eşzamansız olmayandan eşzamansız arama
-“Düzenli” bir fonksiyonumuz var. Ondan nasıl aranır asyncve sonucu nasıl kullanılır? */
+“Düzenli” bir fonksiyonumuz var. Ondan nasıl aranır async ve sonucu nasıl kullanılır? */
 
 async function wait1() {
 
@@ -9,9 +9,9 @@ async function wait1() {
 }
 
 function f1() {
-    // ...what to write here?
-    // we need to call async wait() and wait to get 10
-    // remember, we can't use "await"
+    // ...buraya ne yazmalı
+    // async wait()'i çağırmamız ve 10 almak için beklememiz gerekiyor
+    // unutma, "bekle"yi kullanamayız
 }
 
 /* Not: Görev teknik olarak çok basittir, ancak soru, zaman uyumsuz/beklemeye yeni başlayan geliştiriciler için oldukça yaygındır. */
