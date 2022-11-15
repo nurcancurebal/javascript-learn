@@ -28,9 +28,9 @@ fetch('/article/promise-chaining/user.json')
         img.className = "promise-avatar-example";
         document.body.append(img);
 
-        setTimeout(() => { // TODO burada ne oluyor?
-            img.remove(); // remove: bir veya daha fazla öğeyi Html belgesinden kaldırabiliriz 
-            resolve(githubUser);
+        setTimeout(() => {
+            img.remove(); // remove: bir veya daha fazla öğeyi Html belgesinden kaldırabiliriz (body nin içindeki image silinir 3 sn sonra.)
+            resolve(githubUser); // promise remove olarak çalışacak ve en son githubUser ne çıktı verdiyse o şekilde bitecek( burada githubUser son settimeout işlemi)
         }, 3000);
     }))
     .catch(error => console.log(error.message));

@@ -1,19 +1,19 @@
 /* -> vaat
-Söz verme – basit bir dönüşüm için uzun bir kelimedir. Geri aramayı kabul eden bir işlevin, söz veren bir işleve dönüştürülmesidir.
+Söz verme – basit bir dönüşüm için uzun bir kelimedir. Geri aramayı kabul eden bir fonksiyonun, söz veren bir fonksiyona dönüştürülmesidir.
 
-Daha kesin olmak gerekirse, aynı şeyi yapan, orijinali dahili olarak çağıran, ancak bir söz veren bir sarmalayıcı işlevi yaratırız.
+Daha kesin olmak gerekirse, aynı şeyi yapan, orijinali dahili olarak çağıran, ancak bir söz veren bir sarmalayıcı fonksiyonu yaratırız.
 
-Birçok işlev ve kitaplık geri arama tabanlı olduğundan, bu tür dönüşümlere genellikle gerçek hayatta ihtiyaç duyulur. Ancak vaatler daha uygundur. Bu yüzden onlara söz vermek mantıklı.
+Birçok fonksiyon ve kitaplık geri arama tabanlı olduğundan, bu tür dönüşümlere genellikle gerçek hayatta ihtiyaç duyulur. Ancak vaatler daha uygundur. Bu yüzden onlara söz vermek mantıklı.
 
 Örneğin Callback fonksiyonuna giriş bölümünden loadScript(src, callback) alıyoruz. */
 
-function loadScript(src, callback) {
+function loadScript(src, callback) { // (ikinci olarak bu fonksiyon çalışır)
 
     let script = document.createElement('script');
 
     script.src = src;
 
-    script.onload = () => callback(null, script); // TODO bu ne demek callback(null, script)
+    script.onload = () => callback(null, script); // callback = (err, script) içine err= null script=script attı
     script.onerror = () => callback(new Error(`Script load error for ${src}`));
 
     document.head.append(script);
@@ -21,13 +21,13 @@ function loadScript(src, callback) {
 
 // kullanım:
 // loadScript('path/script.js', (err, script) => {...})
-/* Söz verelim. Yeni loadScriptPromise1(src)işlev de aynısını yapacak, ancak yalnızca kabul edecek src(geri arama yok) ve bir söz verecek. */
+/* Söz verelim. Yeni loadScriptPromise1(src)fonksiyon de aynısını yapacak, ancak yalnızca kabul edecek src(geri arama yok) ve bir söz verecek. */
 
-let loadScriptPromise1 = function (src) {
+let loadScriptPromise1 = function (src) { // (ilk önce bu fonksiyon çalışır)
 
     return new Promise((resolve, reject) => {
 
-        loadScript(src, (err, script) => { // TODO burada ne yapıyor?
+        loadScript(src, (err, script) => { // callback = (err, script)
 
             if (err) reject(err)
 
@@ -44,7 +44,7 @@ Gördüğümüz gibi, tüm işi orijinale devreder loadScript ve söz vermek anl
 
 Pek çok fonksiyona söz vermemiz gerekebileceğinden, bir yardımcı kullanmak mantıklıdır.
 
-Bu aslında çok basit – promisify(f) aşağıda bir taahhüt işlevi alır f ve bir sarmalayıcı işlevi döndürür.
+Bu aslında çok basit – promisify(f) aşağıda bir taahhüt fonksiyonu alır f ve bir sarmalayıcı fonksiyona döndürür.
 
 Bu sarmalayıcı, yukarıdaki koddakiyle aynı şeyi yapar: bir söz verir ve aramayı orijinal f öğesine ileterek sonucu özel bir geri aramada izler: */
 
@@ -116,9 +116,9 @@ f = promisify(f, true);
 
 // f(...).then(arrayOfResults => ..., err => ...)
 
-/* Bazı durumlarda, err hiç olmayabilir: callback(result) veya geri arama biçiminde egzotik bir şey var, o zaman bu tür işlevleri, yardımcıyı kullanmadan manuel olarak vaat edebiliriz.
+/* Bazı durumlarda, err hiç olmayabilir: callback(result) veya geri arama biçiminde egzotik bir şey var, o zaman bu tür fonksiyonleri, yardımcıyı kullanmadan manuel olarak vaat edebiliriz.
 
-Biraz daha esnek taahhüt işlevlerine sahip modüller de vardır, örneğin es6-promisify . Node.js'de bunun için yerleşik bir util.promisify işlev vardır. */
+Biraz daha esnek taahhüt fonksiyonlerine sahip modüller de vardır, örneğin es6-promisify . Node.js'de bunun için yerleşik bir util.promisify fonksiyon vardır. */
 
 
 /* -> Dikkate değer:
@@ -126,4 +126,4 @@ Söz vermek, özellikle kullandığınızda async/await harika bir yaklaşımdı
 
 Unutmayın, bir sözün yalnızca bir sonucu olabilir, ancak teknik olarak bir geri arama birçok kez çağrılabilir.
 
-Bu nedenle, söz verme yalnızca geri aramayı bir kez çağıran işlevler içindir. Diğer aramalar göz ardı edilecektir. */
+Bu nedenle, söz verme yalnızca geri aramayı bir kez çağıran fonksiyonler içindir. Diğer aramalar göz ardı edilecektir. */

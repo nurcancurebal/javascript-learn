@@ -113,12 +113,12 @@ function showAvatar(githubUser) {
 
         img.src = githubUser.avatar_url;
         img.className = "promise-avatar-example";
-        document.body.append(img); // append() sonsuz sayıda yeni elemanı parametre olarak alabilir. // TODO burada ne oluyor?
+        document.body.append(img); // append() sonsuz sayıda yeni elemanı parametre olarak alabilir.
 
         setTimeout(() => {
 
-            img.remove(); //remove(), belgeden bir öğeyi (veya düğümü) kaldırır. // TODO burada ne oluyor?
-            resolve(githubUser); // TODO burada ne oluyor?
+            img.remove(); //remove(), belgeden bir öğeyi (veya düğümü) kaldırır. 3 sn sonra img kaldırılır
+            resolve(githubUser); // promise ın resolve çıktısı vermesi yani, then ile devam edebilmesi için
 
         }, 3000);
     });
