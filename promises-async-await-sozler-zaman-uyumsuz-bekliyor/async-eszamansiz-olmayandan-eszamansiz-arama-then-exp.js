@@ -19,7 +19,7 @@ function f1() {
 /* çözüm
 İçeride nasıl çalıştığını bilmek faydalı olduğunda durum budur.
 
-Çağrıyı söz olarak kabul edin asyncve ona ekleyin .then: */
+Çağrıyı söz olarak kabul edin async ve ona ekleyin .then: */
 
 async function wait() {
 
