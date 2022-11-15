@@ -1,4 +1,4 @@
-/* -> bekle
+/* -> Await (Bekliyor)
 Sözdizimi: */
 
 // sadece zaman uyumsuz işlevler içinde çalışır
@@ -22,15 +22,15 @@ async function f() {
 
 f();
 
-/* İşlev yürütme satırda "duraklar" (*)ve söz yerine getirildiğinde resultsonuç olarak devam eder. Yani yukarıdaki kod "bitti!" bir saniyede.
+/* İşlev yürütme satırda "duraklar" (*)  ve söz yerine getirildiğinde result sonuç olarak devam eder. Yani yukarıdaki kod "bitti!" bir saniyede.
 
-Vurgulayalım: awaitJavaScript'i kelimenin tam anlamıyla söz verilene kadar bekletir ve ardından sonuca devam eder. Bu, herhangi bir CPU kaynağına mal olmaz, çünkü motor bu arada başka işler de yapabilir: diğer komut dosyalarını yürütün, olayları yönetin vb.
+Vurgulayalım: await JavaScript'i kelimenin tam anlamıyla söz verilene kadar bekletir ve ardından sonuca devam eder. Bu, herhangi bir CPU kaynağına mal olmaz, çünkü motor bu arada başka işler de yapabilir: diğer komut dosyalarını yürütün, olayları yönetin vb. 
 
-Bu, vaad edilen sonucu almanın, promise.thenokuması ve yazması daha kolay olandan daha zarif bir sözdizimidir. */
+Bu, vaad edilen sonucu almanın, promise.then okuması ve yazması daha kolay olandan daha zarif bir sözdizimidir. */
 
 
 /* -> await Normal işlevlerde kullanılamaz
-awaitEşzamansız olmayan bir işlevde kullanmaya çalışırsak , bir sözdizimi hatası olur: */
+await Eşzamansız olmayan bir işlevde kullanmaya çalışırsak , bir sözdizimi hatası olur: */
 
 function f() {
 
@@ -39,31 +39,31 @@ function f() {
     // let result = await promise; // Syntax error
 }
 
-/* asyncBir fonksiyonun önüne koymazsak bu hatayı alacağız . Söylendiği gibi, awaityalnızca bir async function.
+/* async Bir fonksiyonun önüne koymazsak bu hatayı alacağız . Söylendiği gibi, await yalnızca bir async function.
 
-Promise ZincirishowAvatar() bölümünden bir örnek alalım ve şunu kullanarak yeniden yazalım :async/await
+Promise Zinciri showAvatar() bölümünden bir örnek alalım ve async/await kullanarak yeniden yazalım :
 
-1. .then ile aramaları değiştirmemiz gerekecek await.
-2. Ayrıca onların çalışması için işlevi yapmalıyız async. */
+1. .then Çağrıları ile await değiştirmemiz gerekecek.
+2. Ayrıca onların çalışması için async fonksiyon yapmalıyız. */
 
 async function showAvatar() {
 
-    // read our JSON
+    // JSON'umuzu okuyun
     let response = await fetch('/article/promise-chaining/user.json');
     let user = await response.json();
 
-    // read github user
+    // github kullanıcısını oku
     let githubResponse = await fetch(`https://api.github.com/users/${user.name}`);
     let githubUser = await githubResponse.json();
 
-    // show the avatar
+    // avatarı göster
     let img = document.createElement('img');
 
     img.src = githubUser.avatar_url;
     img.className = "promise-avatar-example";
     document.body.append(img);
 
-    // wait 3 seconds
+    // 3 saniye bekle
     await new Promise((resolve, reject) => setTimeout(resolve, 3000));
 
     img.remove();
@@ -77,9 +77,9 @@ showAvatar();
 
 
 /* -> await üst düzey kodda çalışmayacak
-Yeni kullanmaya başlayan kişiler, üst düzey kodlarda awaitkullanamayacağımızı unutmaya meyillidir . awaitÖrneğin, bu işe yaramaz: */
+Yeni kullanmaya başlayan kişiler, üst düzey kodlarda await kullanamayacağımızı unutmaya meyillidir . await Örneğin, bu işe yaramaz: */
 
-// syntax error in top-level code
+// üst düzey kodda sözdizimi hatası
 let response = await fetch('/article/promise-chaining/user.json');
 
 let user = await response.json();
@@ -94,10 +94,10 @@ let user = await response.json();
 })();
 
 
-/* -> await"sonralanabilir" kabul eder
-Gibi promise.then, awaitsonra yapılabilir nesneleri (çağrılabilir bir thenyöntemle olanlar) kullanmaya izin verir. Buradaki fikir, 3. taraf bir nesnenin bir söz vermeyebileceği, ancak sözle uyumlu olabileceğidir: destekliyorsa .then, ile kullanmak yeterlidir await.
+/* -> await "o halde" kabul eder
+Gibi promise.then, await uygulanabilir nesnelerin (çağrılabilir bir then yöntemi olanlar) kullanılmasına izin verir. Fikir şu ki, bir 3. taraf nesnesi bir söz olmayabilir, ancak sözle uyumlu olabilir: öğesini destekliyorsa .then, bu, ile kullanmak için yeterlidir await.
 
-İşte bir demo Thenablesınıfı, awaitaşağıda örneklerini kabul eder: */
+İşte bir demo Thenable sınıfı, await aşağıda örneklerini kabul ediyor: */
 
 class Thenable {
 
@@ -125,7 +125,7 @@ async function f() {
 
 f();
 
-/* awaitile vaat edilmeyen bir nesne alırsa , yerel .thenişlevler sağlayan bu yöntemi argüman olarak çağırır. Sonra bunlardan biri çağrılana kadar bekler (yukarıdaki örnekte satırda olur ) ve sonuçla devam eder.resolverejectawait(*) */
+/* await İle söz vermeyen bir nesne alırsa , bağımsız değişkenler olarak .then yerel işlevler sağlayan bu yöntemi çağırır. Sonra bunlardan biri çağrılana kadar bekler (yukarıdaki örnekte satırda olur ) ve ardından sonuçla devam eder.resolve reject await(*) */
 
 
 /* -> zaman uyumsuz yöntemler

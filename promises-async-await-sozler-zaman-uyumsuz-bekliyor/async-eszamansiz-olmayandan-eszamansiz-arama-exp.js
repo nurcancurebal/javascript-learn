@@ -1,4 +1,4 @@
-/* -> Zaman uyumsuzdan zaman uyumsuz çağrı
+/* -> Eşzamansız olmayandan eşzamansız arama
 “Düzenli” bir fonksiyonumuz var. Ondan nasıl aranır asyncve sonucu nasıl kullanılır? */
 
 async function wait1() {
