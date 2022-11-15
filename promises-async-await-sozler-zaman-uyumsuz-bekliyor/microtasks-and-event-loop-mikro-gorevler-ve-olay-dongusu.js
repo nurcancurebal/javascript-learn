@@ -1,5 +1,5 @@
 /* -> Mikro görevler ve olay döngüsü
-Söz işleyicileri .then// .catchher .finallyzaman eşzamansızdır.
+Söz işleyicileri .then// .catch .finally her zaman eşzamansızdır.
 
 Bir Söz hemen çözüldüğünde bile, // aşağıdaki satırlardaki kod bu işleyicilerden önce yürütülecektir..then.catch.finally
 
