@@ -48,9 +48,21 @@ Bu aslında çok basit – promisify(f) aşağıda bir taahhüt fonksiyonu alır
 
 Bu sarmalayıcı, yukarıdaki koddakiyle aynı şeyi yapar: bir söz verir ve aramayı orijinal f öğesine ileterek sonucu özel bir geri aramada izler: */
 
-function promisify(f) {
+function loadScript2(src, callback) {
 
-    return function (...args) { // sarmalayıcı fonksiyonu döndür
+    let script = document.createElement('script');
+
+    script.src = src;
+
+    script.onload = () => callback(null, script); // onload= sayfa yüklendiğinde
+    script.onerror = () => callback(new Error(`Script load error for ${src}`));
+
+    document.head.append(script);
+}
+
+function promisify2(f) { // f= loadScript2
+
+    return function (...args) { // sarmalayıcı fonksiyonu döndür ,
 
         return new Promise((resolve, reject) => {
 
@@ -68,13 +80,12 @@ function promisify(f) {
 
             args.push(callback); // argümanların sonuna özel geri aramamızı ekleyin
 
-            f.call(this, ...args); // orijinal fonksiyonu çağır // TODO burada ne oluyor?
+            f.call(this, ...args); // call= orijinal fonksiyonu çağırmak için kullanılır
         });
     };
 };
 
-// kullanım:
-let loadScriptPromise2 = promisify(loadScript);
+let loadScriptPromise2 = promisify2(loadScript2);
 
 // loadScriptPromise2(...).then(...);
 
@@ -111,7 +122,6 @@ function promisify(f, manyArgs = false) {
     };
 };
 
-// kullanım:
 f = promisify(f, true);
 
 // f(...).then(arrayOfResults => ..., err => ...)

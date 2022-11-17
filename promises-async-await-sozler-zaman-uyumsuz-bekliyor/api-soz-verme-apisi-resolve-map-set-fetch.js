@@ -25,9 +25,8 @@ function loadCached(url) {
     }
 
     return fetch(url) // cache mapinin içinde url anahtarı yoksa
-        .then(response => response.text()) // TODO buradaki text() ne işe yarıyor?
+        .then(response => response.text()) // buradaki text()= fetch içinde text adlı bir fonksiyon var onu çağırıyoruz burada
         .then(text => {
-
             cache.set(url, text);
             return text;
         });

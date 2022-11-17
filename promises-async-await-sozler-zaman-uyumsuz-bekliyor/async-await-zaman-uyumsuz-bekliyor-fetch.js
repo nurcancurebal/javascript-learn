@@ -37,7 +37,7 @@ fetch(url)
     })
     .catch(error => console.error(error))
 
-    
+
 // . zaman uyumsuz ve bekliyor
 
 const fetchData = async () => {
