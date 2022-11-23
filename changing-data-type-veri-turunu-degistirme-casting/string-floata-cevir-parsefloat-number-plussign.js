@@ -22,6 +22,6 @@ console.log(numFloat); // 9.81
 
 let numTwo = '9.81';
 
-let numFloatTwo = +num;
+let numFloatTwo = +numTwo;
 
 console.log(numFloatTwo); // 9.81

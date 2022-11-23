@@ -1,5 +1,4 @@
-// Sayısal dünüştürme işlemleri matematiksel operasyonlarda otomatik olarak gerçekleşir. Örnğin sayı olmayan iki değer /
-// işlemine tutulduğunda:
+// Sayısal dünüştürme işlemleri matematiksel operasyonlarda otomatik olarak gerçekleşir. Örnğin sayı olmayan iki değer / işlemine tutulduğunda:
 
 console.log("6" / "2");  // 3, karakterler sayılara dönüştürülür ve işlem öyle yapılır.
 
@@ -15,8 +14,8 @@ let num = Number(str);
 console.log(typeof num); // number
 
 
-// Bu şekilde fonksiyon ile değer dönüştürme işlemi genelde karakter dizi olarak aldığımız formlarda kullanılır. Aslında
-// sayı kullanılmak istenmektedir. Fakat yazı kutusunun içeriğine sayı dahilinde yazılanları kontrol etmeniz gerekmektedir.
+// Bu şekilde fonksiyon ile değer dönüştürme işlemi genelde karakter dizi olarak aldığımız formlarda kullanılır Aslında sayı kullanılmak istenmektedir. Fakat yazı kutusunun içeriğine sayı dahilinde yazılanları kontrol etmeniz gerekmektedir.
+
 // Böyle bir fonksiyona sayı olmayan bir değer geldiğinde fonksiyon NaN değeri döndürür. Yani (Not a Number) sayı değil.
 
 let age = Number("Bir sayı yerine herhangi bir yazı");
@@ -37,8 +36,12 @@ içerisinde sayısal olmayan bir değer var ise bu durumda NaN değeri alınır.
 
 console.log(Number("   123   ")); // 123
 console.log(Number("123z"));      // NaN (Hata "z" bir rakam değil)
+console.log(Number(undefined));   // NaN
+console.log(Number(NaN));         // NaN
 console.log(Number(true));        // 1
 console.log(Number(false));       // 0
+console.log(Number(null));        // 0
+console.log(Number());            // 0
 
 // Lütfen null ve undefined'ın aynı davranmadıklarını bilin. null 0 olurken undefined NaN yani sayı değildir.
 

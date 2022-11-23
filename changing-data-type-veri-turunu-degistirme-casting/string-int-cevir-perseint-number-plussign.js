@@ -18,14 +18,17 @@ console.log(typeof numint); // çıktı number
 
 
 //plus sign(+): number stringi numbera çevirirken başına artı koy  
-no = 10;
-num = +'10';
+let no = 10;
+let number = +'10';
+let number2 = +'kalben';
+
+console.log(typeof number2); // çıktı number
 
 console.log(typeof no);  // çıktı number
 
-console.log(typeof num);  // çıktı number
+console.log(typeof number);  // çıktı number
 
-console.log(typeof no === typeof num); // true
+console.log(typeof no === typeof number); // true
 
 
 

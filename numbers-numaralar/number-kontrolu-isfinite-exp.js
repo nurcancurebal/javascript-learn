@@ -22,4 +22,4 @@ function sayiOku() {
     return;
 }
 
-sayiOku('Nurcan', '2', '', 3, 'null');
+sayiOku('Nurcan', '2', '', 3, 'null', 'Nan', undefined); // Girilen sayı number 2

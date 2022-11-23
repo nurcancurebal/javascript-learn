@@ -11,18 +11,19 @@ fonksiyonlar bulunmaktadır. */
 console.log(isNaN(NaN)); // true
 console.log(isNaN("str")); // true
 console.log(isNaN("3")); // false
+console.log(isNaN("")); // false
 
-/* Bu fonksiyona ihtiyacınız var mı? Sadece === NaN kullanılsa ? Malesef ihtiyaç var. NaN kendi başına hiçbir şeye eşit
-değildir, hatta kendisine bile: */
+/* Bu fonksiyona ihtiyacınız var mı? Sadece === NaN kullanılsa ? Malesef ihtiyaç var. NaN kendi başına hiçbir şeye eşit değildir, hatta kendisine bile: */
 
 console.log(NaN === NaN); // false
-
+console.log(NaN == NaN); // false
 
 // -> isFinite(deger): argümanı sayıya çevirir ve normal sayı ise true, değil ise NaN/Infinity/-Infinity döndürür:
 
 console.log(isFinite("15")); // true
 console.log(isFinite("str")); // false,  NaN döndürür.
 console.log(isFinite(Infinity)); // false, Infinity döndürür.
+console.log(isFinite('')); // true
 
 // Bazen isFinite karakterin sayı olup olmadığını kontrol için kullanılır:
 
