@@ -24,6 +24,7 @@ console.log(isFinite("15")); // true
 console.log(isFinite("str")); // false,  NaN döndürür.
 console.log(isFinite(Infinity)); // false, Infinity döndürür.
 console.log(isFinite('')); // true
+console.log(isFinite(1)); // true
 
 // Bazen isFinite karakterin sayı olup olmadığını kontrol için kullanılır:
 
