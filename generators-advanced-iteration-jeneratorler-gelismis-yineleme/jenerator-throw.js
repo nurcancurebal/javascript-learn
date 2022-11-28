@@ -1,9 +1,9 @@
-/* -> jeneratör. atmak
-Yukarıdaki örneklerde gözlemlediğimiz gibi, dış kod, yield.
+/* -> jeneratör. atma(throw)
+Yukarıdaki örneklerde gözlemlediğimiz gibi, dış kod, sonucu olarak üreticiye bir değer iletebilir yield.
 
 …Fakat orada da bir hata başlatabilir (atabilir). Bu doğaldır, çünkü bir hata bir tür sonuçtur.
 
-Bir hatayı a'ya iletmek için yieldaramamız gerekir generator.throw(err). Bu durumda, bununla erraynı doğrultuda atılır yield.
+Bir hatayı a'ya iletmek için yield, çağırmalıyız generator.throw(err). Bu durumda, err that satırına atılır yield.
 
 Örneğin, burada verim "2 + 2?"bir hataya yol açar: */
 
@@ -27,11 +27,11 @@ let question1 = generator1.next().value;
 
 generator1.throw(new Error("The answer is not found in my database")); // (2)
 
-/* Satırda jeneratöre atılan hata, ile satırda bir (2)istisnaya yol açar . Yukarıdaki örnekte onu yakalar ve gösterir.(1)yieldtry..catch
+/* Satırda jeneratöre atılan hata, ile satırda bir (2) istisnaya yol açar. Yukarıdaki örnekte onu yakalar ve gösterir.(1) yield try..catch
 
-Yakalayamazsak, herhangi bir istisna gibi, jeneratörü arama koduna “düşer”.
+Yakalayamazsak, herhangi bir istisna gibi, jeneratörü çağıran koda “düşer”.
 
-Çağıran kodun geçerli satırı, ile generator1.throwetiketlenmiş satırdır (2). Böylece onu burada yakalayabiliriz, şöyle: */
+Çağıran kodun geçerli satırı generator1.throw, olarak etiketlenmiş satırıdır (2). Böylece onu burada yakalayabiliriz, şöyle: */
 
 function* generate() {
 

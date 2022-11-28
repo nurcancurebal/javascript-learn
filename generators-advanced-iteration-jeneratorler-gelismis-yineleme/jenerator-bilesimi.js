@@ -46,11 +46,6 @@ console.log(str1); // 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuv
 
 Sonuç, kodu iç içe geçmiş oluşturuculardan satır içine almamızla aynıdır: */
 
-function* generateSequence(start, end) {
-
-    for (let i = start; i <= end; i++) yield i;
-}
-
 function* generateAlphaNum() {
 
     // yield* generateSequence(48, 57);

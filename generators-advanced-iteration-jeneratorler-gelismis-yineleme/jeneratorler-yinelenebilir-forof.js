@@ -1,5 +1,5 @@
 /* -> Jeneratörler yinelenebilir
-next()Muhtemelen yönteme bakarak tahmin ettiğiniz gibi , üreteçler yinelenebilirdir .
+next() Muhtemelen yönteme bakarak tahmin ettiğiniz gibi , üreteçler yinelenebilirdir .
 
 Döngü üzerinden değerleri şu şekilde alabiliriz for..of: */
 
@@ -18,9 +18,9 @@ for (let value of generator1) {
 
 /* Jeneratörlerle çalışmak için aramaktan çok daha iyi görünen bir yol bu .next().value, değil mi?
 
-…Ama lütfen dikkat edin: yukarıdaki örnekte 1, o zaman 2, ve hepsi bu kadar. Göstermiyor 3!
+…Ama lütfen unutmayın: yukarıdaki örnek 1, sonra 2, gösterir ve hepsi bu kadar. göstermiyor 3!
 
-Bunun nedeni, for-of yinelemenin son value, When öğesini yok saymasıdır done: true. Bu nedenle, tüm sonuçların tarafından gösterilmesini istiyorsak for..of, onları şununla döndürmeliyiz yield: */
+Bunun nedeni, for-of yinelemenin sonuncuyu value, ne zaman done: true yok saymasıdır. Bu nedenle, tüm sonuçların for..of tarafından gösterilmesini istiyorsak, bunları şu şekilde yield döndürmeliyiz: */
 
 function* generateSequence() {
     yield 1;
@@ -35,7 +35,7 @@ for (let value of generator2) {
     console.log(value); // 1, 2, 3
 }
 
-// Doğal olarak, üreteçler yinelenebilir olduğundan, ilgili tüm işlevleri çağırabiliriz, örneğin yayılma operatörü ...:
+// Doğal olarak, üreteçler yinelenebilir olduğundan, ilgili tüm fonksiyonları çağırabiliriz, örneğin yayılma operatörü ...:
 
 function* generateSequence() {
     yield 1;
@@ -47,4 +47,4 @@ let sequence = [0, ...generateSequence()];
 
 console.log(sequence); // [ 0, 1, 2, 3 ]
 
-/* Yukarıdaki kodda ...generateSequence(), yinelenebilir öğeler dizisine dönüşür (operatör hakkında daha fazla bilgiyi Gerisi ve yayma operatörleri bölümünden okuyabilirsiniz ) */
+/* Yukarıdaki kodda ...generateSequence(), yinelenebilir öğeler dizisine dönüşür*/

@@ -49,11 +49,11 @@ for (let value of range1) {
 
 Nesneyi eşzamansız olarak yinelenebilir yapmak için:
 
-1. Symbol.asyncIteratoryerine kullanmamız gerekiyor Symbol.iterator.
-2. next()bir söz iade etmelidir.
-3. Böyle bir nesne üzerinde yineleme yapmak için for await (let item of iterable)döngü kullanmalıyız.
+1. Symbol.asyncIterator yerine kullanmamız gerekiyor Symbol.iterator.
+2. next() bir sözle dönmelidir.
+3. Böyle bir nesne üzerinde yineleme yapmak için for await (let item of iterable) döngü kullanmalıyız.
 
-Bir önceki gibi yinelenebilir bir nesne yapalım range1, ama şimdi asenkron olarak, saniyede bir değerler döndürecek: */
+Önceki gibi yinelenebilir bir nesne yapalım range1, ama şimdi asenkron olarak, saniyede bir değerler döndürecek: */
 
 let range2 = {
 
@@ -101,15 +101,18 @@ let range2 = {
 /* Gördüğümüz gibi, yapı normal yineleyicilere benzer:
 
 1. Bir nesneyi eşzamansız olarak yinelenebilir yapmak için bir yöntemi olmalıdır Symbol.asyncIterator (1).
-2. Nesneyi, next()bir söz veren yöntemle döndürmesi gerekir (2).
-3. Yöntem next()olmak zorunda değildir, asyncsöz veren normal bir yöntem olabilir, ancak içeride asynckullanılmasına izin verir . awaitBurada sadece bir saniye geciktiriyoruz (3).
-4. Yinelemek için kullanırız for await(let value of range2) (4), yani “for”dan sonra “await” ekleriz. Bir kez çağırır range2[Symbol.asyncIterator]()ve ardından next()değerler için. */
+2. Nesneyi, next() bir söz veren yöntemle döndürmesi gerekir (2).
+3. Yöntem next() olmak zorunda değildir, async söz döndüren normal bir yöntem olabilir, ancak içeride async kullanılmasına izin verir. await Burada sadece bir saniye erteliyoruz (3).
+4. Yinelemek için kullanırız for await(let value of range2) (4), yani “for”dan sonra “await” ekleriz. Bir kez çağırır range2[Symbol.asyncIterator]() ve ardından next() değerler için. */
 
 /* İşte küçük bir hile sayfası:
 
                                              yineleyiciler	       zaman uyumsuz yineleyiciler
+
 Yineleyici sağlamak için nesne yöntemi    	Symbol.iterator     	Symbol.asyncIterator
-next()dönüş değeri                         	herhangi bir değer      Promise
+
+next() dönüş değeri                        	herhangi bir değer      Promise
+
 döngü yapmak, kullanmak	                    for..of                	for await..of */
 
 
@@ -121,4 +124,4 @@ Normal, eşzamanlı yineleyiciler gerektiren özellikler, eşzamansız olanlarla
 
 console.log([...range2]); // TypeError: range2 is not iterable
 
-// Bu doğaldır, bulmayı umduğu gibi, olmadan Symbol.iteratorda aynı . değil .for..ofawaitSymbol.asyncIterator
+// Bu doğal, bulmayı beklediği gibi , olmadan Symbol.iterator olduğu gibi . değil .for..of await Symbol.asyncIterator

@@ -1,12 +1,10 @@
 /* -> Gerçek hayattan örnek
-Şimdiye kadar, temel anlayışı kazanmak için basit örnekler gördük. Şimdi gerçek hayattaki bir kullanım örneğini gözden geçirelim.
-
 Sayfalandırılmış veriler sağlayan birçok çevrimiçi API vardır. Örneğin, bir kullanıcı listesine ihtiyacımız olduğunda, onu sayfa sayfa getirebiliriz: bir istek önceden tanımlanmış bir sayı (örneğin 100 kullanıcı) döndürür ve sonraki sayfaya bir URL sağlar.
 
 Kalıp çok yaygın, kullanıcılarla ilgili değil, hemen hemen her şeyle ilgili. Örneğin GitHub, taahhütleri aynı, sayfalandırılmış şekilde almaya izin verir:
 
 . URL'ye formda bir istek yapmalıyız https://api.github.com/repos/<repo>/commits.
-. 30 taahhütten oluşan bir JSON ile yanıt verir ve ayrıca Linkbaşlıktaki sonraki sayfaya bir bağlantı sağlar.
+. 30 taahhütten oluşan bir JSON ile yanıt verir ve ayrıca Link başlıktaki sonraki sayfaya bir bağlantı sağlar.
 . Daha sonra bu bağlantıyı bir sonraki istek için, daha fazla taahhüt almak vb. için kullanabiliriz.
 
 Sahip olmak istediğimiz daha basit bir API: taahhütleri olan yinelenebilir bir nesne, böylece bunları şu şekilde gözden geçirebiliriz: */
@@ -18,7 +16,7 @@ for await (let commit of fetchCommits(repo)) {
     // process commit(süreç taahhüdü)
 }
 
-/* fetchCommitsGerektiğinde istekte bulunarak bizim için taahhüt almak istiyoruz . Ve tüm sayfalama işlerini önemsemesine izin verin, bizim için basit bir for await..of.
+/* fetchCommits Gerektiğinde istekte bulunarak bizim için taahhüt almak istiyoruz . Ve tüm sayfalama işlerini önemsemesine izin verin, bizim için basit bir for await..of.
 
 Uygulaması oldukça kolay olan zaman uyumsuz oluşturucularla: */
 
@@ -50,9 +48,9 @@ async function* fetchCommits(repo) {
 }
 
 /* 1. fetch Uzak bir URL'den indirmek için tarayıcı yöntemini kullanıyoruz . Gerekirse yetkilendirme ve diğer başlıkların sağlanmasına izin verir, burada GitHub User-Agent.
-2. Getirme sonucu, yine belirli bir fetchyöntem olan JSON olarak ayrıştırılır.
-3. Bir sonraki sayfa URL'sini Linkyanıtın başlığından alabiliriz. Özel bir formatı var, bu yüzden bunun için bir normal ifade kullanıyoruz. Sonraki sayfa URL'si şöyle görünebilir: https://api.github.com/repositories/93253246/commits?page=2GitHub'ın kendisi tarafından oluşturulur.
-4. Ardından, alınan tüm taahhütleri veririz ve bittiğinde - bir sonraki while(url)yineleme tetiklenir ve bir istek daha yapılır.
+2. Getirme sonucu, yine belirli bir fetch yöntem olan JSON olarak ayrıştırılır.
+3. Bir sonraki sayfa URL'sini Link yanıtın başlığından alabiliriz. Özel bir formatı var, bu yüzden bunun için bir normal ifade kullanıyoruz. Sonraki sayfa URL'si şöyle görünebilir: https://api.github.com/repositories/93253246/commits?page=2GitHub'ın kendisi tarafından oluşturulur.
+4. Ardından, alınan tüm taahhütleri veririz ve bittiğinde - bir sonraki while(url) yineleme tetiklenir ve bir istek daha yapılır.
 
 Bir kullanım örneği (konsoldaki taahhüt yazarlarını gösterir): */
 

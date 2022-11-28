@@ -1,5 +1,5 @@
 /* -> Yinelenebilirler yerine jeneratörleri kullanma
-Bir süre önce Sıralı erişim bölümünde, rangedeğerleri döndüren yinelenebilir bir nesne oluşturduk from..to.
+Bir süre önce Sıralı erişim (İterable) range bölümünde , değerler döndüren yinelenebilir bir nesne yaratmıştık from..to.
 
 Burada kodu hatırlayalım: */
 
@@ -35,7 +35,7 @@ let range = {
 
 console.log([...range]); // [ 1, 2, 3, 4, 5 ]
 
-// Yinelenebilir diziler yapmak için bir jeneratör kullanmak çok daha şık:
+// Yinelenebilir diziler yapmak için bir jeneratör(üreteç) kullanmak çok daha şık:
 
 function* generateSequence(start, end) {
 
@@ -49,4 +49,4 @@ let sequence = [...generateSequence(1, 5)];
 
 console.log(sequence); // [ 1, 2, 3, 4, 5 ]
 
-// range…Ama ya özel bir nesneyi saklamak istiyorsak ?
+// range… Ama ya özel bir nesneyi saklamak istiyorsak ?

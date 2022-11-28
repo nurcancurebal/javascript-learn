@@ -1,5 +1,5 @@
-/* -> Zaman uyumsuz oluşturucular aracılığıyla yinelenebilir
-Bildiğimiz gibi, bir nesneyi yinelenebilir hale getirmek için ona eklememiz Symbol.iteratorgerekir. */
+/* -> Eşzamansız üreteçler aracılığıyla yinelenebilir
+Bildiğimiz gibi, bir nesneyi yinelenebilir hale getirmek için ona eklememiz Symbol.iterator gerekir. */
 
 let range1 = {
 
@@ -8,7 +8,7 @@ let range1 = {
     [Symbol.iterator]() { /* ...aralığı yinelenebilir yapmak için next ile nesneyi döndür...  */ }
 }
 
-/* için yaygın bir uygulama , önceki örnekte olduğu gibi Symbol.iteratordüz bir nesne yerine bir jeneratör döndürmektir .next
+/* için yaygın bir uygulama , önceki örnekte olduğu gibi Symbol.iterator düz bir nesne yerine bir jeneratör döndürmektir .next
 
 Jeneratörler bölümünden bir örnek hatırlayalım : */
 
@@ -31,9 +31,9 @@ for (let value of range2) {
     console.log(value); // 1, 2, 3, 4, 5
 }
 
-/* Burada özel bir nesne range2 yinelenebilir ve oluşturucu *[Symbol.iterator]değerleri listelemek için mantığı uygular.
+/* Burada özel bir nesne range2 yinelenebilir ve oluşturucu *[Symbol.iterator] değerleri listelemek için mantığı uygular.
 
-Jeneratöre async eylemleri eklemek istiyorsak, Symbol.iteratorasync ile değiştirmeliyiz Symbol.asyncIterator: */
+Jeneratöre async eylemleri eklemek istiyorsak, Symbol.iterator async ile değiştirmeliyiz Symbol.asyncIterator: */
 
 let range3 = {
 
