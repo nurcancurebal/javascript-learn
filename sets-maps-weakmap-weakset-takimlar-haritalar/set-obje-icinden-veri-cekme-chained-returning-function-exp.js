@@ -311,7 +311,7 @@ function mostSpokenLanguage(outArray, num) {
 
         const filterlanguage = array.filter(function (lang) {
 
-            return lang === newSet;
+            return lang === newSet; // true olanları alır yani ikinin aynı olduğu değerleri içinde saklar
         });
 
         result.push({ name: newSet, value: filterlanguage.length });
@@ -319,11 +319,11 @@ function mostSpokenLanguage(outArray, num) {
 
     const resultSort = result.sort(function (a, b) {
 
-        return b.value - a.value;
+        return b.value - a.value; // büyükten küçüğe
 
     }).map(function (item) {    // chained(zincirleme)
 
-        return { [item.name]: item.value };
+        return { [item.name]: item.value }; // TODO buradaki item.name neden array içindede item.value değil
     });
 
     const filter = resultSort.filter(function (item, index) {
@@ -336,3 +336,13 @@ function mostSpokenLanguage(outArray, num) {
 
     return filter;
 };
+
+/* [
+    { English: 13 },
+    { French: 8 },
+    { Spanish: 3 },
+    { German: 2 },
+    { Arabic: 2 }
+]
+
+[ { English: 13 }, { French: 8 }, { Spanish: 3 } ] */

@@ -17,9 +17,9 @@ const person = {
     }
 };
 
-// const entries = Object.entries(person);
+const entries = Object.entries(person);
 
-// console.log(entries);   //(8) [Array(2), Array(2), Array(2), Array(2), Array(2), Array(2), Array(2), Array(2)]
+console.log(entries);   //(8) [Array(2), Array(2), Array(2), Array(2), Array(2), Array(2), Array(2), Array(2)]
 
 
 for (let [key, val] of Object.entries(person)) {

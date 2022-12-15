@@ -86,4 +86,18 @@ const set = new Set(array); // benzersiz yaptık
 
 console.log(set);
 
+/* Set(11) {
+    'Pashto',
+    'Uzbek',
+    'Turkmen',
+    'Swedish',
+    'Albanian',
+    'Arabic',
+    'English',
+    'Samoan',
+    'Catalan',
+    'Portuguese',
+    'Russian'
+} */
+
 console.log(set.size);

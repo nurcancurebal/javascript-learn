@@ -58,7 +58,7 @@ console.log(users.sort(sortId));
 
 const idSort = users.sort(function (a, b) {
 
-    return b.id - a.id;
+    return b.id - a.id; // büyükten küçüğe
 });
 
 console.log(idSort);
