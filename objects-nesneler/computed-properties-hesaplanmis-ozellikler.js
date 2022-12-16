@@ -22,8 +22,14 @@ let posetTwo = {};
 posetTwo[meyveTwo] = 10;
 // …fakat biraz daha iyi görünür.
 
-console.log(posetTwo.elma); // 10
+console.log(posetTwo); // {elma: 10}
 
+
+const array = [];
+
+array.push(["muz"]= 50); //Not: Hata bu şekilde kullanılamaz
+
+console.log(array);
 
 // Köşeli parantez içerisinde daha karmaşık ifadeler de kullanabilirsiniz:
 
