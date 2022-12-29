@@ -8,7 +8,7 @@ let total = 0;
 
 numbers.forEach(number => total += number); //! forEach()parametre olarak bir fonksiyon alır.
 
-console.log(total);
+console.log(total); // 25
 
 // 2. kullanımı
 
@@ -20,4 +20,4 @@ let calculate = sayi => totalTwo += sayi;
 
 num.forEach(calculate);
 
-console.log(totalTwo);
+console.log(totalTwo); // 46

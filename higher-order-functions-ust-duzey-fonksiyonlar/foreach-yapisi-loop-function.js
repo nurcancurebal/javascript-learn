@@ -14,7 +14,7 @@ function forEaca(inArray) {
 
         console.log(item);
 
-        if (loopIndex < 1) {
+        if (loopIndex < 2) {
 
             loopFunc(fullArray[loopIndex + 1], (loopIndex + 1), fullArray);
 

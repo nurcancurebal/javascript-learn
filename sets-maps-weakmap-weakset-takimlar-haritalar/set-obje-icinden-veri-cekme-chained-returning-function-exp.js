@@ -323,7 +323,7 @@ function mostSpokenLanguage(outArray, num) {
 
     }).map(function (item) {    // chained(zincirleme)
 
-        return { [item.name]: item.value }; // TODO buradaki item.name neden array içindede item.value değil
+        return { [item.name]: item.value };
     });
 
     const filter = resultSort.filter(function (item, index) {
