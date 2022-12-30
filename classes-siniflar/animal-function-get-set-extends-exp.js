@@ -26,9 +26,9 @@ class Animal {
 
 
 class Dog extends Animal {
-    constructor(name, age, color, legs, genus) {
+    constructor(name, age, color, legs, genus) { // değişken olarak dışarıdan değeri gelecekler
 
-        super(name, age, color, legs);
+        super(name, age, color, legs); // bunları üstten al
 
         this.genus = genus;
     };
@@ -50,6 +50,30 @@ s1.setProperties = "pet dog";
 s1.setProperties = "does not bark";
 s1.setProperties = "doesn't bite";
 
+console.log(s1);    // inheritance ile oluşturulan yeni obje
+// Dog {
+//     name: 'Dog',
+//     age: 3,
+//     color: 'Black',
+//     legs: 4,
+//     properties: [ 'pet dog', 'does not bark', "doesn't bite" ],
+//     genus: 'Terrier'
+//   }
+
+console.log(s1.getAnimalInfo());    // overriding ile functionı düzenleme
+//   Hayvanın türü Dog' dir. Yaşı 3. Rengi Black. Bacak sayısı 4. Cinsi Terrier.
+
+console.log(s1.getName);    // get ile çağırma
+//   Dog
+
+console.log(s1.properties); // set ile ekleme
+//   [ 'pet dog', 'does not bark', "doesn't bite" ]
+
+console.log(s1.saySomething()); // inheritance ile yeni function ekleme
+//   I am a sweet dog
+
+
+// ikinci bir hayvanın özelliklerini ekleme işlemi
 
 class Cat extends Animal {
     constructor(name, age, color, legs, genus) {
@@ -76,32 +100,12 @@ s2.setProperties = "pet cat";
 s2.setProperties = "doesn't scratch";
 s2.setProperties = "doesn't bite";
 
-
-console.log(s1);    // inheritance ile oluşturulan yeni obje
-console.log(s1.getAnimalInfo());    // overriding ile functionı düzenleme
-console.log(s1.getName);    // get ile çağırma
-console.log(s1.properties); // set ile ekleme
-console.log(s1.saySomething()); // inheritance ile yeni function ekleme
-
 console.log(s2);
 console.log(s2.getAnimalInfo());
 console.log(s2.getName);
 console.log(s2.properties);
 console.log(s2.saySomething());
 
-
-// Dog {
-//     name: 'Dog',
-//     age: 3,
-//     color: 'Black',
-//     legs: 4,
-//     properties: [ 'pet dog', 'does not bark', "doesn't bite" ],
-//     genus: 'Terrier'
-//   }
-//   Hayvanın türü Dog' dir. Yaşı 3. Rengi Black. Bacak sayısı 4. Cinsi Terrier.
-//   Dog
-//   [ 'pet dog', 'does not bark', "doesn't bite" ]
-//   I am a sweet dog
 // Cat {
 //     name: 'Cat',
 //     age: 2,

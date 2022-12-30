@@ -6,7 +6,7 @@
 // tarayıcıdaki en popüler test ve hata ayıklama aracıdır. DOM ile etkileşim kurmak istediğimizde, JavaScript kullanmayı denediğimizde
 // document.getElementById() kullanırız. DOM'u başka bir bölümde ele alacağız.
 
-// Konsol, ünlü konsol.log() yöntemine ek olarak, başka yöntemler de sağlar.
+// Konsol, ünlü consol.log() yöntemine ek olarak, başka yöntemler de sağlar.
 
 // console.log()
 // Tarayıcı konsolunda çıktıyı göstermek için console.log() kullanıyoruz. Değerleri değiştirebiliriz ve ayrıca %c kullanarak oturumu

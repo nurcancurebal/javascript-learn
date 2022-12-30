@@ -5,4 +5,4 @@ let countriesStartsWith = countries.filter(function (country) {
     return country.startsWith('E');
 });
 
-console.log(countriesStartsWith);
+console.log(countriesStartsWith); // [ 'Estonia' ]

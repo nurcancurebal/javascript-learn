@@ -12,6 +12,7 @@ console.log(isNaN(NaN)); // true
 console.log(isNaN("str")); // true
 console.log(isNaN("3")); // false
 console.log(isNaN("")); // false
+console.log(isNaN("AFDASDG")); // true
 
 /* Bu fonksiyona ihtiyacınız var mı? Sadece === NaN kullanılsa ? Malesef ihtiyaç var. NaN kendi başına hiçbir şeye eşit değildir, hatta kendisine bile: */
 

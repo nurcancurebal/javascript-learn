@@ -15,3 +15,9 @@ let numberProducts = products.filter(function (num) {
 });
 
 console.log(numberProducts);
+/* [
+    { product: 'banana', price: 3 },
+    { product: 'mango', price: 6 },
+    { product: 'avocado', price: 8 },
+    { product: 'coffee', price: 10 }
+] */
