@@ -12,4 +12,4 @@ console.log(names); // [ 'Bal', 'Erdinç', 'Irlanda', 'Kanada', 'Nurcan' ];
 
 const nameSort = names.sort((a, b) => b.localeCompare(a));
 
-console.log(nameSort);
+console.log(nameSort); // [ 'Nurcan', 'Kanada', 'Irlanda', 'Erdinç', 'Bal' ]
