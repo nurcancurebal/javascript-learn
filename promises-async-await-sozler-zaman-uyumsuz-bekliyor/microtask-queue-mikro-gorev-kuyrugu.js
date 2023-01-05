@@ -21,5 +21,8 @@ async function f() {
 
     console.log('await');
 })();
+// await
+// timeout
+
 
 // Burada bir belirsizlik yok: await her zaman önce bitirir, çünkü (bir mikro görev olarak) ele almaktan daha yüksek bir önceliğe sahiptir setTimeout.

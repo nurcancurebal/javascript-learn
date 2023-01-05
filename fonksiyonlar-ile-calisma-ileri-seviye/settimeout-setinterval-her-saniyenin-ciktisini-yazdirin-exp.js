@@ -11,7 +11,7 @@ Kendini tekrar eden setTimeout kullanarak. */
 
 function printNumbers1(from, to) {
 
-    let current = from; // from number ilkel bir tip olduğu için kopyalayarak işlem yaptık from değişmedi yalnızca current değişti
+    let current = from; // from number ilkel bir tip olduğu için kopyalayarak işlem yaptık from değişmedi yalnızca current değişti(refaranssız kopyalama işlemi gerçekleşiyor)
 
     let timerId = setInterval(function () {
 

@@ -1,4 +1,4 @@
-// objelerde köşeli parantez üç şey için kullanılır
+// objelerde köşeli parantez dört şey için kullanılır
 
 const person = {
     firstName: 'Nurcan',
@@ -22,20 +22,22 @@ const person = {
     'phone number': '+3584545454545'
 };
 
-console.log(person['phone number']);    // boşluklu değişken çağırmak için
+// boşluklu değişken çağırmak için
 
+console.log(person['phone number']); // +3584545454545
+
+
+// dinamik olarak kullanmak için(değişken sahip olduğu değeri yazdık içine)
 
 let keyName = 'skills';
 
-console.log(person[keyName]);   // dinamik olarak kullanmak için(değişken sahip olduğu değeri yazdık içine)
-
+console.log(person[keyName]);
 // [
 //     'HTML',       'CSS',
 //     'JavaScript', 'React',
 //     'Node',       'MongoDB',
 //     'Python',     'D3.js'
 //   ]
-
 
 
 // obje içinde obje çağırmak için
@@ -45,3 +47,10 @@ const obj2 = { name: 'Nurcan' };
 const obj = { [obj2]: "Merhaba Dünya" };
 
 console.log(obj);   // { '[object Object]': 'Merhaba Dünya' }
+
+
+//! obje içine key:value şeklinde ekleme yapmak için
+
+person["married"] = "evli";
+
+console.log(person.married); // evli

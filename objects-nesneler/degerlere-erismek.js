@@ -1,5 +1,5 @@
 // değerlere iki şekilde erişilebilir
-// 1. eğer anahtar isim (key-name) tek bir kelime ise noktadan sonra key-namin adını yazarak erişebiliyoruz(.followed)
+// 1. eğer anahtar isim (key-name) tek bir kelime ise noktadan sonra key-namein adını yazarak erişebiliyoruz(.followed)
 // 2. köşeli parantez ve bir alıntı kullanarak
 
 //! NOT: objelerde boşlukla değişken tanımlanabilir ama tırnak içine alınmalı örn: {'phone number':+325456715526}
