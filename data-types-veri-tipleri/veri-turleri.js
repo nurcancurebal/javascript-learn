@@ -1,5 +1,5 @@
 /*
-Non primitive değişkenlerin değerlerini sonradan değiştirebiliyorken primitive değişkenler değişmez.
+Non primitive değişkenlerin değerleri kopyalandığı zaman sığ kopya(orijinale bağlı) yapılarak değiştirilebiliyorken, primitive değişkenler sığ kopya ile değerleri değiştirilemez.
 
     1. Primitive Data Types(İlkel Veri Türleri)
 
@@ -18,11 +18,13 @@ Non primitive değişkenlerin değerlerini sonradan değiştirebiliyorken primit
 3. Function (Fonksiyon)
 */
 
+/* Reference veri tiplerini herhangi bir atama işlemine tabi tutarsak atanan değer orjinal reference veri tipinin bellekteki adresine işaret edeceği için bunun üzerinde bir değişiklik yaptığımızda orjinal değeri de değiştirmiş oluruz.(sığ kopya = orijinale bağlı) */
+
 /* Number: Normal sayıların haricinde “özel sayısal değerler” de sayı olarak tanımlanabilir. Bunlar : Infinity, -Infinity
 ve NaN gibi değerlerdir. Infinity matematiksel Sonsuzluğu ∞ ifade eder. Diğer tüm sayılardan büyük olan özel bir sayıdır.
 NaN = bu matematiksel işlem hatalı */
 
-/* Array: JavaScript typeof operatörü dizi veri türünü (array) nesne veri türü (object) olarak verir. JavaScript dizi veri
+/* Array: JavaScript typeof operatörü dizi (array) veri türünü nesne (object) veri türü olarak verir. JavaScript dizi veri
 türünü, nesne veri türü olarak tanımlamıştır.*/
 
 /* Bigint : JavaScript’te “number” türü, şundan büyük tamsayı değerlerini temsil edemez (2 üssü 53-1) (bu 9007199254740991),
@@ -31,7 +33,7 @@ oldukça yeterlidir, ancak bazen gerçekten büyük sayılara ihtiyacımız olab
 zaman damgaları için. Son zamanlarda, isteğe bağlı uzunluktaki tam sayıları temsil etmek için dile BigInt türü eklendi. Bir
 tamsayının sonuna n eklenerek BigInt değeri oluşturulur: */
 
-/* Null: Javascript’ de null primative bir değer olmasına rağmen ,bir object olarak algılanır. Yani tanımladığınız bir veri
+/* Null: Javascript’ de primative bir değer olmasına rağmen ,bir object olarak algılanır. Yani tanımladığınız bir veri
 içine null değer attığınızda bellekte bir alan tahsis edilir ancak içerisinde bir değer olmadığını söylemiş oluruz. Bu özel
 durum aslında JavaScript’de hala çözülememiş bir bug olarak devam etmektedir. Null çok özel ve önemli bir veridir. */
 
@@ -45,13 +47,6 @@ olduklarından JavaScript motoru bunları olabildiğince optimize eder. */
 const bigInt = 1234567890123456789012345678901234567890n;
 
 console.log(typeof bigInt); // bigint
-
-
-// Null örneği(yas bilinmiyor veya boş)
-
-const one = null;
-
-console.log(typeof one);   //! object
 
 
 // Undefined örneği
@@ -88,7 +83,14 @@ let obj = {
     yasi: 27
 };
 
-console.log(typeof obj); // object
+console.log(typeof obj); //! object
+
+
+// Null örneği(yas bilinmiyor veya boş)
+
+const one = null;
+
+console.log(typeof one);   //! object
 
 
 // String örneğidir

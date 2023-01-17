@@ -1,5 +1,4 @@
-//Slice() yöntemi, bir dizinin bir bölümünün sığ bir kopyasını(referanssız kopyalama), baştan sona seçilen (bitiş dahil değildir) yeni
-//bir dizi nesnesine döndürür; burada başlangıç ​​ve bitiş, o dizideki öğelerin dizinini temsil eder.Orijinal dizi değişmez.
+//Slice() yöntemi, bir dizinin bir bölümünün derin bir kopyasını(referanssız kopyalama), baştan sona seçilen (bitiş dahil değildir) yeni bir dizi nesnesine döndürür; burada başlangıç ​​ve bitiş, o dizideki öğelerin dizinini temsil eder.Orijinal dizi değişmez.
 
 // slice() fonksiyonunu kullanarak bir kopyasını yaratabilir ve sonrasında bunu sıralayabilirsiniz:
 

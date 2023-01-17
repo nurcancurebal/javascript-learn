@@ -18,7 +18,6 @@ console.log( aclean(arr) ); // "aks,alim,açlık" veya "ask,ilam,çalık"
 
 Hangisi olduğuna bakılmaksızın her anagram grubunda bir tane kelime kalmalıdır. Hangisinin olduğu önemli değildir.
 
-Testler ile korunaklı olan aç.
 
 çözüm
 Tüm anagramları bulmak için öncelikle kelimeleri harflerine ayırıp sonrasında sıralamak gerekmektedir.
@@ -33,7 +32,7 @@ Harf sıralı tipler map anahtarları olacak şekilde kaydedilir. */
 
 function atemiz(dizi) {
 
-    let map = new Map(); // Map(0) {size: 0} oluşturuyorfor satırına geçtiğinde
+    let map = new Map(); // Map(0) {size: 0} oluşturuyor for satırına geçtiğinde
 
     for (let word of dizi) {
 
