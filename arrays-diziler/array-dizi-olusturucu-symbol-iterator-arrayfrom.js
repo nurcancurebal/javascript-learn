@@ -20,7 +20,7 @@ let diziBenzeri = { //  indekslere ve uzunluğa sahiptir => dizi-benzeri
 // Hata Symbol.iterator bulunmamaktadır.
 // for (let eleman of diziBenzeri) { }
 
-/* Ortak noktalaraı ikisinin de dizi olmamasıdır. Bunların push veya pop gibi metodları bulunmamaktadır. Eğer dizi ile çalışmak istiyorsanız bunlar yetersiz kalırlar. */
+/* Ortak noktaları ikisinin de dizi olmamasıdır. Bunların push veya pop gibi metodları bulunmamaktadır. Eğer dizi ile çalışmak istiyorsanız bunlar yetersiz kalırlar. */
 
 
 /* -> Array.from

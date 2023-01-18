@@ -39,4 +39,4 @@ let ccc = [];
 
 console.log(bbb === ccc);  // false
 
-// boş iki array birbirine denk değildir
+// boş iki array birbirine denk/eşit değildir
