@@ -5,6 +5,7 @@ is_valid_variable('firstname$'); // True
 is_valid_variable('first-name'); // False
 is_valid_variable('1first_name'); // False
 is_valid_variable('first name'); // False
+is_valid_variable('10firstname'); // False
 
 
 
