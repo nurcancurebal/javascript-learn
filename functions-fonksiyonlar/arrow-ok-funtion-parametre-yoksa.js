@@ -1,4 +1,4 @@
-// Eğer hiçbir değer yoksa parantez eklenmelidir. (Bir değer olduğunda yukarıdaki gibi kullanılabilir.)
+// Eğer hiçbir değer yoksa parantez eklenmelidir.
 
 let selamVer = () => console.log("Merhaba!");
 
