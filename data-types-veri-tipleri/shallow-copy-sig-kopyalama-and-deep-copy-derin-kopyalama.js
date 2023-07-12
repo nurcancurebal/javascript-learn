@@ -1,14 +1,14 @@
 /* Shallow copy (Sığ Kopyalama veya Yüzeysel Kopyalama), Deep Copy (Derin Kopyalama) olarak çevirebiliriz.
 
-Reference veri tiplerini (array, object) herhangi bir atama işlemine tabi tutarsak atanan değer orjinal reference veri tipinin bellekteki adresine işaret edeceği için bunun üzerinde bir değişiklik yaptığımızda orjinal değeri de değiştirmiş oluruz. */
+Reference veri tiplerini (array, object, function) herhangi bir atama işlemine tabi tutarsak atanan değer orjinal reference veri tipinin bellekteki adresine işaret edeceği için bunun üzerinde bir değişiklik yaptığımızda orjinal değeri de değiştirmiş oluruz. Buna Shallow copy (Sığ Kopyalama veya Yüzeysel Kopyalama) denir.
 
-/* Sığ kopyalama basitçe bir nesnenin referansını gösteren nesne atfının, farklı bir nesne atfına atanmasıdır. */
+Detay kopya veya Deep copy terimi ise nesnenin değerlerinin ve tamamnın içerikleri ile kopyalanması ve yeni bellek referansı oluşturulmasını ifade eder.
 
-/* Derin bir kopya, yeni değişkenin tüm değerlerinin kopyalandığı ve orijinal değişkenden bağlantısının kesildiği anlamına gelir . Yüzeysel bir kopya, belirli (alt) değerlerin hala orijinal değişkene bağlı olduğu anlamına gelir . */
+Derin bir kopya, yeni değişkenin tüm değerlerinin kopyalandığı ve orijinal değişkenden bağlantısının kesildiği anlamına gelir . Yüzeysel bir kopya, belirli (alt) değerlerin hala orijinal değişkene bağlı olduğu anlamına gelir . */
 
-//! orijinal değişmiyorsa sığ kopya, orijinal değişiyorsa derin kopya
+//! orijinal değişiyorsa sığ kopya, orijinal değişmiyorsa derin kopya
 
-//* Reference veri tipleri(object, array, function) için derin kopya
+//* Reference veri tipleri için sığ kopya
 
 // 1. Yayılma operatörü
 
@@ -61,7 +61,7 @@ console.log(copyNo[1]) // 4
 console.log(no[1]) // 2
 
 
-//* Reference veri tipleri için sığ kopya
+//* Reference veri tipleri için derin kopya
 
 // 1. atama operatörü
 
@@ -157,8 +157,6 @@ let name = "ayşe";
 
 let copiedName = name;
 
-console.log(copiedName, name); // ayşe ayşe
-
 name = "fatma";
 
 copiedName = "ali";
@@ -170,7 +168,7 @@ console.log(copiedName); // ali
 
 // ---------------------
 
-// BONUS: özel sınıfların örneğini kopyalama
+// BONUS: özel sınıfları derin kopyalama
 class Counter {
     constructor() {
         this.count = 5
