@@ -8,6 +8,10 @@ Derin bir kopya, yeni değişkenin tüm değerlerinin kopyalandığı ve orijina
 
 //! orijinal değişiyorsa sığ kopya, orijinal değişmiyorsa derin kopya
 
+
+/// atama operatörü ilkel veri türlerini derin kopyalar, referans veri türlerini sığ kopyalar
+
+
 //* Reference veri tipleri için sığ kopya
 
 // 1. Yayılma operatörü
