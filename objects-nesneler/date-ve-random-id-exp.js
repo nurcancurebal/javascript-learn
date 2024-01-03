@@ -106,11 +106,10 @@ function signUp(username, email, password) {
 
         let time = '';
 
-        if (hourZero >= 00 && hourZero < 12) {
+        if (hourZero >= "00" && hourZero < 12) {
 
             time = `${dayNumberZero}/${mounthZero}/${year} ${hourZero}:${minuteZero} AM`;
 
-            console.log(id(data));
 
         } else if (hourZero >= 12 && hourZero <= 23) {
 
@@ -159,6 +158,6 @@ function signIn(username, password) {
     };
 };
 
-console.log(signIn('Alex', "123123"));
+console.log(signIn('Alex', "123123")); // Böyle bir kullanıcı mevcut: True
 
-console.log(signIn('sdfgyhu', "3456789"));
+console.log(signIn('sdfgyhu', "3456789")); // Böyle bir kullanıcı mevcut değil: False

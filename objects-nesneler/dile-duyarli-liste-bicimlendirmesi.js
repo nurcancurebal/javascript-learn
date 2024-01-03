@@ -39,3 +39,7 @@ person.getPersonInfo = function () {
 };
 
 console.log(person.getPersonInfo());
+/* 
+Nurcan Cürebal is a developer.
+He lives in Canada.
+He teaches HTML, CSS, JavaScript, React, Node, MongoDB, Python ve D3.js. */

@@ -22,14 +22,14 @@ const person = {
 
 Object.freeze(person);  // bu kodu burada yazdırınca country Canada olarak sabitliyor
 
-console.log(person);
+console.log(person); // country: 'Canada',
 
 
 person.country = 'Ireland';
 
-console.log(person);
+console.log(person); // country: 'Canada',
 
 
-Object.freeze(person);  // bu kodu burada kullanınca country Ireland olarak sabitliyor
+Object.freeze(person);  
 
-console.log(person);
+console.log(person); // country: 'Canada',
