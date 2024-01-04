@@ -13,7 +13,7 @@ function B() {
 let a = new A;
 let b = new B;
 
-console.log(a == b); // true, şu an bu haliyleyken false döndürüyor
+console.log(a == b); // false, şu an bu haliyleyken false döndürüyor
 
 // Eğer mümkünse, bi işi yapan kodu yazınız. Eğer öyleyse, kodlarından bir örnek verin.
 
@@ -28,3 +28,5 @@ function A2() { return obj; }
 function B2() { return obj; }
 
 console.log(new A2() == new B2()); // true
+
+console.log(new A2() === new B2()); // true aynı refarans değerini işaret ettikleri için

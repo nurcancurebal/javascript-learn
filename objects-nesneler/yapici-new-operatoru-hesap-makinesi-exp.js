@@ -3,13 +3,6 @@ oku() veri giriş ekranı gösterir ve iki değeri objenin özelliklerine kayded
 topla() kaydedilen değerlerin toplamını döner.
 carp() kaydedilen değerlerin çarpımını döner. */
 
-let hesapMakinesi1 = new HesapMakinesi();
-hesapMakinesi1.oku();
-
-console.log("Toplam=" + hesapMakinesi1.topla());
-console.log("Çarpım=" + hesapMakinesi1.carp());
-
-
 function HesapMakinesi() {
 
     this.oku = function (a, b) {
