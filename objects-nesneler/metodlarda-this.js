@@ -29,7 +29,7 @@ let kullanici2 = {
 
 };
 
-/* … Fakat böyle bir koda güvenilmez. Diyelim ki kullanici2 objesini kopyaladınız ve yonetici = kullanici3 yaptınız. Sonra kullanici2 objesinin üzerine yazdınız bu durumda yanlış objeye erişmiş olacaksınız. Bir örnekle açıklamak gerekirse: */
+/* … Fakat böyle bir koda güvenilmez. Diyelim ki kullanici3 objesini kopyaladınız ve yonetici = kullanici3 yaptınız. Sonra kullanici3 objesinin üzerine yazdınız bu durumda yanlış objeye erişmiş olacaksınız. Bir örnekle açıklamak gerekirse: */
 
 let kullanici3 = {
 

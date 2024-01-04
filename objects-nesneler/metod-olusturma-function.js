@@ -19,5 +19,4 @@ const person = {
     }
 };
 
-console.log(person.getFullName());
-  // Nurcan Cürebal
+console.log(person.getFullName()); // Nurcan Cürebal

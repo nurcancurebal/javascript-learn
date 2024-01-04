@@ -21,7 +21,6 @@ Duruma bağlı olarak, bu çevirime “ipucu(hint)” da denir.
 /* -> "karakter dizisi" – string
 Uygulama karakter dizisi bekliyorsa, objeden karakter dizisine çeviri yapmak gerekmektedir. Örneğin console.log: */
 
-çıktı
 console.log(obj);
 
 // veya obje özellik anahtarı olarak kullanıldığında.

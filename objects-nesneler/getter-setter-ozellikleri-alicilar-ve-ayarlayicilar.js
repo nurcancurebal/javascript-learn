@@ -38,13 +38,28 @@ let user1 = {
 
 console.log(user1.fullName); // John Smith
 
+console.log(user1); // { name: 'John', surname: 'Smith', fullName: [Getter] }
+
+
+let user2 = {
+
+    name: "John",
+    surname: "Smith",
+
+    fullName() {
+        return `${this.name} ${this.surname}`;
+    }
+};
+
+console.log(user2.fullName()); // John Smith
+
 /* Dışardan, bu özellik normal görünür. Aslında fikir de tam olarak budur. Biz user1.fullName 'i fonksiyon olarak çağırmıyoruz. Onu normal bir şekilde özellikmiş gibi okuyoruz. Alıcı perdenin arkasında çalışıyor.
 
 Şu anda fullName'in sadece alıcısı var. Eğer user1.fullName= şeklinde atamaya çalışırsanız hata alırsınız.
 
 Bunu düzeltmek için ayarlayıcı metodu eklemek gerekmektedir: */
 
-let user2 = {
+let user3 = {
 
     name: "John",
     surname: "Smith",
@@ -59,10 +74,10 @@ let user2 = {
 };
 
 // FullName ayarlandı.
-user2.fullName = "Alice Cooper";
+user3.fullName = "Alice Cooper";
 
-console.log(user2.name); // Alice
-console.log(user2.surname); // Cooper
+console.log(user3.name); // Alice
+console.log(user3.surname); // Cooper
 
 // Şimdi yeni bir “sanal” özelliğimiz oldu. Okunabiliyor, yazılabiliyor fakat aslında yok.
 

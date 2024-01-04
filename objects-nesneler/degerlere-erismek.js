@@ -24,15 +24,26 @@ const person = {
         'D3.js'
     ],
     getFullName: function () {
-        return `${this.firstName}${this.lastName}`;
+        return `${this.firstName} ${this.lastName}`;
     },
-    'phone number': '+3584545454545'
+
+    'phone number': '+3584545454545',
+
+    function() {
+
+        this.age + 5;
+        console.log(`${this.city}' de yaşıyor`);
+    },
+
+    getAge: function () {
+        return this.age + 11;
+    }
 };
 
 
 console.log(person.firstName);
 console.log(person.lastName);
-console.log(person.age);
+console.log(person.age); // 250
 console.log(person.location);   // undefined
 console.log(person.skills); // (8) ['HTML', 'CSS', 'JavaScript', 'React', 'Node', 'MongoDB', 'Python', 'D3.js']
 console.log(person.skills[1]);  // CSS
@@ -40,3 +51,13 @@ console.log(person.skills[1]);  // CSS
 console.log(person['phone number']);    //+3584545454545 //! boşluklu olduğu için bu şekilde eriştik birde dinamik olarak kullanmak için köşeli parantez kullanılır
 
 console.log(person['skills']);
+
+console.log(person.getFullName()) // Nurcan Cürebal
+console.log(person.getFullName) // [Function: getFullName]
+
+// console.log(person)
+// getFullName: [Function: getFullName],
+// 'phone number': '+3584545454545',
+// function: [Function: function]
+
+console.log(person.getAge()) // 261

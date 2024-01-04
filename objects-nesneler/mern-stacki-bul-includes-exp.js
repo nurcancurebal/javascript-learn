@@ -74,3 +74,6 @@ for (let index = 0; index < arrayUsers.length; index++) {
 };
 
 console.log(`MERN yığın geliştiricisi ${mernMeter} kişi var.`);
+// MERN yığın geliştiricisi Asab
+// MERN yığın geliştiricisi Paul
+// MERN yığın geliştiricisi 2 kişi var.
