@@ -90,18 +90,15 @@ for (const iterator of kategoriobjectEntries) {
 
     for (const iterator of altKategori) {
         altKategoriArray.push(iterator[0]);
-    }
-
-    for (const iterator of altKategori) {
         markalarArray.push(iterator[1])
     }
 }
 
 
-console.log(kategoriArray); // [ 'Meyve & Sebze', 'Et, Tavuk & Balık', 'Kahvaltılık & Süt Ürünleri' ]
-console.log(altKategoriArray); // ['Meyve','Sebze','Kırmızı Et','Balık ve Deniz Mahsülleri','Et Şarküteri','Süt','Peynir','Yoğurt']
-console.log(markalarArray);
-/* [
+console.log("Kategoriler:", kategoriArray); // Kategoriler: [ 'Meyve & Sebze', 'Et, Tavuk & Balık', 'Kahvaltılık & Süt Ürünleri' ]
+console.log("Alt Kategoriler:", altKategoriArray); // Alt Kategoriler: ['Meyve','Sebze','Kırmızı Et','Balık ve Deniz Mahsülleri','Et Şarküteri','Süt','Peynir','Yoğurt']
+console.log("Markalar:", markalarArray);
+/* Markalar: [
     [ 'Reyondan', 'Verita', 'Excelente', 'Genuine Coconut' ],
     [ 'Reyondan', 'Si&Ha', 'Aressa' ],
     [ 'Pınar', 'Erşan', 'Eral' ],
