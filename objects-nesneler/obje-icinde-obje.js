@@ -53,10 +53,11 @@ let items = {
         ]
     }
 };
+let kategoriobjectEntries = Object.entries(items);
 
-// console.log(Object.entries(items)); 
-/* 
-[
+console.log(kategoriobjectEntries);
+
+/* [
     [ 'Meyve & Sebze', { Meyve: [Array], Sebze: [Array] } ],
     [
       'Et, Tavuk & Balık',
@@ -70,33 +71,44 @@ let items = {
       'Kahvaltılık & Süt Ürünleri',
       { 'Süt': [Array], Peynir: [Array], 'Yoğurt': [Array] }
     ]
-] */
+   ] 
+*/
 
-let objectEntries = Object.entries(items);
 
-for (let index = 0; index < objectEntries.length; index++) {
-    console.log(objectEntries[index][0]);
+let kategoriArray = [];
+let altKategoriArray = [];
+let markalarArray = [];
+
+for (const iterator of kategoriobjectEntries) {
+
+    let kategori = iterator[0];
+
+    kategoriArray.push(kategori)
+
+
+    let altKategori = Object.entries(iterator[1]);
+
+    for (const iterator of altKategori) {
+        altKategoriArray.push(iterator[0]);
+    }
+
+    for (const iterator of altKategori) {
+        markalarArray.push(iterator[1])
+    }
 }
-/* Meyve & Sebze
-Et, Tavuk & Balık
-Kahvaltılık & Süt Ürünleri */
 
-for (let index = 0; index < objectEntries.length; index++) {
-    /*  Object.entries(objectEntries[index][1]); */
-    console.log(Object.entries(objectEntries[index][1]))
-}
-/* {
-    Meyve: [ 'Reyondan', 'Verita', 'Excelente', 'Genuine Coconut' ],
-    Sebze: [ 'Reyondan', 'Si&Ha', 'Aressa' ]
-  }
-  {
-    'Kırmızı Et': [ 'Pınar', 'Erşan', 'Eral' ],
-    'Balık ve Deniz Mahsülleri': [ 'Dardanel', 'Leroy', 'Fish Point' ],
-    'Et Şarküteri': [ 'Polonez', 'Pınar', 'Laz Kızı', 'Seçme' ]
-  }
-  {
-    'Süt': [ 'İçim', 'Pınar', 'Efeler Çiftliği', 'Milupa' ],
-    Peynir: [ 'Tahsildaroğlu', 'Pınar', 'Bahçıvan', 'İçim', 'Meriç' ],
-    'Yoğurt': [ 'Activia', 'Eker', 'Danone', 'Belkıs Çiftliği', 'Velioğlu' ]
-  } */
 
+console.log(kategoriArray); // [ 'Meyve & Sebze', 'Et, Tavuk & Balık', 'Kahvaltılık & Süt Ürünleri' ]
+console.log(altKategoriArray); // ['Meyve','Sebze','Kırmızı Et','Balık ve Deniz Mahsülleri','Et Şarküteri','Süt','Peynir','Yoğurt']
+console.log(markalarArray);
+/* [
+    [ 'Reyondan', 'Verita', 'Excelente', 'Genuine Coconut' ],
+    [ 'Reyondan', 'Si&Ha', 'Aressa' ],
+    [ 'Pınar', 'Erşan', 'Eral' ],
+    [ 'Dardanel', 'Leroy', 'Fish Point' ],
+    [ 'Polonez', 'Pınar', 'Laz Kızı', 'Seçme' ],
+    [ 'İçim', 'Pınar', 'Efeler Çiftliği', 'Milupa' ],
+    [ 'Tahsildaroğlu', 'Pınar', 'Bahçıvan', 'İçim', 'Meriç' ],
+    [ 'Activia', 'Eker', 'Danone', 'Belkıs Çiftliği', 'Velioğlu' ]
+   ] 
+*/
