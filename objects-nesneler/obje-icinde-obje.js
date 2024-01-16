@@ -12,7 +12,7 @@ let items = {
             "Aressa"
         ]
     },
-    "Et, Tavuk & Balık": {
+    Et: {
         "Kırmızı Et": [
             "Pınar",
             "Erşan",
@@ -53,6 +53,23 @@ let items = {
         ]
     }
 };
+
+console.log(items["Kahvaltılık & Süt Ürünleri"]);
+/* 
+{
+    'Süt': [ 'İçim', 'Pınar', 'Efeler Çiftliği', 'Milupa' ],
+    Peynir: [ 'Tahsildaroğlu', 'Pınar', 'Bahçıvan', 'İçim', 'Meriç' ],
+    'Yoğurt': [ 'Activia', 'Eker', 'Danone', 'Belkıs Çiftliği', 'Velioğlu' ]
+} */
+console.log(items["Kahvaltılık & Süt Ürünleri"].Süt); // [ 'İçim', 'Pınar', 'Efeler Çiftliği', 'Milupa' ]
+console.log(items.Et);
+/* 
+{
+    'Kırmızı Et': [ 'Pınar', 'Erşan', 'Eral' ],
+    'Balık ve Deniz Mahsülleri': [ 'Dardanel', 'Leroy', 'Fish Point' ],
+    'Et Şarküteri': [ 'Polonez', 'Pınar', 'Laz Kızı', 'Seçme' ]
+} */
+
 let kategoriobjectEntries = Object.entries(items);
 
 console.log(kategoriobjectEntries);
@@ -60,7 +77,7 @@ console.log(kategoriobjectEntries);
 /* [
     [ 'Meyve & Sebze', { Meyve: [Array], Sebze: [Array] } ],
     [
-      'Et, Tavuk & Balık',
+      'Et',
       {
         'Kırmızı Et': [Array],
         'Balık ve Deniz Mahsülleri': [Array],
@@ -95,7 +112,7 @@ for (const iterator of kategoriobjectEntries) {
 }
 
 
-console.log("Kategoriler:", kategoriArray); // Kategoriler: [ 'Meyve & Sebze', 'Et, Tavuk & Balık', 'Kahvaltılık & Süt Ürünleri' ]
+console.log("Kategoriler:", kategoriArray); // Kategoriler: [ 'Meyve & Sebze', 'Et', 'Kahvaltılık & Süt Ürünleri' ]
 console.log("Alt Kategoriler:", altKategoriArray); // Alt Kategoriler: ['Meyve','Sebze','Kırmızı Et','Balık ve Deniz Mahsülleri','Et Şarküteri','Süt','Peynir','Yoğurt']
 console.log("Markalar:", markalarArray);
 /* Markalar: [
