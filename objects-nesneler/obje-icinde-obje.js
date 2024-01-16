@@ -69,6 +69,7 @@ console.log(items.Et);
     'Balık ve Deniz Mahsülleri': [ 'Dardanel', 'Leroy', 'Fish Point' ],
     'Et Şarküteri': [ 'Polonez', 'Pınar', 'Laz Kızı', 'Seçme' ]
 } */
+console.log(items.Et["Kırmızı Et"]); // [ 'Pınar', 'Erşan', 'Eral' ]
 
 let kategoriobjectEntries = Object.entries(items);
 
