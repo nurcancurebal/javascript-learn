@@ -167,10 +167,10 @@ const result = [
 ]
 
 let groupedResult = result.reduce((acc, current) => {
-    if (!acc[current.barcode]) {
-        acc[current.barcode] = {};
+    if (!acc[current.barcode]) { // oluşturduğumuz boş acc objesinin içerisinde current.barcode var mı?
+        acc[current.barcode] = {}; // yoksa oluştur. içerisinede boş obje oluştur.
     }
-    if (!acc[current.barcode][current.unit]) {
+    if (!acc[current.barcode][current.unit]) { // acc[current.barcode] içerisindeki objede current.unit var mı?
         acc[current.barcode][current.unit] = []; // yukarıda oluşturulan objenin içerisinde key var(barcode) o keyin value su bir obje ve o objenin keyi [current.unit] örn: { c7nt64td94: { mm: [ [Object] ] }, ... }
     }
     acc[current.barcode][current.unit].push(current);
