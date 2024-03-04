@@ -26,3 +26,8 @@ for (const item of result) {
 /* 1. İlk döngüde, destructuring (yapı çözümleme) kullanılır. Bu, bir objenin özelliklerini tek bir satırda çıkartmamızı sağlar. Bu durumda, her bir result elemanının _doc özelliği iterator adlı bir değişkene atanır ve konsola yazdırılır.
 
 2. İkinci döngüde, her bir result elemanı item adlı bir değişkene atanır. Daha sonra, item._doc özelliği iterator adlı bir değişkene atanır ve konsola yazdırılır. */
+
+
+// newData= { key: {value}, ... }
+const { data } = newData[iterator];
+// const data = newData[iterator].data; yukarıdaki ile aynı işlevi görür
